@@ -7,9 +7,9 @@
 
 ### Usage ###
     
-    ```
-    $> python spoiler.py > EMN.xml
-    ```
+```
+$> python spoiler.py > EMN.xml
+```
 
 Create the set xml file and add it to your `customsets` folder for Cockatrice.
 Enjoy!

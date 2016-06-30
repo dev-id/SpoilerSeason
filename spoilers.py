@@ -34,9 +34,8 @@ def get_cards():
    
     cards = []
     for entry in d.items()[5][1]:
-    #for entry in d.items()[5][1][:5]:
         card = dict(cost='',cmc='',img='',pow='',name='',rules='',type='',
-                color='')
+                color='', altname='')
         summary = entry['summary']
         for pattern in patterns:
             match = re.search(pattern, summary, re.MULTILINE|re.DOTALL)
@@ -44,21 +43,47 @@ def get_cards():
                 dg = match.groupdict()
                 card[dg.items()[0][0]] = dg.items()[0][1]
         cards.append(card)
+    
+    fix_cards(cards)
 
     return cards
 
+def fix_cards(cards):
+    for card in cards:
+        card['altname'] = card['name']
+        if (card['name'] == 'Vidlin-Pack Outcast'):
+            card['name'] = 'Vildin-Pack Outcast'
+            card['altname'] = 'Vildin-Pack Outcast'
+        elif (card['name'] == 'Decimator of the Provinces'):
+            card['altname'] = 'Decimator of Provinces'
+        elif (card['name'] == 'GrizAngler'):
+            card['name'] = 'Grizzled Angler'
+            card['altname'] = 'Grizzled Angler'
+        elif (card['name'] == 'Stitcher&#x27;s Graft'):
+            card['altname'] = 'Graft Stapler'
+        elif (card['name'] == 'Emrakul&#x27;s Influence'):
+            card['altname'] = 'Influence of Emrakul'
+
+
 def add_images(cards):
     text = requests.get(IMAGES).text
+    text2 = requests.get(IMAGES2).text
     
-    pattern = r'<img alt="{}.*?" src="(?P<img>.*?\.png)"'
+    wotc_pattern = r'<img alt="{}.*?" src="(?P<img>.*?\.png)"'
+    mythic_pattern = r' src="emn/cards/{}.*?.jpg">'
     for c in cards:
-        match = re.search(pattern.format(c['name']), text, re.DOTALL)
+        match = re.search(wotc_pattern.format(c['name']), text, re.DOTALL)
         if match:
             c['img'] = match.groupdict()['img']
-        else:
-            pass
-            #print('image for {} not found'.format(c['name']))
-
+        else: 
+            match2 = re.search(mythic_pattern.format(
+                (c['altname']).lower().replace(' ','')
+                                      .replace('&#x27;','')
+                                      .replace('-','')), text2, re.DOTALL)
+            if match2:
+                c['img'] = (match2.group(0)
+                        .replace('src="','http://mythicspoiler.com/')
+                        .replace('">',''))
 def make_xml(cards):
     print """<cockatrice_carddatabase version="3">
     <sets>
