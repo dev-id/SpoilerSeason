@@ -4,12 +4,17 @@
  * Python 2.7
  * python requests (pip install requests)
  * feedreader (pip install feedreader)
+ * json
+ * datetime
 
 ### Usage ###
     
 ```
-$> python spoiler.py > EMN.xml
+$> python spoiler.py
 ```
 
+Outputs EMN.json and EMN.xml
+
 Create the set xml file and add it to your `customsets` folder for Cockatrice.
-Enjoy!
+
+Scraper code by robtandy @ https://github.com/robtandy/CockatriceSpoilerXML
