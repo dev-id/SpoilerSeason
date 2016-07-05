@@ -301,8 +301,8 @@ def write_xml(mtgjson, cardsxml):
         count += 1
         #print card["name"]
         name = card["name"]
-        if card.has_key("manacost"):
-            manacost = card["manacost"].replace('{', '').replace('}', '')
+        if card.has_key("manaCost"):
+            manacost = card["manaCost"].replace('{', '').replace('}', '')
         else:
             manacost = ""
         if card.has_key("power") or card.has_key("toughness"):
