@@ -4,7 +4,7 @@ import requests
 import feedparser
 import re
 import json
-import hashlib
+#import hashlib
 
 setname = 'EMN'
 setjson = setname + '.json'
@@ -214,7 +214,7 @@ def make_json(cards, setjson):
         if card['cmc'] == '':
             card['cmc'] = 0
         cardjson = {}
-        cardjson["id"] = hashlib.sha1('EMN' + card['name'] + str(card['name']).lower()).hexdigest()
+        #cardjson["id"] = hashlib.sha1('EMN' + card['name'] + str(card['name']).lower()).hexdigest()
         cardjson["cmc"] = card['cmc']
         cardjson["manaCost"] = card['cost']
         cardjson["name"] = card['name']
