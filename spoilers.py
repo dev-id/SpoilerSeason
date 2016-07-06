@@ -4,6 +4,7 @@ import requests
 import feedparser
 import re
 import json
+import hashlib
 
 setname = 'EMN'
 setjson = setname + '.json'
@@ -65,53 +66,57 @@ def get_cards():
 def fix_cards(cards):
     for card in cards:
         card['name'] = card['name'].replace('&#x27;','\'')
-        card['rules'] = card['rules'].replace('&#x27;','\'').replace('&lt;i&gt;','').replace('&lt;/i&gt;','').replace('&quot;','"')
+        card['rules'] = card['rules'].replace('&#x27;','\'')\
+            .replace('&lt;i&gt;','')\
+            .replace('&lt;/i&gt;','')\
+            .replace('&quot;','"')\
+            .replace('blkocking','blocking')
         card['altname'] = card['name']
         if (card['name'] == 'Vidlin-Pack Outcast'):
             card['name'] = 'Vildin-Pack Outcast'
             card['altname'] = 'Vildin-Pack Outcast'
-        if (card['name'] == 'Decimator of the Provinces'):
+        elif (card['name'] == 'Decimator of the Provinces'):
             card['altname'] = 'Decimator of Provinces'
-        if (card['name'] == 'GrizAngler'):
+        elif (card['name'] == 'GrizAngler'):
             card['name'] = 'Grizzled Angler'
             card['altname'] = 'Grizzled Angler'
-        if (card['name'] == 'Stitcher&#x27;s Graft') or (card['name'] == 'Stitcher\'s Graft'):
-            #card['altname'] = 'Graft Stapler'
-            card['img'] = 'http://media.wizards.com/2016/ouhtebrpjwxcnw5_EMN/en_h2Hu65ff7l.png'
-        if (card['name'] == 'Emrakul\'s Influence'):
-            #card['altname'] = 'Influence of Emrakul'
-            card['img'] = 'http://media.wizards.com/2016/ouhtebrpjwxcnw5_EMN/en_h2Hu65ff7l.png'
-        if (card['name'] == 'Tamiyo, Field Researcher'):
+        elif (card['name'] == 'Tamiyo, Field Researcher'):
             card['loyalty'] = 4
-        if (card['name'] == 'Stromkirk Occultist'):
+        elif (card['name'] == 'Stromkirk Occultist'):
             card['altname'] = 'Stormkirk Mystic'
-        if (card['name'] == 'Gnarlwood Dryad'):
+        elif (card['name'] == 'Gnarlwood Dryad'):
             card['type'] = "Creature - Dryad Horror"
-        if (card['name'] == 'Hanweir, the Writhing Township'):
+        elif (card['name'] == 'Hanweir, the Writhing Township'):
             card['img'] = 'http://mythicspoiler.com/emn/cards/hanweirthewrithingtownship.jpg'
-        if (card['name'] == 'Brisela, Voice of Nightmares'):
+            card['colorIdentityArray'] = ["R"]
+        elif (card['name'] == 'Brisela, Voice of Nightmares'):
             card['img'] = 'http://mythicspoiler.com/emn/cards/briselavoiceofnightmares.jpg'
-        if (card['name'] == 'Chittering Host'):
+            card['colorIdentityArray'] = ["W"]
+        elif (card['name'] == 'Chittering Host'):
             card['img'] = 'http://mythicspoiler.com/emn/cards/chitteringhost.jpg'
-        if ('Liliana,') in card['name']:
+            card['colorIdentityArray'] = ["B"]
+        elif ('Liliana,') in card['name']:
             card['loyalty'] = 3
-        if (card['name'] == 'Selfless Spirit'):
+        elif (card['name'] == 'Selfless Spirit'):
             card['altname'] = 'Selfless Soul'
-        if (card['name'] == 'Nephalia Acadamy'):
+        elif (card['name'] == 'Nephalia Acadamy'):
             card['name'] = 'Nephalia Academy'
             card['altname'] = 'Nephalia Academy'
-        if (card['name'] == 'Distended Mindbender'):
+        elif (card['name'] == 'Distended Mindbender'):
             card['pow'] = '5/5'
-        if (card['name'] == 'Collective Resistance'):
+        elif (card['name'] == 'Collective Resistance'):
             card['img'] = 'http://media-dominaria.cursecdn.com/avatars/125/491/636032361836090807.png'
-        if ('Writhing Township') in card['name']:
-            card['colorIdentityArray'] = ["R"]
-        if ('Brisela,') in card['name']:
-            card['colorIdentityArray'] = ["W"]
-        if ('Chittering Host') in card['name']:
-            card['colorIdentityArray'] = ["B"]
-        #if ('Lashweed Lurker') in card['name']:
-        #    card['colorIdentityArray'] = ["U","G"]
+        elif (card['name'] == 'Chaoeveler'):
+            card['name'] = 'Chaos Reveler'
+            card['altname'] = 'Chaos Reveler'
+        elif (card['name'] == 'Fortune\'s Favor'):
+            card['cost'] = '3U'
+        elif (card['name'] == 'Dark Salvation'):
+            card['cost'] = 'XXB'
+    for card in cards:
+        if card['name'] == 'Chaos Reveler':
+           if not card['img']:
+               cards.remove(card)
 
 def add_images(cards):
     text = requests.get(IMAGES).text
@@ -119,17 +124,21 @@ def add_images(cards):
     wotcpattern = r'<img alt="{}.*?" src="(?P<img>.*?\.png)"'
     mythicspoilerpattern = r' src="emn/cards/{}.*?.jpg">'
     for c in cards:
-        match = re.search(wotcpattern.format(c['name']), text, re.DOTALL)
-        if match:
-            c['img'] = match.groupdict()['img']
-        else:
-            match2 = re.search(mythicspoilerpattern.format((c['altname']).lower().replace(' ','').replace('&#x27;','').replace('-','').replace('\'','').replace(',','')), text2, re.DOTALL)
-            if match2:
-                c['img'] = match2.group(0).replace(' src="','http://mythicspoiler.com/').replace('">','')
+        match = re.search(wotcpattern.format(c['name'].replace('\'','&rsquo;')), text, re.DOTALL)
+        if not c['img']:
+            if match:
+                c['img'] = match.groupdict()['img']
             else:
-                print('image for {} not found'.format(c['name']))
-                #print('we checked mythic for ' + c['altname'])
-                pass
+                match2 = re.search(mythicspoilerpattern.format(
+                    (c['altname']).lower().replace(' ', '').replace('&#x27;', '').replace('-', '').replace('\'',
+                                                                                                           '').replace(
+                        ',', '')), text2, re.DOTALL)
+                if match2:
+                    c['img'] = match2.group(0).replace(' src="', 'http://mythicspoiler.com/').replace('">', '')
+                else:
+                    print('image for {} not found'.format(c['name']))
+                    pass
+
 
 def make_json(cards, setjson):
     #initialize mtg format json
@@ -205,6 +214,7 @@ def make_json(cards, setjson):
         if card['cmc'] == '':
             card['cmc'] = 0
         cardjson = {}
+        cardjson["id"] = hashlib.sha1('EMN' + card['name'] + str(card['name']).lower()).hexdigest()
         cardjson["cmc"] = card['cmc']
         cardjson["manaCost"] = card['cost']
         cardjson["name"] = card['name']
@@ -358,8 +368,7 @@ def write_xml(mtgjson, cardsxml):
 
     print 'XML STATS'
     print 'Total cards: ' + str(count)
-    if (dfccount > 0):
-      print 'DFC: ' + str(dfccount)
+    print 'DFC: ' + str(dfccount)
     print 'Newest: ' + str(newest)
     return newest
 
@@ -382,6 +391,4 @@ if __name__ == '__main__':
     #make_xml(cards)
     mtgjson = make_json(cards, setjson)
     newest = write_xml(mtgjson, cardsxml)
-    # writehtml is an announce page that lists the newest card spoiled and the date of the script's last run
-    # disabled by default
     #writehtml(newest)
