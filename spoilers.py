@@ -14,6 +14,7 @@ html = 'index.html'
 SPOILER_RSS = 'http://www.mtgsalvation.com/spoilers.rss'
 IMAGES = 'http://magic.wizards.com/en/content/eldritch-moon-cards'
 IMAGES2 = 'http://mythicspoiler.com/newspoilers.html'
+IMAGES3 = 'http://magic.wizards.com/en/articles/archive/card-image-gallery/eldritch-moon'
 
 patterns = ['<b>Name:</b> <b>(?P<name>.*?)<',
             'Cost: (?P<cost>\d{0,2}[WUBRGC]*?)<',
@@ -40,8 +41,116 @@ related_cards = {'Gisela, the Broken Blade': 'Brisela, Voice of Nightmares',
                  'Smoldering Werewolf': 'Erupting Dreadwolf',
                  'Kessig Prowler': 'Sinuous Predator',
                  'Curious Homunculus': 'Voracious Reader',
-                 'Voldaren Pariah': 'Abolisher of Bloodlines'
+                 'Voldaren Pariah': 'Abolisher of Bloodlines',
+                 'Extricator of Sin': 'Extricator of Flesh',
+                 'Conduit of Storms': 'Conduit of Emrakul',
+                 'Shrill Howler': 'Howling Chorus',
+                 'Tangleclaw Werewolf': 'Fibrous Entangler'
                  }
+
+card_corrections = {
+    'Strange Augmentation': {
+        "type": "Enchantment - Aura"
+    },
+    'Contigencey Plan': {
+        "name": 'Contingency Plan'
+    },
+    'Advanced Stichwing': {
+        "name": 'Advanced Stitchwing'
+    },
+    'Power of the Moon':{
+        "name": 'Lunar Force'
+    },
+    'Lunarch Mantle':{
+        "type": 'Enchantment - Aura'
+    },
+    'Choking Restraints':{
+        "type": 'Enchantment - Aura'
+    },
+    'Faithbearer Paladin ':{
+        "name": 'Faithbearer Paladin'
+    },
+    'Faith Bender':{
+        "name": 'Fiend Binder'
+    },
+    'Geist of the Lonely Vgil':{
+        "name": 'Geist of the Lonely Vigil'
+    },
+    'Vidlin-Pack Outcast': {
+        "name": 'Vildin-Pack Outcast'
+    },
+    'Decimator of the Provices': {
+        "altname": 'Decimator of Provinces'
+    },
+    'Tamiyo, Field Researcher': {
+        'loyalty': 4
+    },
+    'Stromkirk Occultist': {
+        'altname': 'Stormkirk Mystic'
+    },
+    'Gnarlwood Dryad': {
+        'type': 'Creature - Dryad Horror'
+    },
+    'Hanweir, the Writhing Township': {
+        'img': 'http://mythicspoiler.com/emn/cards/hanweirthewrithingtownship.jpg',
+        'colorIdentityArray': ["R"]
+    },
+    'Brisela, Voice of Nightmares': {
+        'img': 'http://mythicspoiler.com/emn/cards/briselavoiceofnightmares.jpg',
+        'colorIdentityArray': ["W"]
+    },
+    'Chittering Host': {
+        'img': 'http://mythicspoiler.com/emn/cards/chitteringhost.jpg',
+        'colorIdentityArray': ["B"]
+    },
+    'Liliana, the Last Hope': {
+        'loyalty': 3
+    },
+    'Selfless Spirit': {
+        'altname': 'Selfless Soul'
+    },
+    'Nephalia Acadamy': {
+        'name': 'Nephalia Academy'
+    },
+    'Distended Mindbender': {
+        'pow': '5/5'
+    },
+    'Fortune\'s Favor': {
+        'cost': '3U'
+    },
+    'Dark Salvation': {
+        'cost': 'XXB'
+    },
+    'Lupine Prototype': {
+        'pow': '5/5'
+    },
+    'Spontaenous Mutation': {
+        'name': 'Spontaneous Mutation'
+    },
+    'Nebegast Herald': {
+        'name': 'Nebelgast Herald'
+    },
+    'Enlightend Maniac': {
+        'name': 'Enlightened Maniac'
+    }
+}
+
+manual_card_template = [
+    {
+        "cost": '',
+        "cmc": '',
+        "img": '',
+        "pow": '',
+        "name": '',
+        "rules": '',
+        "type": '',
+        "setnumber": '',
+        "rarity": '',
+    }
+]
+
+manual_cards = [
+]
 
 def get_cards():
     text = requests.get(SPOILER_RSS).text
@@ -59,68 +168,76 @@ def get_cards():
                 dg = match.groupdict()
                 card[dg.items()[0][0]] = dg.items()[0][1]
         cards.append(card)
-    fix_cards(cards)
 
+    for manual_card in manual_cards:
+        inCards = False
+        manual_card['colorArray'] = []
+        manual_card['colorIdentityArray'] = []
+        manual_card['color'] = ''
+        manual_card['colorIdentity'] = ''
+        if not manual_card.has_key('rules'):
+            manual_card['rules'] = ''
+        if not manual_card.has_key('pow'):
+            manual_card['pow'] = ''
+        if not manual_card.has_key('setnumber'):
+            manual_card['setnumber'] = '0'
+        if not manual_card.has_key('type'):
+            manual_card['type'] = ''
+        #print 'Inserting manual card: ' + manual_card['name']
+        for card in cards:
+            if card['name'] == manual_card['name']:
+                inCards = True
+        if not (inCards):
+            #print 'Inserting manual card: ' + manual_card['name']
+            cards.append(manual_card)
     return cards
 
-def fix_cards(cards):
+def correct_cards(cards):
     for card in cards:
-        card['name'] = card['name'].replace('&#x27;','\'')
-        card['rules'] = card['rules'].replace('&#x27;','\'')\
-            .replace('&lt;i&gt;','')\
-            .replace('&lt;/i&gt;','')\
-            .replace('&quot;','"')\
-            .replace('blkocking','blocking')
-        card['altname'] = card['name']
-        if (card['name'] == 'Vidlin-Pack Outcast'):
-            card['name'] = 'Vildin-Pack Outcast'
-            card['altname'] = 'Vildin-Pack Outcast'
-        elif (card['name'] == 'Decimator of the Provinces'):
-            card['altname'] = 'Decimator of Provinces'
-        elif (card['name'] == 'GrizAngler'):
-            card['name'] = 'Grizzled Angler'
-            card['altname'] = 'Grizzled Angler'
-        elif (card['name'] == 'Tamiyo, Field Researcher'):
-            card['loyalty'] = 4
-        elif (card['name'] == 'Stromkirk Occultist'):
-            card['altname'] = 'Stormkirk Mystic'
-        elif (card['name'] == 'Gnarlwood Dryad'):
-            card['type'] = "Creature - Dryad Horror"
-        elif (card['name'] == 'Hanweir, the Writhing Township'):
-            card['img'] = 'http://mythicspoiler.com/emn/cards/hanweirthewrithingtownship.jpg'
-            card['colorIdentityArray'] = ["R"]
-        elif (card['name'] == 'Brisela, Voice of Nightmares'):
-            card['img'] = 'http://mythicspoiler.com/emn/cards/briselavoiceofnightmares.jpg'
-            card['colorIdentityArray'] = ["W"]
-        elif (card['name'] == 'Chittering Host'):
-            card['img'] = 'http://mythicspoiler.com/emn/cards/chitteringhost.jpg'
-            card['colorIdentityArray'] = ["B"]
-        elif ('Liliana,') in card['name']:
-            card['loyalty'] = 3
-        elif (card['name'] == 'Selfless Spirit'):
-            card['altname'] = 'Selfless Soul'
-        elif (card['name'] == 'Nephalia Acadamy'):
-            card['name'] = 'Nephalia Academy'
-            card['altname'] = 'Nephalia Academy'
-        elif (card['name'] == 'Distended Mindbender'):
-            card['pow'] = '5/5'
-        elif (card['name'] == 'Collective Resistance'):
-            card['img'] = 'http://media-dominaria.cursecdn.com/avatars/125/491/636032361836090807.png'
-        elif (card['name'] == 'Chaoeveler'):
-            card['name'] = 'Chaos Reveler'
-            card['altname'] = 'Chaos Reveler'
-        elif (card['name'] == 'Fortune\'s Favor'):
-            card['cost'] = '3U'
-        elif (card['name'] == 'Dark Salvation'):
-            card['cost'] = 'XXB'
-    for card in cards:
-        if card['name'] == 'Chaos Reveler':
-           if not card['img']:
-               cards.remove(card)
+        if card['name'] == 'Chaoeveler':
+            cards.remove(card)
+        elif card['name'] == 'GrizAngler':
+            cards.remove(card)
+        card['name'] = card['name'].replace('&#x27;', '\'')
+        card['rules'] = card['rules'].replace('&#x27;', '\'') \
+            .replace('&lt;i&gt;', '') \
+            .replace('&lt;/i&gt;', '') \
+            .replace('&quot;', '"') \
+            .replace('blkocking', 'blocking').replace('&amp;bull;','*')\
+            .replace('comes into the','enters the')
+        if card['name'] in card_corrections:
+            for correction in card_corrections[card['name']]:
+                if correction == 'name':
+                    card['rules'] = card['rules'].replace(card['name'],card_corrections[card['name']][correction])
+                card[correction] = card_corrections[card['name']][correction]
+
+        if 'cost' in card and len(card['cost']) > 0:
+            m = re.search('(\d+)', card['cost'].replace('X',''))
+            cmc = 0
+            if m:
+                cmc += int(m.group())
+                cmc += len(card['cost']) - 1  # account for colored symbols
+            else:
+                cmc += len(card['cost'])  # all colored symbols
+            card['cmc'] = cmc
+        # figure out color
+        for c in 'WUBRG':
+            if c not in card['colorIdentity']:
+                if c in card['cost']:
+                    card['color'] += c
+                    card['colorIdentity'] += c
+                if (c + '}') in card['rules'] or (str.lower(c) + '}') in card['rules']:
+                    if not (c in card['colorIdentity']):
+                        card['colorIdentity'] += c
+
+    #cards.append(cost='',cmc='',img='',pow='',name='',rules='',type='',
+    #            color='', altname='', colorIdentity='', colorArray=[], colorIdentityArray=[], setnumber='', rarity='')
+    return cards
 
 def add_images(cards):
     text = requests.get(IMAGES).text
     text2 = requests.get(IMAGES2).text
+    text3 = requests.get(IMAGES3).text
     wotcpattern = r'<img alt="{}.*?" src="(?P<img>.*?\.png)"'
     mythicspoilerpattern = r' src="emn/cards/{}.*?.jpg">'
     for c in cards:
@@ -129,14 +246,18 @@ def add_images(cards):
             if match:
                 c['img'] = match.groupdict()['img']
             else:
-                match2 = re.search(mythicspoilerpattern.format(
-                    (c['altname']).lower().replace(' ', '').replace('&#x27;', '').replace('-', '').replace('\'',
-                                                                                                           '').replace(
-                        ',', '')), text2, re.DOTALL)
-                if match2:
-                    c['img'] = match2.group(0).replace(' src="', 'http://mythicspoiler.com/').replace('">', '')
+                match3 = re.search(wotcpattern.format(c['name'].replace('\'','&rsquo;')), text3, re.DOTALL)
+                if match3:
+                    c['img'] = match3.groupdict()['img']
                 else:
+                    #disable mythicspoiler now that we're fully spoiled
+                    #match2 = re.search(mythicspoilerpattern.format((c['name']).lower().replace(' ', '').replace('&#x27;', '').replace('-', '').replace('\'','').replace(',', '')), text2, re.DOTALL)
+                    #if match2:
+                        #print match2.group(0).replace(' src="', 'http://mythicspoiler.com/').replace('">', '')
+                    #    c['img'] = match2.group(0).replace(' src="', 'http://mythicspoiler.com/').replace('">', '')
+                    #else:
                     print('image for {} not found'.format(c['name']))
+                    # print('we checked mythic for ' + c['altname'])
                     pass
 
 
@@ -199,6 +320,7 @@ def make_json(cards, setjson):
             cardnames.append(related_cards[card['name']])
             cardnumber += 'a'
             card['layout'] = 'double-faced'
+            card['name']
         for namematch in related_cards:
             if card['name'] == related_cards[namematch]:
                 card['layout'] = 'double-faced'
@@ -208,7 +330,8 @@ def make_json(cards, setjson):
                     cardnumber += 'b'
         cardtypes = []
         if not '-' in card['type']:
-            cardtypes.append(card['type'])
+            card['type'] = card['type'].replace('instant','Instant')
+            cardtypes.append(card['type'].replace('instant','Instant'))
         else:
             cardtypes = card['type'].replace('Legendary ','').split('-')[0].split(' ')[:-1]
         if card['cmc'] == '':
@@ -242,60 +365,23 @@ def make_json(cards, setjson):
         cardsjson['cards'].append(cardjson)
     with open(setjson, 'w') as outfile:
         json.dump(cardsjson, outfile, sort_keys=True, indent=2, separators=(',', ': '))
+    specialjson = {
+        "Mythic Rare": [],
+        "Rare": [],
+        "Uncommon": [],
+        "Common": []
+    }
+    for card in cardsjson['cards']:
+        if card.has_key('layout'):
+            if card['layout'] == 'double-faced' and 'a' in card['number']:
+                specialjson[card['rarity']].append(card['name'].lower())
+    #create dict of DFC sorted by library                
+    #for specialrarity in specialjson:
+        #print specialrarity + ': [
+        #for name in specialjson[specialrarity]:
+        #    print '"' + name + '"'
+       # print "]"
     return cardsjson
-
-def prep_xml(cards):
-    for card in cards:
-        if 'cost' in card and len(card['cost']) > 0:
-            m = re.search('(\d+)', card['cost'])
-            cmc = 0
-            if m:
-                cmc += int(m.group())
-                cmc += len(card['cost']) - 1  # account for colored symbols
-            else:
-                cmc += len(card['cost'])  # all colored symbols
-            card['cmc'] = cmc
-    # figure out color
-        for c in 'WUBRG':
-            if c in card['cost']:
-                card['color'] += c
-                card['colorIdentity'] += c
-            if (c + '}') in card['rules'] or (str.lower(c) + '}') in card['rules']:
-                if not (c in card['colorIdentity']):
-                    card['colorIdentity'] += c
-
-#make_xml from previous iteration, prefer my implementation in write_xml
-def make_xml(cards):
-    cardsxml.write("""<cockatrice_carddatabase version="3">
-    <sets>
-        <set>
-            <name>EMN</name>
-            <longname>Eldritch Moon</longname>
-            <settype>Expansion</settype>
-            <releasedate>2016-07-22</releasedate>
-        </set>
-    </sets>
-    <cards>
-    """)
-    for card in cards:
-        cardsxml.write("""
-<card>
-    <name>{name}</name>
-    <set rarity="{rarity}" picURL="{img}">EMN</set>
-    <color>{color}</color>
-    <manacost>{cost}</manacost>
-    <cmc>{cmc}</cmc>
-    <type>{type}</type>
-    <pt>{pow}</pt>
-
-    <tablerow>2</tablerow>
-    <text>{rules}</text>
-</card>
-        """.format(**card))
-
-    cardsxml.write("""</cards>
-    </cockatrice_carddatabase>
-    """)
 
 def write_xml(mtgjson, cardsxml):
     cardsxml = open(cardsxml, 'w')
@@ -351,6 +437,13 @@ def write_xml(mtgjson, cardsxml):
         cardsxml.write("<name>" + name.encode('utf-8') + "</name>\n")
         cardsxml.write('<set rarity="' + card['rarity'] + '" picURL="' + card["url"] + '">EMN</set>\n')
         cardsxml.write("<manacost>" + manacost.encode('utf-8') + "</manacost>\n")
+        cardsxml.write("<cmc>" + str(card['cmc']) + "</cmc>")
+        if card.has_key('colors'):
+            for color in card['colors']:
+                cardsxml.write('<color>' + color + '</color>')
+        #add 'CIPT' tag to enters the battlefield tapped cards            
+        if name == 'Terrarion' or name == 'Cryptolith Fragment':
+            cardsxml.write("<cipt>1</cipt>")
         cardsxml.write("<type>" + cardtype.encode('utf-8') + "</type>\n")
         if pt:
             cardsxml.write("<pt>" + pt + "</pt>\n")
@@ -359,6 +452,7 @@ def write_xml(mtgjson, cardsxml):
         cardsxml.write("<tablerow>" + tablerow + "</tablerow>\n")
         cardsxml.write("<text>" + text.encode('utf-8') + "</text>\n")
         if related:
+        #    for relatedname in related:
             cardsxml.write("<related>" + related.encode('utf-8') + "</related>\n")
             related = ''
 
@@ -368,8 +462,11 @@ def write_xml(mtgjson, cardsxml):
 
     print 'XML STATS'
     print 'Total cards: ' + str(count)
-    print 'DFC: ' + str(dfccount)
+    if dfccount > 0:
+        print 'DFC: ' + str(dfccount)
     print 'Newest: ' + str(newest)
+    print 'Time: ' + str(datetime.datetime.today().strftime('%H:%M'))
+
     return newest
 
 def writehtml(newest):
@@ -386,9 +483,10 @@ def writehtml(newest):
 
 if __name__ == '__main__':
     cards = get_cards()
+    cards = correct_cards(cards)
+    #for some reason bedlam reveler doesn't get caught the first time through... unicode?
+    cards = correct_cards(cards)
     add_images(cards)
-    prep_xml(cards)
-    #make_xml(cards)
     mtgjson = make_json(cards, setjson)
     newest = write_xml(mtgjson, cardsxml)
     #writehtml(newest)
