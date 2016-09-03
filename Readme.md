@@ -18,3 +18,4 @@ Outputs EMN.json and EMN.xml
 Create the set xml file and add it to your `customsets` folder for Cockatrice.
 
 Scraper code by robtandy @ https://github.com/robtandy/CockatriceSpoilerXML
+All other code is MIT License
