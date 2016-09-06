@@ -12,11 +12,14 @@ setname = 'KLD'
 setlongname = 'Kaladesh'
 setreleasedate = '2016-09-30'
 
+#the two files that will be generated in program directory
+#default is SETCODE.json and SETCODE.xml
 setjson = setname + '.json'
 cardsxml = setname + '.xml'
 
 #for maintaining an html page with changes.
 #format is
+#line 23: number of cards in xml
 #line 27: latest card added
 #line 29: date of last add
 #line 31: time of last add
@@ -28,7 +31,7 @@ SPOILER_RSS = 'http://www.mtgsalvation.com/spoilers.rss'
 IMAGES = 'http://magic.wizards.com/en/content/' + setlongname.lower().replace(' ','-') + '-cards'
 #static
 IMAGES2 = 'http://mythicspoiler.com/newspoilers.html'
-#magic.wizards.com/en/articles/card-image-gallery/set-name-with-hyphens
+#magic.wizards.com/en/articles/archive/card-image-gallery/set-name-with-hyphens
 IMAGES3 = 'http://magic.wizards.com/en/articles/archive/card-image-gallery/' + setlongname.lower().replace(' ','-')
 
 #scraper pattern for mtgs rss feed
@@ -41,15 +44,18 @@ patterns = ['<b>Name:</b> <b>(?P<name>.*?)<',
             'Set Number: #(?P<setnumber>.*?)/'
             ]
 
+#for DFC, tuples with front name first, ex:
+#"Huntmaster of the Fells":"Ravager of the Fells"
 related_cards = {}
 
 #fix any cards that have errors, format:
 #"card name": {
-#  "incorrect key": "correct value"
+#  "key with incorrect value": "correct value"
 #}
 #can handle multiple incorrect values
 #and handles incorrect name
 #new keys will be created (loyalty)
+#key values: name, img, cost, type, pow, rules, rarity, setnumber, loyalty, colorArray, colorIdentityArray, color, colorIdentity
 card_corrections = {
     "Glint-Sleeved Artisan": {
         "name": "Glint-Sleeve Artisan"
@@ -72,6 +78,31 @@ card_corrections = {
     },
     "Saheeli Rai": {
         "loyalty": 3
+    },
+    "Demon of Shadowy Schemes": {
+        "name": "Demon of Shady Schemes"
+    },
+    "Larger than Life": {
+        "name": "Larger Than Life",
+        "img": "https://pbs.twimg.com/media/CrmPhI1WIAAl77B.png"
+    },
+    "Pia Nalaar": {
+        "img": "http://media.wizards.com/2016/bVvMNuiu2i_KLD/en_z8u7TFxf8R.png"
+    },
+    "Master Trinketcrafter": {
+        "img": "http://media-dominaria.cursecdn.com/avatars/thumbnails/126/862/200/283/636086937653130201.png"
+    },
+    "Multiform Wonder": {
+        "img": "http://media.wizards.com/2016/bVvMNuiu2i_KLD/en_0zfOjCQoWi.png"
+    },
+    " Rashmi, Eterniafter ": {
+        "name": "delete"
+    },
+    "DeputisProtester": {
+        "name": "delete"
+    },
+    "Decocotion Module": {
+        "name": "Decoction Module"
     }
 }
 
@@ -93,6 +124,34 @@ manual_card_template = [
 
 #array for storing manually entered cards, mtgs can be slow
 manual_cards = [
+    {
+        "cost": '4GG',
+        "cmc": '6',
+        "img": 'http://media.wizards.com/2016/bVvMNuiu2i_KLD/en_YXvBDsDjHq.png',
+        "loyalty": 5,
+        "name": 'Nissa, Nature\'s Artisan',
+        "rules": '+1: You gain 3 life.\n\
+        -4: Reveal the top two cards of your library. \
+        Put all land cards from among them onto the battlefield and the rest into your hand.\n\
+        -12: Creatures you control get +5/+5 and gain trample until end of turn.',
+        "type": 'Planeswalker - Nissa',
+        "setnumber": '270',
+        "rarity": 'Mythic Rare',
+    },
+    {
+        "cost": '4RR',
+        "cmc": '6',
+        "img": 'http://media.wizards.com/2016/bVvMNuiu2i_KLD/en_CO4tkc9sLe.png',
+        "loyalty": 5,
+        "name": 'Chandra, Pyrogenius',
+        "rules": '+2: Chandra, Pyrogenius deals 2 damage to each opponent.\n\
+                 -3: Chandra, Pyrogenius deals 4 damage to target creature.\n\
+                 -10: Chandra, Pyrogenius deals 6 damage to target player and\
+                  each creature he or she controls',
+        "type": 'Planeswalker - Chandra',
+        "setnumber": '265',
+        "rarity": 'Mythic Rare',
+    }
 ]
 
 def get_cards():
@@ -113,6 +172,7 @@ def get_cards():
 
     for manual_card in manual_cards:
         incards = False
+        #initialize some keys
         manual_card['colorArray'] = []
         manual_card['colorIdentityArray'] = []
         manual_card['color'] = ''
@@ -125,9 +185,11 @@ def get_cards():
             manual_card['setnumber'] = '0'
         if not manual_card.has_key('type'):
             manual_card['type'] = ''
+        #see if this is a dupe
         for card in cards:
             if card['name'] == manual_card['name']:
                 incards = True
+                print 'Not inserting manual card, already found: ' + manual_card['name']
         if not (incards):
             print 'Inserting manual card: ' + manual_card['name']
             cards.append(manual_card)
@@ -135,23 +197,34 @@ def get_cards():
 
 def correct_cards(cards):
     for card in cards:
-        if card['name'] == ' Rashmi, Eterniafter ':
+        #remove some weird entries in the rss
+        if card['name'] == 'delete':
             cards.remove(card)
-        elif card['name'] == 'DeputisProtester':
+        elif card['name'] == ' Rashmi, Eterniafter ':
             cards.remove(card)
+        #elif card['name'] == 'DeputisProtester':
+        #    cards.remove(card)
+        if card['name'] == 'Demon of Shadowy Schemes':
+            card['name'] = 'Demon of Shady Schemes'
+
+        if card['name'] in card_corrections:
+            for correction in card_corrections[card['name']]:
+                if correction != 'name':
+                    card[correction] = card_corrections[card['name']][correction]
+            for correction in card_corrections[card['name']]:
+                if correction == 'name':
+                    oldname = card['name']
+                    card['name'] = card_corrections[oldname]['name']
+                    card['rules'] = card['rules'].replace(oldname, card_corrections[oldname][correction])
+
         card['name'] = card['name'].replace('&#x27;', '\'')
         card['rules'] = card['rules'].replace('&#x27;', '\'') \
             .replace('&lt;i&gt;', '') \
             .replace('&lt;/i&gt;', '') \
             .replace('&quot;', '"') \
             .replace('blkocking', 'blocking').replace('&amp;bull;','*')\
-            .replace('comes into the','enters the')
-        if card['name'] in card_corrections:
-            for correction in card_corrections[card['name']]:
-                if correction == 'name':
-                    card['rules'] = card['rules'].replace(card['name'],card_corrections[card['name']][correction])
-                else:
-                    card[correction] = card_corrections[card['name']][correction]
+            .replace('comes into the','enters the')\
+            .replace('threeor', 'three or')
 
         if 'cost' in card and len(card['cost']) > 0:
             m = re.search('(\d+)', card['cost'].replace('X',''))
@@ -172,6 +245,8 @@ def correct_cards(cards):
                     if not (c in card['colorIdentity']):
                         card['colorIdentity'] += c
 
+    #cards.append(cost='',cmc='',img='',pow='',name='',rules='',type='',
+    #            color='', altname='', colorIdentity='', colorArray=[], colorIdentityArray=[], setnumber='', rarity='')
     return cards
 
 def add_images(cards):
@@ -181,18 +256,15 @@ def add_images(cards):
     wotcpattern = r'<img alt="{}.*?" src="(?P<img>.*?\.png)"'
     mythicspoilerpattern = r' src="' + setname.lower() + '/cards/{}.*?.jpg">'
     for c in cards:
-                #check official wotc site first
         match = re.search(wotcpattern.format(c['name'].replace('\'','&rsquo;')), text, re.DOTALL)
         if not c['img']:
             if match:
                 c['img'] = match.groupdict()['img']
             else:
-                        #check wotc site #2 next
                 match3 = re.search(wotcpattern.format(c['name'].replace('\'','&rsquo;')), text3, re.DOTALL)
                 if match3:
                     c['img'] = match3.groupdict()['img']
                 else:
-                            #finally check mythicspoiler
                     match2 = re.search(mythicspoilerpattern.format((c['name']).lower().replace(' ', '').replace('&#x27;', '').replace('-', '').replace('\'','').replace(',', '')), text2, re.DOTALL)
                     if match2:
                         #print match2.group(0).replace(' src="', 'http://mythicspoiler.com/').replace('">', '')
@@ -237,7 +309,6 @@ def make_json(cards, setjson):
         "cards": []
     }
     for card in cards:
-            #check to see if card is duplicate
         dupe = False
         for dupecheck in cardsjson['cards']:
             if dupecheck['name'] == card['name']:
@@ -318,7 +389,21 @@ def make_json(cards, setjson):
         cardsjson['cards'].append(cardjson)
     with open(setjson, 'w') as outfile:
         json.dump(cardsjson, outfile, sort_keys=True, indent=2, separators=(',', ': '))
-
+    #specialjson = {
+    #    "Mythic Rare": [],
+    #    "Rare": [],
+    #    "Uncommon": [],
+    #    "Common": []
+    #}
+    #for card in cardsjson['cards']:
+    #    if card.has_key('layout'):
+    #        if card['layout'] == 'double-faced' and 'a' in card['number']:
+    #            specialjson[card['rarity']].append(card['name'].lower())
+    #for specialrarity in specialjson:
+        #print specialrarity + ': [
+        #for name in specialjson[specialrarity]:
+        #    print '"' + name + '"'
+       # print "]"
     return cardsjson
 
 def write_xml(mtgjson, cardsxml):
@@ -403,6 +488,7 @@ def write_xml(mtgjson, cardsxml):
         cardsxml.write("<tablerow>" + tablerow + "</tablerow>\n")
         cardsxml.write("<text>" + text.encode('utf-8') + "</text>\n")
         if related:
+        #    for relatedname in related:
             cardsxml.write("<related>" + related.encode('utf-8') + "</related>\n")
             related = ''
 
@@ -417,14 +503,21 @@ def write_xml(mtgjson, cardsxml):
     print 'Newest: ' + str(newest)
     print 'Time: ' + str(datetime.datetime.today().strftime('%H:%M'))
 
+    #for card in mtgjson['cards']:
+    #    print card['name']
     return newest
 
-def writehtml(newest):
+def writehtml(newest, cards):
     f = open(html, 'r')
     lines = f.readlines()
+    count = 0
+    for card in cards['cards']:
+        count = count + 1
+    lines[22] = str(count) + '\n'
     lines[26] = newest + '\n'
     lines[28] = str(datetime.date.today()) + '\n'
     lines[30] = str(datetime.datetime.today().strftime('%H:%M')) + '\n'
+    lines
     f.close()
 
     f = open(html, 'w')
@@ -434,11 +527,11 @@ def writehtml(newest):
 if __name__ == '__main__':
     cards = get_cards()
     cards = correct_cards(cards)
-    #some unicode cards don't get caught the first time through, no harm going through twice
+    #for some reason bedlam reveler doesn't get caught the first time through...
     cards = correct_cards(cards)
     add_images(cards)
     #prep_xml(cards)
     #make_xml(cards)
     mtgjson = make_json(cards, setjson)
     newest = write_xml(mtgjson, cardsxml)
-    writehtml(newest)
+    writehtml(newest, mtgjson)
