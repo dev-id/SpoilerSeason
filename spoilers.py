@@ -6,6 +6,8 @@ import re
 import json
 import shutil
 import sys
+import urllib
+import os.path
 #import hashlib
 
 #variables for xml & json
@@ -13,6 +15,10 @@ blockname = 'Kaladesh'
 setname = 'KLD'
 setlongname = 'Kaladesh'
 setreleasedate = '2016-09-30'
+
+#you can download a local copy of images (to images/Card Name.jpg)
+#yes, we call it .jpg no matter - it's more cockatrice-friendly
+downloadimages = False
 
 #once we're at full spoil, we'll turn off mythic to prefer wotc's images
 #they're preferred anyway, but just in case ;)
@@ -584,15 +590,21 @@ def writehtml(newest, cards):
     f.writelines(lines)
     f.close()
 
+def download_images(mtgjson):
+    for card in mtgjson['cards']:
+        if card['url'] and not os.path.isfile('images/' + card['name'] + '.jpg') :
+            print 'Downloading ' + card['url'] + ' to images/' + card['name'] + '.jpg'
+            urllib.urlretrieve(card['url'], 'images/' + card['name'] + '.jpg')
+
 if __name__ == '__main__':
     cards = get_cards()
     cards = correct_cards(cards)
     #for some reason bedlam reveler doesn't get caught the first time through...
     cards = correct_cards(cards)
     add_images(cards)
-    #prep_xml(cards)
-    #make_xml(cards)
     mtgjson = make_json(cards, setjson)
     newest = write_xml(mtgjson, cardsxml)
+    if downloadimages:
+        download_images(mtgjson)
     writehtml(newest, mtgjson)
     #specialcards(mtgjson)
