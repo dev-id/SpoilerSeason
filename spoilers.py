@@ -7,14 +7,18 @@ import json
 import shutil
 import sys
 import urllib
-import os.path
-#import hashlib
+import os
+import zipfile
 
 #variables for xml & json
 blockname = 'Kaladesh'
 setname = 'KLD'
 setlongname = 'Kaladesh'
 setreleasedate = '2016-09-30'
+
+#you can create a AllSets.json.zip by grabbing the current one from mtgjson
+#and slapping the current set on the end of it. disabled by default
+makezip = False
 
 #you can download a local copy of images (to images/Card Name.jpg)
 #yes, we call it .jpg no matter - it's more cockatrice-friendly
@@ -122,6 +126,15 @@ card_corrections = {
     },
     "Decocotion Module": {
         "name": "Decoction Module"
+    },
+    "Chandra, Torch of Defiance": {
+        "loyalty": 4
+    },
+    "Nissa, Nature's Artisan": {
+        "loyalty": 5
+    },
+    "Nissa, Vital Force": {
+        "loyalty": 5
     }
 }
 
@@ -567,8 +580,6 @@ def write_xml(mtgjson, cardsxml):
     print 'Newest: ' + str(newest)
     print 'Runtime: ' + str(datetime.datetime.today().strftime('%H:%M')) + ' on ' + str(datetime.date.today())
 
-    #for card in mtgjson['cards']:
-    #    print card['name']
     return newest
 
 def writehtml(newest, cards):
@@ -596,6 +607,48 @@ def download_images(mtgjson):
             print 'Downloading ' + card['url'] + ' to images/' + card['name'] + '.jpg'
             urllib.urlretrieve(card['url'], 'images/' + card['name'] + '.jpg')
 
+def makeAllSets(mtgjson):
+    #we have to spoof a user-agent for mtgjson
+    class MyOpener(urllib.FancyURLopener):
+        version = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko / 20071127 Firefox / 2.0.0.11'
+    opener = MyOpener()
+    opener.retrieve('http://mtgjson.com/json/AllSets.json', 'AllSets.pre.json')
+    #let's remove the last } from mtgjson
+    #then put the new set code in there
+    with open('AllSets.pre.json', 'rb+') as filehandle:
+        filehandle.seek(-1, os.SEEK_END)
+        filehandle.truncate()
+        filehandle.write(',"' + setname + '":')
+    #now let's smash together the old json
+    #with our new one
+    #and then close it!
+    with open('AllSets.json', 'wb') as wfd:
+        for f in ['AllSets.pre.json', setjson]:
+            with open(f, 'rb') as fd:
+                shutil.copyfileobj(fd, wfd, 1024 * 1024 * 10)
+                # 10MB per writing chunk to avoid reading big file into memory.
+        wfd.write('}')
+    
+    #let's zip it up, with compression if possible
+    try:
+        import zlib
+        compression = zipfile.ZIP_DEFLATED
+    except:
+        compression = zipfile.ZIP_STORED
+
+    modes = {zipfile.ZIP_DEFLATED: 'deflated',
+             zipfile.ZIP_STORED: 'stored',
+             }
+    zf = zipfile.ZipFile('AllSets.json.zip', mode='w')
+    try:
+        print 'adding AllSets.json with compression mode', modes[compression]
+        zf.write('AllSets.json', compress_type=compression)
+    finally:
+        #let's clear out the working files
+        os.remove('AllSets.pre.json')
+        os.remove('AllSets.json')
+        zf.close()
+
 if __name__ == '__main__':
     cards = get_cards()
     cards = correct_cards(cards)
@@ -607,4 +660,6 @@ if __name__ == '__main__':
     if downloadimages:
         download_images(mtgjson)
     writehtml(newest, mtgjson)
+    if makezip:
+        makeAllSets(mtgjson)
     #specialcards(mtgjson)
