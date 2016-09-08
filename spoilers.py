@@ -9,6 +9,7 @@ import sys
 import urllib
 import os
 import zipfile
+import time
 
 #variables for xml & json
 blockname = 'Kaladesh'
@@ -32,7 +33,6 @@ mythicenabled = True
 #in case the scraping goes wrong like the
 #rss feed being overwritten by blank or a new set coming out
 #this is a destructive backup, so it's only good for one oops
-#if we turn this off, we can remove the shutil dependency
 backupfiles = True
 
 #the two files that will be generated in program directory
@@ -580,6 +580,8 @@ def write_xml(mtgjson, cardsxml):
     print 'Newest: ' + str(newest)
     print 'Runtime: ' + str(datetime.datetime.today().strftime('%H:%M')) + ' on ' + str(datetime.date.today())
 
+    #for card in mtgjson['cards']:
+    #    print card['name']
     return newest
 
 def writehtml(newest, cards):
@@ -608,17 +610,26 @@ def download_images(mtgjson):
             urllib.urlretrieve(card['url'], 'images/' + card['name'] + '.jpg')
 
 def makeAllSets(mtgjson):
-    #we have to spoof a user-agent for mtgjson
-    class MyOpener(urllib.FancyURLopener):
-        version = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko / 20071127 Firefox / 2.0.0.11'
-    opener = MyOpener()
-    opener.retrieve('http://mtgjson.com/json/AllSets.json', 'AllSets.pre.json')
-    #let's remove the last } from mtgjson
-    #then put the new set code in there
-    with open('AllSets.pre.json', 'rb+') as filehandle:
-        filehandle.seek(-1, os.SEEK_END)
-        filehandle.truncate()
-        filehandle.write(',"' + setname + '":')
+    #let's see if we have an AllSets.pre.json, and how old it is.
+    #if it's more than a week old, let's grab a new one
+    getAllSets = True
+    if os.path.isfile('AllSets.pre.json'):
+        if (time.time() - os.path.getctime('AllSets.pre.json')) < 604800:
+            getAllSets = False
+            print "Found a current AllSets.pre.json, not grabbing a new one."
+    if getAllSets:
+        #we have to spoof a user-agent for mtgjson
+        class MyOpener(urllib.FancyURLopener):
+            version = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko / 20071127 Firefox / 2.0.0.11'
+        opener = MyOpener()
+        opener.retrieve('http://mtgjson.com/json/AllSets.json', 'AllSets.pre.json')
+        #let's remove the last } from mtgjson
+        #then put the new set code in there
+        with open('AllSets.pre.json', 'rb+') as filehandle:
+            filehandle.seek(-1, os.SEEK_END)
+            filehandle.truncate()
+            filehandle.write(',"' + setname + '":')
+
     #now let's smash together the old json
     #with our new one
     #and then close it!
@@ -628,7 +639,7 @@ def makeAllSets(mtgjson):
                 shutil.copyfileobj(fd, wfd, 1024 * 1024 * 10)
                 # 10MB per writing chunk to avoid reading big file into memory.
         wfd.write('}')
-    
+
     #let's zip it up, with compression if possible
     try:
         import zlib
@@ -644,9 +655,6 @@ def makeAllSets(mtgjson):
         print 'adding AllSets.json with compression mode', modes[compression]
         zf.write('AllSets.json', compress_type=compression)
     finally:
-        #let's clear out the working files
-        os.remove('AllSets.pre.json')
-        os.remove('AllSets.json')
         zf.close()
 
 if __name__ == '__main__':
