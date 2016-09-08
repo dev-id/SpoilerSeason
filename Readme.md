@@ -2,10 +2,18 @@
 
 ### Requirements ###
  * Python 2.7
- * python requests (pip install requests)
- * feedreader (pip install feedreader)
- * json
- * datetime
+ * Python Modules:
+    datetime
+    requests
+    feedparser
+    re
+    json
+    shutil
+    sys
+    urllib
+    os
+    zipfile
+
 
 ### Usage ###
     
