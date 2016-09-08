@@ -4,6 +4,8 @@ import requests
 import feedparser
 import re
 import json
+import shutil
+import sys
 #import hashlib
 
 #variables for xml & json
@@ -11,6 +13,17 @@ blockname = 'Kaladesh'
 setname = 'KLD'
 setlongname = 'Kaladesh'
 setreleasedate = '2016-09-30'
+
+#once we're at full spoil, we'll turn off mythic to prefer wotc's images
+#they're preferred anyway, but just in case ;)
+mythicenabled = True
+
+#we may want to back up files before scraping
+#in case the scraping goes wrong like the
+#rss feed being overwritten by blank or a new set coming out
+#this is a destructive backup, so it's only good for one oops
+#if we turn this off, we can remove the shutil dependency
+backupfiles = True
 
 #the two files that will be generated in program directory
 #default is SETCODE.json and SETCODE.xml
@@ -108,6 +121,17 @@ card_corrections = {
 
 #if you want to add a card manually
 #use this template and place the object in the manual_cards array
+#example values:
+#"cost": "X3BB",
+#"cmc": "6", #yes, it's a string - that's how it's scraped
+#"img": "http://media.wizards.com/2016/bVvMNuiu2i_KLD/en_0zfOjCQoWi.png",
+#"pow": "*/1",
+#"name": "Gideon, Maker of Tokens",
+#"rules": "+1: Make a super duper token.\n-20: Destroy stuff.",
+#"type": "Legendary Artifact Creature - Human Soldier Zombie Druid",
+#"setnumber": "666",
+#"rarity": "Mythic Rare",
+#"loyalty": 7, #loyalty is the only non-string value
 manual_card_template = [
     {
         "cost": '',
@@ -131,9 +155,9 @@ manual_cards = [
         "loyalty": 5,
         "name": 'Nissa, Nature\'s Artisan',
         "rules": '+1: You gain 3 life.\n\
-        -4: Reveal the top two cards of your library. \
-        Put all land cards from among them onto the battlefield and the rest into your hand.\n\
-        -12: Creatures you control get +5/+5 and gain trample until end of turn.',
+-4: Reveal the top two cards of your library. \
+Put all land cards from among them onto the battlefield and the rest into your hand.\n\
+-12: Creatures you control get +5/+5 and gain trample until end of turn.',
         "type": 'Planeswalker - Nissa',
         "setnumber": '270',
         "rarity": 'Mythic Rare',
@@ -145,12 +169,24 @@ manual_cards = [
         "loyalty": 5,
         "name": 'Chandra, Pyrogenius',
         "rules": '+2: Chandra, Pyrogenius deals 2 damage to each opponent.\n\
-                 -3: Chandra, Pyrogenius deals 4 damage to target creature.\n\
-                 -10: Chandra, Pyrogenius deals 6 damage to target player and\
-                  each creature he or she controls',
+-3: Chandra, Pyrogenius deals 4 damage to target creature.\n\
+-10: Chandra, Pyrogenius deals 6 damage to target player and \
+each creature he or she controls',
         "type": 'Planeswalker - Chandra',
         "setnumber": '265',
         "rarity": 'Mythic Rare',
+    },
+    {
+        "cost": '2GG',
+        "cmc": '4',
+        "img": 'http://img.tcgplayer.com/tcg_img/media_tcg/articles/0147_MTGKLD_EN_HRR.png',
+        "pow": '4/3',
+        "name": 'Bristling Hydra',
+        "rules": 'When Bristling Hydra enters the battlefield, you get {E}{E}{E} (three energy counters)\n\
+Pay {E}{E}{E}: Put a +1/+1 counter on Bristling Hydra. It gains hexproof until end of turn.',
+        "type": 'Creature - Hydra',
+        "setnumber": '147',
+        "rarity": 'Rare',
     }
 ]
 
@@ -170,8 +206,16 @@ def get_cards():
                 card[dg.items()[0][0]] = dg.items()[0][1]
         cards.append(card)
 
+    #if we didn't find any cards, let's bail out to prevent overwriting good data
+    count = 0
+    for card in cards:
+        count = count + 1
+    #let's assume there should be at least 5 good cards
+    #if there's less than 5 cards, why are you scraping?
+    if count < 5:
+        sys.exit("No cards found, exiting to prevent file overwrite")
+
     for manual_card in manual_cards:
-        incards = False
         #initialize some keys
         manual_card['colorArray'] = []
         manual_card['colorIdentityArray'] = []
@@ -186,13 +230,15 @@ def get_cards():
         if not manual_card.has_key('type'):
             manual_card['type'] = ''
         #see if this is a dupe
+        #and remove the spoiler version
+        #i trust my manual cards over their data
         for card in cards:
             if card['name'] == manual_card['name']:
-                incards = True
-                print 'Not inserting manual card, already found: ' + manual_card['name']
-        if not (incards):
-            print 'Inserting manual card: ' + manual_card['name']
-            cards.append(manual_card)
+                cards.remove(card)
+                print 'Found scraped card, deleting and using manual card: ' + manual_card['name']
+        print 'Inserting manual card: ' + manual_card['name']
+        cards.append(manual_card)
+
     return cards
 
 def correct_cards(cards):
@@ -264,7 +310,7 @@ def add_images(cards):
                 match3 = re.search(wotcpattern.format(c['name'].replace('\'','&rsquo;')), text3, re.DOTALL)
                 if match3:
                     c['img'] = match3.groupdict()['img']
-                else:
+                elif (mythicenabled):
                     match2 = re.search(mythicspoilerpattern.format((c['name']).lower().replace(' ', '').replace('&#x27;', '').replace('-', '').replace('\'','').replace(',', '')), text2, re.DOTALL)
                     if match2:
                         #print match2.group(0).replace(' src="', 'http://mythicspoiler.com/').replace('">', '')
@@ -273,7 +319,6 @@ def add_images(cards):
                         print('image for {} not found'.format(c['name']))
                         #print('we checked mythic for ' + c['altname'])
                     pass
-
 
 def make_json(cards, setjson):
     #initialize mtg format json
@@ -364,6 +409,9 @@ def make_json(cards, setjson):
         cardjson["manaCost"] = card['cost']
         cardjson["name"] = card['name']
         cardjson["number"] = cardnumber
+        #not sure if mtgjson has a list of acceptable rarities, but my application does
+        #so we'll warn me but continue to write a non-standard rarity (timeshifted?)
+        #may force 'special' in the future
         if card['rarity'] not in ['Mythic Rare','Rare','Uncommon','Common','Special']:
             print card['name'] + ' has rarity = ' + card['rarity']
         cardjson["rarity"] = card['rarity']
@@ -387,26 +435,36 @@ def make_json(cards, setjson):
             cardjson["layout"] = card['layout']
 
         cardsjson['cards'].append(cardjson)
+    if backupfiles:
+        shutil.copyfile(setjson, 'bak/' + setjson)
     with open(setjson, 'w') as outfile:
         json.dump(cardsjson, outfile, sort_keys=True, indent=2, separators=(',', ': '))
-    #specialjson = {
-    #    "Mythic Rare": [],
-    #    "Rare": [],
-    #    "Uncommon": [],
-    #    "Common": []
-    #}
-    #for card in cardsjson['cards']:
-    #    if card.has_key('layout'):
-    #        if card['layout'] == 'double-faced' and 'a' in card['number']:
-    #            specialjson[card['rarity']].append(card['name'].lower())
-    #for specialrarity in specialjson:
-        #print specialrarity + ': [
-        #for name in specialjson[specialrarity]:
-        #    print '"' + name + '"'
-       # print "]"
+
     return cardsjson
 
+def specialcards(cardsjson):
+    #this is a fuction used for my app to create a list of 'special' cards
+    #that are inserted differently than regular cards in a 'pack'
+    #specifically, the below is for DFC, exactly, for SOI/EMN
+    specialjson = {
+        "Mythic Rare": [],
+        "Rare": [],
+        "Uncommon": [],
+        "Common": []
+    }
+    for card in cardsjson['cards']:
+        if card.has_key('layout'):
+            if card['layout'] == 'double-faced' and 'a' in card['number']:
+                specialjson[card['rarity']].append(card['name'].lower())
+    for specialrarity in specialjson:
+        print specialrarity + ': ['
+        for name in specialjson[specialrarity]:
+            print '"' + name + '"'
+        print "]"
+
 def write_xml(mtgjson, cardsxml):
+    if backupfiles:
+        shutil.copyfile(cardsxml, 'bak/' + cardsxml)
     cardsxml = open(cardsxml, 'w')
     cardsxml.truncate()
     count = 0
@@ -501,7 +559,7 @@ def write_xml(mtgjson, cardsxml):
     if dfccount > 0:
         print 'DFC: ' + str(dfccount)
     print 'Newest: ' + str(newest)
-    print 'Time: ' + str(datetime.datetime.today().strftime('%H:%M'))
+    print 'Runtime: ' + str(datetime.datetime.today().strftime('%H:%M')) + ' on ' + str(datetime.date.today())
 
     #for card in mtgjson['cards']:
     #    print card['name']
@@ -520,6 +578,8 @@ def writehtml(newest, cards):
     lines
     f.close()
 
+    if backupfiles:
+        shutil.copyfile(html, 'bak/' + html)
     f = open(html, 'w')
     f.writelines(lines)
     f.close()
@@ -535,3 +595,4 @@ if __name__ == '__main__':
     mtgjson = make_json(cards, setjson)
     newest = write_xml(mtgjson, cardsxml)
     writehtml(newest, mtgjson)
+    #specialcards(mtgjson)
