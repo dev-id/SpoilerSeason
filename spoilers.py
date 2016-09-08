@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
-import datetime
 import requests
 import feedparser
 import re
 import json
-import shutil
-import sys
-import urllib
-import os
-import zipfile
+
+#this is the simplified version of SpoilerSeason
+#it doesn't have all the bells and whistles, just makes a xml and json file.
+#it is not kept current with corrections
 
 #variables for xml & json
 blockname = 'Kaladesh'
@@ -16,37 +14,14 @@ setname = 'KLD'
 setlongname = 'Kaladesh'
 setreleasedate = '2016-09-30'
 
-#you can create a AllSets.json.zip by grabbing the current one from mtgjson
-#and slapping the current set on the end of it. disabled by default
-makezip = False
-
-#you can download a local copy of images (to images/Card Name.jpg)
-#yes, we call it .jpg no matter - it's more cockatrice-friendly
-downloadimages = False
-
 #once we're at full spoil, we'll turn off mythic to prefer wotc's images
 #they're preferred anyway, but just in case ;)
 mythicenabled = True
-
-#we may want to back up files before scraping
-#in case the scraping goes wrong like the
-#rss feed being overwritten by blank or a new set coming out
-#this is a destructive backup, so it's only good for one oops
-#if we turn this off, we can remove the shutil dependency
-backupfiles = True
 
 #the two files that will be generated in program directory
 #default is SETCODE.json and SETCODE.xml
 setjson = setname + '.json'
 cardsxml = setname + '.xml'
-
-#for maintaining an html page with changes.
-#format is
-#line 23: number of cards in xml
-#line 27: latest card added
-#line 29: date of last add
-#line 31: time of last add
-html = 'index.html'
 
 #static
 SPOILER_RSS = 'http://www.mtgsalvation.com/spoilers.rss'
@@ -80,62 +55,6 @@ related_cards = {}
 #new keys will be created (loyalty)
 #key values: name, img, cost, type, pow, rules, rarity, setnumber, loyalty, colorArray, colorIdentityArray, color, colorIdentity
 card_corrections = {
-    "Glint-Sleeved Artisan": {
-        "name": "Glint-Sleeve Artisan"
-    },
-    "Fleetwheel Cruiser": {
-        "pow": "5/3",
-        "type": "Artifact - Vehicle"
-    },
-    "Golden Wire Fox": {
-        "pow": "2/2"
-    },
-    "Sky Skiff": {
-        "pow": "2/3"
-    },
-    "Skysovereign, Consul Flagship": {
-        "pow": "6/5"
-    },
-    "Ovalchase Dragster": {
-        "pow": "6/1"
-    },
-    "Saheeli Rai": {
-        "loyalty": 3
-    },
-    "Demon of Shadowy Schemes": {
-        "name": "Demon of Shady Schemes"
-    },
-    "Larger than Life": {
-        "name": "Larger Than Life",
-        "img": "https://pbs.twimg.com/media/CrmPhI1WIAAl77B.png"
-    },
-    "Pia Nalaar": {
-        "img": "http://media.wizards.com/2016/bVvMNuiu2i_KLD/en_z8u7TFxf8R.png"
-    },
-    "Master Trinketcrafter": {
-        "img": "http://media-dominaria.cursecdn.com/avatars/thumbnails/126/862/200/283/636086937653130201.png"
-    },
-    "Multiform Wonder": {
-        "img": "http://media.wizards.com/2016/bVvMNuiu2i_KLD/en_0zfOjCQoWi.png"
-    },
-    " Rashmi, Eterniafter ": {
-        "name": "delete"
-    },
-    "DeputisProtester": {
-        "name": "delete"
-    },
-    "Decocotion Module": {
-        "name": "Decoction Module"
-    },
-    "Chandra, Torch of Defiance": {
-        "loyalty": 4
-    },
-    "Nissa, Nature's Artisan": {
-        "loyalty": 5
-    },
-    "Nissa, Vital Force": {
-        "loyalty": 5
-    }
 }
 
 #if you want to add a card manually
@@ -166,48 +85,7 @@ manual_card_template = [
 ]
 
 #array for storing manually entered cards, mtgs can be slow
-manual_cards = [
-    {
-        "cost": '4GG',
-        "cmc": '6',
-        "img": 'http://media.wizards.com/2016/bVvMNuiu2i_KLD/en_YXvBDsDjHq.png',
-        "loyalty": 5,
-        "name": 'Nissa, Nature\'s Artisan',
-        "rules": '+1: You gain 3 life.\n\
--4: Reveal the top two cards of your library. \
-Put all land cards from among them onto the battlefield and the rest into your hand.\n\
--12: Creatures you control get +5/+5 and gain trample until end of turn.',
-        "type": 'Planeswalker - Nissa',
-        "setnumber": '270',
-        "rarity": 'Mythic Rare',
-    },
-    {
-        "cost": '4RR',
-        "cmc": '6',
-        "img": 'http://media.wizards.com/2016/bVvMNuiu2i_KLD/en_CO4tkc9sLe.png',
-        "loyalty": 5,
-        "name": 'Chandra, Pyrogenius',
-        "rules": '+2: Chandra, Pyrogenius deals 2 damage to each opponent.\n\
--3: Chandra, Pyrogenius deals 4 damage to target creature.\n\
--10: Chandra, Pyrogenius deals 6 damage to target player and \
-each creature he or she controls',
-        "type": 'Planeswalker - Chandra',
-        "setnumber": '265',
-        "rarity": 'Mythic Rare',
-    },
-    {
-        "cost": '2GG',
-        "cmc": '4',
-        "img": 'http://img.tcgplayer.com/tcg_img/media_tcg/articles/0147_MTGKLD_EN_HRR.png',
-        "pow": '4/3',
-        "name": 'Bristling Hydra',
-        "rules": 'When Bristling Hydra enters the battlefield, you get {E}{E}{E} (three energy counters)\n\
-Pay {E}{E}{E}: Put a +1/+1 counter on Bristling Hydra. It gains hexproof until end of turn.',
-        "type": 'Creature - Hydra',
-        "setnumber": '147',
-        "rarity": 'Rare',
-    }
-]
+manual_cards = []
 
 def get_cards():
     text = requests.get(SPOILER_RSS).text
@@ -224,15 +102,6 @@ def get_cards():
                 dg = match.groupdict()
                 card[dg.items()[0][0]] = dg.items()[0][1]
         cards.append(card)
-
-    #if we didn't find any cards, let's bail out to prevent overwriting good data
-    count = 0
-    for card in cards:
-        count = count + 1
-    #let's assume there should be at least 5 good cards
-    #if there's less than 5 cards, why are you scraping?
-    if count < 5:
-        sys.exit("No cards found, exiting to prevent file overwrite")
 
     for manual_card in manual_cards:
         #initialize some keys
@@ -405,7 +274,7 @@ def make_json(cards, setjson):
             cardnames.append(related_cards[card['name']])
             cardnumber += 'a'
             card['layout'] = 'double-faced'
-            card['name']
+
         for namematch in related_cards:
             if card['name'] == related_cards[namematch]:
                 card['layout'] = 'double-faced'
@@ -454,36 +323,13 @@ def make_json(cards, setjson):
             cardjson["layout"] = card['layout']
 
         cardsjson['cards'].append(cardjson)
-    if backupfiles:
-        shutil.copyfile(setjson, 'bak/' + setjson)
+
     with open(setjson, 'w') as outfile:
         json.dump(cardsjson, outfile, sort_keys=True, indent=2, separators=(',', ': '))
 
     return cardsjson
 
-def specialcards(cardsjson):
-    #this is a fuction used for my app to create a list of 'special' cards
-    #that are inserted differently than regular cards in a 'pack'
-    #specifically, the below is for DFC, exactly, for SOI/EMN
-    specialjson = {
-        "Mythic Rare": [],
-        "Rare": [],
-        "Uncommon": [],
-        "Common": []
-    }
-    for card in cardsjson['cards']:
-        if card.has_key('layout'):
-            if card['layout'] == 'double-faced' and 'a' in card['number']:
-                specialjson[card['rarity']].append(card['name'].lower())
-    for specialrarity in specialjson:
-        print specialrarity + ': ['
-        for name in specialjson[specialrarity]:
-            print '"' + name + '"'
-        print "]"
-
 def write_xml(mtgjson, cardsxml):
-    if backupfiles:
-        shutil.copyfile(cardsxml, 'bak/' + cardsxml)
     cardsxml = open(cardsxml, 'w')
     cardsxml.truncate()
     count = 0
@@ -578,76 +424,10 @@ def write_xml(mtgjson, cardsxml):
     if dfccount > 0:
         print 'DFC: ' + str(dfccount)
     print 'Newest: ' + str(newest)
-    print 'Runtime: ' + str(datetime.datetime.today().strftime('%H:%M')) + ' on ' + str(datetime.date.today())
 
+    #for card in mtgjson['cards']:
+    #    print card['name']
     return newest
-
-def writehtml(newest, cards):
-    f = open(html, 'r')
-    lines = f.readlines()
-    count = 0
-    for card in cards['cards']:
-        count = count + 1
-    lines[22] = str(count) + '\n'
-    lines[26] = newest + '\n'
-    lines[28] = str(datetime.date.today()) + '\n'
-    lines[30] = str(datetime.datetime.today().strftime('%H:%M')) + '\n'
-    lines
-    f.close()
-
-    if backupfiles:
-        shutil.copyfile(html, 'bak/' + html)
-    f = open(html, 'w')
-    f.writelines(lines)
-    f.close()
-
-def download_images(mtgjson):
-    for card in mtgjson['cards']:
-        if card['url'] and not os.path.isfile('images/' + card['name'] + '.jpg') :
-            print 'Downloading ' + card['url'] + ' to images/' + card['name'] + '.jpg'
-            urllib.urlretrieve(card['url'], 'images/' + card['name'] + '.jpg')
-
-def makeAllSets(mtgjson):
-    #we have to spoof a user-agent for mtgjson
-    class MyOpener(urllib.FancyURLopener):
-        version = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko / 20071127 Firefox / 2.0.0.11'
-    opener = MyOpener()
-    opener.retrieve('http://mtgjson.com/json/AllSets.json', 'AllSets.pre.json')
-    #let's remove the last } from mtgjson
-    #then put the new set code in there
-    with open('AllSets.pre.json', 'rb+') as filehandle:
-        filehandle.seek(-1, os.SEEK_END)
-        filehandle.truncate()
-        filehandle.write(',"' + setname + '":')
-    #now let's smash together the old json
-    #with our new one
-    #and then close it!
-    with open('AllSets.json', 'wb') as wfd:
-        for f in ['AllSets.pre.json', setjson]:
-            with open(f, 'rb') as fd:
-                shutil.copyfileobj(fd, wfd, 1024 * 1024 * 10)
-                # 10MB per writing chunk to avoid reading big file into memory.
-        wfd.write('}')
-    
-    #let's zip it up, with compression if possible
-    try:
-        import zlib
-        compression = zipfile.ZIP_DEFLATED
-    except:
-        compression = zipfile.ZIP_STORED
-
-    modes = {zipfile.ZIP_DEFLATED: 'deflated',
-             zipfile.ZIP_STORED: 'stored',
-             }
-    zf = zipfile.ZipFile('AllSets.json.zip', mode='w')
-    try:
-        print 'adding AllSets.json with compression mode', modes[compression]
-        zf.write('AllSets.json', compress_type=compression)
-    finally:
-        #let's clear out the working files
-        os.remove('AllSets.pre.json')
-        os.remove('AllSets.json')
-        zf.close()
 
 if __name__ == '__main__':
     cards = get_cards()
@@ -656,10 +436,5 @@ if __name__ == '__main__':
     cards = correct_cards(cards)
     add_images(cards)
     mtgjson = make_json(cards, setjson)
-    newest = write_xml(mtgjson, cardsxml)
-    if downloadimages:
-        download_images(mtgjson)
-    writehtml(newest, mtgjson)
-    if makezip:
-        makeAllSets(mtgjson)
+
     #specialcards(mtgjson)
