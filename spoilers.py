@@ -91,6 +91,7 @@ related_cards = {}
 #and handles incorrect name
 #new keys will be created (loyalty)
 #key values: name, img, cost, type, pow, rules, rarity, setnumber, loyalty, colorArray, colorIdentityArray, color, colorIdentity
+delete_cards = ['Plains', 'Island', 'Swamp', 'Mountain', 'Forest', " Rashmi, Eterniafter ", 'DeputisProtester']
 card_corrections = {
     "Glint-Sleeved Artisan": {
         "name": "Glint-Sleeve Artisan"
@@ -130,12 +131,6 @@ card_corrections = {
     "Multiform Wonder": {
         "img": "http://media.wizards.com/2016/bVvMNuiu2i_KLD/en_0zfOjCQoWi.png"
     },
-    " Rashmi, Eterniafter ": {
-        "name": "delete"
-    },
-    "DeputisProtester": {
-        "name": "delete"
-    },
     "Decocotion Module": {
         "name": "Decoction Module"
     },
@@ -162,8 +157,10 @@ card_corrections = {
     },
     "Smuggler's Copter": {
         "pow": "3/3"
+    },
+    "Craftmaster Paradigm": {
+        "img": "http://media-dominaria.cursecdn.com/avatars/127/241/636092636462476481.png"
     }
-
 }
 
 #if you want to add a card manually
@@ -195,6 +192,20 @@ manual_card_template = [
 
 #array for storing manually entered cards, mtgs can be slow
 manual_cards = [
+    {
+        "cost": '4RR',
+        "cmc": '6',
+        "img": 'http://mythicspoiler.com/kld/cards/combustiblegearhulk.jpg',
+        "pow": '6/6',
+        "name": 'Combustible Gearhulk',
+        "rules": 'First Strike\nWhen Combustible Gearhulk enters the battlefield, \
+target opponent may have you draw three cards. If the player doesn\'t, \
+put the top three cards of your library into your graveyard, then Combustible Gearhulk \
+deals damage to that player equal to the total converted mana cost of those cards.',
+        "type": 'Artifact Creature - Construct',
+        "setnumber": '112',
+        "rarity": 'Mythic Rare',
+    },
     {
         "cost": 'W',
         "cmc": '1',
@@ -308,8 +319,6 @@ def get_cards():
         #print 'Inserting manual card: ' + manual_card['name']
         cards.append(manual_card)
 
-
-
     return cards
 
 def correct_cards(cards):
@@ -353,18 +362,23 @@ def correct_cards(cards):
                 if (c + '}') in card['rules'] or (str.lower(c) + '}') in card['rules']:
                     if not (c in card['colorIdentity']):
                         card['colorIdentity'] += c
+    cleanedcards = []
+    for card in cards:
+        if not card['name'] in delete_cards:
+            cleanedcards.append(card)
+    cards = cleanedcards
 
-        if card['name'] == 'delete':
-            cards.remove(card)
-
-    #we're going to see if the card count has increased, if it hasn't, bail.
+    # we're going to see if the card count has increased, if it hasn't, bail.
     #remove dupes
     cardnames = []
+    nodupes = []
     for card in cards:
         cardnames.append(card['name'])
-        if cardnames.count(card['name']) > 1:
-            cards.remove(card)
-
+        if not cardnames.count(card['name']) > 1:
+            nodupes.append(card)
+            #cards.remove(card)
+            #print 'removing duplicate card ' + card['name']
+    cards = nodupes
     if os.path.isfile(setjson):
         with open(setjson) as data_file:
             oldcards = json.load(data_file)
@@ -383,11 +397,12 @@ def correct_cards(cards):
             if not new['name'] == 'delete':
                 newcount = newcount + 1
                 #print new['name']
-        #bail on execution if we don't have any new cards
-        #and we're not forcing
+        #print(str(newcount) + ' vs ' + str(oldcount))
         if not newcount > oldcount and not forcerun:
             sys.exit("No new cards found (" + str(newcount) + " cards)")
 
+    #cards.append(cost='',cmc='',img='',pow='',name='',rules='',type='',
+    #            color='', altname='', colorIdentity='', colorArray=[], colorIdentityArray=[], setnumber='', rarity='')
     return cards
 
 def add_images(cards):
@@ -495,6 +510,7 @@ def make_json(cards, setjson):
             cardtypes.append(card['type'].replace('instant','Instant'))
         else:
             cardtypes = card['type'].replace('Legendary ','').split('-')[0].split(' ')[:-1]
+        #print card['name']
         if card['cmc'] == '':
             card['cmc'] = 0
         cardjson = {}
@@ -655,6 +671,8 @@ def write_xml(mtgjson, cardsxml):
     print 'Newest: ' + str(newest)
     print 'Runtime: ' + str(datetime.datetime.today().strftime('%H:%M')) + ' on ' + str(datetime.date.today())
 
+    #for card in mtgjson['cards']:
+    #    print card['name']
     return newest
 
 def writehtml(newest, cards):
@@ -739,7 +757,9 @@ if __name__ == '__main__':
     cards = correct_cards(cards)
     #for some reason bedlam reveler doesn't get caught the first time through...
     #cards = correct_cards(cards)
+    #cards = correct_cards(cards)
     add_images(cards)
+    #mtgjson = make_json(cards, setjson) #moved this to !offlinemode
     if offlinemode:
         with open(setjson) as data_file:
             mtgjson = json.load(data_file)
