@@ -11,15 +11,21 @@ import os
 import zipfile
 import time
 
+requests.packages.urllib3.disable_warnings()
+
 #variables for xml & json
 blockname = 'Kaladesh'
 setname = 'KLD'
 setlongname = 'Kaladesh'
 setreleasedate = '2016-09-30'
 
+#if there's no new cards, the default option is to kill the program
+#if you want to do updates, you can force the program to run with this variable
+forcerun = False
+
 #you can create a AllSets.json.zip by grabbing the current one from mtgjson
 #and slapping the current set on the end of it. disabled by default
-makezip = False
+makezip = True
 
 #you can download a local copy of images (to images/Card Name.jpg)
 #yes, we call it .jpg no matter - it's more cockatrice-friendly
@@ -33,6 +39,7 @@ mythicenabled = True
 #in case the scraping goes wrong like the
 #rss feed being overwritten by blank or a new set coming out
 #this is a destructive backup, so it's only good for one oops
+#if we turn this off, we can remove the shutil dependency
 backupfiles = True
 
 #the two files that will be generated in program directory
@@ -47,6 +54,11 @@ cardsxml = setname + '.xml'
 #line 29: date of last add
 #line 31: time of last add
 html = 'index.html'
+
+#once mtgs removes or changes their spoilers.rss, this program will stop working.
+#if we switch to offline mode, we can still make the xml, html, and smash the json
+#if we have a good setcode.json
+offlinemode = False
 
 #static
 SPOILER_RSS = 'http://www.mtgsalvation.com/spoilers.rss'
@@ -135,7 +147,23 @@ card_corrections = {
     },
     "Nissa, Vital Force": {
         "loyalty": 5
+    },
+    "Wildest Dreams": {
+        "img": "http://media-dominaria.cursecdn.com/avatars/127/172/636089412426252877.png"
+    },
+    "Acrobatic Maneuver": {
+        "img": "http://media-dominaria.cursecdn.com/avatars/127/182/636089769798790258.png"
+    },
+    "Midnight Oil": {
+        "img": "http://media-dominaria.cursecdn.com/avatars/127/183/636089778778747687.png"
+    },
+    "Noxious Gearhulk": {
+        "pow": "5/4"
+    },
+    "Smuggler's Copter": {
+        "pow": "3/3"
     }
+
 }
 
 #if you want to add a card manually
@@ -167,6 +195,28 @@ manual_card_template = [
 
 #array for storing manually entered cards, mtgs can be slow
 manual_cards = [
+    {
+        "cost": 'W',
+        "cmc": '1',
+        "img": 'http://s3.gatheringmagic.com/uploads/2016/09/09/AU_1.png',
+        "pow": '',
+        "name": 'Fragmentize',
+        "rules": 'Destroy target artifact or enchantment with converted mana cost 4 or less.',
+        "type": 'Sorcery',
+        "setnumber": '14',
+        "rarity": 'Common',
+    },
+    {
+        "cost": '2R',
+        "cmc": '3',
+        "img": 'https://cdn.pastemagazine.com/www/articles/Welding%20Sparks.png',
+        "pow": '',
+        "name": 'Welding Sparks',
+        "rules": 'Welding Sparks deals X damage to target creature, where X is 3 plus the number of artifacts you control.',
+        "type": 'Instant',
+        "setnumber": '140',
+        "rarity": 'Common',
+    },
     {
         "cost": '4GG',
         "cmc": '6',
@@ -254,24 +304,16 @@ def get_cards():
         for card in cards:
             if card['name'] == manual_card['name']:
                 cards.remove(card)
-                print 'Found scraped card, deleting and using manual card: ' + manual_card['name']
-        print 'Inserting manual card: ' + manual_card['name']
+                #print 'Found scraped card, deleting and using manual card: ' + manual_card['name']
+        #print 'Inserting manual card: ' + manual_card['name']
         cards.append(manual_card)
+
+
 
     return cards
 
 def correct_cards(cards):
     for card in cards:
-        #remove some weird entries in the rss
-        if card['name'] == 'delete':
-            cards.remove(card)
-        elif card['name'] == ' Rashmi, Eterniafter ':
-            cards.remove(card)
-        #elif card['name'] == 'DeputisProtester':
-        #    cards.remove(card)
-        if card['name'] == 'Demon of Shadowy Schemes':
-            card['name'] = 'Demon of Shady Schemes'
-
         if card['name'] in card_corrections:
             for correction in card_corrections[card['name']]:
                 if correction != 'name':
@@ -289,7 +331,9 @@ def correct_cards(cards):
             .replace('&quot;', '"') \
             .replace('blkocking', 'blocking').replace('&amp;bull;','*')\
             .replace('comes into the','enters the')\
-            .replace('threeor', 'three or')
+            .replace('threeor', 'three or')\
+            .replace('[i]','')\
+            .replace('[/i]','')
 
         if 'cost' in card and len(card['cost']) > 0:
             m = re.search('(\d+)', card['cost'].replace('X',''))
@@ -310,8 +354,40 @@ def correct_cards(cards):
                     if not (c in card['colorIdentity']):
                         card['colorIdentity'] += c
 
-    #cards.append(cost='',cmc='',img='',pow='',name='',rules='',type='',
-    #            color='', altname='', colorIdentity='', colorArray=[], colorIdentityArray=[], setnumber='', rarity='')
+        if card['name'] == 'delete':
+            cards.remove(card)
+
+    #we're going to see if the card count has increased, if it hasn't, bail.
+    #remove dupes
+    cardnames = []
+    for card in cards:
+        cardnames.append(card['name'])
+        if cardnames.count(card['name']) > 1:
+            cards.remove(card)
+
+    if os.path.isfile(setjson):
+        with open(setjson) as data_file:
+            oldcards = json.load(data_file)
+        oldcount = 0
+        newcount = 0
+        for old in oldcards['cards']:
+            #print old['name']
+            oldcount = oldcount + 1
+        for new in cards:
+            isnew = True
+            for oldcard in oldcards['cards']:
+                if oldcard['name'] == new['name']:
+                    isnew = False
+            if isnew:
+                print 'New card! ' + new['name']
+            if not new['name'] == 'delete':
+                newcount = newcount + 1
+                #print new['name']
+        #bail on execution if we don't have any new cards
+        #and we're not forcing
+        if not newcount > oldcount and not forcerun:
+            sys.exit("No new cards found (" + str(newcount) + " cards)")
+
     return cards
 
 def add_images(cards):
@@ -419,7 +495,6 @@ def make_json(cards, setjson):
             cardtypes.append(card['type'].replace('instant','Instant'))
         else:
             cardtypes = card['type'].replace('Legendary ','').split('-')[0].split(' ')[:-1]
-        #print card['name']
         if card['cmc'] == '':
             card['cmc'] = 0
         cardjson = {}
@@ -580,8 +655,6 @@ def write_xml(mtgjson, cardsxml):
     print 'Newest: ' + str(newest)
     print 'Runtime: ' + str(datetime.datetime.today().strftime('%H:%M')) + ' on ' + str(datetime.date.today())
 
-    #for card in mtgjson['cards']:
-    #    print card['name']
     return newest
 
 def writehtml(newest, cards):
@@ -614,9 +687,10 @@ def makeAllSets(mtgjson):
     #if it's more than a week old, let's grab a new one
     getAllSets = True
     if os.path.isfile('AllSets.pre.json'):
-        if (time.time() - os.path.getctime('AllSets.pre.json')) < 604800:
+        allSetsAge = (time.time() - os.path.getctime('AllSets.pre.json'))
+        if (allSetsAge < 604800):
             getAllSets = False
-            print "Found a current AllSets.pre.json, not grabbing a new one."
+            #print "Found a current (" + str(datetime.timedelta(minutes=allSetsAge/60)) + ") AllSets.pre.json, not grabbing a new one."
     if getAllSets:
         #we have to spoof a user-agent for mtgjson
         class MyOpener(urllib.FancyURLopener):
@@ -652,22 +726,29 @@ def makeAllSets(mtgjson):
              }
     zf = zipfile.ZipFile('AllSets.json.zip', mode='w')
     try:
-        print 'adding AllSets.json with compression mode', modes[compression]
+        #print 'adding AllSets.json with compression mode', modes[compression]
         zf.write('AllSets.json', compress_type=compression)
     finally:
+        #let's clear out the working files
+        #os.remove('AllSets.pre.json')
+        os.remove('AllSets.json')
         zf.close()
 
 if __name__ == '__main__':
     cards = get_cards()
     cards = correct_cards(cards)
     #for some reason bedlam reveler doesn't get caught the first time through...
-    cards = correct_cards(cards)
+    #cards = correct_cards(cards)
     add_images(cards)
-    mtgjson = make_json(cards, setjson)
+    if offlinemode:
+        with open(setjson) as data_file:
+            mtgjson = json.load(data_file)
+    else:
+        mtgjson = make_json(cards, setjson)
+    if makezip:
+        makeAllSets(mtgjson)
     newest = write_xml(mtgjson, cardsxml)
     if downloadimages:
         download_images(mtgjson)
     writehtml(newest, mtgjson)
-    if makezip:
-        makeAllSets(mtgjson)
     #specialcards(mtgjson)
