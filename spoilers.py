@@ -545,7 +545,7 @@ def make_json(cards, setjson):
             cardjson["layout"] = card['layout']
 
         cardsjson['cards'].append(cardjson)
-    if backupfiles:
+    if backupfiles and os.path.isfile(setjson):
         shutil.copyfile(setjson, 'bak/' + setjson)
     with open(setjson, 'w') as outfile:
         json.dump(cardsjson, outfile, sort_keys=True, indent=2, separators=(',', ': '))
@@ -573,7 +573,7 @@ def specialcards(cardsjson):
         print "]"
 
 def write_xml(mtgjson, cardsxml):
-    if backupfiles:
+    if backupfiles and os.path.isfile(cardsxml):
         shutil.copyfile(cardsxml, 'bak/' + cardsxml)
     cardsxml = open(cardsxml, 'w')
     cardsxml.truncate()
@@ -761,8 +761,11 @@ if __name__ == '__main__':
     add_images(cards)
     #mtgjson = make_json(cards, setjson) #moved this to !offlinemode
     if offlinemode:
-        with open(setjson) as data_file:
-            mtgjson = json.load(data_file)
+        if os.path.isfile(setjson):
+            with open(setjson) as data_file:
+                mtgjson = json.load(data_file)
+        else:
+            print "No set json file found, cannot run in Offline Mode"
     else:
         mtgjson = make_json(cards, setjson)
     if makezip:
