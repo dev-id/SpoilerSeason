@@ -14,14 +14,20 @@ import time
 requests.packages.urllib3.disable_warnings()
 
 #variables for xml & json
-blockname = 'Kaladesh'
-setname = 'KLD'
-setlongname = 'Kaladesh'
-setreleasedate = '2016-09-30'
+#leave blockname = '' if not part of a block
+blockname = ''
+setname = 'C16'
+setlongname = 'Commander 2016'
+setreleasedate = '2016-11-11'
+#the number to the right of the slash in the bottom left of the card (total number of cards in set)
+setcount = 351
+#set types: "core", "expansion", "reprint", "box", "un", "from the vault", "premium deck", "duel deck",
+    # "starter", "commander", "planechase", "archenemy", "promo", "vanguard", "masters", "conspiracy"
+settype = 'commander'
 
 #if there's no new cards, the default option is to kill the program
 #if you want to do updates, you can force the program to run with this variable
-forcerun = False
+forcerun = True
 
 #you can create a AllSets.json.zip by grabbing the current one from mtgjson
 #and slapping the current set on the end of it. disabled by default
@@ -29,11 +35,13 @@ makezip = True
 
 #you can download a local copy of images (to images/Card Name.jpg)
 #yes, we call it .jpg no matter - it's more cockatrice-friendly
-downloadimages = False
+#we can grab new images even if we already have one with overwriteimages
+downloadimages = True
+overwriteimages = False
 
 #once we're at full spoil, we'll turn off mythic to prefer wotc's images
 #they're preferred anyway, but just in case ;)
-mythicenabled = True
+fullspoil = False
 
 #we may want to back up files before scraping
 #in case the scraping goes wrong like the
@@ -56,7 +64,7 @@ cardsxml = setname + '.xml'
 html = 'index.html'
 
 #once mtgs removes or changes their spoilers.rss, this program will stop working.
-#if we switch to offline mode, we can still make the xml, html, and smash the json
+#if we switch to offline mode, we can still make the xml, html, and smash the AllSets
 #if we have a good setcode.json
 offlinemode = False
 
@@ -91,75 +99,13 @@ related_cards = {}
 #and handles incorrect name
 #new keys will be created (loyalty)
 #key values: name, img, cost, type, pow, rules, rarity, setnumber, loyalty, colorArray, colorIdentityArray, color, colorIdentity
-delete_cards = ['Plains', 'Island', 'Swamp', 'Mountain', 'Forest', " Rashmi, Eterniafter ", 'DeputisProtester']
+delete_cards = ['Plains', 'Island', 'Swamp', 'Mountain', 'Forest']
 card_corrections = {
-    "Glint-Sleeved Artisan": {
-        "name": "Glint-Sleeve Artisan"
+    'Silas Renn, Seeker Adept': {
+        'pow': '2/2'
     },
-    "Fleetwheel Cruiser": {
-        "pow": "5/3",
-        "type": "Artifact - Vehicle"
-    },
-    "Golden Wire Fox": {
-        "pow": "2/2"
-    },
-    "Sky Skiff": {
-        "pow": "2/3"
-    },
-    "Skysovereign, Consul Flagship": {
-        "pow": "6/5"
-    },
-    "Ovalchase Dragster": {
-        "pow": "6/1"
-    },
-    "Saheeli Rai": {
-        "loyalty": 3
-    },
-    "Demon of Shadowy Schemes": {
-        "name": "Demon of Shady Schemes"
-    },
-    "Larger than Life": {
-        "name": "Larger Than Life",
-        "img": "https://pbs.twimg.com/media/CrmPhI1WIAAl77B.png"
-    },
-    "Pia Nalaar": {
-        "img": "http://media.wizards.com/2016/bVvMNuiu2i_KLD/en_z8u7TFxf8R.png"
-    },
-    "Master Trinketcrafter": {
-        "img": "http://media-dominaria.cursecdn.com/avatars/thumbnails/126/862/200/283/636086937653130201.png"
-    },
-    "Multiform Wonder": {
-        "img": "http://media.wizards.com/2016/bVvMNuiu2i_KLD/en_0zfOjCQoWi.png"
-    },
-    "Decocotion Module": {
-        "name": "Decoction Module"
-    },
-    "Chandra, Torch of Defiance": {
-        "loyalty": 4
-    },
-    "Nissa, Nature's Artisan": {
-        "loyalty": 5
-    },
-    "Nissa, Vital Force": {
-        "loyalty": 5
-    },
-    "Wildest Dreams": {
-        "img": "http://media-dominaria.cursecdn.com/avatars/127/172/636089412426252877.png"
-    },
-    "Acrobatic Maneuver": {
-        "img": "http://media-dominaria.cursecdn.com/avatars/127/182/636089769798790258.png"
-    },
-    "Midnight Oil": {
-        "img": "http://media-dominaria.cursecdn.com/avatars/127/183/636089778778747687.png"
-    },
-    "Noxious Gearhulk": {
-        "pow": "5/4"
-    },
-    "Smuggler's Copter": {
-        "pow": "3/3"
-    },
-    "Craftmaster Paradigm": {
-        "img": "http://media-dominaria.cursecdn.com/avatars/127/241/636092636462476481.png"
+    'Sidar Kondo of Jamurra': {
+        'name': 'Sidar Kondo of Jamuraa'
     }
 }
 
@@ -170,7 +116,7 @@ card_corrections = {
 #"cmc": "6", #yes, it's a string - that's how it's scraped
 #"img": "http://media.wizards.com/2016/bVvMNuiu2i_KLD/en_0zfOjCQoWi.png",
 #"pow": "*/1",
-#"name": "Gideon, Maker of Tokens",
+#"name": "Elspeth, Maker of Tokens",
 #"rules": "+1: Make a super duper token.\n-20: Destroy stuff.",
 #"type": "Legendary Artifact Creature - Human Soldier Zombie Druid",
 #"setnumber": "666",
@@ -187,91 +133,14 @@ manual_card_template = [
         "type": '',
         "setnumber": '',
         "rarity": '',
-    }
+    },
 ]
 
 #array for storing manually entered cards, mtgs can be slow
-manual_cards = [
-    {
-        "cost": '4RR',
-        "cmc": '6',
-        "img": 'http://mythicspoiler.com/kld/cards/combustiblegearhulk.jpg',
-        "pow": '6/6',
-        "name": 'Combustible Gearhulk',
-        "rules": 'First Strike\nWhen Combustible Gearhulk enters the battlefield, \
-target opponent may have you draw three cards. If the player doesn\'t, \
-put the top three cards of your library into your graveyard, then Combustible Gearhulk \
-deals damage to that player equal to the total converted mana cost of those cards.',
-        "type": 'Artifact Creature - Construct',
-        "setnumber": '112',
-        "rarity": 'Mythic Rare',
-    },
-    {
-        "cost": 'W',
-        "cmc": '1',
-        "img": 'http://s3.gatheringmagic.com/uploads/2016/09/09/AU_1.png',
-        "pow": '',
-        "name": 'Fragmentize',
-        "rules": 'Destroy target artifact or enchantment with converted mana cost 4 or less.',
-        "type": 'Sorcery',
-        "setnumber": '14',
-        "rarity": 'Common',
-    },
-    {
-        "cost": '2R',
-        "cmc": '3',
-        "img": 'https://cdn.pastemagazine.com/www/articles/Welding%20Sparks.png',
-        "pow": '',
-        "name": 'Welding Sparks',
-        "rules": 'Welding Sparks deals X damage to target creature, where X is 3 plus the number of artifacts you control.',
-        "type": 'Instant',
-        "setnumber": '140',
-        "rarity": 'Common',
-    },
-    {
-        "cost": '4GG',
-        "cmc": '6',
-        "img": 'http://media.wizards.com/2016/bVvMNuiu2i_KLD/en_YXvBDsDjHq.png',
-        "loyalty": 5,
-        "name": 'Nissa, Nature\'s Artisan',
-        "rules": '+1: You gain 3 life.\n\
--4: Reveal the top two cards of your library. \
-Put all land cards from among them onto the battlefield and the rest into your hand.\n\
--12: Creatures you control get +5/+5 and gain trample until end of turn.',
-        "type": 'Planeswalker - Nissa',
-        "setnumber": '270',
-        "rarity": 'Mythic Rare',
-    },
-    {
-        "cost": '4RR',
-        "cmc": '6',
-        "img": 'http://media.wizards.com/2016/bVvMNuiu2i_KLD/en_CO4tkc9sLe.png',
-        "loyalty": 5,
-        "name": 'Chandra, Pyrogenius',
-        "rules": '+2: Chandra, Pyrogenius deals 2 damage to each opponent.\n\
--3: Chandra, Pyrogenius deals 4 damage to target creature.\n\
--10: Chandra, Pyrogenius deals 6 damage to target player and \
-each creature he or she controls',
-        "type": 'Planeswalker - Chandra',
-        "setnumber": '265',
-        "rarity": 'Mythic Rare',
-    },
-    {
-        "cost": '2GG',
-        "cmc": '4',
-        "img": 'http://img.tcgplayer.com/tcg_img/media_tcg/articles/0147_MTGKLD_EN_HRR.png',
-        "pow": '4/3',
-        "name": 'Bristling Hydra',
-        "rules": 'When Bristling Hydra enters the battlefield, you get {E}{E}{E} (three energy counters)\n\
-Pay {E}{E}{E}: Put a +1/+1 counter on Bristling Hydra. It gains hexproof until end of turn.',
-        "type": 'Creature - Hydra',
-        "setnumber": '147',
-        "rarity": 'Rare',
-    }
-]
+manual_cards = []
 
 def get_cards():
-    text = requests.get(SPOILER_RSS).text
+    text = requests.get(SPOILER_RSS, headers={'Cache-Control':'no-cache', 'Pragma':'no-cache', 'Expires': 'Thu, 01 Jan 1970 00:00:00 GMT'}).text
     d = feedparser.parse(text)
 
     cards = []
@@ -318,11 +187,28 @@ def get_cards():
                 #print 'Found scraped card, deleting and using manual card: ' + manual_card['name']
         #print 'Inserting manual card: ' + manual_card['name']
         cards.append(manual_card)
-
     return cards
 
 def correct_cards(cards):
     for card in cards:
+
+        card['name'] = card['name'].replace('&#x27;', '\'')
+        card['rules'] = card['rules'].replace('&#x27;', '\'') \
+            .replace('&lt;i&gt;', '') \
+            .replace('&lt;/i&gt;', '') \
+            .replace('&quot;', '"') \
+            .replace('blkocking', 'blocking')\
+            .replace('&amp;bull;','*')\
+            .replace('comes into the','enters the')\
+            .replace('threeor', 'three or')\
+            .replace('[i]','')\
+            .replace('[/i]','')\
+            .replace('Lawlwss','Lawless')\
+            .replace('Costner',"Counter")
+        card['type'] = card['type'].replace('  ',' ')\
+            .replace('Crature', 'Creature')
+        if card['type'][-1] == ' ':
+            card['type'] = card['type'][:-1]
         if card['name'] in card_corrections:
             for correction in card_corrections[card['name']]:
                 if correction != 'name':
@@ -332,18 +218,6 @@ def correct_cards(cards):
                     oldname = card['name']
                     card['name'] = card_corrections[oldname]['name']
                     card['rules'] = card['rules'].replace(oldname, card_corrections[oldname][correction])
-
-        card['name'] = card['name'].replace('&#x27;', '\'')
-        card['rules'] = card['rules'].replace('&#x27;', '\'') \
-            .replace('&lt;i&gt;', '') \
-            .replace('&lt;/i&gt;', '') \
-            .replace('&quot;', '"') \
-            .replace('blkocking', 'blocking').replace('&amp;bull;','*')\
-            .replace('comes into the','enters the')\
-            .replace('threeor', 'three or')\
-            .replace('[i]','')\
-            .replace('[/i]','')
-
         if 'cost' in card and len(card['cost']) > 0:
             m = re.search('(\d+)', card['cost'].replace('X',''))
             cmc = 0
@@ -362,6 +236,7 @@ def correct_cards(cards):
                 if (c + '}') in card['rules'] or (str.lower(c) + '}') in card['rules']:
                     if not (c in card['colorIdentity']):
                         card['colorIdentity'] += c
+
     cleanedcards = []
     for card in cards:
         if not card['name'] in delete_cards:
@@ -376,8 +251,6 @@ def correct_cards(cards):
         cardnames.append(card['name'])
         if not cardnames.count(card['name']) > 1:
             nodupes.append(card)
-            #cards.remove(card)
-            #print 'removing duplicate card ' + card['name']
     cards = nodupes
     if os.path.isfile(setjson):
         with open(setjson) as data_file:
@@ -385,7 +258,6 @@ def correct_cards(cards):
         oldcount = 0
         newcount = 0
         for old in oldcards['cards']:
-            #print old['name']
             oldcount = oldcount + 1
         for new in cards:
             isnew = True
@@ -393,16 +265,14 @@ def correct_cards(cards):
                 if oldcard['name'] == new['name']:
                     isnew = False
             if isnew:
-                print 'New card! ' + new['name']
+                print 'New card! ' + new['name'] + '  '
             if not new['name'] == 'delete':
                 newcount = newcount + 1
-                #print new['name']
-        #print(str(newcount) + ' vs ' + str(oldcount))
-        if not newcount > oldcount and not forcerun:
-            sys.exit("No new cards found (" + str(newcount) + " cards)")
 
-    #cards.append(cost='',cmc='',img='',pow='',name='',rules='',type='',
-    #            color='', altname='', colorIdentity='', colorArray=[], colorIdentityArray=[], setnumber='', rarity='')
+        if not newcount > oldcount:
+            if not forcerun:
+                sys.exit("No new cards found (" + str(newcount) + " cards)")
+
     return cards
 
 def add_images(cards):
@@ -412,6 +282,10 @@ def add_images(cards):
     wotcpattern = r'<img alt="{}.*?" src="(?P<img>.*?\.png)"'
     mythicspoilerpattern = r' src="' + setname.lower() + '/cards/{}.*?.jpg">'
     for c in cards:
+        #the below is needed to wipe images for the cards that aren't part of the 'full spoil' because
+        #they're not part of the regular Kaladesh set (planeswalker decks)
+        #if fullspoil and not c['setnumber'] in ['265','266','267','268','269','270','271','272','273','274']:
+        #    c['img'] = ''
         match = re.search(wotcpattern.format(c['name'].replace('\'','&rsquo;')), text, re.DOTALL)
         if not c['img']:
             if match:
@@ -420,7 +294,7 @@ def add_images(cards):
                 match3 = re.search(wotcpattern.format(c['name'].replace('\'','&rsquo;')), text3, re.DOTALL)
                 if match3:
                     c['img'] = match3.groupdict()['img']
-                elif (mythicenabled):
+                elif not (fullspoil):
                     match2 = re.search(mythicspoilerpattern.format((c['name']).lower().replace(' ', '').replace('&#x27;', '').replace('-', '').replace('\'','').replace(',', '')), text2, re.DOTALL)
                     if match2:
                         #print match2.group(0).replace(' src="', 'http://mythicspoiler.com/').replace('">', '')
@@ -429,17 +303,30 @@ def add_images(cards):
                         print('image for {} not found'.format(c['name']))
                         #print('we checked mythic for ' + c['altname'])
                     pass
+            if ('Creature' in c['type'] and c['pow'] == '') or ('Vehicle' in c['type'] and c['pow'] == ''):
+                print(c['name'] + ' is a creature w/o p/t img: ' + c['img'])
+        if len(str(c['img'])) < 10:
+            print(c['name'] + ' has no image.')
 
 def make_json(cards, setjson):
     #initialize mtg format json
+    cardlist = ["Acrobatic Maneuver","Aerial Responder","Aetherstorm Roc","Angel of Invention","Authority of the Consuls","Aviary Mechanic","Built to Last","Captured by the Consulate","Cataclysmic Gearhulk","Consulate Surveillance","Consul's Shieldguard","Eddytrail Hawk","Fairgrounds Warden","Fragmentize","Fumigate","Gearshift Ace","Glint-Sleeve Artisan","Herald of the Fair","Impeccable Timing","Inspired Charge","Master Trinketeer","Ninth Bridge Patrol","Pressure Point","Propeller Pioneer","Refurbish","Revoke Privileges","Servo Exhibition","Skyswirl Harrier","Skywhaler's Shot","Tasseled Dromedary","Thriving Ibex","Toolcraft Exemplar","Trusty Companion","Visionary Augmenter","Wispweaver Angel","Aether Meltdown","Aether Theorist","Aether Tradewinds","Aethersquall Ancient","Ceremonious Rejection","Confiscation Coup","Curio Vendor","Disappearing Act","Dramatic Reversal","Era of Innovation","Experimental Aviator","Failed Inspection","Gearseeker Serpent","Glimmer of Genius","Glint-Nest Crane","Hightide Hermit","Insidious Will","Janjeet Sentry","Long-Finned Skywhale","Malfunction","Metallurgic Summonings","Minister of Inquiries","Nimble Innovator","Padeem, Consul of Innovation","Paradoxical Outcome","Revolutionary Rebuff","Saheeli's Artistry","Select for Inspection","Shrewd Negotiation","Tezzeret's Ambition","Thriving Turtle","Torrential Gearhulk","Vedalken Blademaster","Weldfast Wingsmith","Wind Drake","Aetherborn Marauder","Ambitious Aetherborn","Demon of Dark Schemes","Dhund Operative","Diabolic Tutor","Die Young","Dukhara Scavenger","Eliminate the Competition","Embraal Bruiser","Essence Extraction","Fortuitous Find","Foundry Screecher","Fretwork Colony","Gonti, Lord of Luxury","Harsh Scrutiny","Lawless Broker","Live Fast","Lost Legacy","Make Obsolete","Marionette Master","Maulfist Squad","Midnight Oil","Mind Rot","Morbid Curiosity","Night Market Lookout","Noxious Gearhulk","Ovalchase Daredevil","Prakhata Club Security","Rush of Vitality","Subtle Strike","Syndicate Trafficker","Thriving Rats","Tidy Conclusion","Underhanded Designs","Weaponcraft Enthusiast","Aethertorch Renegade","Brazen Scourge","Built to Smash","Cathartic Reunion","Chandra, Torch of Defiance","Chandra's Pyrohelix","Combustible Gearhulk","Demolish","Fateful Showdown","Furious Reprisal","Giant Spectacle","Harnessed Lightning","Hijack","Incendiary Sabotage","Inventor's Apprentice","Lathnu Hellion","Madcap Experiment","Maulfist Doorbuster","Pia Nalaar","Quicksmith Genius","Reckless Fireweaver","Renegade Tactics","Ruinous Gremlin","Salivating Gremlins","Skyship Stalker","Spark of Creativity","Speedway Fanatic","Spireside Infiltrator","Spontaneous Artist","Start Your Engines","Territorial Gorger","Terror of the Fairgrounds","Thriving Grubs","Wayward Giant","Welding Sparks","Appetite for the Unnatural","Arborback Stomper","Architect of the Untamed","Armorcraft Judge","Attune with Aether","Blossoming Defense","Bristling Hydra","Commencement of Festivities","Cowl Prowler","Creeping Mold","Cultivator of Blades","Dubious Challenge","Durable Handicraft","Elegant Edgecrafters","Fairgrounds Trumpeter","Ghirapur Guide","Highspire Artisan","Hunt the Weak","Kujar Seedsculptor","Larger Than Life","Longtusk Cub","Nature's Way","Nissa, Vital Force","Ornamental Courage","Oviya Pashiri, Sage Lifecrafter","Peema Outrider","Riparian Tiger","Sage of Shaila's Claim","Servant of the Conduit","Take Down","Thriving Rhino","Verdurous Gearhulk","Wild Wanderer","Wildest Dreams","Wily Bandar","Cloudblazer","Contraband Kingpin","Depala, Pilot Exemplar","Dovin Baan","Empyreal Voyager","Engineered Might","Hazardous Conditions","Kambal, Consul of Allocation","Rashmi, Eternities Crafter","Restoration Gearsmith","Saheeli Rai","Unlicensed Disintegration","Veteran Motorist","Voltaic Brawler","Whirler Virtuoso","Accomplished Automaton","Aetherflux Reservoir","Aetherworks Marvel","Animation Module","Aradara Express","Ballista Charger","Bastion Mastodon","Bomat Bazaar Barge","Bomat Courier","Chief of the Foundry","Cogworker's Puzzleknot","Consulate Skygate","Cultivator's Caravan","Deadlock Trap","Decoction Module","Demolition Stomper","Dukhara Peafowl","Dynavolt Tower","Eager Construct","Electrostatic Pummeler","Fabrication Module","Filigree Familiar","Fireforger's Puzzleknot","Fleetwheel Cruiser","Foundry Inspector","Ghirapur Orrery","Glassblower's Puzzleknot","Inventor's Goggles","Iron League Steed","Key to the City","Metalspinner's Puzzleknot","Metalwork Colossus","Multiform Wonder","Narnam Cobra","Ovalchase Dragster","Panharmonicon","Perpetual Timepiece","Prakhata Pillar-Bug","Prophetic Prism","Renegade Freighter","Scrapheap Scrounger","Self-Assembler","Sky Skiff","Skysovereign, Consul Flagship","Smuggler's Copter","Snare Thopter","Torch Gauntlet","Weldfast Monitor","Whirlermaker","Woodweaver's Puzzleknot","Workshop Assistant","Aether Hub","Blooming Marsh","Botanical Sanctum","Concealed Courtyard","Inspiring Vantage","Inventors' Fair","Sequestered Stash","Spirebluff Canal"]
+    if (fullspoil):
+        for comparison in cardlist:
+            missing = True
+            for card in cards:
+                if comparison in card['name']:
+                    missing = False
+            if missing:
+                print comparison
+
     cardsjson = {
-        "block": blockname,
         "border": "black",
         "code": setname,
         "magicCardsInfoCode": setname.lower(),
         "name": setlongname,
         "releaseDate": setreleasedate,
-        "type": "expansion",
+        "type": settype,
         "booster": [
                 [
                 "rare",
@@ -463,6 +350,8 @@ def make_json(cards, setjson):
         ],
         "cards": []
     }
+    if blockname:
+        cardsjson["block"] = blockname
     for card in cards:
         dupe = False
         for dupecheck in cardsjson['cards']:
@@ -496,7 +385,6 @@ def make_json(cards, setjson):
             cardnames.append(related_cards[card['name']])
             cardnumber += 'a'
             card['layout'] = 'double-faced'
-            card['name']
         for namematch in related_cards:
             if card['name'] == related_cards[namematch]:
                 card['layout'] = 'double-faced'
@@ -506,11 +394,10 @@ def make_json(cards, setjson):
                     cardnumber += 'b'
         cardtypes = []
         if not '-' in card['type']:
-            card['type'] = card['type'].replace('instant','Instant')
+            card['type'] = card['type'].replace('instant','Instant').replace('sorcery','Sorcery').replace('creature','Creature')
             cardtypes.append(card['type'].replace('instant','Instant'))
         else:
             cardtypes = card['type'].replace('Legendary ','').split('-')[0].split(' ')[:-1]
-        #print card['name']
         if card['cmc'] == '':
             card['cmc'] = 0
         cardjson = {}
@@ -549,7 +436,10 @@ def make_json(cards, setjson):
         shutil.copyfile(setjson, 'bak/' + setjson)
     with open(setjson, 'w') as outfile:
         json.dump(cardsjson, outfile, sort_keys=True, indent=2, separators=(',', ': '))
-
+    for card in cardsjson['cards']:
+        for type in card['types']:
+            if len(str(type)) <= 3:
+                print card['name'] + ' has bad type'
     return cardsjson
 
 def specialcards(cardsjson):
@@ -600,7 +490,6 @@ def write_xml(mtgjson, cardsxml):
         if count == 0:
             newest = card["name"]
         count += 1
-        #print card["name"]
         name = card["name"]
         if card.has_key("manaCost"):
             manacost = card["manaCost"].replace('{', '').replace('}', '')
@@ -644,8 +533,15 @@ def write_xml(mtgjson, cardsxml):
         cardsxml.write("<manacost>" + manacost.encode('utf-8') + "</manacost>\n")
         cardsxml.write("<cmc>" + str(card['cmc']) + "</cmc>")
         if card.has_key('colors'):
+            colorTranslate = {
+                "White": "W",
+                "Blue": "U",
+                "Black": "B",
+                "Red": "R",
+                "Green": "G"
+            }
             for color in card['colors']:
-                cardsxml.write('<color>' + color + '</color>')
+                cardsxml.write('<color>' + colorTranslate[color] + '</color>')
         if name == 'Terrarion' or name == 'Cryptolith Fragment':
             cardsxml.write("<cipt>1</cipt>")
         cardsxml.write("<type>" + cardtype.encode('utf-8') + "</type>\n")
@@ -656,7 +552,6 @@ def write_xml(mtgjson, cardsxml):
         cardsxml.write("<tablerow>" + tablerow + "</tablerow>\n")
         cardsxml.write("<text>" + text.encode('utf-8') + "</text>\n")
         if related:
-        #    for relatedname in related:
             cardsxml.write("<related>" + related.encode('utf-8') + "</related>\n")
             related = ''
 
@@ -671,8 +566,6 @@ def write_xml(mtgjson, cardsxml):
     print 'Newest: ' + str(newest)
     print 'Runtime: ' + str(datetime.datetime.today().strftime('%H:%M')) + ' on ' + str(datetime.date.today())
 
-    #for card in mtgjson['cards']:
-    #    print card['name']
     return newest
 
 def writehtml(newest, cards):
@@ -681,7 +574,7 @@ def writehtml(newest, cards):
     count = 0
     for card in cards['cards']:
         count = count + 1
-    lines[22] = str(count) + '\n'
+    lines[22] = str(count) + '/' + str(setcount) + ' \n'
     lines[26] = newest + '\n'
     lines[28] = str(datetime.date.today()) + '\n'
     lines[30] = str(datetime.datetime.today().strftime('%H:%M')) + '\n'
@@ -696,9 +589,15 @@ def writehtml(newest, cards):
 
 def download_images(mtgjson):
     for card in mtgjson['cards']:
-        if card['url'] and not os.path.isfile('images/' + card['name'] + '.jpg') :
-            print 'Downloading ' + card['url'] + ' to images/' + card['name'] + '.jpg'
-            urllib.urlretrieve(card['url'], 'images/' + card['name'] + '.jpg')
+        if card['url']:
+            if not os.path.isdir('images'):
+              os.mkdir('images')
+            if not os.path.isdir('images/' + setname):
+                os.mkdir('images/' + setname)
+            if os.path.isfile('images/' + setname + '/' + card['name'] + '.jpg') and not overwriteimages:
+                continue
+            print 'Downloading ' + card['url'] + ' to images/' + setname + '/' + card['name'] + '.jpg'
+            urllib.urlretrieve(card['url'], 'images/' + setname + '/' + card['name'] + '.jpg')
 
 def makeAllSets(mtgjson):
     #let's see if we have an AllSets.pre.json, and how old it is.
@@ -755,17 +654,13 @@ def makeAllSets(mtgjson):
 if __name__ == '__main__':
     cards = get_cards()
     cards = correct_cards(cards)
-    #for some reason bedlam reveler doesn't get caught the first time through...
-    #cards = correct_cards(cards)
-    #cards = correct_cards(cards)
     add_images(cards)
-    #mtgjson = make_json(cards, setjson) #moved this to !offlinemode
     if offlinemode:
         if os.path.isfile(setjson):
             with open(setjson) as data_file:
                 mtgjson = json.load(data_file)
         else:
-            print "No set json file found, cannot run in Offline Mode"
+            print "No " + setjson + " file found, cannot run offline"
     else:
         mtgjson = make_json(cards, setjson)
     if makezip:
