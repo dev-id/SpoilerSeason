@@ -12,6 +12,7 @@ import zipfile
 import time
 
 #variables for xml & json
+#leave blockname = '' for non-expansions
 blockname = 'Kaladesh'
 setname = 'AER'
 setlongname = 'Aether Revolt'
@@ -169,8 +170,6 @@ def get_cards():
     count = 0
     for card in cards:
         count = count + 1
-    #let's assume there should be at least 5 good cards
-    #if there's less than 5 cards, why are you scraping?
     if count < 1:
         sys.exit("No cards found, exiting to prevent file overwrite")
 
@@ -194,8 +193,6 @@ def get_cards():
         for card in cards:
             if card['name'] == manual_card['name']:
                 cards.remove(card)
-                #print 'Found scra#ped card, deleting and using manual card: ' + manual_card['name']
-        #print 'Inserting manual card: ' + manual_card['name']
         cards.append(manual_card)
     return cards
 
@@ -255,7 +252,6 @@ def correct_cards(cards):
             cleanedcards.append(card)
     cards = cleanedcards
 
-    # we're going to see if the card count has increased, if it hasn't, bail.
     #remove dupes
     cardnames = []
     nodupes = []
@@ -266,6 +262,7 @@ def correct_cards(cards):
             #cards.remove(card)
             #print 'removing duplicate card ' + card['name']
     cards = nodupes
+    # we're going to see if the card count has increased, if it hasn't, bail.
     if os.path.isfile(setjson):
         with open(setjson) as data_file:
             oldcards = json.load(data_file)
@@ -283,16 +280,12 @@ def correct_cards(cards):
                 print 'New card! ' + new['name'] + '  '
             if not new['name'] == 'delete':
                 newcount = newcount + 1
-                #print new['name']
-        #print(str(newcount) + ' vs ' + str(oldcount))
         if not newcount > oldcount:
             if not forcerun:
                 sys.exit("No new cards found (" + str(newcount) + " cards)")
             #else:
             #    print 'No new cards found, running anyway. Set Forcerun = False to prevent overwrite.'
 
-    #cards.append(cost='',cmc='',img='',pow='',name='',rules='',type='',
-    #            color='', altname='', colorIdentity='', colorArray=[], colorIdentityArray=[], setnumber='', rarity='')
     return cards
 
 def add_images(cards):
@@ -316,11 +309,9 @@ def add_images(cards):
                 elif not (fullspoil):
                     match2 = re.search(mythicspoilerpattern.format((c['name']).lower().replace(' ', '').replace('&#x27;', '').replace('-', '').replace('\'','').replace(',', '')), text2, re.DOTALL)
                     if match2:
-                        #print match2.group(0).replace(' src="', 'http://mythicspoiler.com/').replace('">', '')
                         c['img'] = match2.group(0).replace(' src="', 'http://mythicspoiler.com/').replace('">', '')
                     else:
                         print('image for {} not found'.format(c['name']))
-                        #print('we checked mythic for ' + c['altname'])
                     pass
             if ('Creature' in c['type'] and c['pow'] == '') or ('Vehicle' in c['type'] and c['pow'] == ''):
                 print(c['name'] + ' is a creature w/o p/t img: ' + c['img'])
@@ -329,6 +320,7 @@ def add_images(cards):
 
 def make_json(cards, setjson):
     #initialize mtg format json
+    #fill this array with a list of card names to check to see what we're missing
     cardlist = []
     if (fullspoil):
         #print "Missing Cards:\n"
@@ -405,7 +397,6 @@ def make_json(cards, setjson):
             cardnames.append(related_cards[card['name']])
             cardnumber += 'a'
             card['layout'] = 'double-faced'
-            #card['name']
         for namematch in related_cards:
             if card['name'] == related_cards[namematch]:
                 card['layout'] = 'double-faced'
@@ -419,9 +410,6 @@ def make_json(cards, setjson):
             cardtypes.append(card['type'].replace('instant','Instant'))
         else:
             cardtypes = card['type'].replace('Legendary ','').split('-')[0].split(' ')[:-1]
-        #print "card name: " + card['name'] + " card type: " + card['type']
-        #print card['name'] + " " + str(cardtypes)
-        #print card['name']
         if card['cmc'] == '':
             card['cmc'] = 0
         cardjson = {}
@@ -514,7 +502,6 @@ def write_xml(mtgjson, cardsxml):
         if count == 0:
             newest = card["name"]
         count += 1
-        #print card["name"]
         name = card["name"]
         if card.has_key("manaCost"):
             manacost = card["manaCost"].replace('{', '').replace('}', '')
@@ -592,8 +579,6 @@ def write_xml(mtgjson, cardsxml):
     print 'Newest: ' + str(newest)
     print 'Runtime: ' + str(datetime.datetime.today().strftime('%H:%M')) + ' on ' + str(datetime.date.today())
 
-    #for card in mtgjson['cards']:
-    #    print card['name']
     return newest
 
 def writehtml(newest, cards):
@@ -637,7 +622,6 @@ def download_images(mtgjson):
     zf = zipfile.ZipFile('Images.zip', mode='w')
 
     try:
-        #zipf = zipfile.ZipFile('Images.zip', 'w', zipfile.ZIP_DEFLATED)
         for file in os.listdir('images/' + setname):
             zf.write('images/' + setname + '/' + file, setname + '/' + file, compress_type=compression)
         zf.close()
@@ -688,7 +672,6 @@ def makeAllSets(mtgjson):
              }
     zf = zipfile.ZipFile('AllSets.json.zip', mode='w')
     try:
-        #print 'adding AllSets.json with compression mode', modes[compression]
         zf.write('AllSets.json', compress_type=compression)
     finally:
         #let's clear out the working files
@@ -711,6 +694,7 @@ def get_mtgs():
     return mtgjson
 
 def check_scryfall():
+    #see if Scryfall has our set
     setUrl = 'https://api.scryfall.com/cards/search?q=++e:' + setname.lower()
     setcards = requests.get(setUrl)
     setcards = setcards.json()
