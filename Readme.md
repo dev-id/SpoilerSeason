@@ -21,7 +21,7 @@
 $> python spoiler.py
 ```
 
-Outputs EMN.json and EMN.xml
+Outputs {SETCODE}.json, {SETCODE}.xml, AllSets.json.zip, and Images.zip (containing {SETCODE}\{IMAGE NAMES}.jpg)
 
 Create the set xml file and add it to your `customsets` folder for Cockatrice.
 
