@@ -14,11 +14,14 @@
     os
     zipfile
 
+...
+pip install requests feedparser
+...
 
 ### Usage ###
     
 ```
-$> python spoiler.py
+$> python spoilers.py
 ```
 
 Outputs {SETCODE}.json, {SETCODE}.xml, AllSets.json.zip, and Images.zip (containing {SETCODE}\{IMAGE NAMES}.jpg)
