@@ -11,8 +11,6 @@ import os
 import zipfile
 import time
 
-#variables for xml & json
-#leave blockname = '' for non-expansions
 blockname = 'Kaladesh'
 setname = 'AER'
 setlongname = 'Aether Revolt'
@@ -22,33 +20,12 @@ setcount = 184
     # "starter", "commander", "planechase", "archenemy", "promo", "vanguard", "masters", "conspiracy"
 settype = 'expansion'
 
-#we have a new source, scryfall may have card data before gatherer
-#let's check it and use it if it does
-usescryfall = True
-
-#if there's no new cards, the default option is to kill the program
-#if you want to do updates, you can force the program to run with this variable
-forcerun = True
-
-#you can create a AllSets.json.zip by grabbing the current one from mtgjson
-#and slapping the current set on the end of it. disabled by default
-makezip = True
-
-#you can download a local copy of images (to images/Card Name.jpg)
-#yes, we call it .jpg no matter - it's more cockatrice-friendly
-#we can grab new images even if we already have one with overwriteimages
-downloadimages = True
-overwriteimages = False
-
-#once we're at full spoil, we'll turn off mythic to prefer wotc's images
-#they're preferred anyway, but just in case ;)
+offlineMode = False
+useScryfall = False
+makeAllsetsZip = True
+downloadImages = True
+overwriteImages = False
 fullspoil = False
-
-#we may want to back up files before scraping
-#in case the scraping goes wrong like the
-#rss feed being overwritten by blank or a new set coming out
-#this is a destructive backup, so it's only good for one oops
-#if we turn this off, we can remove the shutil dependency
 backupfiles = True
 
 #the two files that will be generated in program directory
@@ -64,33 +41,12 @@ cardsxml = setname + '.xml'
 #line 31: time of last add
 html = 'index.html'
 
-#once mtgs removes or changes their spoilers.rss, this program will stop working.
-#if we switch to offline mode, we can still make the xml, html, and smash the AllSets
-#if we have a good setcode.json
-offlinemode = False
-
-#static
-SPOILER_RSS = 'http://www.mtgsalvation.com/spoilers.rss'
-#typically magic.wizards.com/en/content/set-name-with-hyphens-cards
-IMAGES = 'http://magic.wizards.com/en/content/' + setlongname.lower().replace(' ','-') + '-cards'
-#static
-IMAGES2 = 'http://mythicspoiler.com/newspoilers.html'
-#magic.wizards.com/en/articles/archive/card-image-gallery/set-name-with-hyphens
-IMAGES3 = 'http://magic.wizards.com/en/articles/archive/card-image-gallery/' + setlongname.lower().replace(' ','-')
-
-#scraper pattern for mtgs rss feed
-patterns = ['<b>Name:</b> <b>(?P<name>.*?)<',
-            'Cost: (?P<cost>\d{0,2}[WUBRGC]*?)<',
-            'Type: (?P<type>.*?)<',
-            'Pow/Tgh: (?P<pow>.*?)<',
-            'Rules Text: (?P<rules>.*?)<br /',
-            'Rarity: (?P<rarity>.*?)<',
-            'Set Number: #(?P<setnumber>.*?)/'
-            ]
-
 #for DFC, tuples with front name first, ex:
 #"Huntmaster of the Fells":"Ravager of the Fells"
 related_cards = {}
+
+#delete erroneous cards and basics
+delete_cards = ['Plains', 'Island', 'Swamp', 'Mountain', 'Forest']
 
 #fix any cards that have errors, format:
 #"card name": {
@@ -100,10 +56,66 @@ related_cards = {}
 #and handles incorrect name
 #new keys will be created (loyalty)
 #key values: name, img, cost, type, pow, rules, rarity, setnumber, loyalty, colorArray, colorIdentityArray, color, colorIdentity
-delete_cards = ['Plains', 'Island', 'Swamp', 'Mountain', 'Forest']
 card_corrections = {
+    "Peacekeeper Colossus": {
+        "img": "http://media-dominaria.cursecdn.com/avatars/128/653/636190442819845313.png"
+    },
     "Scrap Trawler": {
         "pow": "3/2"
+    },
+    "Heart of Kiran": {
+        "pow": "4/4"
+    },
+    "Consulate Dreadnought": {
+        "pow": "7/11"
+    },
+    "Peacekeeper Colossus": {
+        "pow": "6/6",
+        "img": "http://media-dominaria.cursecdn.com/avatars/128/653/636190442819845313.png"
+    },
+    "Decommision": {
+        "name": "Decommission"
+    },
+    "Metallic Mimic": {
+        "pow": "2/1"
+    },
+    "Untethered Express": {
+        "pow": "4/4"
+    },
+    "Ornithopter": {
+        "pow": "0/2"
+    },
+    "Merchant's Porter": {
+        "pow": "1/2"
+    },
+    "Foundry Assembler": {
+        "pow": "3/3"
+    },
+    "Aegis Automaton": {
+        "img": "http://mythicspoiler.com/aer/cards/aegisautomation.jpg",
+        "pow": "0/3"
+    },
+    "Druid of the Cowl": {
+        "img": "http://mythicspoiler.com/aer/cards/greenbeltdruid.jpg"
+    },
+    "Inspiring Statuary": {
+        "img": "http://www.hobbyconsolas.com/sites/hobbyconsolas.com/public/media/image/2017/01/magic-gatheringestatuas-inspiradoras.jpg"
+    },
+    "Spire of Industry": {
+        "img": "http://www.cardbox.sc/image/news/201701/sangyounotou.png"
+    },
+    "Merchant's Dockhand": {
+        "img": "http://www.cardshophamaya.com/data/hamaya/image/20170103_e7a2e6.png",
+        "pow": "1/2"
+    },
+    "Quicksmith Rebel": {
+        "pow": "3/2"
+    },
+    "Skyship Bandit": {
+        "img": "http://mythicspoiler.com/aer/cards/skyshippirate.jpg"
+    },
+    "Lightning Runner": {
+        "img": "https://pbs.twimg.com/media/C1Uh2_eWgAAdlo0.png"
     }
 }
 
@@ -133,24 +145,32 @@ manual_card_template = [
         "rarity": '',
     },
 ]
-
 #array for storing manually entered cards, mtgs can be slow
 manual_cards = [
-    {
-        "cost": '3R',
-        "cmc": '4',
-        "img": 'http://mythicspoiler.com/aer/cards/quicksmithrebel.jpg',
-        "pow": '',
-        "name": 'Quicksmith Rebel',
-        "rules": 'When Quicksmith Rebel enters the battlefield, target artifact you control gains\
-"{T}: This artifact deals # damage to target creature or player" for as long as you control Quicksmith Rebel',
-        "type": 'Artifact Creature - Construct',
-        "setnumber": '?',
-        "rarity": 'Rare',
-    },
 ]
 
-def get_cards():
+#static
+SPOILER_RSS = 'http://www.mtgsalvation.com/spoilers.rss'
+#typically magic.wizards.com/en/content/set-name-with-hyphens-cards
+IMAGES = 'http://magic.wizards.com/en/content/' + setlongname.lower().replace(' ','-') + '-cards'
+#static
+IMAGES2 = 'http://mythicspoiler.com/newspoilers.html'
+#magic.wizards.com/en/articles/archive/card-image-gallery/set-name-with-hyphens
+IMAGES3 = 'http://magic.wizards.com/en/articles/archive/card-image-gallery/' + setlongname.lower().replace(' ','-')
+
+#scraper pattern for mtgs rss feed
+patterns = ['<b>Name:</b> <b>(?P<name>.*?)<',
+            'Cost: (?P<cost>\d{0,2}[WUBRGC]*?)<',
+            'Type: (?P<type>.*?)<',
+            'Pow/Tgh: (?P<pow>.*?)<',
+            'Rules Text: (?P<rules>.*?)<br /',
+            'Rarity: (?P<rarity>.*?)<',
+            'Set Number: #(?P<setnumber>.*?)/'
+            ]
+
+newest = ''
+
+def scrape_mtgs():
     text = requests.get(SPOILER_RSS, headers={'Cache-Control':'no-cache', 'Pragma':'no-cache', 'Expires': 'Thu, 01 Jan 1970 00:00:00 GMT'}).text
     d = feedparser.parse(text)
 
@@ -194,11 +214,8 @@ def get_cards():
             if card['name'] == manual_card['name']:
                 cards.remove(card)
         cards.append(manual_card)
-    return cards
 
-def correct_cards(cards):
     for card in cards:
-
         card['name'] = card['name'].replace('&#x27;', '\'')
         card['rules'] = card['rules'].replace('&#x27;', '\'') \
             .replace('&lt;i&gt;', '') \
@@ -263,64 +280,28 @@ def correct_cards(cards):
             #print 'removing duplicate card ' + card['name']
     cards = nodupes
     # we're going to see if the card count has increased, if it hasn't, bail.
-    if os.path.isfile(setjson):
-        with open(setjson) as data_file:
-            oldcards = json.load(data_file)
-        oldcount = 0
-        newcount = 0
-        for old in oldcards['cards']:
-            #print old['name']
-            oldcount = oldcount + 1
-        for new in cards:
-            isnew = True
-            for oldcard in oldcards['cards']:
-                if oldcard['name'] == new['name']:
-                    isnew = False
-            if isnew:
-                print 'New card! ' + new['name'] + '  '
-            if not new['name'] == 'delete':
-                newcount = newcount + 1
-        if not newcount > oldcount:
-            if not forcerun:
-                sys.exit("No new cards found (" + str(newcount) + " cards)")
+    #if os.path.isfile(setjson):
+    #    with open(setjson) as data_file:
+    #        oldcards = json.load(data_file)
+    #    oldcount = 0
+    #    newcount = 0
+    #    for old in oldcards['cards']:
+    #        #print old['name']
+    #        oldcount = oldcount + 1
+    #    for new in cards:
+    #        isnew = True
+    #        for oldcard in oldcards['cards']:
+    #            if oldcard['name'] == new['name']:
+    #                isnew = False
+    #        if isnew:
+    #            print 'New card! ' + new['name'] + '(' + new['cost'] + '|' + new['type'] + '|' + new['rarity'] + ') '
+    #        if not new['name'] == 'delete':
+    #            newcount = newcount + 1
+        #if not newcount > oldcount:
+            #if not forcerun:
+            #sys.exit("No new cards found (" + str(newcount) + " cards)")
             #else:
             #    print 'No new cards found, running anyway. Set Forcerun = False to prevent overwrite.'
-
-    return cards
-
-def add_images(cards):
-    text = requests.get(IMAGES).text
-    text2 = requests.get(IMAGES2).text
-    text3 = requests.get(IMAGES3).text
-    wotcpattern = r'<img alt="{}.*?" src="(?P<img>.*?\.png)"'
-    mythicspoilerpattern = r' src="' + setname.lower() + '/cards/{}.*?.jpg">'
-    for c in cards:
-        if fullspoil and not c['setnumber'] in ['265','266','267','268','269','270','271','272','273','274']:
-            #print c['name'] + ' is #' + c['setnumber']
-            c['img'] = ''
-        match = re.search(wotcpattern.format(c['name'].replace('\'','&rsquo;')), text, re.DOTALL)
-        if not c['img']:
-            if match:
-                c['img'] = match.groupdict()['img']
-            else:
-                match3 = re.search(wotcpattern.format(c['name'].replace('\'','&rsquo;')), text3, re.DOTALL)
-                if match3:
-                    c['img'] = match3.groupdict()['img']
-                elif not (fullspoil):
-                    match2 = re.search(mythicspoilerpattern.format((c['name']).lower().replace(' ', '').replace('&#x27;', '').replace('-', '').replace('\'','').replace(',', '')), text2, re.DOTALL)
-                    if match2:
-                        c['img'] = match2.group(0).replace(' src="', 'http://mythicspoiler.com/').replace('">', '')
-                    else:
-                        print('image for {} not found'.format(c['name']))
-                    pass
-            if ('Creature' in c['type'] and c['pow'] == '') or ('Vehicle' in c['type'] and c['pow'] == ''):
-                print(c['name'] + ' is a creature w/o p/t img: ' + c['img'])
-        if len(str(c['img'])) < 10:
-            print(c['name'] + ' has no image.')
-
-def make_json(cards, setjson):
-    #initialize mtg format json
-    #fill this array with a list of card names to check to see what we're missing
     cardlist = []
     if (fullspoil):
         #print "Missing Cards:\n"
@@ -332,37 +313,8 @@ def make_json(cards, setjson):
                     #print 'found ' + comparison
             if missing:
                 print comparison
-
     cardsjson = {
-        "block": blockname,
-        "border": "black",
-        "code": setname,
-        "magicCardsInfoCode": setname.lower(),
-        "name": setlongname,
-        "releaseDate": setreleasedate,
-        "type": settype,
-        "booster": [
-                [
-                "rare",
-                "mythic rare"
-                ],
-            "uncommon",
-            "uncommon",
-            "uncommon",
-            "common",
-            "common",
-            "common",
-            "common",
-            "common",
-            "common",
-            "common",
-            "common",
-            "common",
-            "common",
-            "land",
-            "marketing"
-        ],
-        "cards": []
+        'cards': []
     }
     for card in cards:
         dupe = False
@@ -446,262 +398,48 @@ def make_json(cards, setjson):
         cardsjson['cards'].append(cardjson)
     if backupfiles and os.path.isfile(setjson):
         shutil.copyfile(setjson, 'bak/' + setjson)
-    with open(setjson, 'w') as outfile:
-        json.dump(cardsjson, outfile, sort_keys=True, indent=2, separators=(',', ': '))
+
     for card in cardsjson['cards']:
         for type in card['types']:
             if len(str(type)) <= 3:
                 print card['name'] + ' has bad type'
+    cardsjson = add_headers(cardsjson['cards'])
+
     return cardsjson
 
-def specialcards(cardsjson):
-    #this is a fuction used for my app to create a list of 'special' cards
-    #that are inserted differently than regular cards in a 'pack'
-    #specifically, the below is for DFC, exactly, for SOI/EMN
-    specialjson = {
-        "Mythic Rare": [],
-        "Rare": [],
-        "Uncommon": [],
-        "Common": []
+def add_headers(cardsarray):
+    cardsjson = {
+        "block": blockname,
+        "border": "black",
+        "code": setname,
+        "magicCardsInfoCode": setname.lower(),
+        "name": setlongname,
+        "releaseDate": setreleasedate,
+        "type": settype,
+        "booster": [
+                [
+                "rare",
+                "mythic rare"
+                ],
+            "uncommon",
+            "uncommon",
+            "uncommon",
+            "common",
+            "common",
+            "common",
+            "common",
+            "common",
+            "common",
+            "common",
+            "common",
+            "common",
+            "common",
+            "land",
+            "marketing"
+        ],
+        "cards": cardsarray
     }
-    for card in cardsjson['cards']:
-        if card.has_key('layout'):
-            if card['layout'] == 'double-faced' and 'a' in card['number']:
-                specialjson[card['rarity']].append(card['name'].lower())
-    for specialrarity in specialjson:
-        print specialrarity + ': ['
-        for name in specialjson[specialrarity]:
-            print '"' + name + '"'
-        print "]"
-
-def write_xml(mtgjson, cardsxml):
-    if backupfiles and os.path.isfile(cardsxml):
-        shutil.copyfile(cardsxml, 'bak/' + cardsxml)
-    cardsxml = open(cardsxml, 'w')
-    cardsxml.truncate()
-    count = 0
-    dfccount = 0
-    newest = ''
-    related = 0
-    cardsxml.write("<?xml version='1.0' encoding='UTF-8'?>\n"
-                   "<cockatrice_carddatabase version='3'>\n"
-                   "<sets>\n<set>\n<name>"
-                   + setname +
-                   "</name>\n"
-                   "<longname>"
-                   + setlongname +
-                   "</longname>\n"
-                   "<settype>Expansion</settype>\n"
-                   "<releasedate>"
-                   + setreleasedate +
-                   "</releasedate>\n"
-                   "</set>\n"
-                   "</sets>\n"
-                   "<cards>")
-    for card in mtgjson["cards"]:
-        if count == 0:
-            newest = card["name"]
-        count += 1
-        name = card["name"]
-        if card.has_key("manaCost"):
-            manacost = card["manaCost"].replace('{', '').replace('}', '')
-        else:
-            manacost = ""
-        if card.has_key("power") or card.has_key("toughness"):
-            if card["power"]:
-                pt = str(card["power"]) + "/" + str(card["toughness"])
-            else:
-                pt = 0
-        else:
-            pt = 0
-        if card.has_key("text"):
-            text = card["text"]
-        else:
-            text = ""
-        if card.has_key("names"):
-            if len(card["names"]) > 1:
-                if card["names"][0] == card["name"]:
-                    related = card["names"][1]
-                    text += '\n\n(Related: ' + card["names"][1] + ')'
-                    dfccount += 1
-                elif card['names'][1] == card['name']:
-                    related = card["names"][0]
-                    text += '\n\n(Related: ' + card["names"][0] + ')'
-
-        cardtype = card["type"]
-        tablerow = "1"
-        if "Land" in cardtype:
-            tablerow = "0"
-        elif "Sorcery" in cardtype:
-            tablerow = "3"
-        elif "Instant" in cardtype:
-            tablerow = "3"
-        elif "Creature" in cardtype:
-            tablerow = "2"
-
-        cardsxml.write("<card>\n")
-        cardsxml.write("<name>" + name.encode('utf-8') + "</name>\n")
-        cardsxml.write('<set rarity="' + card['rarity'] + '" picURL="' + card["url"] + '">' + setname + '</set>\n')
-        cardsxml.write("<manacost>" + manacost.encode('utf-8') + "</manacost>\n")
-        cardsxml.write("<cmc>" + str(card['cmc']) + "</cmc>")
-        if card.has_key('colors'):
-            colorTranslate = {
-                "White": "W",
-                "Blue": "U",
-                "Black": "B",
-                "Red": "R",
-                "Green": "G"
-            }
-            for color in card['colors']:
-                cardsxml.write('<color>' + colorTranslate[color] + '</color>')
-        if name == 'Terrarion' or name == 'Cryptolith Fragment':
-            cardsxml.write("<cipt>1</cipt>")
-        cardsxml.write("<type>" + cardtype.encode('utf-8') + "</type>\n")
-        if pt:
-            cardsxml.write("<pt>" + pt + "</pt>\n")
-        if card.has_key('loyalty'):
-            cardsxml.write("<loyalty>" + str(card['loyalty']) + "</loyalty>")
-        cardsxml.write("<tablerow>" + tablerow + "</tablerow>\n")
-        cardsxml.write("<text>" + text.encode('utf-8') + "</text>\n")
-        if related:
-        #    for relatedname in related:
-            cardsxml.write("<related>" + related.encode('utf-8') + "</related>\n")
-            related = ''
-
-        cardsxml.write("</card>\n")
-
-    cardsxml.write("</cards>\n</cockatrice_carddatabase>")
-
-    print 'XML STATS'
-    print 'Total cards: ' + str(count)
-    if dfccount > 0:
-        print 'DFC: ' + str(dfccount)
-    print 'Newest: ' + str(newest)
-    print 'Runtime: ' + str(datetime.datetime.today().strftime('%H:%M')) + ' on ' + str(datetime.date.today())
-
-    return newest
-
-def writehtml(newest, cards):
-    f = open(html, 'r')
-    lines = f.readlines()
-    count = 0
-    for card in cards['cards']:
-        count = count + 1
-    lines[22] = str(count) + '/' + str(setcount) + ' \n'
-    lines[26] = newest + '\n'
-    lines[28] = str(datetime.date.today()) + '\n'
-    lines[30] = str(datetime.datetime.today().strftime('%H:%M')) + '\n'
-    lines
-    f.close()
-
-    if backupfiles:
-        shutil.copyfile(html, 'bak/' + html)
-    f = open(html, 'w')
-    f.writelines(lines)
-    f.close()
-
-def download_images(mtgjson):
-    if not os.path.isdir('images/' + setname):
-        os.makedirs('images/' + setname)
-    for card in mtgjson['cards']:
-        if card['url']:
-            if os.path.isfile('images/' + setname + '/' + card['name'] + '.jpg') and not overwriteimages:
-                continue
-            print 'Downloading ' + card['url'] + ' to images/' + setname + '/' + card['name'] + '.jpg'
-            urllib.urlretrieve(card['url'], 'images/' + setname + '/' + card['name'] + '.jpg')
-    #let's zip it up, with compression if possible
-    try:
-        import zlib
-        compression = zipfile.ZIP_DEFLATED
-    except:
-        compression = zipfile.ZIP_STORED
-
-    modes = {zipfile.ZIP_DEFLATED: 'deflated',
-             zipfile.ZIP_STORED: 'stored',
-             }
-    zf = zipfile.ZipFile('Images.zip', mode='w')
-
-    try:
-        for file in os.listdir('images/' + setname):
-            zf.write('images/' + setname + '/' + file, setname + '/' + file, compress_type=compression)
-        zf.close()
-    finally:
-        zf.close()
-
-def makeAllSets(mtgjson):
-    #let's see if we have an AllSets.pre.json, and how old it is.
-    #if it's more than a week old, let's grab a new one
-    getAllSets = False
-    if os.path.isfile('AllSets.pre.json'):
-        allSetsAge = (time.time() - os.path.getctime('AllSets.pre.json'))
-        if (allSetsAge < 604800):
-            getAllSets = False
-            #print "Found a current (" + str(datetime.timedelta(minutes=allSetsAge/60)) + ") AllSets.pre.json, not grabbing a new one."
-    if getAllSets:
-        #we have to spoof a user-agent for mtgjson
-        class MyOpener(urllib.FancyURLopener):
-            version = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko / 20071127 Firefox / 2.0.0.11'
-        opener = MyOpener()
-        opener.retrieve('http://mtgjson.com/json/AllSets.json', 'AllSets.pre.json')
-        #let's remove the last } from mtgjson
-        #then put the new set code in there
-        with open('AllSets.pre.json', 'rb+') as filehandle:
-            filehandle.seek(-1, os.SEEK_END)
-            filehandle.truncate()
-            filehandle.write(',"' + setname + '":')
-
-    #now let's smash together the old json
-    #with our new one
-    #and then close it!
-    with open('AllSets.json', 'wb') as wfd:
-        for f in ['AllSets.pre.json', setjson]:
-            with open(f, 'rb') as fd:
-                shutil.copyfileobj(fd, wfd, 1024 * 1024 * 10)
-                # 10MB per writing chunk to avoid reading big file into memory.
-        wfd.write('}')
-
-    #let's zip it up, with compression if possible
-    try:
-        import zlib
-        compression = zipfile.ZIP_DEFLATED
-    except:
-        compression = zipfile.ZIP_STORED
-
-    modes = {zipfile.ZIP_DEFLATED: 'deflated',
-             zipfile.ZIP_STORED: 'stored',
-             }
-    zf = zipfile.ZipFile('AllSets.json.zip', mode='w')
-    try:
-        zf.write('AllSets.json', compress_type=compression)
-    finally:
-        #let's clear out the working files
-        #os.remove('AllSets.pre.json')
-        os.remove('AllSets.json')
-        zf.close()
-
-def get_mtgs():
-    cards = get_cards()
-    cards = correct_cards(cards)
-    add_images(cards)
-    if offlinemode:
-        if os.path.isfile(setjson):
-            with open(setjson) as data_file:
-                mtgjson = json.load(data_file)
-        else:
-            print "No " + setjson + " file found, cannot run offline"
-    else:
-        mtgjson = make_json(cards, setjson)
-    return mtgjson
-
-def check_scryfall():
-    #see if Scryfall has our set
-    setUrl = 'https://api.scryfall.com/cards/search?q=++e:' + setname.lower()
-    setcards = requests.get(setUrl)
-    setcards = setcards.json()
-    if setcards.has_key('data'):
-        return True
-    else:
-        return False
+    return cardsjson
 
 def get_scryfall():
     #ok let's set the api uri
@@ -711,34 +449,6 @@ def get_scryfall():
     #initialize a cards array
     cards = {
         setname: {
-            "block": blockname,
-            "border": "black",
-            "code": setname,
-            "magicCardsInfoCode": setname.lower(),
-            "name": setlongname,
-            "releaseDate": setreleasedate,
-            "type": settype,
-            "booster": [
-                [
-                    "rare",
-                    "mythic rare"
-                ],
-                "uncommon",
-                "uncommon",
-                "uncommon",
-                "common",
-                "common",
-                "common",
-                "common",
-                "common",
-                "common",
-                "common",
-                "common",
-                "common",
-                "common",
-                "land",
-                "marketing"
-            ],
             "cards": []
         }
     }
@@ -874,33 +584,296 @@ def get_scryfall():
     #    [array of cards]
     #  }
     #}
-    return cards2[setname]['cards']
+    cards2 = add_headers(cards2[setname]['cards'])
+    return cards2
+
+#def list_missing(mtgjson):
+#   return
+
+#def combine_jsons(json1, json2):
+#    return
+
+def get_images(mtgjson):
+    text = requests.get(IMAGES).text
+    text2 = requests.get(IMAGES2).text
+    text3 = requests.get(IMAGES3).text
+    wotcpattern = r'<img alt="{}.*?" src="(?P<img>.*?\.png)"'
+    mythicspoilerpattern = r' src="' + setname.lower() + '/cards/{}.*?.jpg">'
+
+    for c in mtgjson['cards']:
+        if fullspoil and not c['setnumber'] in ['265','266','267','268','269','270','271','272','273','274']:
+            #print c['name'] + ' is #' + c['setnumber']
+            c['url'] = ''
+        match = re.search(wotcpattern.format(c['name'].replace('\'','&rsquo;')), text, re.DOTALL)
+        #if not c['url']:
+        if match:
+            c['url'] = match.groupdict()['img']
+        else:
+            match3 = re.search(wotcpattern.format(c['name'].replace('\'','&rsquo;')), text3, re.DOTALL)
+            if match3:
+                c['url'] = match3.groupdict()['img']
+            elif not (fullspoil):
+                match2 = re.search(mythicspoilerpattern.format((c['name']).lower().replace(' ', '').replace('&#x27;', '').replace('-', '').replace('\'','').replace(',', '')), text2, re.DOTALL)
+                if match2:
+                    c['url'] = match2.group(0).replace(' src="', 'http://mythicspoiler.com/').replace('">', '')
+                    #else:
+                        #print('image for {} not found'.format(c['name']))
+                pass
+        if ('Creature' in c['type'] and not c.has_key('power')) or ('Vehicle' in c['type'] and not c.has_key('power')):
+            print(c['name'] + ' is a creature w/o p/t img: ' + c['url'])
+        if len(str(c['url'])) < 10:
+            print(c['name'] + ' has no image.')
+    return mtgjson
+
+def check_new(mtgjson):
+    if os.path.isfile(setjson):
+        with open(setjson) as data_file:
+            oldcards = json.load(data_file)
+        oldcount = 0
+        newcount = 0
+        for old in oldcards['cards']:
+            #print old['name']
+            oldcount = oldcount + 1
+        for new in mtgjson['cards']:
+            isnew = True
+            for oldcard in oldcards['cards']:
+                if oldcard['name'] == new['name']:
+                    isnew = False
+            if isnew:
+                print 'New card! ' + new['name'] + '( ' + new['url'] + ' ) '
+            if not new['name'] == 'delete':
+                newcount = newcount + 1
+
+def write_mtgjson(mtgjson):
+    with open(setjson, 'w') as outfile:
+        json.dump(mtgjson, outfile, sort_keys=True, indent=2, separators=(',', ': '))
+
+def make_allsets(mtgjson):
+    #let's see if we have an AllSets.pre.json, and how old it is.
+    #if it's more than a week old, let's grab a new one
+    getAllSets = False
+    if os.path.isfile('AllSets.pre.json'):
+        allSetsAge = (time.time() - os.path.getctime('AllSets.pre.json'))
+        if (allSetsAge < 604800):
+            getAllSets = False
+            #print "Found a current (" + str(datetime.timedelta(minutes=allSetsAge/60)) + ") AllSets.pre.json, not grabbing a new one."
+    if getAllSets:
+        #we have to spoof a user-agent for mtgjson
+        class MyOpener(urllib.FancyURLopener):
+            version = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko / 20071127 Firefox / 2.0.0.11'
+        opener = MyOpener()
+        opener.retrieve('http://mtgjson.com/json/AllSets.json', 'AllSets.pre.json')
+        #let's remove the last } from mtgjson
+        #then put the new set code in there
+        with open('AllSets.pre.json', 'rb+') as filehandle:
+            filehandle.seek(-1, os.SEEK_END)
+            filehandle.truncate()
+            filehandle.write(',"' + setname + '":')
+
+    #now let's smash together the old json
+    #with our new one
+    #and then close it!
+    with open('AllSets.json', 'wb') as wfd:
+        for f in ['AllSets.pre.json', setjson]:
+            with open(f, 'rb') as fd:
+                shutil.copyfileobj(fd, wfd, 1024 * 1024 * 10)
+                # 10MB per writing chunk to avoid reading big file into memory.
+        wfd.write('}')
+
+    #let's zip it up, with compression if possible
+    try:
+        import zlib
+        compression = zipfile.ZIP_DEFLATED
+    except:
+        compression = zipfile.ZIP_STORED
+
+    modes = {zipfile.ZIP_DEFLATED: 'deflated',
+             zipfile.ZIP_STORED: 'stored',
+             }
+    zf = zipfile.ZipFile('AllSets.json.zip', mode='w')
+    try:
+        zf.write('AllSets.json', compress_type=compression)
+    finally:
+        #let's clear out the working files
+        #os.remove('AllSets.pre.json')
+        os.remove('AllSets.json')
+        zf.close()
+
+def write_xml(mtgjson, cardsxml):
+    if backupfiles and os.path.isfile(cardsxml):
+        shutil.copyfile(cardsxml, 'bak/' + cardsxml)
+    cardsxml = open(cardsxml, 'w')
+    cardsxml.truncate()
+    count = 0
+    dfccount = 0
+    newest = ''
+    related = 0
+    cardsxml.write("<?xml version='1.0' encoding='UTF-8'?>\n"
+                   "<cockatrice_carddatabase version='3'>\n"
+                   "<sets>\n<set>\n<name>"
+                   + setname +
+                   "</name>\n"
+                   "<longname>"
+                   + setlongname +
+                   "</longname>\n"
+                   "<settype>Expansion</settype>\n"
+                   "<releasedate>"
+                   + setreleasedate +
+                   "</releasedate>\n"
+                   "</set>\n"
+                   "</sets>\n"
+                   "<cards>")
+    #print mtgjson
+    for card in mtgjson["cards"]:
+        if count == 0:
+            newest = card["name"]
+        count += 1
+        name = card["name"]
+        if card.has_key("manaCost"):
+            manacost = card["manaCost"].replace('{', '').replace('}', '')
+        else:
+            manacost = ""
+        if card.has_key("power") or card.has_key("toughness"):
+            if card["power"]:
+                pt = str(card["power"]) + "/" + str(card["toughness"])
+            else:
+                pt = 0
+        else:
+            pt = 0
+        if card.has_key("text"):
+            text = card["text"]
+        else:
+            text = ""
+        if card.has_key("names"):
+            if len(card["names"]) > 1:
+                if card["names"][0] == card["name"]:
+                    related = card["names"][1]
+                    text += '\n\n(Related: ' + card["names"][1] + ')'
+                    dfccount += 1
+                elif card['names'][1] == card['name']:
+                    related = card["names"][0]
+                    text += '\n\n(Related: ' + card["names"][0] + ')'
+
+        cardtype = card["type"]
+        tablerow = "1"
+        if "Land" in cardtype:
+            tablerow = "0"
+        elif "Sorcery" in cardtype:
+            tablerow = "3"
+        elif "Instant" in cardtype:
+            tablerow = "3"
+        elif "Creature" in cardtype:
+            tablerow = "2"
+
+        cardsxml.write("<card>\n")
+        cardsxml.write("<name>" + name.encode('utf-8') + "</name>\n")
+        cardsxml.write('<set rarity="' + card['rarity'] + '" picURL="' + card["url"] + '">' + setname + '</set>\n')
+        cardsxml.write("<manacost>" + manacost.encode('utf-8') + "</manacost>\n")
+        cardsxml.write("<cmc>" + str(card['cmc']) + "</cmc>")
+        if card.has_key('colors'):
+            colorTranslate = {
+                "White": "W",
+                "Blue": "U",
+                "Black": "B",
+                "Red": "R",
+                "Green": "G"
+            }
+            for color in card['colors']:
+                cardsxml.write('<color>' + colorTranslate[color] + '</color>')
+        if name + ' enters the battlefield tapped' in text:
+            cardsxml.write("<cipt>1</cipt>")
+        cardsxml.write("<type>" + cardtype.encode('utf-8') + "</type>\n")
+        if pt:
+            cardsxml.write("<pt>" + pt + "</pt>\n")
+        if card.has_key('loyalty'):
+            cardsxml.write("<loyalty>" + str(card['loyalty']) + "</loyalty>")
+        cardsxml.write("<tablerow>" + tablerow + "</tablerow>\n")
+        cardsxml.write("<text>" + text.encode('utf-8') + "</text>\n")
+        if related:
+        #    for relatedname in related:
+            cardsxml.write("<related>" + related.encode('utf-8') + "</related>\n")
+            related = ''
+
+        cardsxml.write("</card>\n")
+
+    cardsxml.write("</cards>\n</cockatrice_carddatabase>")
+
+    print 'XML STATS'
+    print 'Total cards: ' + str(count)
+    if dfccount > 0:
+        print 'DFC: ' + str(dfccount)
+    print 'Newest: ' + str(newest)
+    print 'Runtime: ' + str(datetime.datetime.today().strftime('%H:%M')) + ' on ' + str(datetime.date.today())
+
+    return newest
+
+def download_images(mtgjson):
+    if downloadImages:
+        if not os.path.isdir('images/' + setname):
+            os.makedirs('images/' + setname)
+        for card in mtgjson['cards']:
+            if card['url']:
+                if os.path.isfile('images/' + setname + '/' + card['name'] + '.jpg') and not overwriteImages:
+                    continue
+                print 'Downloading ' + card['url'] + ' to images/' + setname + '/' + card['name'] + '.jpg'
+                urllib.urlretrieve(card['url'], 'images/' + setname + '/' + card['name'] + '.jpg')
+        #let's zip it up, with compression if possible
+        try:
+            import zlib
+            compression = zipfile.ZIP_DEFLATED
+        except:
+            compression = zipfile.ZIP_STORED
+
+        modes = {zipfile.ZIP_DEFLATED: 'deflated',
+                 zipfile.ZIP_STORED: 'stored',
+                 }
+        zf = zipfile.ZipFile('Images.zip', mode='w')
+
+        try:
+            for file in os.listdir('images/' + setname):
+                zf.write('images/' + setname + '/' + file, setname + '/' + file, compress_type=compression)
+            zf.close()
+        finally:
+            zf.close()
+
+def write_html(newest, mtgjson):
+    f = open(html, 'r')
+    lines = f.readlines()
+    count = 0
+    for card in mtgjson['cards']:
+        count = count + 1
+    lines[22] = str(count) + '/' + str(setcount) + ' \n'
+    lines[26] = newest + '\n'
+    lines[28] = str(datetime.date.today()) + '\n'
+    lines[30] = str(datetime.datetime.today().strftime('%H:%M')) + '\n'
+    #lines
+    f.close()
+
+    if backupfiles:
+        shutil.copyfile(html, 'bak/' + html)
+    f = open(html, 'w')
+    f.writelines(lines)
+    f.close()
+    return
 
 if __name__ == '__main__':
-    if usescryfall and not offlinemode:
-        if check_scryfall():
-            mtgjson = get_scryfall()
+    if not offlineMode:
+        mtgsjson = scrape_mtgs()
+        if useScryfall:
+            scryfalljson = get_scryfall()
+            #mtgjson = combine_jsons(mtgsjson, scryfalljson)
         else:
-            mtgjson = get_mtgs()
-    elif not offlinemode:
-        mtgjson = get_mtgs()
-    #moved the following functions into get_mtgs() vs get_scryfall()
-    #cards = get_cards()
-    #cards = correct_cards(cards)
-    #add_images(cards)
-    #mtgjson = make_json(cards, setjson) #moved this to !offlinemode
-    #if offlinemode:
-    #    if os.path.isfile(setjson):
-    #        with open(setjson) as data_file:
-    #            mtgjson = json.load(data_file)
-    #    else:
-    #        print "No " + setjson + " file found, cannot run offline"
-    #else:
-    #    mtgjson = make_json(cards, setjson)
-    if makezip:
-        makeAllSets(mtgjson)
-    newest = write_xml(mtgjson, cardsxml)
-    if downloadimages:
-        download_images(mtgjson)
-    writehtml(newest, mtgjson)
-    #specialcards(mtgjson)
+            mtgjson = mtgsjson
+    else:
+        if os.path.isfile(setjson):
+            with open(setjson) as data_file:
+                mtgjson = json.load(data_file)
+        else:
+            sys.exit("No " + setjson + " file found, cannot run offline")
+    mtgjson = get_images(mtgjson)
+    check_new(mtgjson)
+    write_mtgjson(mtgjson)
+    make_allsets(mtgjson)
+    latest = write_xml(mtgjson, cardsxml)
+    download_images(mtgjson)
+    write_html(latest, mtgjson)
