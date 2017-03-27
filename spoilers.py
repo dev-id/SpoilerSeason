@@ -11,10 +11,10 @@ import os
 import zipfile
 import time
 
-blockname = 'Kaladesh'
-setname = 'AER'
-setlongname = 'Aether Revolt'
-setreleasedate = '2017-01-20'
+blockname = 'Amonkhet'
+setname = 'AKH'
+setlongname = 'Amonkhet'
+setreleasedate = '2017-04-28'
 setcount = 184
 #set types: "core", "expansion", "reprint", "box", "un", "from the vault", "premium deck", "duel deck",
     # "starter", "commander", "planechase", "archenemy", "promo", "vanguard", "masters", "conspiracy"
@@ -57,65 +57,8 @@ delete_cards = ['Plains', 'Island', 'Swamp', 'Mountain', 'Forest']
 #new keys will be created (loyalty)
 #key values: name, img, cost, type, pow, rules, rarity, setnumber, loyalty, colorArray, colorIdentityArray, color, colorIdentity
 card_corrections = {
-    "Peacekeeper Colossus": {
-        "img": "http://media-dominaria.cursecdn.com/avatars/128/653/636190442819845313.png"
-    },
-    "Scrap Trawler": {
-        "pow": "3/2"
-    },
-    "Heart of Kiran": {
-        "pow": "4/4"
-    },
-    "Consulate Dreadnought": {
-        "pow": "7/11"
-    },
-    "Peacekeeper Colossus": {
-        "pow": "6/6",
-        "img": "http://media-dominaria.cursecdn.com/avatars/128/653/636190442819845313.png"
-    },
-    "Decommision": {
-        "name": "Decommission"
-    },
-    "Metallic Mimic": {
-        "pow": "2/1"
-    },
-    "Untethered Express": {
-        "pow": "4/4"
-    },
-    "Ornithopter": {
-        "pow": "0/2"
-    },
-    "Merchant's Porter": {
-        "pow": "1/2"
-    },
-    "Foundry Assembler": {
-        "pow": "3/3"
-    },
-    "Aegis Automaton": {
-        "img": "http://mythicspoiler.com/aer/cards/aegisautomation.jpg",
-        "pow": "0/3"
-    },
-    "Druid of the Cowl": {
-        "img": "http://mythicspoiler.com/aer/cards/greenbeltdruid.jpg"
-    },
-    "Inspiring Statuary": {
-        "img": "http://www.hobbyconsolas.com/sites/hobbyconsolas.com/public/media/image/2017/01/magic-gatheringestatuas-inspiradoras.jpg"
-    },
-    "Spire of Industry": {
-        "img": "http://www.cardbox.sc/image/news/201701/sangyounotou.png"
-    },
-    "Merchant's Dockhand": {
-        "img": "http://www.cardshophamaya.com/data/hamaya/image/20170103_e7a2e6.png",
-        "pow": "1/2"
-    },
-    "Quicksmith Rebel": {
-        "pow": "3/2"
-    },
-    "Skyship Bandit": {
-        "img": "http://mythicspoiler.com/aer/cards/skyshippirate.jpg"
-    },
-    "Lightning Runner": {
-        "img": "https://pbs.twimg.com/media/C1Uh2_eWgAAdlo0.png"
+    "Dusk": {
+        "rules": "Destroy all creatures with power 3 or greater."
     }
 }
 
@@ -147,6 +90,17 @@ manual_card_template = [
 ]
 #array for storing manually entered cards, mtgs can be slow
 manual_cards = [
+    {
+        "cost": "3WW",
+        "cmc": '5',
+        "img": 'http://mythicspoiler.com/akh/cards/duskdawn.jpg',
+        "pow": '',
+        "name": 'Dawn',
+        "rules": 'Aftermath (Cast this spell only from your graveyard, then exile it.)\nReturn all creature cards with power 2 or less from your graveyard to your hand.',
+        "type": 'Sorcery',
+        "setnumber": '210b',
+        "rarity": 'Rare'
+    }
 ]
 
 #static
@@ -599,9 +553,9 @@ def get_images(mtgjson):
     text3 = requests.get(IMAGES3).text
     wotcpattern = r'<img alt="{}.*?" src="(?P<img>.*?\.png)"'
     mythicspoilerpattern = r' src="' + setname.lower() + '/cards/{}.*?.jpg">'
-
     for c in mtgjson['cards']:
-        if fullspoil and not c['setnumber'] in ['265','266','267','268','269','270','271','272','273','274']:
+        if fullspoil and not int(c['number']) > 184:
+        #if fullspoil:
             #print c['name'] + ' is #' + c['setnumber']
             c['url'] = ''
         match = re.search(wotcpattern.format(c['name'].replace('\'','&rsquo;')), text, re.DOTALL)
@@ -652,11 +606,11 @@ def make_allsets(mtgjson):
     #let's see if we have an AllSets.pre.json, and how old it is.
     #if it's more than a week old, let's grab a new one
     getAllSets = False
-    if os.path.isfile('AllSets.pre.json'):
-        allSetsAge = (time.time() - os.path.getctime('AllSets.pre.json'))
-        if (allSetsAge < 604800):
-            getAllSets = False
-            #print "Found a current (" + str(datetime.timedelta(minutes=allSetsAge/60)) + ") AllSets.pre.json, not grabbing a new one."
+    #if os.path.isfile('AllSets.pre.json'):
+    #    allSetsAge = (time.time() - os.path.getctime('AllSets.pre.json'))
+    #    if (allSetsAge < 604800):
+    #        getAllSets = False
+    #        #print "Found a current (" + str(datetime.timedelta(minutes=allSetsAge/60)) + ") AllSets.pre.json, not grabbing a new one."
     if getAllSets:
         #we have to spoof a user-agent for mtgjson
         class MyOpener(urllib.FancyURLopener):
