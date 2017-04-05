@@ -15,7 +15,7 @@ blockname = 'Amonkhet'
 setname = 'AKH'
 setlongname = 'Amonkhet'
 setreleasedate = '2017-04-28'
-setcount = 184
+setcount = 269
 #set types: "core", "expansion", "reprint", "box", "un", "from the vault", "premium deck", "duel deck",
     # "starter", "commander", "planechase", "archenemy", "promo", "vanguard", "masters", "conspiracy"
 settype = 'expansion'
@@ -46,7 +46,7 @@ html = 'index.html'
 related_cards = {}
 
 #delete erroneous cards and basics
-delete_cards = ['Plains', 'Island', 'Swamp', 'Mountain', 'Forest']
+delete_cards = ['Ready', 'Plains', 'Island', 'Swamp', 'Mountain', 'Forest']
 
 #fix any cards that have errors, format:
 #"card name": {
@@ -57,8 +57,26 @@ delete_cards = ['Plains', 'Island', 'Swamp', 'Mountain', 'Forest']
 #new keys will be created (loyalty)
 #key values: name, img, cost, type, pow, rules, rarity, setnumber, loyalty, colorArray, colorIdentityArray, color, colorIdentity
 card_corrections = {
+    "Gideon of the Trials": {
+        "loyalty": "3"
+    },
+    "Watchers of the Dead": {
+        "pow": "2/2"
+    },
+    "Lay Bare the Heart": {
+        "name": "Open Heart"
+    },
+    "Kefnet the Mindful": {
+        "img": "https://i.redd.it/3ei96s19zjpy.jpg"
+    },
     "Dusk": {
         "rules": "Destroy all creatures with power 3 or greater."
+    },
+    "Annointer Priest": {
+        "name": "Anointer Priest"
+    },
+    "Kefnet's Monument": {
+        "img": "http://mythicspoiler.com/akh/cards/kefnatsmonument.jpg"
     }
 }
 
@@ -77,19 +95,63 @@ card_corrections = {
 #"loyalty": 7, #loyalty is the only non-string value
 manual_card_template = [
     {
-        "cost": '',
-        "cmc": '',
-        "img": '',
-        "pow": '',
-        "name": '',
-        "rules": '',
-        "type": '',
-        "setnumber": '',
-        "rarity": '',
+        "cost": "",
+        "cmc": "",
+        "img": "",
+        "pow": "",
+        "name": "",
+        "rules": "",
+        "type": "",
+        "setnumber": "",
+        "rarity": "",
     },
 ]
 #array for storing manually entered cards, mtgs can be slow
 manual_cards = [
+    {
+        "cost": "2R",
+        "cmc": "3",
+        "img": "http://mythicspoiler.com/akh/cards/onwardvictory.jpg",
+        "pow": "",
+        "name": "Onward",
+        "rules": "Target creature gets +X/+0 until end of turn, where X is its power.",
+        "type": "Instant",
+        "setnumber": "218a",
+        "rarity": "Uncommon",
+    },
+    {
+        "cost": "2W",
+        "cmc": "3",
+        "img": "http://mythicspoiler.com/akh/cards/onwardvictory.jpg",
+        "pow": "",
+        "name": "Victory",
+        "rules": "Aftermath (Cast this spell only from your graveyard. Then exile it.)\nTarget creature gains double strike until end of turn.",
+        "type": "Sorcery",
+        "setnumber": "218b",
+        "rarity": "Uncommon",
+    },
+    {
+        "cost": "1W",
+        "cmc": "2",
+        "img": "http://mythicspoiler.com/akh/cards/preparedfight.jpg",
+        "pow": "",
+        "name": "Prepare",
+        "rules": "Untap target creature. It gains +2/+2 and has lifelink until end of turn.",
+        "type": "Instant",
+        "setnumber": "220a",
+        "rarity": "Rare",
+    },
+    {
+        "cost": "3G",
+        "cmc": "4",
+        "img": "http://mythicspoiler.com/akh/cards/preparedfight.jpg",
+        "pow": "",
+        "name": "Fight",
+        "rules": "Aftermath (Cast this spell only from your graveyard. Then exile it.)\nTarget creature you control fights target creature an opponent controls.",
+        "type": "Sorcery",
+        "setnumber": "220b",
+        "rarity": "Rare",
+    },
     {
         "cost": "3WW",
         "cmc": '5',
@@ -100,8 +162,85 @@ manual_cards = [
         "type": 'Sorcery',
         "setnumber": '210b',
         "rarity": 'Rare'
-    }
+    },
+    {
+        "cost": "4W",
+        "cmc": '5',
+        "img": 'http://mythicspoiler.com/akh/cards/gideonmartialparagon.jpg',
+        "pow": '',
+        "loyalty": '0',
+        "name": 'Gideon, Martial Paragon',
+        "rules": "+2: Untap creatures you control. They get +1/+1 until end of turn.\n0: Until end of turn, Gideon, Martial Paragon becomes a 5/5 human Soldier with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n-10: Creatures you control get +2/+2 until end of turn. Tap all creatures your opponents control.",
+        "type": 'Planeswalker - Gideon',
+        "setnumber": '270',
+        "rarity": 'Mythic Rare'
+    },
+    {
+        "cost": "5BB",
+        "cmc": '7',
+        "img": 'http://mythicspoiler.com/akh/cards/lilianadeathwielder.jpg',
+        "pow": '',
+        "loyalty": "0",
+        "name": 'Liliana, Death Wielder',
+        "rules": "+2: Put a -1/-1 counter on up to one target creature.\n-3: Destroy target creature with a -1/-1 counter on it.\n-10: Return all creature cards from your graveyard to the battlefield.",
+        "type": 'Planeswalker - Liliana',
+        "setnumber": '275',
+        "rarity": 'Mythic Rare'
+    },
+    {
+        "cost": "2W",
+        "cmc": "3",
+        "img": "https://i.redd.it/0qev4j3z1moy.png",
+        "pow": "",
+        "name": "Renewed Faith",
+        "rules": "You gain 6 life\nCycling {1}{W}\nWhen you cycle Renewed Faith, you may gain 2 life.",
+        "type": "Instant",
+        "setnumber": "25",
+        "rarity": "Uncommon",
+    },
+    {
+        "cost": "1GG",
+        "cmc": "3",
+        "img": "https://pbs.twimg.com/media/C8MhyQwVwAAa-u-.jpg",
+        "pow": "4/3",
+        "name": "Prowling Serpopard",
+        "rules": "Prowling Serpopard can't be countered.\nCreature spells you control can't be countered",
+        "type": "Creature - Cat Snake",
+        "setnumber": "180",
+        "rarity": "Rare",
+    },
+    {
+        "cost": "1B",
+        "cmc": "2",
+        "img": "http://mythicspoiler.com/akh/cards/destinedlead.jpg",
+        "pow": "",
+        "name": "Destined",
+        "rules": "Target creature gets +1/+0 and gains indestructible until end of turn. ",
+        "type": "Instant",
+        "setnumber": "217a",
+        "rarity": "Uncommon",
+    },
+    {
+        "cost": "3G",
+        "cmc": "4",
+        "img": "http://mythicspoiler.com/akh/cards/destinedlead.jpg",
+        "pow": "",
+        "name": "Lead",
+        "rules": "All creatures able to block target creature this turn do so.",
+        "type": "Sorcery",
+        "setnumber": "217b",
+        "rarity": "Uncommon",
+    },
 ]
+
+#split cards (and aftermath) go here,
+#"Front": "Back"
+split_cards = {
+    "Dusk": "Dawn",
+    "Destined": "Lead",
+    "Prepare": "Fight",
+    "Onward": "Victory"
+}
 
 #static
 SPOILER_RSS = 'http://www.mtgsalvation.com/spoilers.rss'
@@ -230,32 +369,9 @@ def scrape_mtgs():
         cardnames.append(card['name'])
         if not cardnames.count(card['name']) > 1:
             nodupes.append(card)
-            #cards.remove(card)
-            #print 'removing duplicate card ' + card['name']
+            
     cards = nodupes
-    # we're going to see if the card count has increased, if it hasn't, bail.
-    #if os.path.isfile(setjson):
-    #    with open(setjson) as data_file:
-    #        oldcards = json.load(data_file)
-    #    oldcount = 0
-    #    newcount = 0
-    #    for old in oldcards['cards']:
-    #        #print old['name']
-    #        oldcount = oldcount + 1
-    #    for new in cards:
-    #        isnew = True
-    #        for oldcard in oldcards['cards']:
-    #            if oldcard['name'] == new['name']:
-    #                isnew = False
-    #        if isnew:
-    #            print 'New card! ' + new['name'] + '(' + new['cost'] + '|' + new['type'] + '|' + new['rarity'] + ') '
-    #        if not new['name'] == 'delete':
-    #            newcount = newcount + 1
-        #if not newcount > oldcount:
-            #if not forcerun:
-            #sys.exit("No new cards found (" + str(newcount) + " cards)")
-            #else:
-            #    print 'No new cards found, running anyway. Set Forcerun = False to prevent overwrite.'
+
     cardlist = []
     if (fullspoil):
         #print "Missing Cards:\n"
@@ -310,6 +426,24 @@ def scrape_mtgs():
                 if not card['name'] in cardnames:
                     cardnames.append(card['name'])
                     cardnumber += 'b'
+        cardnames = []
+        if card['name'] in split_cards:
+            cardnames.append(card['name'])
+            cardnames.append(split_cards[card['name']])
+            cardnumber = cardnumber.replace('b','').replace('a','') + 'a'
+            card['layout'] = 'split'
+        for namematch in split_cards:
+            if card['name'] == split_cards[namematch]:
+                card['layout'] = 'split'
+                cardnames.append(namematch)
+                if not card['name'] in cardnames:
+                    cardnames.append(card['name'])
+                    cardnumber = cardnumber.replace('b','').replace('a','') + 'b'
+        if 'number' in card:
+            if 'b' in card['number'] or 'a' in card['number']:
+                if not 'layout' in card:
+                    print card['name'] + " has a a/b number but no 'layout'"
+
         cardtypes = []
         if not '-' in card['type']:
             card['type'] = card['type'].replace('instant','Instant').replace('sorcery','Sorcery').replace('creature','Creature')
@@ -679,6 +813,9 @@ def write_xml(mtgjson, cardsxml):
                    "<cards>")
     #print mtgjson
     for card in mtgjson["cards"]:
+        for carda in split_cards:
+            if card["name"] == split_cards[carda]:
+                continue
         if count == 0:
             newest = card["name"]
         count += 1
@@ -698,17 +835,34 @@ def write_xml(mtgjson, cardsxml):
             text = card["text"]
         else:
             text = ""
-        if card.has_key("names"):
-            if len(card["names"]) > 1:
-                if card["names"][0] == card["name"]:
-                    related = card["names"][1]
-                    text += '\n\n(Related: ' + card["names"][1] + ')'
-                    dfccount += 1
-                elif card['names'][1] == card['name']:
-                    related = card["names"][0]
-                    text += '\n\n(Related: ' + card["names"][0] + ')'
-
+        cardcmc = str(card['cmc'])
         cardtype = card["type"]
+        if card.has_key("names"):
+            if "layout" in card:
+                if card["layout"] != 'split':
+                    if len(card["names"]) > 1:
+                        if card["names"][0] == card["name"]:
+                            related = card["names"][1]
+                            text += '\n\n(Related: ' + card["names"][1] + ')'
+                            dfccount += 1
+                        elif card['names'][1] == card['name']:
+                            related = card["names"][0]
+                            text += '\n\n(Related: ' + card["names"][0] + ')'
+                else:
+                    for carda in split_cards:
+                        if card["name"] == carda:
+                            cardb = split_cards[carda]
+                            for jsoncard in mtgjson["cards"]:
+                                if cardb == jsoncard["name"]:
+                                    cardtype += " // " + jsoncard["type"]
+                                    manacost += " // " + (jsoncard["manaCost"]).replace('{', '').replace('}', '')
+                                    cardcmc += " // " + str(jsoncard["cmc"])
+                                    text += "\n---\n" + jsoncard["text"]
+                                    name += " // " + cardb
+            else:
+                print card["name"] + " has multiple names and no 'layout' key"
+
+
         tablerow = "1"
         if "Land" in cardtype:
             tablerow = "0"
@@ -719,11 +873,18 @@ def write_xml(mtgjson, cardsxml):
         elif "Creature" in cardtype:
             tablerow = "2"
 
+        if 'number' in card:
+            if 'b' in card['number']:
+                if 'layout' in card:
+                    if card['layout'] == 'split':
+                        print "We're skipping " + card['name'] + " because it's the right side of a split card"
+                        continue
+
         cardsxml.write("<card>\n")
         cardsxml.write("<name>" + name.encode('utf-8') + "</name>\n")
         cardsxml.write('<set rarity="' + card['rarity'] + '" picURL="' + card["url"] + '">' + setname + '</set>\n')
         cardsxml.write("<manacost>" + manacost.encode('utf-8') + "</manacost>\n")
-        cardsxml.write("<cmc>" + str(card['cmc']) + "</cmc>")
+        cardsxml.write("<cmc>" + cardcmc + "</cmc>")
         if card.has_key('colors'):
             colorTranslate = {
                 "White": "W",
