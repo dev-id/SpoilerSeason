@@ -6,7 +6,7 @@ deploy:
   provider: releases
   api_key: "263a669607736038e5e3a065c124e7fdfb55bf8f"
   file_glob: true
-  file: *.xml
+  file: /*.xml
   skip_cleanup: true
   overwrite: true
   on:
