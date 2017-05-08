@@ -1,12 +1,6 @@
 requests
 feedparser
-re
-sys
-os
-shutil
-time
 lxml
 PIL
 datetime
-urllib
 json
