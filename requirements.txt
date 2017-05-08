@@ -1,6 +1,6 @@
 requests
 feedparser
 lxml
-PIL
+Pillow
 datetime
 json
