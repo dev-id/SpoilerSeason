@@ -1,4 +1,4 @@
 language: python
 install:
   - pip install -r requirements.txt
-script: main.py
+script: python main.py
