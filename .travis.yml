@@ -2,3 +2,11 @@ language: python
 install:
   - pip install -r requirements.txt
 script: python main.py
+deploy:
+  provider: releases
+  api_key: "263a669607736038e5e3a065c124e7fdfb55bf8f"
+  file: *.xml
+  skip_cleanup: true
+  overwrite: true
+  on:
+    tags: true
