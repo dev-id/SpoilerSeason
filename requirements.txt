@@ -3,4 +3,3 @@ feedparser
 lxml
 Pillow
 datetime
-json
