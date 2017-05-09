@@ -6,5 +6,5 @@ notifications:
   email: false
 env:
   global:
-  - ENCRYPTION_LABEL: "d63619e83bb3"
+  - ENCRYPTION_LABEL: "b40e9c1f35ae"
   - COMMIT_AUTHOR_EMAIL: "you@example.com"
