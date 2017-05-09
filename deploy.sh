@@ -4,9 +4,9 @@ set -e # Exit with nonzero exit code if anything fails
 SOURCE_BRANCH="master"
 TARGET_BRANCH="files"
 
-#function doCompile {
-python main.py
-#}
+function doCompile {
+    python main.py
+}
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
 #if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
