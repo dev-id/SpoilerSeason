@@ -527,6 +527,8 @@ def get_image_urls(mtgjson, isfullspoil, setname, setlongname, setSize=269):
     return mtgjson
 
 def write_xml(mtgjson, setname, setlongname, setreleasedate, split_cards=[]):
+    if not os.path.isdir('out/'):
+        os.makedirs('out/')
     cardsxml = open('out/' + setname + '.xml', 'w+')
     cardsxml.truncate()
     count = 0
