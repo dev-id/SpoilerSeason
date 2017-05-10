@@ -177,8 +177,293 @@
   ],
   "unfixed": [
     {
+      "key": "subtypes",
+      "name": "Hooded Brawler",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Minotaur Sureshot",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Nef-Crop Entangler",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Manticore of the Gauntlet",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Pathmaker Initiate",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Emberhorn Minotaur",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Thresher Lizard",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Desert Cerodon",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Trueheart Twins",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Warfire Javelineer",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Wasteland Scorpion",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Bitterblade Warrior",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Defiant Greatmaw",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Greater Sandwurm",
+      "value": ""
+    },
+    {
       "key": "url",
       "name": "Tresspasser's Curse",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Zenith Seeker",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Tah-Crop Skirmisher",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Initiate's Companion",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Naga Vitalist",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Slither Blade",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Oashra Cultivator",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Shimmerscale Drake",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Soulstinger",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Seeker of Insight",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Ornery Kudu",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Scaled Behemoth",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Ruthless Sniper",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "River Serpent",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Pitiless Vizier",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Naga Oracle",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Weaver of Currents",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Horror of the Broken Lands",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Shadowstorm Vizier",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Hekma Sentinels",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Merciless Javelineer",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Festering Mummy",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Khenra Charioteer",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Honored Crop-Captain",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Decimator Beetle",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Aven Initiate",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Aven Wind Guide",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Vizier of Remedies",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Bone Picker",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Those Who Serve",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Ahn-Crop Champion",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Sparring Mummy",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Blighted Bat",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Seraph of the Suns",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Rhet-Crop Spearmaster",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Gust Walker",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Baleful Ammit",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Fan Bearer",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Devoted Crop-Mate",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Labyrinth Guardian",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Bloodlust Inciter",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Binding Mummy",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Vizier of Deferment",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Heart-Piercer Manticore",
       "value": ""
     },
     {
@@ -202,13 +487,103 @@
       "value": ""
     },
     {
+      "key": "subtypes",
+      "name": "Bloodrage Brawler",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Oketra's Attendant",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Vizier of Many Faces",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Wayward Servant",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Enigma Drake",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Samut, Voice of Dissent",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Glyph Keeper",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Holaphel, Maw of Sands",
+      "value": ""
+    },
+    {
       "key": "url",
       "name": "Holaphel, Maw of Sands",
       "value": ""
     },
     {
+      "key": "subtypes",
+      "name": "Bontu the Glorified",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Harsh Mentor",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Rhonas the Indomitable",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Plague Belcher",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Dread Wanderer",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Lord of the Accursed",
+      "value": ""
+    },
+    {
       "key": "loyalty",
       "name": "Nissa, Steward of Elements",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Grim Strider",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Cryptic Serpent",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Vizier of Tumbling Sands",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Shefet Monitor",
       "value": ""
     },
     {
@@ -222,8 +597,23 @@
       "value": ""
     },
     {
+      "key": "subtypes",
+      "name": "Quarry Hauler",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Doomed Dissenter",
+      "value": ""
+    },
+    {
       "key": "url",
       "name": "Reduce // Rubble",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Neheb, the Worthy",
       "value": ""
     },
     {
@@ -232,8 +622,58 @@
       "value": ""
     },
     {
+      "key": "subtypes",
+      "name": "Honored Hydra",
+      "value": ""
+    },
+    {
       "key": "url",
       "name": "Never // Return",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Oketra the True",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Vizier of the Menagerie",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Champion of Rhonas",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Nimble-Blade Khenra",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Winged Shepherd",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Supply Caravan",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Angel of Sanctions",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Soul-Scar Mage",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Hapatra, Vizier of Poisons",
       "value": ""
     },
     {
@@ -257,6 +697,11 @@
       "value": ""
     },
     {
+      "key": "subtypes",
+      "name": "Dessicated Naga",
+      "value": ""
+    },
+    {
       "key": "url",
       "name": "Dessicated Naga",
       "value": ""
@@ -277,6 +722,11 @@
       "value": ""
     },
     {
+      "key": "subtypes",
+      "name": "Companion of the Trials",
+      "value": ""
+    },
+    {
       "key": "url",
       "name": "Companion of the Trials",
       "value": ""
@@ -284,6 +734,46 @@
     {
       "key": "url",
       "name": "Stone Quarry",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Curator of Mysteries",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Battlefield Scavenger",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Watchful Naga",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Glory-Bound Initiate",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Manglehorn",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Regal Caracal",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Pouncing Cheetah",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Colossapede",
       "value": ""
     },
     {
@@ -307,8 +797,43 @@
       "value": ""
     },
     {
+      "key": "subtypes",
+      "name": "Combat Celebrant",
+      "value": ""
+    },
+    {
       "key": "loyalty",
       "name": "Gideon of the Trials",
+      "value": ""
+    },
+    {
+      "key": "power",
+      "name": "Watchers of the Dead",
+      "value": ""
+    },
+    {
+      "key": "toughness",
+      "name": "Watchers of the Dead",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Watchers of the Dead",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Kefnet the Mindful",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Scribe of the Mindful",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Tah-Crop Elite",
       "value": ""
     },
     {
@@ -317,8 +842,28 @@
       "value": ""
     },
     {
+      "key": "subtypes",
+      "name": "Channeler Initiate",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Temmet, Vizier of Naktamun",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Exemplar of Strength",
+      "value": ""
+    },
+    {
       "key": "url",
       "name": "Prepare // Fight",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Sacred Cat",
       "value": ""
     },
     {
@@ -332,8 +877,28 @@
       "value": ""
     },
     {
+      "key": "subtypes",
+      "name": "Flameblade Adept",
+      "value": ""
+    },
+    {
       "key": "url",
       "name": "Destined // Lead",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Crocodile of the Crossing",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Ahn-Crop Crasher",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Annointer Priest",
       "value": ""
     },
     {
@@ -342,8 +907,48 @@
       "value": ""
     },
     {
+      "key": "subtypes",
+      "name": "Hazoret the Fervent",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Prowling Serpopard",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Aven Mindcensor",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Unwavering Initiate",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Miasmic Mummy",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Trueheart Duelist",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Tattered Mummy",
+      "value": ""
+    },
+    {
       "key": "url",
       "name": "Tattered Mummy",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Graceful Cat",
       "value": ""
     },
     {
@@ -352,8 +957,78 @@
       "value": ""
     },
     {
+      "key": "subtypes",
+      "name": "Gravedigger",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Angler Drake",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Hyena Pack",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Dune Beetle",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Cursed Minotaur",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Ancient Crab",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Giant Spider",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Glorybringer",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Archfiend of Ifnir",
+      "value": ""
+    },
+    {
       "key": "url",
       "name": "Dusk // Dawn",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Rhonas the Indomitable",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Bontu the Glorified",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Oketra the True",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Kefnet the Mindful",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Hazoret the Fervent",
       "value": ""
     },
     {
@@ -364,6 +1039,11 @@
     {
       "key": "number",
       "name": "Mind Twist",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Aven Mindcensor",
       "value": ""
     }
   ]
