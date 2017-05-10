@@ -9,6 +9,12 @@
     {
       "fixed": true,
       "key": "manaCost",
+      "name": "Evolving Wilds",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
       "name": "Painted Bluffs",
       "value": ""
     },
@@ -178,6 +184,11 @@
     {
       "key": "url",
       "name": "Start // Finish",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Holaphel, Maw of Sands",
       "value": ""
     },
     {

@@ -1877,6 +1877,21 @@
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_OWxB6Cul5y.png"
     },
     {
+      "cmc": 0,
+      "name": "Evolving Wilds",
+      "number": "242",
+      "rarity": "Common",
+      "subtypes": [
+        "Aura"
+      ],
+      "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
+      "type": "Land",
+      "types": [
+        "Land"
+      ],
+      "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_E0w0D6sVK8.png"
+    },
+    {
       "cmc": 1,
       "colorIdentity": [
         "W"
@@ -2528,6 +2543,28 @@
       "type": "Creature - Sphinx",
       "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_FKPSuLYTWP.png"
+    },
+    {
+      "cmc": 8,
+      "colorIdentity": [
+        "G"
+      ],
+      "colors": [
+        "Green"
+      ],
+      "manaCost": "5GGG",
+      "name": "Holaphel, Maw of Sands",
+      "number": "171",
+      "power": "20",
+      "rarity": "Mythic Rare",
+      "subtypes": [
+        "Wurm"
+      ],
+      "text": "",
+      "toughness": "20",
+      "type": "Legendary Creature - Wurm",
+      "types": [],
+      "url": ""
     },
     {
       "cmc": 3,

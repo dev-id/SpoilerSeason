@@ -786,6 +786,14 @@ Enchanted creature can't attack or block.
 Enchanted creature has "{2}, Sacrifice this creature: You gain 2 life."</text>
 </card>
 <card>
+<name>Evolving Wilds</name>
+<set rarity="Common" picURL="http://media.wizards.com/2017/dw466ytu5_akh/en_E0w0D6sVK8.png">AKH</set>
+<manacost></manacost>
+<cmc>0</cmc><type>Land</type>
+<tablerow>0</tablerow>
+<text>{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.</text>
+</card>
+<card>
 <name>Time to Reflect</name>
 <set rarity="Uncommon" picURL="http://media.wizards.com/2017/dw466ytu5_akh/en_tql7OJMmqL.png">AKH</set>
 <manacost>W</manacost>
@@ -1100,6 +1108,15 @@ Cycling {3} ({3}, Discard this card: Draw a card.)</text>
 <text>Flying
 Whenever Glyph Keeper becomes the target of a spell or ability for the first time each turn, counter that spell or ability.
 Embalm {5}{U}{U} ({5}{U}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Sphinx with no mana cost.  Embalm only as a sorcery.)</text>
+</card>
+<card>
+<name>Holaphel, Maw of Sands</name>
+<set rarity="Mythic Rare" picURL="">AKH</set>
+<manacost>5GGG</manacost>
+<cmc>8</cmc><color>G</color><type>Legendary Creature - Wurm</type>
+<pt>20/20</pt>
+<tablerow>2</tablerow>
+<text></text>
 </card>
 <card>
 <name>Bontu the Glorified</name>
