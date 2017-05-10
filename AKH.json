@@ -2491,6 +2491,7 @@
       "name": "Nissa, Steward of Elements",
       "number": "204",
       "rarity": "Mythic Rare",
+      "subtypes": "Nissa,",
       "text": "+2: Scry 2.\n0: Look at the top card of your library. If it's a land card or a creature card with converted mana cost less than or equal to the number of loyalty counters on Nissa, Steward of Elements, you may put that card onto the battlefield.\n-6: Untap up to two target lands you control. They become 5/5 Elemental creatures with flying and haste until end of turn. They're still lands.",
       "type": "Planeswalker - Nissa",
       "types": [
@@ -3193,6 +3194,7 @@
       "name": "Liliana, Death's Majesty",
       "number": "97",
       "rarity": "Mythic Rare",
+      "subtypes": "Liliana,",
       "text": "+1: Create a 2/2 black Zombie creature token. Put the top two cards of your library into your graveyard.\n-3: Return target creature card from your graveyard to the battlefield. That creature is a black Zombie in addition to its other colors and types.\n-7: Destroy all non-Zombie creatures.",
       "type": "Planeswalker - Liliana",
       "types": [
@@ -3212,6 +3214,7 @@
       "name": "Gideon, Martial Pargon",
       "number": "270",
       "rarity": "Mythic Rare",
+      "subtypes": "Gideon,",
       "text": "+2: Untap all creatures you control. Those creatures get +1/+1 until end of turn.\n0: Until end of turn, Gideon, Martial Paragon becomes a 5/5 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n-10: Creatures you control get +2/+2 until end of turn. Tap all creatures your opponents control.",
       "type": "Planeswalker - Gideon",
       "types": [
@@ -3870,6 +3873,7 @@
       "name": "Gideon of the Trials",
       "number": "14",
       "rarity": "Mythic Rare",
+      "subtypes": "Gideon",
       "text": "+1: Until your next turn, prevent all damage target permanent would deal.\n0: Until end of turn, Gideon of the Trials becomes a 4/4 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n0: You get an emblem with \"As long as you control a Gideon planeswalker, you can't lose the game and your opponents can't win the game.\"",
       "type": "Planeswalker - Gideon",
       "types": [
@@ -4309,6 +4313,7 @@
       "name": "Liliana, Death Wielder",
       "number": "275",
       "rarity": "Mythic Rare",
+      "subtypes": "Liliana,",
       "text": "+2: Put a -1/-1 counter on up to one target creature.\n\n-3: Destroy target creature with a -1/-1 counter on it.\n\n-10: Return all creature cards from your graveyard to the battlefield.",
       "type": "Planeswalker - Liliana",
       "types": [

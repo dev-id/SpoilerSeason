@@ -44,6 +44,12 @@
     },
     {
       "fixed": true,
+      "key": "subtypes",
+      "name": "Nissa, Steward of Elements",
+      "value": ""
+    },
+    {
+      "fixed": true,
       "key": "manaCost",
       "name": "Nissa, Steward of Elements",
       "value": ""
@@ -68,6 +74,18 @@
     },
     {
       "fixed": true,
+      "key": "subtypes",
+      "name": "Liliana, Death's Majesty",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "subtypes",
+      "name": "Gideon, Martial Pargon",
+      "value": ""
+    },
+    {
+      "fixed": true,
       "key": "manaCost",
       "name": "Foul Orchard",
       "value": ""
@@ -76,6 +94,18 @@
       "fixed": true,
       "key": "manaCost",
       "name": "Stone Quarry",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "subtypes",
+      "name": "Gideon of the Trials",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "subtypes",
+      "name": "Liliana, Death Wielder",
       "value": ""
     },
     {
@@ -147,12 +177,37 @@
   ],
   "unfixed": [
     {
-      "key": "loyalty",
-      "name": "Nissa, Steward of Elements",
+      "key": "url",
+      "name": "Tresspasser's Curse",
       "value": ""
     },
     {
-      "key": "subtypes",
+      "key": "url",
+      "name": "~Sandwurm Convengence",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Commit // Memory",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Spring // Mind",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Start // Finish",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Holaphel, Maw of Sands",
+      "value": ""
+    },
+    {
+      "key": "loyalty",
       "name": "Nissa, Steward of Elements",
       "value": ""
     },
@@ -162,12 +217,32 @@
       "value": ""
     },
     {
-      "key": "loyalty",
-      "name": "Liliana, Death's Majesty",
+      "key": "url",
+      "name": "Heaven // Earth",
       "value": ""
     },
     {
-      "key": "subtypes",
+      "key": "url",
+      "name": "Reduce // Rubble",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Pull From Tomorrow",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Never // Return",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Failure // Comply",
+      "value": ""
+    },
+    {
+      "key": "loyalty",
       "name": "Liliana, Death's Majesty",
       "value": ""
     },
@@ -177,18 +252,73 @@
       "value": ""
     },
     {
-      "key": "subtypes",
+      "key": "url",
       "name": "Gideon, Martial Pargon",
       "value": ""
     },
     {
+      "key": "url",
+      "name": "Dessicated Naga",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Foul Orchard",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Gideon's Resolve",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Liliana's Influence",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Companion of the Trials",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Stone Quarry",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Mouth // Feed",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Rags // Riches",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Insult // Injury",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Cut // Ribbons",
+      "value": ""
+    },
+    {
       "key": "loyalty",
       "name": "Gideon of the Trials",
       "value": ""
     },
     {
-      "key": "subtypes",
-      "name": "Gideon of the Trials",
+      "key": "url",
+      "name": "Onward // Victory",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Prepare // Fight",
       "value": ""
     },
     {
@@ -197,8 +327,33 @@
       "value": ""
     },
     {
-      "key": "subtypes",
+      "key": "url",
       "name": "Liliana, Death Wielder",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Destined // Lead",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Annointer Priest",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Tattered Mummy",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Graceful Cat",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Dusk // Dawn",
       "value": ""
     },
     {
