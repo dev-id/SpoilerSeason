@@ -236,8 +236,8 @@ Cycling {2} ({2} Discard this card: Draw a card)</text>
 Cycling {2} ({2}, Discard this card: Draw a card.)</text>
 </card>
 <card>
-<name>Tresspasser's Curse</name>
-<set rarity="Common" picURL="">AKH</set>
+<name>Trespasser's Curse</name>
+<set rarity="Common" picURL="http://media.wizards.com/2017/dw466ytu5_akh/en_pqkoGAKOIE.png">AKH</set>
 <manacost>1B</manacost>
 <cmc>2</cmc><color>B</color><type>Enchantment - Aura Curse</type>
 <tablerow>1</tablerow>
@@ -1110,15 +1110,6 @@ Whenever Glyph Keeper becomes the target of a spell or ability for the first tim
 Embalm {5}{U}{U} ({5}{U}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Sphinx with no mana cost.  Embalm only as a sorcery.)</text>
 </card>
 <card>
-<name>Holaphel, Maw of Sands</name>
-<set rarity="Mythic Rare" picURL="">AKH</set>
-<manacost>5GGG</manacost>
-<cmc>8</cmc><color>G</color><type>Legendary Creature - Wurm</type>
-<pt>20/20</pt>
-<tablerow>2</tablerow>
-<text></text>
-</card>
-<card>
 <name>Bontu the Glorified</name>
 <set rarity="Mythic Rare" picURL="http://media.wizards.com/2017/dw466ytu5_akh/en_G6k0XamzzE.png">AKH</set>
 <manacost>2B</manacost>
@@ -1207,7 +1198,7 @@ Whenever another Zombie you control dies, each opponent loses 1 life.</text>
 <set rarity="Mythic Rare" picURL="http://media.wizards.com/2017/dw466ytu5_akh/en_w08Rh46uHS.png">AKH</set>
 <manacost></manacost>
 <cmc>0</cmc><type>Planeswalker - Nissa</type>
-<tablerow>1</tablerow>
+<loyalty>X</loyalty><tablerow>1</tablerow>
 <text>+2: Scry 2.
 0: Look at the top card of your library. If it's a land card or a creature card with converted mana cost less than or equal to the number of loyalty counters on Nissa, Steward of Elements, you may put that card onto the battlefield.
 -6: Untap up to two target lands you control. They become 5/5 Elemental creatures with flying and haste until end of turn. They're still lands.</text>
@@ -1359,8 +1350,8 @@ Whenever Neheb, the Worthy deals combat damage to a player, each player discards
 Cycling {2} ({2}, Discard this card: Draw a card.)</text>
 </card>
 <card>
-<name>Pull From Tomorrow</name>
-<set rarity="Rare" picURL="">AKH</set>
+<name>Pull from Tomorrow</name>
+<set rarity="Rare" picURL="http://media.wizards.com/2017/dw466ytu5_akh/en_tpDnyktC7Z.png">AKH</set>
 <manacost></manacost>
 <cmc>0</cmc><type>Instant</type>
 <tablerow>3</tablerow>

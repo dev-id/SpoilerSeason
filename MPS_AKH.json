@@ -17,12 +17,13 @@
       "number": "182",
       "power": "5",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
       "text": "Deathtouch, indestructible\n\nRhonas the Indomitable can't attack or block unless you control another creature with power 4 or greater.\n\n{2}{G}: Another target creature gets +2/+0 and gains trample until end of turn.",
       "toughness": "5",
       "type": "Legendary Creature - God",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media-dominaria.cursecdn.com/avatars/131/327/636276327578038901.png"
     },
     {
@@ -38,12 +39,13 @@
       "number": "82",
       "power": "4",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
       "text": "Menace, indestructible\n\nBontu the Glorified can't attack or block unless a creature died under your control this turn.\n\n{1}{B}, Sacrifice another creature: Scry 1. Each opponent loses 1 life and you gain 1 life.",
       "toughness": "6",
       "type": "Legendary Creature - God",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media-dominaria.cursecdn.com/avatars/131/319/636276005970527247.png"
     },
     {
@@ -59,12 +61,13 @@
       "number": "21",
       "power": "3",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
       "text": "Double strike, indestructible \n\nOketra the True can't attack or block unless you control at least three other creatures. \n\n{3}{W}: Create a 1/1 white Warrior creature token with vigilance.",
       "toughness": "6",
       "type": "Legendary Creature - God",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media-dominaria.cursecdn.com/avatars/131/257/636274291047385255.png"
     },
     {
@@ -80,12 +83,13 @@
       "number": "59",
       "power": "5",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
       "text": "Flying, indestructible\n\nKefnet the Mindful can't attack or block unless you have seven or more cards in hand.\n\n{3}{u}: Draw a card, then you may return a land you control to its owner's hand.",
       "toughness": "5",
       "type": "Legendary Creature - God",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media-dominaria.cursecdn.com/avatars/131/216/636271681332388427.png"
     },
     {
@@ -101,12 +105,13 @@
       "number": "136",
       "power": "5",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
       "text": "Indestructible, haste\nHazoret the Fervent can't attack or block unless you have one or fewer cards in hand.\n{2}{R}, Discard a card: Hazoret deals 2 damage to each opponent.",
       "toughness": "4",
       "type": "Legendary Creature - God",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media-dominaria.cursecdn.com/avatars/131/42/636268096129088124.png"
     },
     {
@@ -708,12 +713,14 @@
       "number": "5",
       "power": "2",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "Bird",
+        "Wizard"
+      ],
       "text": "Flash \nFlying\nIf an opponent would search a library, that player searches the top four cards of that library instead.",
       "toughness": "1",
       "type": "Creature - Bird Wizard",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media-dominaria.cursecdn.com/avatars/130/906/636263185962157528.png"
     },
     {

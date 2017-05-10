@@ -36,12 +36,14 @@
       "number": "173",
       "power": "3",
       "rarity": "Common",
+      "subtypes": [
+        "Naga",
+        "Warrior"
+      ],
       "text": "You may exert Hooded Brawler as it attacks. When you do, it gains +2/+2 until end of turn. (An exerted creature won't untap during your next untap step.)",
       "toughness": "2",
       "type": "Creature - Naga Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_eVMAlMFtKm.png"
     },
     {
@@ -56,6 +58,10 @@
       "name": "Haze of Pollen",
       "number": "171",
       "rarity": "Common",
+      "subtypes": [
+        "Naga",
+        "Warrior"
+      ],
       "text": "Prevent all combat damage that would be dealt this turn.\nCycling {3} ({3}, Discard this card: Draw a card.)",
       "type": "Instant",
       "types": [
@@ -76,12 +82,14 @@
       "number": "143",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Minotaur",
+        "Archer"
+      ],
       "text": "Reach\n\n{1r}: Minotaur Sureshot gets +1/+0 until end of turn,",
       "toughness": "3",
       "type": "Creature - Minotaur Archer",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_ccR48pLxQo.png"
     },
     {
@@ -97,12 +105,14 @@
       "number": "144",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "Trample\n\nYou may exert Nef-Crop Entangler as it attacks. When you do, it gets +1/+2 until end of turn. (An exerted creature doesn't untap during your next untap step.)",
       "toughness": "1",
       "type": "Creature - Human Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_WUmZfq47Vs.png"
     },
     {
@@ -118,12 +128,13 @@
       "number": "142",
       "power": "5",
       "rarity": "Common",
+      "subtypes": [
+        "Manticore"
+      ],
       "text": "When Manticore of the Gauntlet enters the battlefield, put a -1/-1 counter on target creature you control. Manticore of the Gauntlet deals 3 damage to target opponent.",
       "toughness": "4",
       "type": "Creature - Manticore",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_6QFbQUYmnl.png"
     },
     {
@@ -139,12 +150,14 @@
       "number": "146",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Wizard"
+      ],
       "text": "{T}: Target creature with power 2 or less can't be blocked this turn.",
       "toughness": "1",
       "type": "Creature - Human Wizard",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_GmPUvEFKvR.png"
     },
     {
@@ -160,12 +173,14 @@
       "number": "130",
       "power": "4",
       "rarity": "Common",
+      "subtypes": [
+        "Minotaur",
+        "Warrior"
+      ],
       "text": "You may exert Emberhorn Minotaur as it attacks. When you do, it gets +1/+1 and gains menace until end of turn. (An exterted creature won't untap during your next untap step) ",
       "toughness": "3",
       "type": "Creature - Minotaur Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_udulbD5HUm.png"
     },
     {
@@ -180,6 +195,10 @@
       "name": "Pursue Glory",
       "number": "147",
       "rarity": "Common",
+      "subtypes": [
+        "Minotaur",
+        "Warrior"
+      ],
       "text": "Attacking creatures get +2/+0 until end of turn.\n\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Instant",
       "types": [
@@ -200,12 +219,13 @@
       "number": "150",
       "power": "3",
       "rarity": "Common",
+      "subtypes": [
+        "Lizard"
+      ],
       "text": "Thresher Lizard gets +1/+2 as long as you have one or fewer cards in hand.",
       "toughness": "2",
       "type": "Creature - Lizard",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_roebBfB1b5.png"
     },
     {
@@ -220,6 +240,9 @@
       "name": "Electrify",
       "number": "129",
       "rarity": "Common",
+      "subtypes": [
+        "Lizard"
+      ],
       "text": "Electrify deals 4 damage to target creature",
       "type": "Instant",
       "types": [
@@ -239,6 +262,9 @@
       "name": "Tormenting Voice",
       "number": "151",
       "rarity": "Common",
+      "subtypes": [
+        "Lizard"
+      ],
       "text": "As an additional cost to cast Tormenting Voice, discard a card.\n\nDraw two cards.",
       "type": "Sorcery",
       "types": [
@@ -259,12 +285,13 @@
       "number": "128",
       "power": "6",
       "rarity": "Common",
+      "subtypes": [
+        "Beast"
+      ],
       "text": "Cycling {r}  ({r}, Discard this card: Draw a card.)",
       "toughness": "4",
       "type": "Creature - Beast",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_jPsD1mmlZ1.png"
     },
     {
@@ -280,12 +307,14 @@
       "number": "153",
       "power": "4",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Jackal",
+        "Warrior"
+      ],
       "text": "You may exert Trueheart Twins as it attacks. (It won't untap during your next untap step.)\n\nWhenever you exert a creature, creatures you control get +1/+0 until end of turn.",
       "toughness": "4",
       "type": "Creature - Jackal Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_2UhKq8n58f.png"
     },
     {
@@ -300,6 +329,10 @@
       "name": "Violent Impact",
       "number": "154",
       "rarity": "Common",
+      "subtypes": [
+        "Jackal",
+        "Warrior"
+      ],
       "text": "Destroy target artifact or land.\n\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Sorcery",
       "types": [
@@ -319,6 +352,10 @@
       "name": "Brute Strength",
       "number": "122",
       "rarity": "Common",
+      "subtypes": [
+        "Jackal",
+        "Warrior"
+      ],
       "text": "Target creature gets +3/+1 and gains trample until end of turn.",
       "type": "Instant",
       "types": [
@@ -338,6 +375,10 @@
       "name": "Blazing Volley",
       "number": "119",
       "rarity": "Common",
+      "subtypes": [
+        "Jackal",
+        "Warrior"
+      ],
       "text": "Blazing Volley deals 1 damage to each creature your opponents control.",
       "type": "Sorcery",
       "types": [
@@ -358,12 +399,14 @@
       "number": "155",
       "power": "2",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Minotaur",
+        "Warrior"
+      ],
       "text": "When Warfire Javelineer enters the battlefield, it deals X damage to target creature an opponent controls, where X is the number of instant and sorcery cards in your graveyard.",
       "toughness": "3",
       "type": "Creature - Minotaur Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_XgEBlXTa5G.png"
     },
     {
@@ -378,6 +421,10 @@
       "name": "Benefaction of Rhonas",
       "number": "156",
       "rarity": "Common",
+      "subtypes": [
+        "Minotaur",
+        "Warrior"
+      ],
       "text": "Reveal the top five cards of your library. You may put a creature card and/or an enchantment card from among them into your hand. Put the rest into your graveyard.",
       "type": "Sorcery",
       "types": [
@@ -398,12 +445,13 @@
       "number": "116",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Scorpion"
+      ],
       "text": "Deathtouch\n\nCycling {2} ({2}, Discard a card: Draw a card)",
       "toughness": "2",
       "type": "Creature - Scorpion",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_8AaWacdGFL.png"
     },
     {
@@ -419,12 +467,14 @@
       "number": "157",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Jackal",
+        "Warrior"
+      ],
       "text": "You may exert Bitterblade Warrior as it attacks. When you do, it gains +1/+0 and gains deathtouch until end of turn. (An exerted creature won't untap during your next untap step.)",
       "toughness": "2",
       "type": "Creature - Jackal Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_JxPEazmBPG.png"
     },
     {
@@ -440,12 +490,13 @@
       "number": "163",
       "power": "4",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Hippo"
+      ],
       "text": "When Defiant Greatmaw enters the battlefield, put two -1/-1 counters on target creature you control.\nWhenever you put one or more -1/-1 counters on Defiant Greatmaw, remove a -1/-1 counter from another creature you control.",
       "toughness": "5",
       "type": "Creature - Hippo",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_XEVvlE4ZvR.png"
     },
     {
@@ -460,11 +511,12 @@
       "name": "Gift of Paradise",
       "number": "167",
       "rarity": "Common",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "Enchant land\nWhen Gift of Paradise enters the battlefield, you gain 3 life.\nEnchanted land has \"{t]: Add two mana of any one color to your mana pool.\"",
       "type": "Enchantment - Aura",
-      "types": [
-        "Enchantment"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_PewIpCQcSj.png"
     },
     {
@@ -479,6 +531,9 @@
       "name": "Wander in Death",
       "number": "115",
       "rarity": "Common",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "Return up to two target creature cards from your graveyard to your hand.\n\nCycling {2} ({2} Discard this card: Draw a card)",
       "type": "Sorcery",
       "types": [
@@ -499,12 +554,13 @@
       "number": "168",
       "power": "7",
       "rarity": "Common",
+      "subtypes": [
+        "Wurm"
+      ],
       "text": "Greater Sandwurm can't be blocked by creatures with power 2 or less.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "toughness": "7",
       "type": "Creature - Wurm",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_S2O4B9eVrA.png"
     },
     {
@@ -516,15 +572,17 @@
         "Black"
       ],
       "manaCost": "1B",
-      "name": "Tresspasser's Curse",
+      "name": "Trespasser's Curse",
       "number": "112",
       "rarity": "Common",
+      "subtypes": [
+        "Aura",
+        "Curse"
+      ],
       "text": "Enchant player\nWhenever a creature enters the battlefield under enchanted player's control, that player loses 1 life and you gain 1 life.",
       "type": "Enchantment - Aura Curse",
-      "types": [
-        "Enchantment"
-      ],
-      "url": ""
+      "types": [],
+      "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_pqkoGAKOIE.png"
     },
     {
       "cmc": 4,
@@ -539,12 +597,14 @@
       "number": "77",
       "power": "2",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Bird",
+        "Wizard"
+      ],
       "text": "Flying\n\nWhenever you cycle or discard a card, target creature gains flying until end of turn.",
       "toughness": "2",
       "type": "Creature - Bird Wizard",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_FgFW74Cq4J.png"
     },
     {
@@ -559,6 +619,10 @@
       "name": "Hapatra's Mark",
       "number": "169",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Bird",
+        "Wizard"
+      ],
       "text": "Target creature you control gains hexproof until end of turn. Remove all -1/-1 counters from it.",
       "type": "Instant",
       "types": [
@@ -578,6 +642,10 @@
       "name": "Winds of Rebuke",
       "number": "76",
       "rarity": "Common",
+      "subtypes": [
+        "Bird",
+        "Wizard"
+      ],
       "text": "Return target nonland permanent to its owner's hand. Each player puts the top two cards of his or her library into his or her graveyard.",
       "type": "Instant",
       "types": [
@@ -597,6 +665,10 @@
       "name": "Supernatural Stamina",
       "number": "111",
       "rarity": "Common",
+      "subtypes": [
+        "Bird",
+        "Wizard"
+      ],
       "text": "Until end of turn, target creature gets +2/+0 and gains \"When this creature dies, return it to the battlefield tapped under its owner's control.\"",
       "type": "Instant",
       "types": [
@@ -617,12 +689,14 @@
       "number": "72",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Naga",
+        "Warrior"
+      ],
       "text": "Embalm {3}{U} ({3}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Naga Warrior with no mana cost. Embalm only as a sorcery.) ",
       "toughness": "1",
       "type": "Creature - Naga Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_U63Mx3pfFm.png"
     },
     {
@@ -638,12 +712,13 @@
       "number": "174",
       "power": "3",
       "rarity": "Common",
+      "subtypes": [
+        "Cat"
+      ],
       "text": "When Initiate's Companion deals combat damage to a player, untap target creature or land.",
       "toughness": "1",
       "type": "Creature - Cat",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_4xOAuhfTIG.png"
     },
     {
@@ -659,12 +734,14 @@
       "number": "176",
       "power": "1",
       "rarity": "Common",
+      "subtypes": [
+        "Naga",
+        "Druid"
+      ],
       "text": "{t}: Add to your mana pool one mana of any type that a land you control could produce.",
       "toughness": "2",
       "type": "Creature - Naga Druid",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_AnBfm8Lv2Z.png"
     },
     {
@@ -680,12 +757,14 @@
       "number": "71",
       "power": "1",
       "rarity": "Common",
+      "subtypes": [
+        "Naga",
+        "Rogue"
+      ],
       "text": "Slither Blade can't be blocked.",
       "toughness": "2",
       "type": "Creature - Naga Rogue",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_R97d0KsfII.png"
     },
     {
@@ -701,12 +780,14 @@
       "number": "177",
       "power": "0",
       "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Druid"
+      ],
       "text": "{2}{G}, {T}, Sacrifice Oashra Cultivator: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
       "toughness": "3",
       "type": "Creature - Human Druid",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_mqrKtwlFS3.png"
     },
     {
@@ -722,12 +803,13 @@
       "number": "70",
       "power": "3",
       "rarity": "Common",
+      "subtypes": [
+        "Drake"
+      ],
       "text": "Flying\n\nCycling {2] ({2}, Discard this card: Draw a card.)",
       "toughness": "4",
       "type": "Creature - Drake",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_d3fg4tM04z.png"
     },
     {
@@ -743,12 +825,14 @@
       "number": "108",
       "power": "4",
       "rarity": "Common",
+      "subtypes": [
+        "Scorpion",
+        "Demon"
+      ],
       "text": "When Soulstinger enters the battlefield, put two -1/-1 counters on target creature you control.\nWhen Soulstinger dies, you may put a -1/-1 counter on target creature for each -1/-1 counter on Soulstinger.",
       "toughness": "5",
       "type": "Creature - Scorpion Demon",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_q8C7P12f3q.png"
     },
     {
@@ -764,12 +848,14 @@
       "number": "69",
       "power": "1",
       "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Wizard"
+      ],
       "text": "{T}: Draw a card, then discard a card. Activate this ability only if you've cast a noncreature spell this turn.",
       "toughness": "3",
       "type": "Creature - Human Wizard",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_blLtDEpgj1.png"
     },
     {
@@ -785,12 +871,13 @@
       "number": "178",
       "power": "3",
       "rarity": "Common",
+      "subtypes": [
+        "Antelope"
+      ],
       "text": "When Ornery Kudu enters the battlefield, put a -1/-1 counter on target creature you control.",
       "toughness": "4",
       "type": "Creature - Antelope",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_Vn836s8Xdi.png"
     },
     {
@@ -805,6 +892,9 @@
       "name": "Sacred Excavation",
       "number": "67",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Antelope"
+      ],
       "text": "Return up to two cards with cycling from your graveyard to your hand.",
       "type": "Sorcery",
       "types": [
@@ -825,12 +915,13 @@
       "number": "184",
       "power": "6",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Crocodile"
+      ],
       "text": "Hexproof",
       "toughness": "7",
       "type": "Creature - Crocodile",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_qv1VeOjdnW.png"
     },
     {
@@ -846,12 +937,14 @@
       "number": "105",
       "power": "1",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Human",
+        "Archer"
+      ],
       "text": "Whenever you cycle or discard a card, you may pay 1={1}. If you do, put a -1/-1 counter on target creature,",
       "toughness": "2",
       "type": "Creature - Human Archer",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_YcAZFlJbK0.png"
     },
     {
@@ -866,6 +959,10 @@
       "name": "Shed Weakness",
       "number": "185",
       "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Archer"
+      ],
       "text": "Target creature gets +2/+2 until end of turn. You may remove a -1/-1 counter from it.",
       "type": "Instant",
       "types": [
@@ -886,12 +983,13 @@
       "number": "66",
       "power": "5",
       "rarity": "Common",
+      "subtypes": [
+        "Serpent"
+      ],
       "text": "River Serpent can't attack unless there are five or more cards in your graveyard.\n\nCycling {U} ({U}, Discard his card: Draw a card.)",
       "toughness": "5",
       "type": "Creature - Serpent",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_kV8TaWP8es.png"
     },
     {
@@ -906,6 +1004,9 @@
       "name": "Stinging Shot",
       "number": "189",
       "rarity": "Common",
+      "subtypes": [
+        "Serpent"
+      ],
       "text": "Put three -1/-1 counters on target creature with flying.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Instant",
       "types": [
@@ -926,12 +1027,14 @@
       "number": "103",
       "power": "4",
       "rarity": "Common",
+      "subtypes": [
+        "Minotaur",
+        "Cleric"
+      ],
       "text": "Whenever you cycle or discard a card, Pitiless Vizier gains indestructible until end of turn.",
       "toughness": "2",
       "type": "Creature - Minotaur Cleric",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_7gnEsM6BOO.png"
     },
     {
@@ -939,6 +1042,10 @@
       "name": "Open into Wonder",
       "number": "64",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Minotaur",
+        "Cleric"
+      ],
       "text": "X target creatures can't be blocked this turn. Until end of turn, those creatures gain \"Whenever this creature deals combat damage to a player, draw a card.\"",
       "type": "Sorcery",
       "types": [
@@ -958,6 +1065,10 @@
       "name": "Synchronized Strike",
       "number": "190",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Minotaur",
+        "Cleric"
+      ],
       "text": "Untap up to two target creatures. They each get +2/+2 until end of turn.",
       "type": "Instant",
       "types": [
@@ -978,12 +1089,14 @@
       "number": "62",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Naga",
+        "Cleric"
+      ],
       "text": "When Naga Oracle enters the battlefield, look at the top three cards of your library. Put any number of them into your graveyard and the rest back on top of your library in any order.",
       "toughness": "4",
       "type": "Creature - Naga Cleric",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_MDBCCfzO0o.png"
     },
     {
@@ -1001,12 +1114,14 @@
       "number": "209",
       "power": "2",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Naga",
+        "Druid"
+      ],
       "text": "{t]: Add {C}{C} to your mana pool.",
       "toughness": "2",
       "type": "Creature - Naga Druid",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_t8yu7mATI4.png"
     },
     {
@@ -1022,12 +1137,13 @@
       "number": "95",
       "power": "4",
       "rarity": "Common",
+      "subtypes": [
+        "Horror"
+      ],
       "text": "Whenever you cycle or discard another card, Horror of the Broken Lands gets +2/+1 until end of turn.\nCycling {b} ({b}, Discard this card: Draw a card.)",
       "toughness": "4",
       "type": "Creature - Horror",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_23cDKTjB6U.png"
     },
     {
@@ -1045,12 +1161,14 @@
       "number": "206",
       "power": "1",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Human",
+        "Cleric"
+      ],
       "text": "Flying\nWhenever you cycle or discard a card, Shadowstorm Vizier gets +1/+1 until end of turn.",
       "toughness": "3",
       "type": "Creature - Human Cleric",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_TARInQvsU3.png"
     },
     {
@@ -1065,11 +1183,12 @@
       "name": "Illusory Wrappings",
       "number": "58",
       "rarity": "Common",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "Enchant creature\n\nEnchanted creature has base power and toughness 0/2.",
       "type": "Enchantment - Aura",
-      "types": [
-        "Enchantment"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_28eugnwcmA.png"
     },
     {
@@ -1084,6 +1203,9 @@
       "name": "Final Reward",
       "number": "92",
       "rarity": "Common",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "Exile target creature\n",
       "type": "Instant",
       "types": [
@@ -1104,12 +1226,14 @@
       "number": "56",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Cleric"
+      ],
       "text": "Whenever you cycle or discard a card, Hekma Sentinels gets +1/+1 until end of turn.",
       "toughness": "3",
       "type": "Creature - Human Cleric",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_hT4tPwQQyW.png"
     },
     {
@@ -1127,12 +1251,14 @@
       "number": "202",
       "power": "4",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Minotaur",
+        "Warrior"
+      ],
       "text": "{2}, Discard a card: Put a -1/-1 counter on target creature. That creature can't block this turn.",
       "toughness": "2",
       "type": "Creature - Minotaur Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_V81VZeVuip.png"
     },
     {
@@ -1147,6 +1273,10 @@
       "name": "Galestrike",
       "number": "54",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Minotaur",
+        "Warrior"
+      ],
       "text": "Return target tapped creature to its owner's hand.\n\nDraw a card.",
       "type": "Instant",
       "types": [
@@ -1167,12 +1297,13 @@
       "number": "91",
       "power": "1",
       "rarity": "Common",
+      "subtypes": [
+        "Zombie"
+      ],
       "text": "When Festering Mummy dies, you may put a -1/-1 counter on target creature.",
       "toughness": "1",
       "type": "Creature - Zombie",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_BCMoiEPYpk.png"
     },
     {
@@ -1190,12 +1321,14 @@
       "number": "201",
       "power": "3",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Jackal",
+        "Warrior"
+      ],
       "text": "Trample\nOther creatures you control have trample.",
       "toughness": "3",
       "type": "Creature - Jackal Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_kEv2i2wfPo.png"
     },
     {
@@ -1210,6 +1343,10 @@
       "name": "Compelling Argument",
       "number": "47",
       "rarity": "Common",
+      "subtypes": [
+        "Jackal",
+        "Warrior"
+      ],
       "text": "Target player puts the top five cards of his or her library into his or her graveyard.\n\nCycling {U}({U}, Discard this card: Draw a card.)",
       "type": "Sorcery",
       "types": [
@@ -1232,12 +1369,14 @@
       "number": "200",
       "power": "3",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "Whenever Honored Crop-Captain attacks, other attacking creatures get +1/+0 until end of turn.",
       "toughness": "2",
       "type": "Creature - Human Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_YWYP8mbNVe.png"
     },
     {
@@ -1252,6 +1391,10 @@
       "name": "Cancel",
       "number": "44",
       "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "Counter target spell.",
       "type": "Instant",
       "types": [
@@ -1271,6 +1414,10 @@
       "name": "Faith of the Devoted",
       "number": "90",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "Whenever you cycle or discard a card you may pay {1}. If you do each opponent loses 2 life and you gain 2 life.",
       "type": "Enchantment",
       "types": [
@@ -1293,12 +1440,13 @@
       "number": "197",
       "power": "4",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Insect"
+      ],
       "text": "When Decimator Beetle enters the battlefield, put a -1/-1 counter on target creature you control.\nWhenever Decimator Beetle attacks, remove a -1/-1 counter from target creature you control and put a -1/-1 counter on up to one target creature defending player controls.",
       "toughness": "5",
       "type": "Creature - Insect",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_n7ijHBmMm5.png"
     },
     {
@@ -1314,12 +1462,14 @@
       "number": "43",
       "power": "3",
       "rarity": "Common",
+      "subtypes": [
+        "Bird",
+        "Warrior"
+      ],
       "text": "Flying\n\nEmbalm {6}{U} ({6}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Bird Warrior with no mana cost. Embalm only as a sorcery.)",
       "toughness": "2",
       "type": "Creature - Bird Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_dILRM5lGMg.png"
     },
     {
@@ -1337,12 +1487,14 @@
       "number": "195",
       "power": "2",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Bird",
+        "Warrior"
+      ],
       "text": "Flying, vigilance\nCreature tokens you control have flying and vigilance.\nEmbalm {4}{W}{U} ({4}{W}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Bird Warrior with no mana cost. Embalm only as a sorcery.)",
       "toughness": "3",
       "type": "Creature - Bird Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_IxBQ2fsDIL.png"
     },
     {
@@ -1358,12 +1510,14 @@
       "number": "38",
       "power": "2",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Human",
+        "Cleric"
+      ],
       "text": "If one or more -1/-1 counters would be put on a creature you control, that many -1/-1 counters minus one are put on it instead.",
       "toughness": "1",
       "type": "Creature - Human Cleric",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_zIZX27a8N2.png"
     },
     {
@@ -1379,12 +1533,13 @@
       "number": "81",
       "power": "3",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Bird"
+      ],
       "text": "Bone Picker costs {3} less to cast if a creature died this turn.\n\nFlying Deathtouch",
       "toughness": "2",
       "type": "Creature - Bird",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_ZPQDOv8TKr.png"
     },
     {
@@ -1400,12 +1555,13 @@
       "number": "32",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Zombie"
+      ],
       "text": "",
       "toughness": "4",
       "type": "Creature - Zombie",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_8CjPPYMXV3.png"
     },
     {
@@ -1423,12 +1579,14 @@
       "number": "194",
       "power": "4",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "You may exert Ahn-Crop Champion as it attacks. When you do, untap all other creatures you control. (An exerted creature won't untap during your next untap step.)",
       "toughness": "4",
       "type": "Creature - Human Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_mALATFDGXj.png"
     },
     {
@@ -1444,12 +1602,13 @@
       "number": "29",
       "power": "3",
       "rarity": "Common",
+      "subtypes": [
+        "Zombie"
+      ],
       "text": "When Sparring Mummy enters the battlefield, untap target creature.",
       "toughness": "3",
       "type": "Creature - Zombie",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_C8W0RQYlrO.png"
     },
     {
@@ -1465,12 +1624,14 @@
       "number": "80",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Zombie",
+        "Bat"
+      ],
       "text": "Flying\n{1}: Blighted Bat gets haste until end of turn.",
       "toughness": "1",
       "type": "Creature - Zombie Bat",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_xEsPZjYsoG.png"
     },
     {
@@ -1486,12 +1647,13 @@
       "number": "28",
       "power": "4",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Angel"
+      ],
       "text": "Flying\n\nIndestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it's still put into its owner's graveyard.)",
       "toughness": "4",
       "type": "Creature - Angel",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_6J3FbVFgyx.png"
     },
     {
@@ -1500,6 +1662,9 @@
       "name": "Luxa River Shrine",
       "number": "232",
       "rarity": "Common",
+      "subtypes": [
+        "Angel"
+      ],
       "text": "{1}, {t}: You gain 1 life. Put a brick counter on Luxa River Shrine.\n{t}: You gain 2 life. Activate this ability only if there are three or more brick counters on Luxa River Shrine.",
       "type": "Artifact",
       "types": [
@@ -1520,12 +1685,14 @@
       "number": "26",
       "power": "3",
       "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "You may exert Rhet-Crop Spearmaster as it attacks. When you do, it gets +1/+0 and gains first strike until end of turn. (An exerted creature won't untap during your next untap step.)",
       "toughness": "1",
       "type": "Creature - Human Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_HcYH2FcJyp.png"
     },
     {
@@ -1534,11 +1701,12 @@
       "name": "Honed Khopesh",
       "number": "230",
       "rarity": "Common",
+      "subtypes": [
+        "Equipment"
+      ],
       "text": "Equipped creature gets +1/+1.\nEquip {1}",
       "type": "Artifact - Equipment",
-      "types": [
-        "Artifact"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_vTWojaKr6u.png"
     },
     {
@@ -1547,6 +1715,9 @@
       "name": "Gate to the Afterlife",
       "number": "228",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Equipment"
+      ],
       "text": "Whenever a nontoken creature you control dies, you gain 1 life. Then you may draw a card. If you do, discard a card.\n{2}, {t}, Sacrifice Gate to the Afterlife: Search your graveyard, hand, and/or library for a card named God-Pharaoh's Gift and put it onto the battlefield. If you search your library this way, shuffle it. Activate this ability only if there are six or more creature cards in your graveyard.",
       "type": "Artifact",
       "types": [
@@ -1567,12 +1738,14 @@
       "number": "17",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Wizard"
+      ],
       "text": "You may exert Gust Walker as it attacks. When you do, it gets +1/+1 and gains flying until end of turn. (An exerted creature won't untap during your next untap step.)",
       "toughness": "2",
       "type": "Creature - Human Wizard",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_fHZY7uUhaJ.png"
     },
     {
@@ -1588,12 +1761,14 @@
       "number": "79",
       "power": "4",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Crocodile",
+        "Demon"
+      ],
       "text": "Lifelink\nWhen Baleful Ammit enters the battlefield, put a -1/-1 counter on target creature you control",
       "toughness": "3",
       "type": "Creature - Crocodile Demon",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_IZfBKSAg5A.png"
     },
     {
@@ -1608,6 +1783,10 @@
       "name": "Forsake the Worldly",
       "number": "13",
       "rarity": "Common",
+      "subtypes": [
+        "Crocodile",
+        "Demon"
+      ],
       "text": "Exile target artifact or enchantment.\n\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Instant",
       "types": [
@@ -1628,12 +1807,13 @@
       "number": "12",
       "power": "1",
       "rarity": "Common",
+      "subtypes": [
+        "Zombie"
+      ],
       "text": "{2}, {T}: Tap target creature.",
       "toughness": "2",
       "type": "Creature - Zombie",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_V699RhCunP.png"
     },
     {
@@ -1649,12 +1829,14 @@
       "number": "10",
       "power": "3",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "You may exert Devoted Crop-Mate as it attacks. When you do, return target creature card with converted mana cost 2 or less from your graveyard to the battlefield. (An exerted creature won't untap during your next untap step.)",
       "toughness": "2",
       "type": "Creature - Human Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_zKaauToxPc.png"
     },
     {
@@ -1663,6 +1845,10 @@
       "name": "Edifice of Authority",
       "number": "226",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "{1}, {t}: Target creature can't attack this turn. Put a brick counter on Edifice of Authority.\n{1}, {t}: Until your next turn, target creature can't attack or block and its activated abilities can't be activated. Activate this ability only if there are three or more brick counters on Edifice of Authority.",
       "type": "Artifact",
       "types": [
@@ -1682,11 +1868,12 @@
       "name": "Compulsory Rest",
       "number": "9",
       "rarity": "Common",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "Enchant creature\n\nEnchanted creature can't attack or block.\n\nEnchanted creature has \"{2}, Sacrifice this creature: You gain 2 life.\"",
       "type": "Enchantment - Aura",
-      "types": [
-        "Enchantment"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_OWxB6Cul5y.png"
     },
     {
@@ -1694,6 +1881,9 @@
       "name": "Evolving Wilds",
       "number": "242",
       "rarity": "Common",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
       "type": "Land",
       "types": [
@@ -1713,6 +1903,9 @@
       "name": "Time to Reflect",
       "number": "33",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "Exile target creature that blocked or was blocked by a Zombie this turn.",
       "type": "Instant",
       "types": [
@@ -1732,11 +1925,12 @@
       "name": "Lay Claim",
       "number": "61",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "Enchant permanent\n\nYou control enchanted permanent.\n\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Enchantment - Aura",
-      "types": [
-        "Enchantment"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_Fudu5L3mEP.png"
     },
     {
@@ -1745,6 +1939,9 @@
       "name": "Embalmer's Tools",
       "number": "227",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "Activated abilities of creatures in your graveyard cost {1} less to activate.\n\nTap an untapped Zombie you control: Target player puts the top card of his or her library into his or her graveyard.",
       "type": "Artifact",
       "types": [
@@ -1765,12 +1962,14 @@
       "number": "60",
       "power": "2",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Illusion",
+        "Warrior"
+      ],
       "text": "When Labyrinth Guardian becomes the target of a spell, sacrifice it.\n\nEmbalm {3}{U} ({3}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Illusion Warrior with no mana cost.  Embalm only as a sorcery.)",
       "toughness": "3",
       "type": "Creature - Illusion Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_gVvyJXdVqI.png"
     },
     {
@@ -1786,12 +1985,14 @@
       "number": "120",
       "power": "1",
       "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "{T}: Target creature gains haste until end of turn.",
       "toughness": "1",
       "type": "Creature - Human Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_hgcGVUqEKo.png"
     },
     {
@@ -1807,12 +2008,13 @@
       "number": "6",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Zombie"
+      ],
       "text": "Whenever another Zombie enters the battlefield under your control, you may tap target artifact or creature.",
       "toughness": "2",
       "type": "Creature - Zombie",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_aWl1bTHboJ.png"
     },
     {
@@ -1820,11 +2022,12 @@
       "name": "Painted Bluffs",
       "number": "246",
       "rarity": "Common",
+      "subtypes": [
+        "Desert"
+      ],
       "text": "{T}: Add {C} to your mana pool.\n\n{1}, {T}: Add one mana of any color to your mana pool.",
       "type": "Land - Desert",
-      "types": [
-        "Land"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_fwuUB3wPMQ.png"
     },
     {
@@ -1840,12 +2043,14 @@
       "number": "37",
       "power": "2",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Human",
+        "Cleric"
+      ],
       "text": "Flash\n\nWhen Vizier of Deferment enters the battlefield, you may exile target creature if it attacked or blocked this turn. Return that card to the battlefield under it's owner's control at the beginning of the next end step.  ",
       "toughness": "2",
       "type": "Creature - Human Cleric",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_JDJNDx9Iw1.png"
     },
     {
@@ -1861,12 +2066,13 @@
       "number": "138",
       "power": "4",
       "rarity": "Rare",
+      "subtypes": [
+        "Manticore"
+      ],
       "text": "When Heart-Piercer Manticore enters the battlefield, you may sacrifice another creature. When you do,  Heart-Piercer Manticore deals damage equal to that's creature's power to target creature or player.\nEmbalm {5r} ({5r}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Manticore with no mana cost. Embalm only as a sorcery.)",
       "toughness": "3",
       "type": "Creature - Manticore",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_r0HVOtrmmj.png"
     },
     {
@@ -1881,6 +2087,9 @@
       "name": "Glorious End",
       "number": "133",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "Manticore"
+      ],
       "text": "End the turn. (Exile all spells and abilities on the stack, including this card. The player whose turn it is discards down to his or her maximum hand size. Damage wears off, and \"this turn\" and \"until end of turn\" effects end.)\nAt the beginning of your next end step, you lose the game.",
       "type": "Instant",
       "types": [
@@ -1900,6 +2109,9 @@
       "name": "Sandwurm Convergence",
       "number": "183",
       "rarity": "Rare",
+      "subtypes": [
+        "Manticore"
+      ],
       "text": "Creatures with flying can't attack you or planeswalkers you control.\nAt the beginning of your end step, create a 5/5 green Wurm creature token.",
       "type": "Enchantment",
       "types": [
@@ -1919,6 +2131,9 @@
       "name": "Dispossess",
       "number": "86",
       "rarity": "Rare",
+      "subtypes": [
+        "Manticore"
+      ],
       "text": "Choose an artifact card name. Search target opponent's graveyard, hand, and library for any number of cards with that name and exile them. Then that player shuffles his or her library.",
       "type": "Sorcery",
       "types": [
@@ -1938,6 +2153,9 @@
       "name": "Commit // Memory",
       "number": "211",
       "rarity": "Rare",
+      "subtypes": [
+        "Manticore"
+      ],
       "text": "Put target spell or nonland permanent into it's owner's library second from the top.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Memory&lt;/b&gt; {4}{uu}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath  (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nEach player shuffles his or her hand and graveyard into his or her library, then draws seven cards.",
       "type": "Instant",
       "types": [
@@ -1958,6 +2176,9 @@
       "name": "Spring // Mind",
       "number": "219",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Manticore"
+      ],
       "text": "Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Mind&lt;/b&gt; {4}{uu}\n&lt;b&gt;Instant&lt;/b&gt;\nAftermath  (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nDraw two cards.",
       "type": "Sorcery",
       "types": [
@@ -1977,6 +2198,9 @@
       "name": "Hieroglyphic Illumination",
       "number": "57",
       "rarity": "Common",
+      "subtypes": [
+        "Manticore"
+      ],
       "text": "Draw two cards.\n\nCycling {u} ({u}, Discard this card: Draw a card.)",
       "type": "Instant",
       "types": [
@@ -1989,6 +2213,9 @@
       "name": "Cascading Cataracts",
       "number": "240",
       "rarity": "Rare",
+      "subtypes": [
+        "Manticore"
+      ],
       "text": "Indestructible\n{T}: Add {C} to your mana pool.\n{5}, {T}: Add five mana in any combination of colors to your mana pool.",
       "type": "Land",
       "types": [
@@ -2009,6 +2236,9 @@
       "name": "Start // Finish",
       "number": "215",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Manticore"
+      ],
       "text": "Create two 1/1 white Warrior creature tokens with vigilance.\n\n&lt;hr /&gt;\n&lt;strong&gt;Finish&lt;/strong&gt; {2}{B}\n&lt;strong&gt;Sorcery&lt;/strong&gt;\nAftermath (Cast this card only from your graveyard.  Then exile it.)\nAs an additional cost to cast Finish, sacrifice a creature.\nDestroy target creature.",
       "type": "Instant",
       "types": [
@@ -2028,6 +2258,9 @@
       "name": "Shadow of the Grave",
       "number": "107",
       "rarity": "Rare",
+      "subtypes": [
+        "Manticore"
+      ],
       "text": "Return to your hand all cards in your graveyard that you cycled or discarded this turn.",
       "type": "Instant",
       "types": [
@@ -2048,12 +2281,14 @@
       "number": "121",
       "power": "4",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Minotaur",
+        "Warrior"
+      ],
       "text": "When Bloodrage Brawler enters the battlefield, discard a card.",
       "toughness": "3",
       "type": "Creature - Minotaur Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_xBvElKgK9K.png"
     },
     {
@@ -2068,6 +2303,10 @@
       "name": "Harvest Season",
       "number": "170",
       "rarity": "Rare",
+      "subtypes": [
+        "Minotaur",
+        "Warrior"
+      ],
       "text": "Search your library for up to X basic land cards, where X is the number of tapped creatures you control, and put those cards onto the battlefield tapped.  Then shuffle your library.",
       "type": "Sorcery",
       "types": [
@@ -2080,11 +2319,12 @@
       "name": "Cradle of the Accursed",
       "number": "241",
       "rarity": "Common",
+      "subtypes": [
+        "Desert"
+      ],
       "text": "{T}: Add {C} to your mana pool.\n\n{3}, {T}, Sacrifice Cradle of the Accursed: Create a 2/2 black Zombie creature token.  Activate this ability only any time you could cast a sorcery.",
       "type": "Land - Desert",
-      "types": [
-        "Land"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_bN57fG5DrO.png"
     },
     {
@@ -2092,11 +2332,12 @@
       "name": "Grasping Dunes",
       "number": "244",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Desert"
+      ],
       "text": "{T}: Add {C} to your mana pool.\n\n{1}, {T}, Sacrifice Grasping Dunes: Put a -1/-1 counter target creature.  Activate this ability only any time you could cast a sorcery.",
       "type": "Land - Desert",
-      "types": [
-        "Land"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_g9OCe2ngWl.png"
     },
     {
@@ -2112,12 +2353,14 @@
       "number": "22",
       "power": "3",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Bird",
+        "Soldier"
+      ],
       "text": "Flying\n\nCycling {2} ({2}, Discard this card: Draw a card.)\n\nEmbalm {3}{W}{W} ({3}{W}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it'as a white Zombie Bird Soldier with no mana cost.  Embalm only as a sorcery.)",
       "toughness": "3",
       "type": "Creature - Bird Soldier",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_O1nimTyiNq.png"
     },
     {
@@ -2132,6 +2375,10 @@
       "name": "Gideon's Intervention",
       "number": "15",
       "rarity": "Rare",
+      "subtypes": [
+        "Bird",
+        "Soldier"
+      ],
       "text": "As Gideon's Intervention enters the battlefield, choose a card name.\n\nYour opponents can't cast spells with the chosen name.\n\nPrevent all damage that would be dealt to you and permanents you control by sources with the chosen name.",
       "type": "Enchantment",
       "types": [
@@ -2152,12 +2399,14 @@
       "number": "74",
       "power": "0",
       "rarity": "Rare",
+      "subtypes": [
+        "Shapeshifter",
+        "Cleric"
+      ],
       "text": "You may have Vizier of Many Faces enter the battlefield as a copy of any creature on the battlefield, except if Vizier of Many Faces was embalmed, the token has no mana cost, it's white, and it's a Zombie in addition to its other types.\nEmbalm {3}{U}{U}",
       "toughness": "0",
       "type": "Creature - Shapeshifter Cleric",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_jAwmykuyVH.png"
     },
     {
@@ -2165,6 +2414,10 @@
       "name": "By Force",
       "number": "123",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Shapeshifter",
+        "Cleric"
+      ],
       "text": "Destroy X target artifacts.",
       "type": "Sorcery",
       "types": [
@@ -2187,12 +2440,13 @@
       "number": "208",
       "power": "2",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Zombie"
+      ],
       "text": "Whenever another Zombie enters the battlefield under your control, each opponent loses 1 life and you gain 1 life.",
       "toughness": "2",
       "type": "Creature - Zombie",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_wUKAoL0eiM.png"
     },
     {
@@ -2210,12 +2464,13 @@
       "number": "198",
       "power": "*",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Drake"
+      ],
       "text": "Flying\nEnigma Drake's power is equal to the number of instant and sorcery cards in your graveyard.",
       "toughness": "4",
       "type": "Creature - Drake",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_o5HQ89U2iF.png"
     },
     {
@@ -2234,12 +2489,14 @@
       "number": "205",
       "power": "3",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "Flash\nDouble strike, vigilance, haste\nOther creatures you control have haste.\n{W}, {t}: Untap another target creature.",
       "toughness": "4",
       "type": "Legendary Creature - Human Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_ZwfaTSMgZp.png"
     },
     {
@@ -2254,6 +2511,10 @@
       "name": "Sweltering Suns",
       "number": "149",
       "rarity": "Rare",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "Sweltering Suns deals 3 damage to each creature.\nCycling {3} ({3}, Discard this card: Draw a card.)",
       "type": "Sorcery",
       "types": [
@@ -2274,34 +2535,14 @@
       "number": "55",
       "power": "5",
       "rarity": "Rare",
+      "subtypes": [
+        "Sphinx"
+      ],
       "text": "Flying\nWhenever Glyph Keeper becomes the target of a spell or ability for the first time each turn, counter that spell or ability.\nEmbalm {5}{U}{U} ({5}{U}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Sphinx with no mana cost.  Embalm only as a sorcery.)",
       "toughness": "3",
       "type": "Creature - Sphinx",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_FKPSuLYTWP.png"
-    },
-    {
-      "cmc": 8,
-      "colorIdentity": [
-        "G"
-      ],
-      "colors": [
-        "Green"
-      ],
-      "manaCost": "5GGG",
-      "name": "Holaphel, Maw of Sands",
-      "number": "171",
-      "power": "20",
-      "rarity": "Mythic Rare",
-      "text": "",
-      "toughness": "20",
-      "type": "Legendary Creature - Wurm",
-      "types": [
-        "Creature"
-      ],
-      "url": ""
     },
     {
       "cmc": 3,
@@ -2316,12 +2557,13 @@
       "number": "82",
       "power": "4",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
       "text": "Menace, indestructible\n\nBontu the Glorified can't attack or block unless a creature died under your control this turn.\n\n{1}{B}, Sacrifice another creature: Scry 1. Each opponent loses 1 life and you gain 1 life.",
       "toughness": "6",
       "type": "Legendary Creature - God",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media-dominaria.cursecdn.com/avatars/131/319/636276005970527247.png"
     },
     {
@@ -2336,6 +2578,9 @@
       "name": "Protection of the Hekma",
       "number": "23",
       "rarity": "Uncommon",
+      "subtypes": [
+        "God"
+      ],
       "text": "If a source an opponent controls would deal damage to you, prevent 1 of that damage.",
       "type": "Enchantment",
       "types": [
@@ -2356,12 +2601,14 @@
       "number": "135",
       "power": "2",
       "rarity": "Rare",
+      "subtypes": [
+        "Human",
+        "Cleric"
+      ],
       "text": "Whenever an opponent activates an ability of an artifact, creature, or land on the battlefield, if it isn't a mana ability, Harsh Mentor deals 2 damage to that player.",
       "toughness": "2",
       "type": "Creature - Human Cleric",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_5Dq3wr4Hv2.png"
     },
     {
@@ -2377,12 +2624,13 @@
       "number": "182",
       "power": "5",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
       "text": "Deathtouch, indestructible\n\nRhonas the Indomitable can't attack or block unless you control another creature with power 4 or greater.\n\n{2}{G}: Another target creature gets +2/+0 and gains trample until end of turn.",
       "toughness": "5",
       "type": "Legendary Creature - God",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media-dominaria.cursecdn.com/avatars/131/327/636276327578038901.png"
     },
     {
@@ -2397,6 +2645,9 @@
       "name": "Anointed Procession",
       "number": "2",
       "rarity": "Rare",
+      "subtypes": [
+        "God"
+      ],
       "text": "If an effect would create one or more tokens under your control, it creates twice that many of those tokens instead.",
       "type": "Enchantment",
       "types": [
@@ -2417,12 +2668,14 @@
       "number": "104",
       "power": "5",
       "rarity": "Rare",
+      "subtypes": [
+        "Zombie",
+        "Beast"
+      ],
       "text": "Menace\nWhen Plague Belcher enters the battlefield, put two -1/-1 counters on target creature you control.\n\nWhenever another Zombie you control dies, each opponent loses 1 life.",
       "toughness": "4",
       "type": "Creature - Zombie Beast",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_Cus62c1PIT.png"
     },
     {
@@ -2438,12 +2691,14 @@
       "number": "88",
       "power": "2",
       "rarity": "Rare",
+      "subtypes": [
+        "Zombie",
+        "Jackal"
+      ],
       "text": "Dread Wanderer enters the battlefield tapped.\n{2}{B}: Return Dread Wanderer from your graveyard to the battlefield. Activate this ability only any time you could cast a sorcery and only if you have one or fewer cards in hand.",
       "toughness": "1",
       "type": "Creature - Zombie Jackal",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_pskzGDdBWi.png"
     },
     {
@@ -2459,20 +2714,24 @@
       "number": "99",
       "power": "2",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Zombie"
+      ],
       "text": "Other Zombies you control get +1/+1.\n\n{1b}, {t}: All Zombies gain menace until end of turn.",
       "toughness": "3",
       "type": "Creature - Zombie",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_zU0ywdXVb1.png"
     },
     {
       "cmc": 0,
+      "loyalty": "X",
       "name": "Nissa, Steward of Elements",
       "number": "204",
       "rarity": "Mythic Rare",
-      "subtypes": "Nissa,",
+      "subtypes": [
+        "Nissa"
+      ],
       "text": "+2: Scry 2.\n0: Look at the top card of your library. If it's a land card or a creature card with converted mana cost less than or equal to the number of loyalty counters on Nissa, Steward of Elements, you may put that card onto the battlefield.\n-6: Untap up to two target lands you control. They become 5/5 Elemental creatures with flying and haste until end of turn. They're still lands.",
       "type": "Planeswalker - Nissa",
       "types": [
@@ -2493,12 +2752,13 @@
       "number": "94",
       "power": "6",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Horror"
+      ],
       "text": "Grim Strider gets -1/-1 for each card in your hand.",
       "toughness": "6",
       "type": "Creature - Horror",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_Pewd9dOpXh.png"
     },
     {
@@ -2514,12 +2774,13 @@
       "number": "48",
       "power": "6",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Serpent"
+      ],
       "text": "Cryptic Serpent costs {1} less to cast for each instant and sorcery card in your graveyard.",
       "toughness": "5",
       "type": "Creature - Serpent",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_A4mXFPT85J.png"
     },
     {
@@ -2527,11 +2788,12 @@
       "name": "Sunscorched Desert",
       "number": "249",
       "rarity": "Common",
+      "subtypes": [
+        "Desert"
+      ],
       "text": "When Sunscorched Desert enters the battlefield, it deals 1 damage to target player.\n\n{T}: Add {c} to your mana pool.",
       "type": "Land - Desert",
-      "types": [
-        "Land"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_wTWlfELA3d.png"
     },
     {
@@ -2547,12 +2809,14 @@
       "number": "75",
       "power": "1",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Human",
+        "Cleric"
+      ],
       "text": "{T}: Untap another target permanent.\nCycling {1}{U} ({1}{U}, Discard this card: Draw a card.)\nWhen you cycle Vizier of Tumbling Sands, untap target permanent.",
       "toughness": "3",
       "type": "Creature - Human Cleric",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_bTkXU5pe4P.png"
     },
     {
@@ -2567,6 +2831,10 @@
       "name": "Stir the Sands",
       "number": "110",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Human",
+        "Cleric"
+      ],
       "text": "Create three 2/2 black Zombie creature tokens.\nCycling {3}{B} ({3}{B}, Discard this card: Draw a card.)\nWhen you cycle Stir the Sands, create a 2/2 black Zombie creature token.",
       "type": "Sorcery",
       "types": [
@@ -2586,11 +2854,12 @@
       "name": "Deem Worthy",
       "number": "127",
       "rarity": "Uncommon",
-      "text": "Deem Worthy deals 7 damage to target creature.\nCycling {3}{R} ({3}{R}, Discard this card: Draw a card.)\nWhen you cycle Deem Worthy, you may have it deal 2 damage to target creature.",
-      "type": "Instant - Instant",
-      "types": [
+      "subtypes": [
         "Instant"
       ],
+      "text": "Deem Worthy deals 7 damage to target creature.\nCycling {3}{R} ({3}{R}, Discard this card: Draw a card.)\nWhen you cycle Deem Worthy, you may have it deal 2 damage to target creature.",
+      "type": "Instant - Instant",
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_WgkilyufGv.png"
     },
     {
@@ -2606,12 +2875,13 @@
       "number": "186",
       "power": "6",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Lizard"
+      ],
       "text": "Cycling {3}{G} ({3}{G}, Discard this card: Draw a card.)\nWhen you cycle Shefet Monitor, you may search your library for a basic land card or a Desert card, put it onto the battlefield, then shuffle your library. (Do this before you draw.)",
       "toughness": "5",
       "type": "Creature - Lizard",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_aaKD4j9lGL.png"
     },
     {
@@ -2622,6 +2892,9 @@
       "name": "Heaven // Earth",
       "number": "224",
       "rarity": "Rare",
+      "subtypes": [
+        "Lizard"
+      ],
       "text": "Heaven deals X damage to each creature with flying.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Earth&lt;/b&gt; {X}{R}{R}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (Cast this spell only from your graveyard.  Then exile it.)\nEarth deals X damage to each creature without flying.",
       "type": "Instant",
       "types": [
@@ -2635,6 +2908,9 @@
       "name": "Pyramid of the Pantheon",
       "number": "235",
       "rarity": "Rare",
+      "subtypes": [
+        "Lizard"
+      ],
       "text": "{2}, {t}: Add one mana of any color to your mana pool. Put a brick counter on Pyramid of the Pantheon.\n\n{t}: Add three mana of any one color to your mana pool. Activate this ability only if there are three or more brick counters on Pyramid of the Pantheon.",
       "type": "Artifact",
       "types": [
@@ -2655,12 +2931,13 @@
       "number": "181",
       "power": "4",
       "rarity": "Common",
+      "subtypes": [
+        "Camel"
+      ],
       "text": "When Quarry Hauler enters the battlefield, for each counter on target permanent, put another counter of that kind on it or remove one from it.",
       "toughness": "3",
       "type": "Creature - Camel",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_erX5h7e1Es.png"
     },
     {
@@ -2676,12 +2953,13 @@
       "number": "87",
       "power": "1",
       "rarity": "Common",
+      "subtypes": [
+        "Human"
+      ],
       "text": "When Doomed Dissenter dies, create a 2/2 black Zombie creature token.",
       "toughness": "1",
       "type": "Creature - Human",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_WtOl4wgncQ.png"
     },
     {
@@ -2697,6 +2975,9 @@
       "name": "Reduce // Rubble",
       "number": "216",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Human"
+      ],
       "text": "Counter target spell unless its controller pays {3}.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Rubble&lt;/b&gt; {2r}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\n\nUp to three target lands don't untap during their controller's next untap step.",
       "type": "Instant",
       "types": [
@@ -2719,12 +3000,14 @@
       "number": "203",
       "power": "2",
       "rarity": "Rare",
+      "subtypes": [
+        "Minotaur",
+        "Warrior"
+      ],
       "text": "First strike\nOther Minotaurs you control have first strike.\nAs long as you have one or fewer cards in hand, Minotaurs you control get +2/+0.\nWhenever Neheb, the Worthy deals combat damage to a player, each player discards a card.",
       "toughness": "2",
       "type": "Legendary Creature - Minotaur Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_pj4Tb9UwJn.png"
     },
     {
@@ -2739,6 +3022,10 @@
       "name": "Unburden",
       "number": "114",
       "rarity": "Common",
+      "subtypes": [
+        "Minotaur",
+        "Warrior"
+      ],
       "text": "Target player discards two cards.\n\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Sorcery",
       "types": [
@@ -2748,15 +3035,19 @@
     },
     {
       "cmc": 0,
-      "name": "Pull From Tomorrow",
+      "name": "Pull from Tomorrow",
       "number": "65",
       "rarity": "Rare",
+      "subtypes": [
+        "Minotaur",
+        "Warrior"
+      ],
       "text": "Draw X cards, then discard a card.",
       "type": "Instant",
       "types": [
         "Instant"
       ],
-      "url": ""
+      "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_tpDnyktC7Z.png"
     },
     {
       "cmc": 6,
@@ -2771,12 +3062,14 @@
       "number": "172",
       "power": "6",
       "rarity": "Rare",
+      "subtypes": [
+        "Snake",
+        "Hydra"
+      ],
       "text": "Trample\nEmbalm {3}{G} ({3}{G}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Snake Hydra with no mana cost. Embalm only as a sorcery.)",
       "toughness": "6",
       "type": "Creature - Snake Hydra",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_CauMBC9mh1.png"
     },
     {
@@ -2791,6 +3084,10 @@
       "name": "Never // Return",
       "number": "212",
       "rarity": "Rare",
+      "subtypes": [
+        "Snake",
+        "Hydra"
+      ],
       "text": "Destroy target creature or planeswalker.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Return&lt;/b&gt; {3}{B}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath  (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nExile target card from a graveyard. Create a 2/2 black Zombie creature token.",
       "type": "Sorcery",
       "types": [
@@ -2810,6 +3107,10 @@
       "name": "Censor",
       "number": "46",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Snake",
+        "Hydra"
+      ],
       "text": "Counter target spell unless its controller pays {1}.\nCycling {U} ({U}, Discard this card: Draw a card.)",
       "type": "Instant",
       "types": [
@@ -2830,12 +3131,13 @@
       "number": "21",
       "power": "3",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
       "text": "Double strike, indestructible \n\nOketra the True can't attack or block unless you control at least three other creatures. \n\n{3}{W}: Create a 1/1 white Warrior creature token with vigilance.",
       "toughness": "6",
       "type": "Legendary Creature - God",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media-dominaria.cursecdn.com/avatars/131/257/636274291047385255.png"
     },
     {
@@ -2850,6 +3152,9 @@
       "name": "Liliana's Mastery",
       "number": "98",
       "rarity": "Rare",
+      "subtypes": [
+        "God"
+      ],
       "text": "Zombies creatures you control get +1/+1.\nWhen Liliana's Mastery enters the battlefield, create two 2/2 black Zombie creature tokens.",
       "type": "Enchantment",
       "types": [
@@ -2870,12 +3175,14 @@
       "number": "192",
       "power": "3",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "Naga",
+        "Cleric"
+      ],
       "text": "You may look at the top card of your library. (You may do this at any time.)\n\nYou may cast the top card of your library if it's a creature card.\n\nYou may spend mana as though it were mana of any type to cast creature spells.",
       "toughness": "4",
       "type": "Creature - Naga Cleric",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_z0MVaI8OhW.png"
     },
     {
@@ -2891,12 +3198,14 @@
       "number": "159",
       "power": "3",
       "rarity": "Rare",
+      "subtypes": [
+        "Jackal",
+        "Warrior"
+      ],
       "text": "You may exert Champion of Rhonas as it attacks.  When you do, you may put a creature card from your hand onto the battlefield.  (An exerted creature won't untap during your next untap step.)",
       "toughness": "3",
       "type": "Creature - Jackal Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_TFmIznnbAe.png"
     },
     {
@@ -2912,12 +3221,14 @@
       "number": "145",
       "power": "1",
       "rarity": "Common",
+      "subtypes": [
+        "Jackal",
+        "Warrior"
+      ],
       "text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",
       "toughness": "3",
       "type": "Creature - Jackal Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_xZZS79fzms.png"
     },
     {
@@ -2933,12 +3244,13 @@
       "number": "38",
       "power": "3",
       "rarity": "Common",
+      "subtypes": [
+        "Angel"
+      ],
       "text": "Flying, vigilance\n\nCycling {w} ({w}, Discard this card: Draw a card.)",
       "toughness": "3",
       "type": "Creature - Angel",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_jlMJ2ypFah.png"
     },
     {
@@ -2954,12 +3266,13 @@
       "number": "30",
       "power": "3",
       "rarity": "Common",
+      "subtypes": [
+        "Camel"
+      ],
       "text": "When Supply Caravan enters the battlefield, if you control a tapped creature, create a 1/1 white Warrior creature token with vigilance.",
       "toughness": "5",
       "type": "Creature - Camel",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_vv8bB3rUcB.png"
     },
     {
@@ -2975,12 +3288,13 @@
       "number": "1",
       "power": "3",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "Angel"
+      ],
       "text": "Flying\nWhen Angel of Sanctions enters the battlefield, you may exile target nonland permanent an opponent controls until Angel of Sanctions leaves the battlefield.\nEmbalm {5W } ({5W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Angel with no mana cost. Embalm only as a sorcery.)",
       "toughness": "4",
       "type": "Creature - Angel",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_mXn7f6ddvK.png"
     },
     {
@@ -2995,6 +3309,9 @@
       "name": "Dissenter's Deliverance",
       "number": "164",
       "rarity": "Common",
+      "subtypes": [
+        "Angel"
+      ],
       "text": "Destroy target artifact.\n\nCycling {G} ({G}, Discard this card: Draw a card.)",
       "type": "Instant",
       "types": [
@@ -3016,6 +3333,9 @@
       "name": "Bounty of the Luxa",
       "number": "196",
       "rarity": "Rare",
+      "subtypes": [
+        "Angel"
+      ],
       "text": "At the beginning of your precombat main phase, remove all flood counters from Bounty of the Luxa. If no flood counters were removed this way, put a flood counter on Bounty of the Luxa and draw a card. Otherwise, add {c}{G}{U} to your mana pool.",
       "type": "Enchantment",
       "types": [
@@ -3035,6 +3355,9 @@
       "name": "New Perspectives",
       "number": "63",
       "rarity": "Rare",
+      "subtypes": [
+        "Angel"
+      ],
       "text": "When New Perspectives enters the battlefield, draw three cards.\n\nAs long as you have seven or more cards in hand, you may pay {0} rather than pay cycling costs.",
       "type": "Enchantment",
       "types": [
@@ -3054,11 +3377,13 @@
       "name": "Cruel Reality",
       "number": "84",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "Aura",
+        "Curse"
+      ],
       "text": "Enchant player\n\nAt the beginning of enchanted player's upkeep, that player sacrifices a creature or a planeswalker. If the player can't, he or she loses 5 life.",
       "type": "Enchantment - Aura Curse",
-      "types": [
-        "Enchantment"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_F33VHO2eye.png"
     },
     {
@@ -3073,6 +3398,10 @@
       "name": "Approach of the Second Sun",
       "number": "4",
       "rarity": "Rare",
+      "subtypes": [
+        "Aura",
+        "Curse"
+      ],
       "text": "If Approach of the Second Sun was cast from your hand and you've cast another spell named Approach of the Second Sun this game, you win the game.  Otherwise, put Approach of the Second Sun into its owner's library seventh from the top and you gain 7 life.",
       "type": "Sorcery",
       "types": [
@@ -3093,12 +3422,14 @@
       "number": "148",
       "power": "1",
       "rarity": "Rare",
+      "subtypes": [
+        "Human",
+        "Wizard"
+      ],
       "text": "Prowess\nIf a source you control would deal noncombat damage to a creature an opponent controls, put that many -1/-1 counters on that creature instead.",
       "toughness": "2",
       "type": "Creature - Human Wizard",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_QrLWGRzHjR.png"
     },
     {
@@ -3113,6 +3444,10 @@
       "name": "Hazoret's Favor",
       "number": "137",
       "rarity": "Rare",
+      "subtypes": [
+        "Human",
+        "Wizard"
+      ],
       "text": "At the beginning of combat on your turn, you may have target creature you control get +2/+0 and gain haste until end of turn. If you do, sacrifice it at the beginning of the next end step.",
       "type": "Enchantment",
       "types": [
@@ -3135,12 +3470,14 @@
       "number": "199",
       "power": "2",
       "rarity": "Rare",
+      "subtypes": [
+        "Human",
+        "Cleric"
+      ],
       "text": "Whenever Hapatra, Vizier of Poisons deals combat damage to a player, you may put a -1/-1 counter on target creature.\n\nWhenever you put one or more -1/-1 counters on a creature, create a 1/1 green Snake creature token with deathtouch.",
       "toughness": "2",
       "type": "Legendary Creature - Human Cleric",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_OjW5ZQphZ8.png"
     },
     {
@@ -3156,6 +3493,10 @@
       "name": "Failure // Comply",
       "number": "221",
       "rarity": "Rare",
+      "subtypes": [
+        "Human",
+        "Cleric"
+      ],
       "text": "Return target spell to its owner's hand.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Comply&lt;/b&gt; {w}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nChoose a card name. Until your next turn, your opponents can't cast spells with the chosen name.",
       "type": "Instant",
       "types": [
@@ -3175,7 +3516,9 @@
       "name": "Liliana, Death's Majesty",
       "number": "97",
       "rarity": "Mythic Rare",
-      "subtypes": "Liliana,",
+      "subtypes": [
+        "Liliana"
+      ],
       "text": "+1: Create a 2/2 black Zombie creature token. Put the top two cards of your library into your graveyard.\n-3: Return target creature card from your graveyard to the battlefield. That creature is a black Zombie in addition to its other colors and types.\n-7: Destroy all non-Zombie creatures.",
       "type": "Planeswalker - Liliana",
       "types": [
@@ -3195,7 +3538,9 @@
       "name": "Gideon, Martial Pargon",
       "number": "270",
       "rarity": "Mythic Rare",
-      "subtypes": "Gideon,",
+      "subtypes": [
+        "Gideon"
+      ],
       "text": "+2: Untap all creatures you control. Those creatures get +1/+1 until end of turn.\n0: Until end of turn, Gideon, Martial Paragon becomes a 5/5 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n-10: Creatures you control get +2/+2 until end of turn. Tap all creatures your opponents control.",
       "type": "Planeswalker - Gideon",
       "types": [
@@ -3216,12 +3561,14 @@
       "number": "276",
       "power": "3",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Zombie",
+        "Naga"
+      ],
       "text": "{3}{B}: Target opponent loses 2 life and you gain 2 life. Activate this ability only if you control a Liliana planeswalker.",
       "toughness": "2",
       "type": "Creature - Zombie Naga",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": ""
     },
     {
@@ -3233,6 +3580,10 @@
       "name": "Foul Orchard",
       "number": "279",
       "rarity": "Common",
+      "subtypes": [
+        "Zombie",
+        "Naga"
+      ],
       "text": "Foul Orchard enters the battlefield tapped.\n\n{T}: Add {B} or {G} to your mana pool.",
       "type": "Land",
       "types": [
@@ -3252,6 +3603,10 @@
       "name": "Gideon's Resolve",
       "number": "272",
       "rarity": "Rare",
+      "subtypes": [
+        "Zombie",
+        "Naga"
+      ],
       "text": "When Gideon's Resolve enters the battlefield, you may search your library and/or graveyard for a card named Gideon, Martial Paragon, reveal it, and put it into your hand. If you search your library this way, shuffle it.\nCreatures you control get +1/+1.",
       "type": "Enchantment",
       "types": [
@@ -3271,6 +3626,10 @@
       "name": "Liliana's Influence",
       "number": "277",
       "rarity": "Rare",
+      "subtypes": [
+        "Zombie",
+        "Naga"
+      ],
       "text": "Put a -1/-1 counter on each creature you don't control. You may search your library and/or graveyard for a card named Liliana, Death Wielder, reveal it, and put it into your hand. If you search your library this way, shuffle it.",
       "type": "Sorcery",
       "types": [
@@ -3291,12 +3650,14 @@
       "number": "271",
       "power": "2",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Bird",
+        "Soldier"
+      ],
       "text": "Flying\n{1}{W}: Untap target creature. Activate this ability only if you control a Gideon planeswalker.",
       "toughness": "2",
       "type": "Creature - Bird Soldier",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": ""
     },
     {
@@ -3308,6 +3669,10 @@
       "name": "Stone Quarry",
       "number": "274",
       "rarity": "Common",
+      "subtypes": [
+        "Bird",
+        "Soldier"
+      ],
       "text": "Stone Quarry enters the battlefield tapped.\n\n{T}: Add {R} or {W} to your mana pool.",
       "type": "Land",
       "types": [
@@ -3328,12 +3693,13 @@
       "number": "49",
       "power": "4",
       "rarity": "Rare",
+      "subtypes": [
+        "Sphinx"
+      ],
       "text": "Flying\nWhenever you cycle or discard another card, scry 1.\nCycling {u} ({u}, Discard this card: Draw a card.)",
       "toughness": "4",
       "type": "Creature - Sphinx",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_zLYhc6JTUB.png"
     },
     {
@@ -3349,12 +3715,14 @@
       "number": "118",
       "power": "2",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Jackal",
+        "Rogue"
+      ],
       "text": "You may exert Battlefield Scavenger as it attacks. (It won't untap during your next untap step.)\nWhenever you exert a creature, you may discard a card. If you do, draw a card.",
       "toughness": "2",
       "type": "Creature - Jackal Rogue",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_YMwLdoh7Ji.png"
     },
     {
@@ -3370,12 +3738,14 @@
       "number": "193",
       "power": "2",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Naga",
+        "Wizard"
+      ],
       "text": "You may exert Watchful Naga as it attacks. If you do, draw a card. (An exerted creature won't untap during your next untap step.)",
       "toughness": "2",
       "type": "Creature - Naga Wizard",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_6x3esiwtny.png"
     },
     {
@@ -3391,12 +3761,14 @@
       "number": "16",
       "power": "3",
       "rarity": "Rare",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "You may exert Glory-Bound Initiate as it attacks. When you do, it gets +1/+3 and gains lifelink until end of turn. (An exerted creature won't untap during your next untap step.)",
       "toughness": "1",
       "type": "Creature - Human Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_0CJxAhwpiU.png"
     },
     {
@@ -3411,6 +3783,10 @@
       "name": "Magma Spray",
       "number": "141",
       "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "Magma Spray deals 2 damage to target creature. If that creature would die this turn, exile it instead.",
       "type": "Instant",
       "types": [
@@ -3431,12 +3807,13 @@
       "number": "175",
       "power": "2",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Beast"
+      ],
       "text": "When Manglehorn enters the battlefield, you may destroy target artifact.\nArtifacts your opponents control enter the battlefield tapped.",
       "toughness": "2",
       "type": "Creature - Beast",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_HEAfjmoHs0.png"
     },
     {
@@ -3445,6 +3822,9 @@
       "name": "Throne of the God-Pharaoh",
       "number": "237",
       "rarity": "Rare",
+      "subtypes": [
+        "Beast"
+      ],
       "text": "At the beginning of your end step, each opponent loses life equal to the number of tapped creatures you control.",
       "type": "Legendary Artifact",
       "types": [
@@ -3465,12 +3845,13 @@
       "number": "24",
       "power": "3",
       "rarity": "Rare",
+      "subtypes": [
+        "Cat"
+      ],
       "text": "Other Cats you control get +1/+1 and have lifelink. \n\nWhen Regal Caracal enters the battlefield, create two 1/1 white Cat creature tokens with lifelink.",
       "toughness": "3",
       "type": "Creature - Cat",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_KiZxnLFWhM.png"
     },
     {
@@ -3486,12 +3867,13 @@
       "number": "179",
       "power": "3",
       "rarity": "Common",
+      "subtypes": [
+        "Cat"
+      ],
       "text": "Flash",
       "toughness": "2",
       "type": "Creature - Cat",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_CBXvdDXeZY.png"
     },
     {
@@ -3507,12 +3889,13 @@
       "number": "161",
       "power": "5",
       "rarity": "Common",
+      "subtypes": [
+        "Insect"
+      ],
       "text": "",
       "toughness": "5",
       "type": "Creature - Insect",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_QLyX44J9GY.png"
     },
     {
@@ -3527,6 +3910,9 @@
       "name": "Mouth // Feed",
       "number": "214",
       "rarity": "Rare",
+      "subtypes": [
+        "Insect"
+      ],
       "text": "Create a 3/3 green Hippo creature token.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Feed&lt;/b&gt; {3}{G}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (Cast this spell only from your graveyard.  Then exile it.)\nDraw a card for each creature you control with power 3 or greater.",
       "type": "Sorcery",
       "types": [
@@ -3546,6 +3932,9 @@
       "name": "As Foretold",
       "number": "42",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "Insect"
+      ],
       "text": "At the beginning of your upkeep, put a time counter on As Foretold.\nOnce each turn, you may pay {0} rather than pay the mana\ncost for a spell you cast with converted mana cost X or less,\nwhere X is the number of time counters on As Foretold.",
       "type": "Enchantment",
       "types": [
@@ -3566,6 +3955,9 @@
       "name": "Rags // Riches",
       "number": "222",
       "rarity": "Rare",
+      "subtypes": [
+        "Insect"
+      ],
       "text": "All creatures get -2/-2 until end of turn.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Riches&lt;/b&gt; {5}{uu}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\n\nEach opponent chooses a creature he or she controls. You gain control of these creatures.",
       "type": "Sorcery",
       "types": [
@@ -3585,6 +3977,9 @@
       "name": "Insult // Injury",
       "number": "213",
       "rarity": "Rare",
+      "subtypes": [
+        "Insect"
+      ],
       "text": "Damage can't be prevented this turn.  If a source you control would deal damage this turn, it deals double that damage instead.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Injury&lt;/b&gt; {2}{R}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nInjury deals 2 damage to target creature and 2 damage to target player.",
       "type": "Sorcery",
       "types": [
@@ -3605,6 +4000,9 @@
       "name": "Cut // Ribbons",
       "number": "223",
       "rarity": "Rare",
+      "subtypes": [
+        "Insect"
+      ],
       "text": "Cut deals 4 damage to target creature.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Ribbons&lt;/b&gt; {X}{B}{B}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nEach opponent loses X life.",
       "type": "Sorcery",
       "types": [
@@ -3624,6 +4022,9 @@
       "name": "Scarab Feast",
       "number": "106",
       "rarity": "Common",
+      "subtypes": [
+        "Insect"
+      ],
       "text": "Exile up to three target cards from a single graveyard.\n\nCydling {B} ({B}, Discard this card: Draw a card.)",
       "type": "Instant",
       "types": [
@@ -3644,12 +4045,14 @@
       "number": "125",
       "power": "4",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "If Combat Celebrant hasn't been exerted this turn, you may exert it as it attacks. When you do, untap all other creatures you control and after this phase, there is an additional combat phase. (An exerted creature won't untap during your next untap step.)",
       "toughness": "1",
       "type": "Creature - Human Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_rShQxnSneN.png"
     },
     {
@@ -3664,6 +4067,10 @@
       "name": "Painful Lesson",
       "number": "102",
       "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "Target player draws two cards and loses 2 life.",
       "type": "Sorcery",
       "types": [
@@ -3683,11 +4090,13 @@
       "name": "Cartouche of Solidarity",
       "number": "7",
       "rarity": "Common",
+      "subtypes": [
+        "Aura",
+        "Cartouche"
+      ],
       "text": "Enchant creature you control\nWhen cartouche of Solidarity enters the battlefield, create a 1/1 white Warrior creature token with vigilance.\nEnchanted creature gets +1/+1 and has first strike.",
       "type": "Enchantment - Aura Cartouche",
-      "types": [
-        "Enchantment"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_1onFb1U6d2.png"
     },
     {
@@ -3702,11 +4111,13 @@
       "name": "Cartouche of Zeal",
       "number": "124",
       "rarity": "Common",
+      "subtypes": [
+        "Aura",
+        "Cartouche"
+      ],
       "text": "Enchant creature you control.\n\nWhen Cartouche of Zeal enters the battlefield, target creature can't block this turn.\n\nEnchanted creature gets +1/+1 and has haste.",
       "type": "Enchantment - Aura Cartouche",
-      "types": [
-        "Enchantment"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_za3rtWofRt.png"
     },
     {
@@ -3721,6 +4132,10 @@
       "name": "Trial of Zeal",
       "number": "152",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Aura",
+        "Cartouche"
+      ],
       "text": "When Trial of Zeal enters the battlefield, it deals 3 damage to target creature or player.\nWhenever a Cartouche enters the battlefield under your control, return Trial of Zeal to its owner's hand.",
       "type": "Enchantment",
       "types": [
@@ -3740,6 +4155,10 @@
       "name": "Trial of Solidarity",
       "number": "34",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Aura",
+        "Cartouche"
+      ],
       "text": "When Trial of Solidarity enters the battlefield, creatures you control get +2/+1 and gain vigilance until end of turn.\nWhen a Cartouche enters the battlefield under your control, return Trial of Solidarity to its owner's hand.",
       "type": "Enchantment",
       "types": [
@@ -3759,6 +4178,10 @@
       "name": "Trial of Strength",
       "number": "191",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Aura",
+        "Cartouche"
+      ],
       "text": "When Trial of Strength enters the battlefield, create a 4/2 green Beast creature token.\n\nWhen a Cartouche enters the battlefield under your control, return Trial of Strength to its owner's hand.",
       "type": "Enchantment",
       "types": [
@@ -3778,6 +4201,10 @@
       "name": "Trial of Ambition",
       "number": "113",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Aura",
+        "Cartouche"
+      ],
       "text": "When Trial of Ambition enters the battlefield, target opponent sacrifices a creature.\nWhen a Cartouche enters the battlefield under your control, return Trial of Ambition to its owner's hand.",
       "type": "Enchantment",
       "types": [
@@ -3797,11 +4224,13 @@
       "name": "Cartouche of Ambition",
       "number": "83",
       "rarity": "Common",
+      "subtypes": [
+        "Aura",
+        "Cartouche"
+      ],
       "text": "Enchant creature you control\nWhen Cartouche of Ambition enters the battlefield, you may put a -1/-1 counter on target creature.\nEnchanted creature gets +1/+1 and has lifelink.",
       "type": "Enchantment - Aura Cartouche",
-      "types": [
-        "Enchantment"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_i6RHzsbYK7.png"
     },
     {
@@ -3816,11 +4245,13 @@
       "name": "Cartouche of Strength",
       "number": "158",
       "rarity": "Common",
+      "subtypes": [
+        "Aura",
+        "Cartouche"
+      ],
       "text": "Enchant creature you control.\n\nWhen Cartouche of Strength enters the battlefield, you may have enchanted creature fight target creature an opponent controls. (Each deals damage equal to its power to the other.)\n\nEnchanted creature gets +1/+1 and has trample.",
       "type": "Enchantment - Aura Cartouche",
-      "types": [
-        "Enchantment"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_bwq1cAxuoq.png"
     },
     {
@@ -3835,11 +4266,13 @@
       "name": "Cartouche of Knowledge",
       "number": "45",
       "rarity": "Common",
+      "subtypes": [
+        "Aura",
+        "Cartouche"
+      ],
       "text": "Enchant creature you control\n\nWhen Cartouche of Knowledge enters the battlefield, draw a card.\n\nEnchanted creature gets +1/+1 and has flying.",
       "type": "Enchantment - Aura Cartouche",
-      "types": [
-        "Enchantment"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_RDpchnWRZf.png"
     },
     {
@@ -3854,7 +4287,9 @@
       "name": "Gideon of the Trials",
       "number": "14",
       "rarity": "Mythic Rare",
-      "subtypes": "Gideon",
+      "subtypes": [
+        "Gideon"
+      ],
       "text": "+1: Until your next turn, prevent all damage target permanent would deal.\n0: Until end of turn, Gideon of the Trials becomes a 4/4 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n0: You get an emblem with \"As long as you control a Gideon planeswalker, you can't lose the game and your opponents can't win the game.\"",
       "type": "Planeswalker - Gideon",
       "types": [
@@ -3868,11 +4303,13 @@
       "name": "Watchers of the Dead",
       "number": "238",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Cat"
+      ],
       "text": "Exile Watchers of the Dead: Each opponent chooses two cards in his or her graveyard and exiles the rest.",
       "type": "Artifact Creature - Cat",
       "types": [
-        "Artifact",
-        "Creature"
+        "Artifact"
       ],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_x2NIitHhTC.png"
     },
@@ -3888,6 +4325,9 @@
       "name": "Floodwaters",
       "number": "53",
       "rarity": "Common",
+      "subtypes": [
+        "Cat"
+      ],
       "text": "Return up to two target creatures to their owners' hands.\n\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Sorcery",
       "types": [
@@ -3908,12 +4348,13 @@
       "number": "59",
       "power": "5",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
       "text": "Flying, indestructible\n\nKefnet the Mindful can't attack or block unless you have seven or more cards in hand.\n\n{3}{u}: Draw a card, then you may return a land you control to its owner's hand.",
       "toughness": "5",
       "type": "Legendary Creature - God",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media-dominaria.cursecdn.com/avatars/131/216/636271681332388427.png"
     },
     {
@@ -3928,6 +4369,9 @@
       "name": "Cast Out",
       "number": "8",
       "rarity": "Uncommon",
+      "subtypes": [
+        "God"
+      ],
       "text": "Flash\nWhen Cast Out enters the battlefield, exile target nonland permanent an opponent controls until Cast Out leaves the battlefield.\nCycling {w} ({w}, Dicard this card: Draw a card.)",
       "type": "Enchantment",
       "types": [
@@ -3947,6 +4391,9 @@
       "name": "Drake Haven",
       "number": "51",
       "rarity": "Rare",
+      "subtypes": [
+        "God"
+      ],
       "text": "Whenever you cycle or discard a card, you may pay {1}. If you do, create a 2/2 blue Drake creature token with flying.",
       "type": "Enchantment",
       "types": [
@@ -3966,6 +4413,9 @@
       "name": "Essence Scatter",
       "number": "52",
       "rarity": "Common",
+      "subtypes": [
+        "God"
+      ],
       "text": "Counter target creature spell.",
       "type": "Instant",
       "types": [
@@ -3985,6 +4435,9 @@
       "name": "Decision Paralysis",
       "number": "50",
       "rarity": "Common",
+      "subtypes": [
+        "God"
+      ],
       "text": "Tap up to two target creatures. Those creatures don't untap during their controller's next untap step.",
       "type": "Instant",
       "types": [
@@ -4005,12 +4458,14 @@
       "number": "68",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Cleric"
+      ],
       "text": "{1}, {t}, Sacrifice Scribe of the Mindful: Return target instant or sorcery card from your graveyard to your hand.",
       "toughness": "2",
       "type": "Creature - Human Cleric",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_HH05694pyM.png"
     },
     {
@@ -4026,12 +4481,14 @@
       "number": "31",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Bird",
+        "Warrior"
+      ],
       "text": "Flying\nYou may exert Tah-Crop Elite as it attacks. When you do, creatures you control get +1/+1 until end of turn. (An exerted creature won't untap during your next untap step.)",
       "toughness": "2",
       "type": "Creature - Bird Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_rFausCFnmy.png"
     },
     {
@@ -4047,6 +4504,10 @@
       "name": "Onward // Victory",
       "number": "218",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Bird",
+        "Warrior"
+      ],
       "text": "Target creature gets +X/+0 until end of turn, where X is its power.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Victory&lt;/b&gt; {2}{W}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nTarget creature gains double strike until end of turn.",
       "type": "Instant",
       "types": [
@@ -4067,12 +4528,14 @@
       "number": "160",
       "power": "3",
       "rarity": "Rare",
+      "subtypes": [
+        "Human",
+        "Druid"
+      ],
       "text": "When Channeler Initiate enters the battlefield, put three -1/-1 counters on target creature you control.\n\n{t}, Remove a -1/-1 counter from Channeler Initiate: Add one mana of any color to your mana pool.",
       "toughness": "4",
       "type": "Creature - Human Druid",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_HHaQF43eEU.png"
     },
     {
@@ -4090,12 +4553,14 @@
       "number": "207",
       "power": "2",
       "rarity": "Rare",
+      "subtypes": [
+        "Human",
+        "Cleric"
+      ],
       "text": "At the beginning of combat on your turn, target creature token you control gets +1/ +1 until end of turn and can't be blocked this turn.\nEmbalm {3}{W}{U} ({3}{W}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Cleric with no mana cost. Embalm only as a sorcery.)",
       "toughness": "2",
       "type": "Legendary Creature - Human Cleric",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_fLjTDYfsCi.png"
     },
     {
@@ -4110,11 +4575,12 @@
       "name": "Consuming Fervor",
       "number": "126",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "Enchant creature\nEnchanted creature gets +3/+3 and has \"At the beginning of your upkeep, put a -1/-1 counter on this creature.\"",
       "type": "Enchantment - Aura",
-      "types": [
-        "Enchantment"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_Ydt8wxVrBx.png"
     },
     {
@@ -4123,6 +4589,9 @@
       "name": "Rhonas's Monument",
       "number": "236",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "Green creature spells you cast cost {1} less to cast.\nWhenever you cast a creature spell, target creature you control gets +2/+2 and gains trample until end of turn.",
       "type": "Legendary Artifact",
       "types": [
@@ -4136,6 +4605,9 @@
       "name": "Hazoret's Monument",
       "number": "229",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "Red creature spells you cast cost {1} less to cast.\nWhenever you cast a creature spell, you may discard a card. If you do, draw a card.",
       "type": "Legendary Artifact",
       "types": [
@@ -4149,6 +4621,9 @@
       "name": "Bontu's Monument",
       "number": "225",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "Black creature spells you cast cost {1} less to cast.\nWhenever you cast a creature spell, each opponent loses 1 life and you gain 1 life.",
       "type": "Legendary Artifact",
       "types": [
@@ -4162,6 +4637,9 @@
       "name": "Kefnet's Monument",
       "number": "231",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "Blue creature spells you cast cost {1} less to cast.\nWhenever you cast a creature spell, target creature an opponent controls doesn't untap during its controller's next untap step.",
       "type": "Legendary Artifact",
       "types": [
@@ -4181,6 +4659,9 @@
       "name": "Splendid Agony",
       "number": "109",
       "rarity": "Common",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "Distribute two -1/-1 counters among one or two target creatures.",
       "type": "Instant",
       "types": [
@@ -4194,6 +4675,9 @@
       "name": "Oketra's Monument",
       "number": "233",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "White creature spells you cast cost {1} less to cast.\nWhenever you cast a creature spell, create a 1/1 white Warrior creature token with vigilance.",
       "type": "Legendary Artifact",
       "types": [
@@ -4214,12 +4698,14 @@
       "number": "165",
       "power": "4",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "When Exemplar of Strength enters the battlefield, put three -1/-1 counters on target creature you control.\nWhenever Exemplar of Strength attacks, remove a -1/-1 counter from it. If you do, you gain 1 life.",
       "toughness": "4",
       "type": "Creature - Human Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_mAaxIz3UkA.png"
     },
     {
@@ -4235,6 +4721,10 @@
       "name": "Prepare // Fight",
       "number": "220",
       "rarity": "Rare",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "Untap target creature. It gets +2/+2 and lifelink until end of turn.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Fight&lt;/b&gt; {3}{G}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath &lt;em&gt;(Cast this spell only from your graveyard.  Then exile it.)&lt;/em&gt;\nTarget creature you control fights target creature an opponent controls.",
       "type": "Instant",
       "types": [
@@ -4254,6 +4744,10 @@
       "name": "Lay Bare the Heart",
       "number": "96",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "Target opponent reveals his or her hand. You choose a nonlegendary, nonland card from it. That player discards that card.",
       "type": "Sorcery",
       "types": [
@@ -4274,12 +4768,13 @@
       "number": "27",
       "power": "1",
       "rarity": "Common",
+      "subtypes": [
+        "Cat"
+      ],
       "text": "Lifelink\n\nEmbalm {w} ({W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Cat with no mana cost. Embalm only as a sorcery.)",
       "toughness": "1",
       "type": "Creature - Cat",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_LZCbF6fpE2.png"
     },
     {
@@ -4294,7 +4789,9 @@
       "name": "Liliana, Death Wielder",
       "number": "275",
       "rarity": "Mythic Rare",
-      "subtypes": "Liliana,",
+      "subtypes": [
+        "Liliana"
+      ],
       "text": "+2: Put a -1/-1 counter on up to one target creature.\n\n-3: Destroy target creature with a -1/-1 counter on it.\n\n-10: Return all creature cards from your graveyard to the battlefield.",
       "type": "Planeswalker - Liliana",
       "types": [
@@ -4314,6 +4811,9 @@
       "name": "Djeru's Resolve",
       "number": "11",
       "rarity": "Common",
+      "subtypes": [
+        "Liliana"
+      ],
       "text": "Untap target creature. Prevent all damage that would be dealt to it this turn.\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Instant",
       "types": [
@@ -4333,6 +4833,9 @@
       "name": "Limits of Solidarity",
       "number": "140",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Liliana"
+      ],
       "text": "Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.\n\nCycling {2} {2}, Discard this card: Draw a card.)\n",
       "type": "Sorcery",
       "types": [
@@ -4353,12 +4856,14 @@
       "number": "131",
       "power": "1",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Jackal",
+        "Warrior"
+      ],
       "text": "Menace\nWhenever you cycle or discard a card, Flameblade Adept gets +1/+0 until end of turn.",
       "toughness": "2",
       "type": "Creature - Jackal Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_D2PjMt6hhU.png"
     },
     {
@@ -4373,6 +4878,10 @@
       "name": "Nest of Scarabs",
       "number": "101",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Jackal",
+        "Warrior"
+      ],
       "text": "Whenever you put one or more -1/-1 counters on a creature, create that many 1/1 black Insect creature tokens.",
       "type": "Enchantment",
       "types": [
@@ -4393,6 +4902,10 @@
       "name": "Destined // Lead",
       "number": "217",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Jackal",
+        "Warrior"
+      ],
       "text": "Target creature gets +1/+0 and gains indestructible until end of turn.\n\n&lt;hr&gt;&lt;/hr&gt;\n&lt;strong&gt;Lead&lt;/strong&gt; {3g}\n&lt;strong&gt;Sorcery&lt;/strong&gt;\nAftermath (Cast this spell only from your graveyard.  Then exile it.)\n\nAll creatures able to block target creature this turn must do so.",
       "type": "Instant",
       "types": [
@@ -4413,12 +4926,13 @@
       "number": "162",
       "power": "5",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Crocodile"
+      ],
       "text": "Haste\nWhen Crocodile of the Crossing enters the battlefield, put a -1/-1 counter on target creature you control.",
       "toughness": "4",
       "type": "Creature - Crocodile",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_SjfDxouH7k.png"
     },
     {
@@ -4433,6 +4947,9 @@
       "name": "Trial of Knowledge",
       "number": "73",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Crocodile"
+      ],
       "text": "When Trial of Knowledge enters the battlefield, draw three cards, then discard a card.\nWhen a Cartouche enters the battlefield under your control, return Trial of Knowledge to its owner's hand.",
       "type": "Enchantment",
       "types": [
@@ -4453,12 +4970,14 @@
       "number": "117",
       "power": "3",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Minotaur",
+        "Warrior"
+      ],
       "text": "Haste\nYou may exert Ahn-Crop Crasher as it attacks. When you do, target creature can't block this turn. (An exterted creature can't untap during your next untap step)",
       "toughness": "2",
       "type": "Creature - Minotaur Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_LCFSvwxjR9.png"
     },
     {
@@ -4473,6 +4992,10 @@
       "name": "In Oketra's Name",
       "number": "19",
       "rarity": "Common",
+      "subtypes": [
+        "Minotaur",
+        "Warrior"
+      ],
       "text": "Zombies you control get +2/+1 until end of turn. Other creatures you control get +1/+1 until end of turn.",
       "type": "Sorcery",
       "types": [
@@ -4493,12 +5016,14 @@
       "number": "3",
       "power": "1",
       "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Cleric"
+      ],
       "text": "Whenever a creature token enters the battlefield under your control, you gain 1 life.\n\nEmbalm {3w} ({3W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Cleric with no mana cost. Embalm only as a sorcery)",
       "toughness": "3",
       "type": "Creature - Human Cleric",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": ""
     },
     {
@@ -4514,12 +5039,13 @@
       "number": "136",
       "power": "5",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
       "text": "Indestructible, haste\nHazoret the Fervent can't attack or block unless you have one or fewer cards in hand.\n{2}{R}, Discard a card: Hazoret deals 2 damage to each opponent.",
       "toughness": "4",
       "type": "Legendary Creature - God",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media-dominaria.cursecdn.com/avatars/131/42/636268096129088124.png"
     },
     {
@@ -4531,11 +5057,13 @@
       "name": "Sheltered Thicket",
       "number": "248",
       "rarity": "Rare",
+      "subtypes": [
+        "Mountain",
+        "Forest"
+      ],
       "text": "({t}: Add {r} or {g} to your mana pool.)\nSheltered Thicket enters the battlefield tapped.\nCycling {2} ({2}, discard this card: Draw a card.)",
       "type": "Land - Mountain Forest",
-      "types": [
-        "Land"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_dJCfMS8DuP.png"
     },
     {
@@ -4547,11 +5075,13 @@
       "name": "Canyon Slough",
       "number": "239",
       "rarity": "Rare",
+      "subtypes": [
+        "Swamp",
+        "Mountain"
+      ],
       "text": "({t}: Add {b} or {r} to your mana pool.)\nCanyon Slough enters the battlefield tapped.\nCycling {2} ({2}, discard this card: Draw a card.)",
       "type": "Land - Swamp Mountain",
-      "types": [
-        "Land"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_O9Zye0bIYs.png"
     },
     {
@@ -4563,11 +5093,13 @@
       "name": "Fetid Pools",
       "number": "243",
       "rarity": "Rare",
+      "subtypes": [
+        "Island",
+        "Swamp"
+      ],
       "text": "({t}: Add {u} or {b} to your mana pool.)\nFetid Pools enters the battlefield tapped.\nCycling {2} ({2}, discard this card: Draw a card.)",
       "type": "Land - Island Swamp",
-      "types": [
-        "Land"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_lRR892wXFr.png"
     },
     {
@@ -4579,11 +5111,13 @@
       "name": "Scattered Groves",
       "number": "247",
       "rarity": "Rare",
+      "subtypes": [
+        "Forest",
+        "Plains"
+      ],
       "text": "({T}: Add {G} or {W} to your mana pool.)\n\nScattered Groves enters the battlefield tapped.\n\nCycling {2} ({2}, Discard this card: Draw a card.)",
       "type": "Land - Forest Plains",
-      "types": [
-        "Land"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_cmJc89R9pt.png"
     },
     {
@@ -4595,11 +5129,13 @@
       "name": "Irrigated Farmland",
       "number": "245",
       "rarity": "Rare",
+      "subtypes": [
+        "Plains",
+        "Island"
+      ],
       "text": "({t}: Add {w} or {u} to your mana pool.)\nIrrigated Farmland enters the battlefield tapped.\nCycling {2} ({2}, discard this card: Draw a card.)",
       "type": "Land - Plains Island",
-      "types": [
-        "Land"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_nsXw6JpzGH.png"
     },
     {
@@ -4615,12 +5151,14 @@
       "number": "180",
       "power": "4",
       "rarity": "Rare",
+      "subtypes": [
+        "Cat",
+        "Snake"
+      ],
       "text": "Prowling Serpopard can't be countered.\n\nCreature spells you control can't be countered.",
       "toughness": "3",
       "type": "Creature - Cat Snake",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_BwEbuZ8XDF.png"
     },
     {
@@ -4635,6 +5173,10 @@
       "name": "Renewed Faith",
       "number": "25",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Cat",
+        "Snake"
+      ],
       "text": "You gain 6 life.\n\nCycling {1}{W} ({1}{W}, Discard this card: Draw a card.)\n\nWhen you cycle Renewed Faith, you may gain 2 life.",
       "type": "Instant",
       "types": [
@@ -4647,11 +5189,13 @@
       "name": "Forest",
       "number": "267",
       "rarity": "Common",
+      "subtypes": [
+        "Forest"
+      ],
       "text": "",
       "type": "Basic Land - Forest",
       "types": [
-        "Basic",
-        "Land"
+        "Basic"
       ],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_4Jq2U9m8G0.png"
     },
@@ -4660,11 +5204,13 @@
       "name": "Mountain",
       "number": "265",
       "rarity": "Common",
+      "subtypes": [
+        "Mountain"
+      ],
       "text": "",
       "type": "Basic Land - Mountain",
       "types": [
-        "Basic",
-        "Land"
+        "Basic"
       ],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_BP5PKbqAJ9.png"
     },
@@ -4673,11 +5219,13 @@
       "name": "Swamp",
       "number": "263",
       "rarity": "Common",
+      "subtypes": [
+        "Swamp"
+      ],
       "text": "",
       "type": "Basic Land - Swamp",
       "types": [
-        "Basic",
-        "Land"
+        "Basic"
       ],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_WqPNlhsMEQ.png"
     },
@@ -4686,11 +5234,13 @@
       "name": "Island",
       "number": "259",
       "rarity": "Common",
+      "subtypes": [
+        "Island"
+      ],
       "text": "",
       "type": "Basic Land - Island",
       "types": [
-        "Basic",
-        "Land"
+        "Basic"
       ],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_lBzWIW7rka.png"
     },
@@ -4699,11 +5249,13 @@
       "name": "Plains",
       "number": "256",
       "rarity": "Common",
+      "subtypes": [
+        "Plains"
+      ],
       "text": "",
       "type": "Basic Land - Plains",
       "types": [
-        "Basic",
-        "Land"
+        "Basic"
       ],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_EWk9cwREYr.png"
     },
@@ -4720,12 +5272,14 @@
       "number": "5",
       "power": "2",
       "rarity": "Mythic Rare",
+      "subtypes": [
+        "Bird",
+        "Wizard"
+      ],
       "text": "Flash \nFlying\nIf an opponent would search a library, that player searches the top four cards of that library instead.",
       "toughness": "1",
       "type": "Creature - Bird Wizard",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media-dominaria.cursecdn.com/avatars/130/906/636263185962157528.png"
     },
     {
@@ -4741,12 +5295,14 @@
       "number": "36",
       "power": "3",
       "rarity": "Common",
+      "subtypes": [
+        "Human",
+        "Warrior"
+      ],
       "text": "Vigilance\n\nEmbalm {4}{W} ({4}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Warrior with no mana cost.  Embalm only as a sorcery.)",
       "toughness": "2",
       "type": "Creature - Human Warrior",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_tAlSSjvfVj.png"
     },
     {
@@ -4762,12 +5318,14 @@
       "number": "100",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Zombie",
+        "Jackal"
+      ],
       "text": "When Miasmic Mummy enters the battlefield, each player discards a card.",
       "toughness": "2",
       "type": "Creature - Zombie Jackal",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_95N6lSrUTD.png"
     },
     {
@@ -4783,12 +5341,14 @@
       "number": "35",
       "power": "2",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Human",
+        "Soldier"
+      ],
       "text": "Trueheart Duelist can block an additional creature each combat.\n\nEmbalm {2w} ({2w}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Warrior with no mana cost. Embalm only as a sorcery)",
       "toughness": "2",
       "type": "Creature - Human Soldier",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_QRANZDgwCH.png"
     },
     {
@@ -4804,12 +5364,14 @@
       "number": "278",
       "power": "1",
       "rarity": "Common",
+      "subtypes": [
+        "Zombie",
+        "Jackal"
+      ],
       "text": "When Tattered Mummy dies, each opponent loses 2 life.",
       "toughness": "2",
       "type": "Creature - Zombie Jackal",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": ""
     },
     {
@@ -4825,12 +5387,13 @@
       "number": "273",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Cat"
+      ],
       "text": "Whenever Graceful Cat attacks, it gets +1/+1 until end of turn.",
       "toughness": "2",
       "type": "Creature - Cat",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": ""
     },
     {
@@ -4846,12 +5409,13 @@
       "number": "93",
       "power": "2",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Zombie"
+      ],
       "text": "When Gravedigger enters the battlefield, you may return target creature card from your graveyard to your hand.",
       "toughness": "2",
       "type": "Creature - Zombie",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_v5Y0D7v9s9.png"
     },
     {
@@ -4866,11 +5430,12 @@
       "name": "Sixth Sense",
       "number": "187",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Aura"
+      ],
       "text": "Enchant creature\n\nEnchanted creature has \"Whenever this creature deals combat damage to a player, you may draw a card.\"",
       "type": "Enchantment - Aura",
-      "types": [
-        "Enchantment"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_ba5Loo2M3I.png"
     },
     {
@@ -4886,12 +5451,13 @@
       "number": "41",
       "power": "4",
       "rarity": "Uncommon",
+      "subtypes": [
+        "Drake"
+      ],
       "text": "Flying\nWhen Angler Drake enters the battlefield, you may return target creature to its owner's hand.",
       "toughness": "4",
       "type": "Creature - Drake",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_QCKUn3Jnqz.png"
     },
     {
@@ -4906,6 +5472,9 @@
       "name": "Spidery Grasp",
       "number": "188",
       "rarity": "Common",
+      "subtypes": [
+        "Drake"
+      ],
       "text": "Untap target creature. It gets +2/+4 and gains reach until end of turn.",
       "type": "Instant",
       "types": [
@@ -4926,12 +5495,13 @@
       "number": "139",
       "power": "3",
       "rarity": "Common",
+      "subtypes": [
+        "Hyena"
+      ],
       "text": "",
       "toughness": "4",
       "type": "Creature - Hyena",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_oM2mZpj1MG.png"
     },
     {
@@ -4946,6 +5516,9 @@
       "name": "Fling",
       "number": "132",
       "rarity": "Common",
+      "subtypes": [
+        "Hyena"
+      ],
       "text": "As an additional cost to cast Fling, sacrifice a creature.\nFling deals damage equal to the sacrificed creature's power to target creature or player.",
       "type": "Instant",
       "types": [
@@ -4966,12 +5539,13 @@
       "number": "89",
       "power": "1",
       "rarity": "Common",
+      "subtypes": [
+        "Insect"
+      ],
       "text": "",
       "toughness": "4",
       "type": "Creature - Insect",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_cOlP2Za8vZ.png"
     },
     {
@@ -4987,12 +5561,14 @@
       "number": "85",
       "power": "3",
       "rarity": "Common",
+      "subtypes": [
+        "Zombie",
+        "Minotaur"
+      ],
       "text": "Menace (This creature can't be blocked except by two or more creatures.)",
       "toughness": "2",
       "type": "Creature - Zombie Minotaur",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_mvz089DFCf.png"
     },
     {
@@ -5008,12 +5584,13 @@
       "number": "40",
       "power": "1",
       "rarity": "Common",
+      "subtypes": [
+        "Crab"
+      ],
       "text": "",
       "toughness": "5",
       "type": "Creature - Crab",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_ZSqT7xMvI8.png"
     },
     {
@@ -5028,6 +5605,9 @@
       "name": "Mighty Leap",
       "number": "20",
       "rarity": "Common",
+      "subtypes": [
+        "Crab"
+      ],
       "text": "Target creature gets +2/+2 and gains flying until end of turn.",
       "type": "Instant",
       "types": [
@@ -5048,12 +5628,13 @@
       "number": "166",
       "power": "2",
       "rarity": "Common",
+      "subtypes": [
+        "Spider"
+      ],
       "text": "Reach",
       "toughness": "4",
       "type": "Creature - Spider",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_t8tHfSE2LY.png"
     },
     {
@@ -5068,6 +5649,9 @@
       "name": "Impeccable Timing",
       "number": "18",
       "rarity": "Common",
+      "subtypes": [
+        "Spider"
+      ],
       "text": "Impeccable Timing deals 3 damage to target attacking or blocking creature.",
       "type": "Instant",
       "types": [
@@ -5088,12 +5672,13 @@
       "number": "134",
       "power": "4",
       "rarity": "Rare",
+      "subtypes": [
+        "Dragon"
+      ],
       "text": "Flying, haste\nYou may exert Glorybringer as it attacks. When you do, it deals 4 damage to target non-Dragon creature an opponent controls. (An exerted creature won't untap during your next untap step.)",
       "toughness": "4",
       "type": "Creature - Dragon",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_vbAlnqwftr.png"
     },
     {
@@ -5109,12 +5694,13 @@
       "number": "78",
       "power": "5",
       "rarity": "Rare",
+      "subtypes": [
+        "Demon"
+      ],
       "text": "Flying\nWhenever you cycle or discard another card, put a -1/-1 counter on each creature your opponents control.\nCycling {2} ({2} , Discard this card: Draw a card.)",
       "toughness": "4",
       "type": "Creature - Demon",
-      "types": [
-        "Creature"
-      ],
+      "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_6Oog5GhkuJ.png"
     },
     {
@@ -5123,6 +5709,9 @@
       "name": "Oracle's Vault",
       "number": "234",
       "rarity": "Rare",
+      "subtypes": [
+        "Demon"
+      ],
       "text": "{2} , {T} : Exile the top card of your library. Until end of turn, you may play that card. Put a brick counter on Oracle's Vault.\n{T} : Exile the top card of your library. Until end of turn, you may play that card without paying its mana cost. Activate this ability only if there are three or more brick counters on Oracle's Vault.",
       "type": "Artifact",
       "types": [
@@ -5142,6 +5731,9 @@
       "name": "Dusk // Dawn",
       "number": "210",
       "rarity": "Rare",
+      "subtypes": [
+        "Demon"
+      ],
       "text": "Destroy all creatures with power 3 or greater.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Dawn&lt;/b&gt; {3}{W}{W}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nReturn all creature cards with power 2 or less from your graveyard to your hand.",
       "type": "Sorcery",
       "types": [
