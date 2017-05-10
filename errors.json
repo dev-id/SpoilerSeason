@@ -1,0 +1,215 @@
+{
+  "fixed": [
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Open into Wonder",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Evolving Wilds",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Painted Bluffs",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Cascading Cataracts",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Cradle of the Accursed",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Grasping Dunes",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "By Force",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Nissa, Steward of Elements",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Sunscorched Desert",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Heaven // Earth",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Pull From Tomorrow",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Foul Orchard",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Stone Quarry",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Sheltered Thicket",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Canyon Slough",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Fetid Pools",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Scattered Groves",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Irrigated Farmland",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Forest",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Mountain",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Swamp",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Island",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Plains",
+      "value": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Pact of Negation",
+      "value": "{0}"
+    }
+  ],
+  "unfixed": [
+    {
+      "key": "loyalty",
+      "name": "Nissa, Steward of Elements",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Nissa, Steward of Elements",
+      "value": ""
+    },
+    {
+      "key": "colors",
+      "name": "Heaven // Earth",
+      "value": ""
+    },
+    {
+      "key": "loyalty",
+      "name": "Liliana, Death's Majesty",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Liliana, Death's Majesty",
+      "value": ""
+    },
+    {
+      "key": "loyalty",
+      "name": "Gideon, Martial Pargon",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Gideon, Martial Pargon",
+      "value": ""
+    },
+    {
+      "key": "loyalty",
+      "name": "Gideon of the Trials",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Gideon of the Trials",
+      "value": ""
+    },
+    {
+      "key": "loyalty",
+      "name": "Liliana, Death Wielder",
+      "value": ""
+    },
+    {
+      "key": "subtypes",
+      "name": "Liliana, Death Wielder",
+      "value": ""
+    },
+    {
+      "key": "number",
+      "name": "Dark Ritual",
+      "value": ""
+    },
+    {
+      "key": "number",
+      "name": "Mind Twist",
+      "value": ""
+    }
+  ]
+}

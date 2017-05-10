@@ -248,7 +248,7 @@ Counter target spell.</text>
 <card>
 <name>Pact of Negation</name>
 <set rarity="Mythic Rare" picURL="http://media-dominaria.cursecdn.com/avatars/130/909/636263195743211900.png">MPS_AKH</set>
-<manacost>0</manacost>
+<manacost></manacost>
 <cmc>0</cmc><color>U</color><type>Instant</type>
 <tablerow>3</tablerow>
 <text>Counter target spell.
