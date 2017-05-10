@@ -9,12 +9,6 @@
     {
       "fixed": true,
       "key": "manaCost",
-      "name": "Evolving Wilds",
-      "value": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
       "name": "Painted Bluffs",
       "value": ""
     },

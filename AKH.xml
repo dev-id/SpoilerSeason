@@ -786,14 +786,6 @@ Enchanted creature can't attack or block.
 Enchanted creature has "{2}, Sacrifice this creature: You gain 2 life."</text>
 </card>
 <card>
-<name>Evolving Wilds</name>
-<set rarity="Common" picURL="http://media.wizards.com/2017/dw466ytu5_akh/en_E0w0D6sVK8.png">AKH</set>
-<manacost></manacost>
-<cmc>0</cmc><type>Land</type>
-<tablerow>0</tablerow>
-<text>{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.</text>
-</card>
-<card>
 <name>Time to Reflect</name>
 <set rarity="Uncommon" picURL="http://media.wizards.com/2017/dw466ytu5_akh/en_tql7OJMmqL.png">AKH</set>
 <manacost>W</manacost>
