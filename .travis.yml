@@ -1,0 +1,10 @@
+language: python
+install:
+  - pip install -r requirements.txt
+script: bash ./deploy.sh
+notifications:
+  email: false
+env:
+  global:
+  - ENCRYPTION_LABEL: 766e07f958d0
+  - COMMIT_AUTHOR_EMAIL: you@example.com

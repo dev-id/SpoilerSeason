@@ -24,10 +24,6 @@ pip install requests feedparser
 $> python spoilers.py
 ```
 
-Outputs {SETCODE}.json, {SETCODE}.xml, AllSets.json.zip, and Images.zip (containing {SETCODE}\{IMAGE NAMES}.jpg)
+Outputs {SETCODE}.xml and MPS\_{SETCODE}.xml
 
 Create the set xml file and add it to your `customsets` folder for Cockatrice.
-
-Scraper code by robtandy @ https://github.com/robtandy/CockatriceSpoilerXML
-
-All other code is MIT License
