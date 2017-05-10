@@ -5,29 +5,23 @@ import sys
 import json
 #import urllib
 
-setinfos = {
-    "setname": "AKH",
-    "setlongname": "Amonkhet",
-    "blockname": "Amonkhet",
-    "setsize": 269,
-    "setreleasedate": "2017-04-28",
-    "settype": "expansion",
-    "masterpieces": {
-        "setname": "MPS_AKH",
-        "setlongname": "Masterpiece Series: Amonkhet Invocations",
-        "setreleasedate": "2017-04-28",
-        "alternativeNames": ["Amonkhet Invocations"],
-        "galleryURL": "http://magic.wizards.com/en/articles/archive/card-preview/masterpiece-series-amonkhet-invocations-2017-03-29",
-        "additionalCardNames": [],
-        "mtgsurl": "http://www.mtgsalvation.com/spoilers/181-amonkhet-invocations",
-        "mtgscardpath": "http://www.mtgsalvation.com/cards/amonkhet-invocations/"
-    }
-}
-
 presets = {
     "isfullspoil": True,
     "includeMasterpieces": True
 }
+
+with open('set_info.json') as data_file:
+    setinfos = json.load(data_file)
+
+with open('cards_manual.json') as data_file:
+    manual_cards = json.load(data_file)
+    manual_cards = manual_cards['cards']
+
+with open('cards_corrections.json') as data_file:
+    card_corrections = json.load(data_file)
+
+with open('cards_delete.json') as data_file:
+    delete_cards = json.load(data_file)
 
 errorlog = []
 
@@ -63,16 +57,6 @@ def save_errorlog(errorlog):
     errorlog = {"unfixed": unfixederrors, "fixed": fixederrors}
     with open('out/errors.json', 'w') as outfile:
         json.dump(errorlog, outfile, sort_keys=True, indent=2, separators=(',', ': '))
-
-with open('cards_manual.json') as data_file:
-    manual_cards = json.load(data_file)
-    manual_cards = manual_cards['cards']
-
-with open('cards_corrections.json') as data_file:
-    card_corrections = json.load(data_file)
-
-with open('cards_delete.json') as data_file:
-    delete_cards = json.load(data_file)
 
 if __name__ == '__main__':
     AllSets = spoilers.get_allsets()

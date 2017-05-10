@@ -186,7 +186,13 @@ def parse_mtgs(mtgs, manual_cards=[], card_corrections=[], delete_cards=[], spli
             card['type'] = card['type'].replace('instant','Instant').replace('sorcery','Sorcery').replace('creature','Creature')
             cardtypes.append(card['type'].replace('instant','Instant'))
         else:
-            cardtypes = card['type'].replace('Legendary ','').split('-')[0].split(' ')[:-1]
+            cardtypes = card['type'].replace('Legendary ','').split(' - ')[0].split(' ')[:-1]
+        if '-' in card['type']:
+            subtype = card['type'].split(' - ')[1].strip()
+        #if u"—" in card['type']:
+        #    subtype = card['type'].split(' — ')[1].strip()
+        if subtype:
+            subtypes = subtype.split(' ')
         if card['cmc'] == '':
             card['cmc'] = 0
         cardjson = {}
@@ -201,7 +207,8 @@ def parse_mtgs(mtgs, manual_cards=[], card_corrections=[], delete_cards=[], spli
         if card['rarity'] not in ['Mythic Rare','Rare','Uncommon','Common','Special']:
             #errors.append({"name": card['name'], "key": "rarity", "value": card['rarity']})
             print card['name'] + ' has rarity = ' + card['rarity']
-
+        if subtypes:
+            cardjson['subtypes'] = subtypes
         cardjson["rarity"] = card['rarity']
         cardjson["text"] = card['rules']
         cardjson["type"] = card['type']
