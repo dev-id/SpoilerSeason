@@ -13,4 +13,5 @@ All Push requests for card fixes should have the name of the card being fixed an
 
 ## Anything else? ##
 If you notice errors, please file an [issue](https://github.com/tritoch/SpoilerSeason/issues)
+
 Code improvement PRs are always welcome!
