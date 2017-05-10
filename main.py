@@ -64,10 +64,21 @@ def save_errorlog(errorlog):
     with open('out/errors.json', 'w') as outfile:
         json.dump(errorlog, outfile, sort_keys=True, indent=2, separators=(',', ': '))
 
+with open('cards_manual.json') as data_file:
+    manual_cards = json.load(data_file)
+    manual_cards = manual_cards['cards']
+
+with open('cards_corrections.json') as data_file:
+    card_corrections = json.load(data_file)
+
+with open('cards_delete.json') as data_file:
+    delete_cards = json.load(data_file)
+
 if __name__ == '__main__':
     AllSets = spoilers.get_allsets()
     mtgs = spoilers.scrape_mtgs('http://www.mtgsalvation.com/spoilers.rss')
     mtgs = spoilers.parse_mtgs(mtgs)
+    mtgs = spoilers.correct_cards(mtgs, manual_cards, card_corrections, delete_cards)
     #errorlog.append(temperror)
     #scryfall = spoilers.get_scryfall('https://api.scryfall.com/cards/search?q=++e:' + setinfos['setname'].lower())
     mtgs = spoilers.get_image_urls(mtgs, presets['isfullspoil'], setinfos['setname'], setinfos['setlongname'], setinfos['setsize'])

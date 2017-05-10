@@ -16,7 +16,6 @@ def scrape_mtgs(url):
     return requests.get(url, headers={'Cache-Control':'no-cache', 'Pragma':'no-cache', 'Expires': 'Thu, 01 Jan 1970 00:00:00 GMT'}).text
 
 def parse_mtgs(mtgs, manual_cards=[], card_corrections=[], delete_cards=[], split_cards=[], related_cards=[]):
-    errors = []
     patterns = ['<b>Name:</b> <b>(?P<name>.*?)<',
                 'Cost: (?P<cost>\d{0,2}[WUBRGC]*?)<',
                 'Type: (?P<type>.*?)<',
@@ -46,27 +45,27 @@ def parse_mtgs(mtgs, manual_cards=[], card_corrections=[], delete_cards=[], spli
     if count < 1:
         sys.exit("No cards found, exiting to prevent file overwrite")
 
-    for manual_card in manual_cards:
+    #for manual_card in manual_cards:
         #initialize some keys
-        manual_card['colorArray'] = []
-        manual_card['colorIdentityArray'] = []
-        manual_card['color'] = ''
-        manual_card['colorIdentity'] = ''
-        if not manual_card.has_key('rules'):
-            manual_card['rules'] = ''
-        if not manual_card.has_key('pow'):
-            manual_card['pow'] = ''
-        if not manual_card.has_key('setnumber'):
-            manual_card['setnumber'] = '0'
-        if not manual_card.has_key('type'):
-            manual_card['type'] = ''
+        #manual_card['colorArray'] = []
+        #manual_card['colorIdentityArray'] = []
+        #manual_card['color'] = ''
+        #manual_card['colorIdentity'] = ''
+        #if not manual_card.has_key('rules'):
+        #    manual_card['rules'] = ''
+        #if not manual_card.has_key('pow'):
+        #    manual_card['pow'] = ''
+        #if not manual_card.has_key('setnumber'):
+        #    manual_card['setnumber'] = '0'
+        #if not manual_card.has_key('type'):
+        #    manual_card['type'] = ''
         #see if this is a dupe
         #and remove the spoiler version
         #i trust my manual cards over their data
-        for card in cards:
-            if card['name'] == manual_card['name']:
-                cards.remove(card)
-        cards.append(manual_card)
+        #for card in cards:
+        #    if card['name'] == manual_card['name']:
+        #        cards.remove(card)
+        #cards.append(manual_card)
 
     for card in cards:
         card['name'] = card['name'].replace('&#x27;', '\'')
@@ -86,15 +85,15 @@ def parse_mtgs(mtgs, manual_cards=[], card_corrections=[], delete_cards=[], spli
             .replace('Crature', 'Creature')
         if card['type'][-1] == ' ':
             card['type'] = card['type'][:-1]
-        if card['name'] in card_corrections:
-            for correction in card_corrections[card['name']]:
-                if correction != 'name':
-                    card[correction] = card_corrections[card['name']][correction]
-            for correction in card_corrections[card['name']]:
-                if correction == 'name':
-                    oldname = card['name']
-                    card['name'] = card_corrections[oldname]['name']
-                    card['rules'] = card['rules'].replace(oldname, card_corrections[oldname][correction])
+        #if card['name'] in card_corrections:
+        #    for correction in card_corrections[card['name']]:
+        #        if correction != 'name':
+        #            card[correction] = card_corrections[card['name']][correction]
+        #    for correction in card_corrections[card['name']]:
+        #        if correction == 'name':
+        #            oldname = card['name']
+        #            card['name'] = card_corrections[oldname]['name']
+        #            card['rules'] = card['rules'].replace(oldname, card_corrections[oldname][correction])
         if 'cost' in card and len(card['cost']) > 0:
             workingCMC = 0
             stripCost = card['cost'].replace('{','').replace('}','')
@@ -227,6 +226,82 @@ def parse_mtgs(mtgs, manual_cards=[], card_corrections=[], delete_cards=[], spli
 
     return {"cards": cardarray}
 
+def correct_cards(mtgjson, manual_cards=[], card_corrections=[], delete_cards=[]):
+    mtgjson2 = []
+    for card in manual_cards:
+        if 'cmc' not in card:
+            workingCMC = 0
+            stripCost = card['manaCost'].replace('{','').replace('}','')
+            for manaSymbol in stripCost:
+                if manaSymbol.isdigit():
+                    workingCMC += int(manaSymbol)
+                elif not manaSymbol == 'X':
+                    workingCMC += 1
+        if 'types' not in card:
+            card['types'] = []
+            if '—' in card['type']:
+                workingTypes = card['type'].split('—')[0].strip()
+            else:
+                workingTypes = card['type'].split('-')[0].strip()
+            workingTypes.replace('Legendary ','').replace('Snow ','')\
+                .replace('Elite ','').replace('Basic ','').replace('World ','').replace('Ongoing ','')
+            card['types'] += workingTypes.split(' ')
+        if 'subtypes' not in card:
+            if '—' in card['type']:
+                workingSubtypes = card['type'].split('—')[1].strip()
+            elif '-' in card['type']:
+                workingSubtypes = card['type'].split('-')[1].strip()
+            if workingSubtypes:
+                card['subtypes'] = workingSubtypes.split(' ')
+        colorMap = {
+            "W": "White",
+            "U": "Blue",
+            "B": "Black",
+            "R": "Red",
+            "G": "Green"
+        }
+        if 'manaCost' in card:
+            if 'text' in card and not 'Devoid' in card['text']:
+                for letter in card['manaCost']:
+                    if not letter.isdigit() and not letter == 'X':
+                        if 'colorIdentity' in card:
+                            if not letter in card['colorIdentity']:
+                                card['colorIdentity'] += letter
+                        else:
+                            card['colorIdentity'] = [letter]
+                        if 'colors' in card:
+                            if not colorMap[letter] in card['colors']:
+                                card['colors'] += colorMap[letter]
+                        else:
+                            card['colors'] = [colorMap[letter]]
+        if 'text' in card:
+            for CID in colorMap:
+                if '{' + CID + '}' in card['text']:
+                    if 'colorIdentity' in card:
+                        if not CID in card['colorIdentity']:
+                            card['colorIdentity'] += CID
+                    else:
+                        card['colorIdentity'] = [CID]
+
+    for card in mtgjson['cards']:
+        isManual = False
+        for manualCard in manual_cards:
+            if card['name'] == manualCard['name']:
+                mtgjson2.append(manualCard)
+                isManual = True
+        if not isManual and not card['name'] in delete_cards:
+            mtgjson2.append(card)
+    mtgjson = {"cards": mtgjson2}
+    for card in mtgjson['cards']:
+        for cardCorrection in card_corrections:
+            if card['name'] == cardCorrection:
+                for correctionType in card_corrections[cardCorrection]:
+                    if not correctionType == 'name':
+                        card[correctionType] = card_corrections[cardCorrection][correctionType]
+                if 'name' in card_corrections[cardCorrection]:
+                    card['name'] = card_corrections[cardCorrection]['name']
+    return mtgjson
+
 def errorcheck(mtgjson):
     errors = []
     for card in mtgjson['cards']:
@@ -250,6 +325,13 @@ def errorcheck(mtgjson):
                 elif not "Planeswalker" in card['types']:
                     card['types'].append("Planeswalker")
                     errors.append({"name": card['name'], "key": "types", "fixed": True})
+            if 'Creature' in card['type']:
+                if not 'power' in card:
+                    errors.append({"name": card['name'], "key": "power", "value": ""})
+                if not 'toughness' in card:
+                    errors.append({"name": card['name'], "key": "toughness", "value": ""})
+                if not 'subtypes' in card:
+                    errors.append({"name": card['name'], "key": "subtypes", "value": ""})
         if not 'cmc' in card:
             errors.append({"name": card['name'], "key": "cmc", "value": ""})
         else:
@@ -310,7 +392,7 @@ def errorcheck(mtgjson):
             errors.append({"name": card['name'], "key": "number", "value": ""})
         if not 'types' in card:
             errors.append({"name": card['name'], "key": "types", "value": ""})
-    print errors
+    #print errors
     return [mtgjson, errors]
 
 def get_scryfall(setUrl):
