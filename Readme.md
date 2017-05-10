@@ -1,5 +1,8 @@
-## SpoilerSeason ##
+# SpoilerSeason #
 SpoilerSeason is a python script to scrape MTGS, Scryfall, and Wizards.com to compile a cockatrice-friendly XML file as well as json files.
+
+## Output ##
+Just looking for XML or JSON files?  [They're in our files branch!](https://github.com/tritoch/SpoilerSeason/tree/files)
 
 ## Running ##
 
