@@ -1897,25 +1897,6 @@
         "Green"
       ],
       "manaCost": "6GG",
-      "name": "~Sandwurm Convengence",
-      "number": "183",
-      "rarity": "Rare",
-      "text": "Creatures with flying can't attack you or planeswalkers you control.\n\nAt the beginning of your end step, create a 5/5 green Wurm creature token.",
-      "type": "Enchantment",
-      "types": [
-        "Enchantment"
-      ],
-      "url": ""
-    },
-    {
-      "cmc": 8,
-      "colorIdentity": [
-        "G"
-      ],
-      "colors": [
-        "Green"
-      ],
-      "manaCost": "6GG",
       "name": "Sandwurm Convergence",
       "number": "183",
       "rarity": "Rare",

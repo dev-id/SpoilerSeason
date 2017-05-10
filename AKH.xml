@@ -893,16 +893,6 @@ Embalm {5r} ({5r}, Exile this card from your graveyard: Create a token that's a 
 At the beginning of your next end step, you lose the game.</text>
 </card>
 <card>
-<name>~Sandwurm Convengence</name>
-<set rarity="Rare" picURL="">AKH</set>
-<manacost>6GG</manacost>
-<cmc>8</cmc><color>G</color><type>Enchantment</type>
-<tablerow>1</tablerow>
-<text>Creatures with flying can't attack you or planeswalkers you control.
-
-At the beginning of your end step, create a 5/5 green Wurm creature token.</text>
-</card>
-<card>
 <name>Sandwurm Convergence</name>
 <set rarity="Rare" picURL="http://media.wizards.com/2017/dw466ytu5_akh/en_S112pRwdFA.png">AKH</set>
 <manacost>6GG</manacost>
