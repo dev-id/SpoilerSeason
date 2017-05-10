@@ -239,7 +239,11 @@ def errorcheck(mtgjson):
                 if not card['rarity'] == 'Mythic Rare':
                     errors.append({"name": card['name'], "key": "rarity", "value": card['rarity']})
                 if not 'subtypes' in card:
-                    errors.append({"name": card['name'], "key": "subtypes", "value": ""})
+                    errors.append({"name": card['name'], "key": "subtypes", "value": "", "fixed": True})
+                    if not card['name'].split(' ')[0] == 'Ob' and not card['name'].split(' ') == 'Nicol':
+                        card["subtypes"] = card['name'].split(" ")[0]
+                    else:
+                        card["subtypes"] = card['name'].split(" ")[1]
                 if not 'types' in card:
                     card['types'] = ["Planeswalker"]
                     errors.append({"name": card['name'], "key": "types", "value": True})
@@ -292,6 +296,8 @@ def errorcheck(mtgjson):
                 errors.append({"name": card['name'], "key": "cmc", "value": card['cmc'], "fixed": True, "match": card['manaCost']})
                 card['cmc'] = workingCMC
         if not 'url' in card:
+            errors.append({"name": card['name'], "key": "url", "value": ""})
+        elif len(card['url']) < 10:
             errors.append({"name": card['name'], "key": "url", "value": ""})
         if 'layout' in card:
             if card['layout'] == 'split' or card['layout'] == 'meld' or card['layout'] == 'aftermath':
