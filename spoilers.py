@@ -16,6 +16,7 @@ def scrape_mtgs(url):
     return requests.get(url, headers={'Cache-Control':'no-cache', 'Pragma':'no-cache', 'Expires': 'Thu, 01 Jan 1970 00:00:00 GMT'}).text
 
 def parse_mtgs(mtgs, manual_cards=[], card_corrections=[], delete_cards=[], split_cards=[], related_cards=[]):
+    errors = []
     patterns = ['<b>Name:</b> <b>(?P<name>.*?)<',
                 'Cost: (?P<cost>\d{0,2}[WUBRGC]*?)<',
                 'Type: (?P<type>.*?)<',
@@ -95,14 +96,14 @@ def parse_mtgs(mtgs, manual_cards=[], card_corrections=[], delete_cards=[], spli
                     card['name'] = card_corrections[oldname]['name']
                     card['rules'] = card['rules'].replace(oldname, card_corrections[oldname][correction])
         if 'cost' in card and len(card['cost']) > 0:
-            m = re.search('(\d+)', card['cost'].replace('X',''))
-            cmc = 0
-            if m:
-                cmc += int(m.group())
-                cmc += len(card['cost']) - 1  # account for colored symbols
-            else:
-                cmc += len(card['cost'])  # all colored symbols
-            card['cmc'] = cmc
+            workingCMC = 0
+            stripCost = card['cost'].replace('{','').replace('}','')
+            for manaSymbol in stripCost:
+                if manaSymbol.isdigit():
+                    workingCMC += int(manaSymbol)
+                elif not manaSymbol == 'X':
+                    workingCMC += 1
+            card['cmc'] = workingCMC
         # figure out color
         for c in 'WUBRG':
             if c not in card['colorIdentity']:
@@ -199,7 +200,9 @@ def parse_mtgs(mtgs, manual_cards=[], card_corrections=[], delete_cards=[], spli
         #so we'll warn me but continue to write a non-standard rarity (timeshifted?)
         #may force 'special' in the future
         if card['rarity'] not in ['Mythic Rare','Rare','Uncommon','Common','Special']:
+            #errors.append({"name": card['name'], "key": "rarity", "value": card['rarity']})
             print card['name'] + ' has rarity = ' + card['rarity']
+
         cardjson["rarity"] = card['rarity']
         cardjson["text"] = card['rules']
         cardjson["type"] = card['type']
@@ -223,6 +226,86 @@ def parse_mtgs(mtgs, manual_cards=[], card_corrections=[], delete_cards=[], spli
         cardarray.append(cardjson)
 
     return {"cards": cardarray}
+
+def errorcheck(mtgjson):
+    errors = []
+    for card in mtgjson['cards']:
+        if not 'type' in card:
+            errors.append({"name": card['name'], "key": "type", "value": ""})
+        else:
+            if 'Planeswalker' in card['type']:
+                if not 'loyalty' in card:
+                    errors.append({"name": card['name'], "key": "loyalty", "value": ""})
+                if not card['rarity'] == 'Mythic Rare':
+                    errors.append({"name": card['name'], "key": "rarity", "value": card['rarity']})
+                if not 'subtypes' in card:
+                    errors.append({"name": card['name'], "key": "subtypes", "value": ""})
+                if not 'types' in card:
+                    card['types'] = ["Planeswalker"]
+                    errors.append({"name": card['name'], "key": "types", "value": True})
+                elif not "Planeswalker" in card['types']:
+                    card['types'].append("Planeswalker")
+                    errors.append({"name": card['name'], "key": "types", "fixed": True})
+        if not 'cmc' in card:
+            errors.append({"name": card['name'], "key": "cmc", "value": ""})
+        else:
+            if not isinstance(card['cmc'], int):
+                errors.append({"name": card['name'], "key": "cmc", "value": card['cmc'], "fixed": True})
+                card['cmc'] = int(card['cmc'])
+            else:
+                if card['cmc'] > 0:
+                    if not 'manaCost' in card:
+                        errors.append({"name": card['name'], "key": "manaCost", "value": "", "match": card['cmc']})
+                else:
+                    if 'manaCost' in card:
+                        errors.append({"name": card['name'], "key": "manaCost", "value": card['manaCost'], "fixed": True})
+                        del card["manaCost"]
+        if 'colors' in card:
+            if not 'colorIdentity' in card:
+                if 'text' in card:
+                    if not 'devoid' in card['text'].lower():
+                        errors.append({"name": card['name'], "key": "colorIdentity", "value": ""})
+                else:
+                    errors.append({"name": card['name'], "key": "colorIdentity", "value": ""})
+        if 'colorIdentity' in card:
+            if not 'colors' in card:
+                #this one will false positive on emerge cards
+                if not 'Land' in card['type'] and not 'Artifact' in card['type'] and not 'Eldrazi' in card['type']:
+                    if 'text' in card:
+                        if not 'emerge' in card['text'].lower() and not 'devoid' in card['text'].lower():
+                            errors.append({"name": card['name'], "key": "colors", "value": ""})
+                    else:
+                        errors.append({"name": card['name'], "key": "colors", "value": ""})
+                #if not 'Land' in card['type'] and not 'Artifact' in card['type'] and not 'Eldrazi' in card['type']:
+                #    errors.append({"name": card['name'], "key": "colors", "value": ""})
+        if 'manaCost' in card:
+            workingCMC = 0
+            stripCost = card['manaCost'].replace('{','').replace('}','')
+            for manaSymbol in stripCost:
+                if manaSymbol.isdigit():
+                    workingCMC += int(manaSymbol)
+                elif not manaSymbol == 'X':
+                    workingCMC += 1
+            if not 'cmc' in card:
+                errors.append({"name": card['name'], "key": "cmc", "value": ""})
+            elif not card['cmc'] == workingCMC:
+                errors.append({"name": card['name'], "key": "cmc", "value": card['cmc'], "fixed": True, "match": card['manaCost']})
+                card['cmc'] = workingCMC
+        if not 'url' in card:
+            errors.append({"name": card['name'], "key": "url", "value": ""})
+        if 'layout' in card:
+            if card['layout'] == 'split' or card['layout'] == 'meld' or card['layout'] == 'aftermath':
+                if not 'names' in card:
+                    errors.append({"name": card['name'], "key": "names", "value": ""})
+                if 'number' in card:
+                    if not 'a' in card['number'] and not 'b' in card['number'] and not 'c' in card['number']:
+                        errors.append({"name": card['name'], "key": "number", "value": card['number']})
+        if not 'number' in card:
+            errors.append({"name": card['name'], "key": "number", "value": ""})
+        if not 'types' in card:
+            errors.append({"name": card['name'], "key": "types", "value": ""})
+    print errors
+    return [mtgjson, errors]
 
 def get_scryfall(setUrl):
     #getUrl = 'https://api.scryfall.com/cards/search?q=++e:'
@@ -686,13 +769,6 @@ def make_masterpieces(headers, AllSets, spoil):
     masterpieces2 = []
     for masterpiece in masterpieces:
         matched = False
-        for spoilcard in spoil['cards']:
-            if spoilcard['name'] == masterpiece['name'] and not matched:
-                mixcard = spoilcard
-                mixcard['rarity'] = 'Mythic Rare'
-                mixcard['url'] = masterpiece['url']
-                masterpieces2.append(mixcard)
-                matched = True
         for set in AllSets:
             if not matched:
                 for oldcard in AllSets[set]['cards']:
@@ -702,6 +778,16 @@ def make_masterpieces(headers, AllSets, spoil):
                         mixcard['rarity'] = 'Mythic Rare'
                         masterpieces2.append(mixcard)
                         matched = True
+                        break
+        for spoilcard in spoil['cards']:
+            if not matched:
+                if spoilcard['name'] == masterpiece['name']:
+                    mixcard = spoilcard
+                    mixcard['rarity'] = 'Mythic Rare'
+                    mixcard['url'] = masterpiece['url']
+                    masterpieces2.append(mixcard)
+                    matched = True
+                    break
         if not matched:
             print "We couldn't find a card object to assign the data to for masterpiece " + masterpiece['name']
             masterpieces2.append(masterpiece)
