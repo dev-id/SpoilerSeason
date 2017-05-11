@@ -4,6 +4,12 @@ install:
 script: bash ./deploy.sh
 notifications:
   email: false
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/7540dd1e121a1430fb8f
+    on_success: always  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: never     # options: [always|never|change] default: always  
 deploy:
   provider: releases
   api_key:
