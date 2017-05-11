@@ -4,6 +4,9 @@ SpoilerSeason is a python script to scrape MTGS, Scryfall, and Wizards.com to co
 ## Output ##
 Just looking for XML or JSON files?  [They're in our files branch!](https://github.com/tritoch/SpoilerSeason/tree/files)
 
+## Errors ##
+Noticed an error?  Check out our [Contributing file](https://github.com/tritoch/SpoilerSeason/blob/master/.github/CONTRIBUTING.md) for information on how to help!
+
 ## Running ##
 
 ### Requirements ###
