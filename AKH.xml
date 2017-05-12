@@ -15,7 +15,7 @@
 <cmc>3</cmc><color>G</color><type>Creature - Naga Warrior</type>
 <pt>3/2</pt>
 <tablerow>2</tablerow>
-<text>You may exert Hooded Brawler as it attacks. When you do, it gains +2/+2 until end of turn. (An exerted creature won't untap during your next untap step.)</text>
+<text>You may exert Hooded Brawler as it attacks. When you do, it gains +2/+2 until end of turn. <i>(An exerted creature won't untap during your next untap step.)</i></text>
 </card>
 <card>
 <name>Haze of Pollen</name>
@@ -24,7 +24,7 @@
 <cmc>2</cmc><color>G</color><type>Instant</type>
 <tablerow>3</tablerow>
 <text>Prevent all combat damage that would be dealt this turn.
-Cycling {3} ({3}, Discard this card: Draw a card.)</text>
+Cycling {3} <i>({3}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Minotaur Sureshot</name>
@@ -46,7 +46,7 @@ Cycling {3} ({3}, Discard this card: Draw a card.)</text>
 <tablerow>2</tablerow>
 <text>Trample
 
-You may exert Nef-Crop Entangler as it attacks. When you do, it gets +1/+2 until end of turn. (An exerted creature doesn't untap during your next untap step.)</text>
+You may exert Nef-Crop Entangler as it attacks. When you do, it gets +1/+2 until end of turn. <i>(An exerted creature doesn't untap during your next untap step.)</text>
 </card>
 <card>
 <name>Manticore of the Gauntlet</name>
@@ -73,7 +73,7 @@ You may exert Nef-Crop Entangler as it attacks. When you do, it gets +1/+2 until
 <cmc>4</cmc><color>R</color><type>Creature - Minotaur Warrior</type>
 <pt>4/3</pt>
 <tablerow>2</tablerow>
-<text>You may exert Emberhorn Minotaur as it attacks. When you do, it gets +1/+1 and gains menace until end of turn. (An exterted creature won't untap during your next untap step) </text>
+<text>You may exert Emberhorn Minotaur as it attacks. When you do, it gets +1/+1 and gains menace until end of turn. <i>(An exterted creature won't untap during your next untap step)</i> </text>
 </card>
 <card>
 <name>Pursue Glory</name>
@@ -119,7 +119,7 @@ Draw two cards.</text>
 <cmc>6</cmc><color>R</color><type>Creature - Beast</type>
 <pt>6/4</pt>
 <tablerow>2</tablerow>
-<text>Cycling {r}  ({r}, Discard this card: Draw a card.)</text>
+<text>Cycling {r}  <i>({r}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Trueheart Twins</name>
@@ -128,7 +128,7 @@ Draw two cards.</text>
 <cmc>5</cmc><color>R</color><type>Creature - Jackal Warrior</type>
 <pt>4/4</pt>
 <tablerow>2</tablerow>
-<text>You may exert Trueheart Twins as it attacks. (It won't untap during your next untap step.)
+<text>You may exert Trueheart Twins as it attacks. <i>(It won't untap during your next untap step.)</i>
 
 Whenever you exert a creature, creatures you control get +1/+0 until end of turn.</text>
 </card>
@@ -140,7 +140,7 @@ Whenever you exert a creature, creatures you control get +1/+0 until end of turn
 <tablerow>3</tablerow>
 <text>Destroy target artifact or land.
 
-Cycling {2} ({2}, Discard this card: Draw a card.)</text>
+Cycling {2} <i>({2}, Discard this card: Draw a card.)</text>
 </card>
 <card>
 <name>Brute Strength</name>
@@ -184,7 +184,7 @@ Cycling {2} ({2}, Discard this card: Draw a card.)</text>
 <tablerow>2</tablerow>
 <text>Deathtouch
 
-Cycling {2} ({2}, Discard a card: Draw a card)</text>
+Cycling {2} <i>({2}, Discard a card: Draw a card)</i></text>
 </card>
 <card>
 <name>Bitterblade Warrior</name>
@@ -193,7 +193,7 @@ Cycling {2} ({2}, Discard a card: Draw a card)</text>
 <cmc>2</cmc><color>G</color><type>Creature - Jackal Warrior</type>
 <pt>2/2</pt>
 <tablerow>2</tablerow>
-<text>You may exert Bitterblade Warrior as it attacks. When you do, it gains +1/+0 and gains deathtouch until end of turn. (An exerted creature won't untap during your next untap step.)</text>
+<text>You may exert Bitterblade Warrior as it attacks. When you do, it gains +1/+0 and gains deathtouch until end of turn. <i>(An exerted creature won't untap during your next untap step.)</i></text>
 </card>
 <card>
 <name>Defiant Greatmaw</name>
@@ -223,7 +223,7 @@ Enchanted land has "{t]: Add two mana of any one color to your mana pool."</text
 <tablerow>3</tablerow>
 <text>Return up to two target creature cards from your graveyard to your hand.
 
-Cycling {2} ({2} Discard this card: Draw a card)</text>
+Cycling {2} <i>({2} Discard this card: Draw a card)</i></text>
 </card>
 <card>
 <name>Greater Sandwurm</name>
@@ -233,7 +233,7 @@ Cycling {2} ({2} Discard this card: Draw a card)</text>
 <pt>7/7</pt>
 <tablerow>2</tablerow>
 <text>Greater Sandwurm can't be blocked by creatures with power 2 or less.
-Cycling {2} ({2}, Discard this card: Draw a card.)</text>
+Cycling {2} <i>({2}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Trespasser's Curse</name>
@@ -286,7 +286,7 @@ Whenever you cycle or discard a card, target creature gains flying until end of 
 <cmc>2</cmc><color>U</color><type>Creature - Naga Warrior</type>
 <pt>2/1</pt>
 <tablerow>2</tablerow>
-<text>Embalm {3}{U} ({3}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Naga Warrior with no mana cost. Embalm only as a sorcery.) </text>
+<text>Embalm {3}{U} <i>({3}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Naga Warrior with no mana cost. Embalm only as a sorcery.)</i> </text>
 </card>
 <card>
 <name>Initiate's Companion</name>
@@ -333,7 +333,7 @@ Whenever you cycle or discard a card, target creature gains flying until end of 
 <tablerow>2</tablerow>
 <text>Flying
 
-Cycling {2] ({2}, Discard this card: Draw a card.)</text>
+Cycling {2] <i>({2}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Soulstinger</name>
@@ -415,7 +415,7 @@ Cycling {U} ({U}, Discard his card: Draw a card.)</text>
 <cmc>1</cmc><color>G</color><type>Instant</type>
 <tablerow>3</tablerow>
 <text>Put three -1/-1 counters on target creature with flying.
-Cycling {2} ({2}, Discard this card: Draw a card.)</text>
+Cycling {2} <i>({2}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Pitiless Vizier</name>
@@ -468,7 +468,7 @@ Cycling {2} ({2}, Discard this card: Draw a card.)</text>
 <pt>4/4</pt>
 <tablerow>2</tablerow>
 <text>Whenever you cycle or discard another card, Horror of the Broken Lands gets +2/+1 until end of turn.
-Cycling {b} ({b}, Discard this card: Draw a card.)</text>
+Cycling {b} <i>({b}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Shadowstorm Vizier</name>
@@ -554,7 +554,7 @@ Other creatures you control have trample.</text>
 <tablerow>3</tablerow>
 <text>Target player puts the top five cards of his or her library into his or her graveyard.
 
-Cycling {U}({U}, Discard this card: Draw a card.)</text>
+Cycling {U}<i>({U}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Honored Crop-Captain</name>
@@ -600,7 +600,7 @@ Whenever Decimator Beetle attacks, remove a -1/-1 counter from target creature y
 <tablerow>2</tablerow>
 <text>Flying
 
-Embalm {6}{U} ({6}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Bird Warrior with no mana cost. Embalm only as a sorcery.)</text>
+Embalm {6}{U} <i>({6}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Bird Warrior with no mana cost. Embalm only as a sorcery.)</i></text>
 </card>
 <card>
 <name>Aven Wind Guide</name>
@@ -611,7 +611,7 @@ Embalm {6}{U} ({6}{U}, Exile this card from your graveyard: Create a token that'
 <tablerow>2</tablerow>
 <text>Flying, vigilance
 Creature tokens you control have flying and vigilance.
-Embalm {4}{W}{U} ({4}{W}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Bird Warrior with no mana cost. Embalm only as a sorcery.)</text>
+Embalm {4}{W}{U} <i>({4}{W}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Bird Warrior with no mana cost. Embalm only as a sorcery.)</i></text>
 </card>
 <card>
 <name>Vizier of Remedies</name>
@@ -649,7 +649,7 @@ Flying Deathtouch</text>
 <cmc>4</cmc><color>W</color><color>G</color><type>Creature - Human Warrior</type>
 <pt>4/4</pt>
 <tablerow>2</tablerow>
-<text>You may exert Ahn-Crop Champion as it attacks. When you do, untap all other creatures you control. (An exerted creature won't untap during your next untap step.)</text>
+<text>You may exert Ahn-Crop Champion as it attacks. When you do, untap all other creatures you control. <i>(An exerted creature won't untap during your next untap step.)</i></text>
 </card>
 <card>
 <name>Sparring Mummy</name>
@@ -679,7 +679,7 @@ Flying Deathtouch</text>
 <tablerow>2</tablerow>
 <text>Flying
 
-Indestructible (Damage and effects that say "destroy" don't destroy this creature. If its toughness is 0 or less, it's still put into its owner's graveyard.)</text>
+Indestructible <i>(Damage and effects that say "destroy" don't destroy this creature. If its toughness is 0 or less, it's still put into its owner's graveyard.)</i></text>
 </card>
 <card>
 <name>Luxa River Shrine</name>
@@ -697,7 +697,7 @@ Indestructible (Damage and effects that say "destroy" don't destroy this creatur
 <cmc>3</cmc><color>W</color><type>Creature - Human Warrior</type>
 <pt>3/1</pt>
 <tablerow>2</tablerow>
-<text>You may exert Rhet-Crop Spearmaster as it attacks. When you do, it gets +1/+0 and gains first strike until end of turn. (An exerted creature won't untap during your next untap step.)</text>
+<text>You may exert Rhet-Crop Spearmaster as it attacks. When you do, it gets +1/+0 and gains first strike until end of turn. <i>(An exerted creature won't untap during your next untap step.)</i></text>
 </card>
 <card>
 <name>Honed Khopesh</name>
@@ -724,7 +724,7 @@ Equip {1}</text>
 <cmc>2</cmc><color>W</color><type>Creature - Human Wizard</type>
 <pt>2/2</pt>
 <tablerow>2</tablerow>
-<text>You may exert Gust Walker as it attacks. When you do, it gets +1/+1 and gains flying until end of turn. (An exerted creature won't untap during your next untap step.)</text>
+<text>You may exert Gust Walker as it attacks. When you do, it gets +1/+1 and gains flying until end of turn. <i>(An exerted creature won't untap during your next untap step.)</text>
 </card>
 <card>
 <name>Baleful Ammit</name>
@@ -744,7 +744,7 @@ When Baleful Ammit enters the battlefield, put a -1/-1 counter on target creatur
 <tablerow>3</tablerow>
 <text>Exile target artifact or enchantment.
 
-Cycling {2} ({2}, Discard this card: Draw a card.)</text>
+Cycling {2} <i>({2}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Fan Bearer</name>
@@ -762,7 +762,7 @@ Cycling {2} ({2}, Discard this card: Draw a card.)</text>
 <cmc>3</cmc><color>W</color><type>Creature - Human Warrior</type>
 <pt>3/2</pt>
 <tablerow>2</tablerow>
-<text>You may exert Devoted Crop-Mate as it attacks. When you do, return target creature card with converted mana cost 2 or less from your graveyard to the battlefield. (An exerted creature won't untap during your next untap step.)</text>
+<text>You may exert Devoted Crop-Mate as it attacks. When you do, return target creature card with converted mana cost 2 or less from your graveyard to the battlefield. <i>(An exerted creature won't untap during your next untap step.)</i></text>
 </card>
 <card>
 <name>Edifice of Authority</name>
@@ -803,7 +803,7 @@ Enchanted creature has "{2}, Sacrifice this creature: You gain 2 life."</text>
 
 You control enchanted permanent.
 
-Cycling {2} ({2}, Discard this card: Draw a card.)</text>
+Cycling {2} <i>({2}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Embalmer's Tools</name>
@@ -824,7 +824,7 @@ Tap an untapped Zombie you control: Target player puts the top card of his or he
 <tablerow>2</tablerow>
 <text>When Labyrinth Guardian becomes the target of a spell, sacrifice it.
 
-Embalm {3}{U} ({3}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Illusion Warrior with no mana cost.  Embalm only as a sorcery.)</text>
+Embalm {3}{U} <i>({3}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Illusion Warrior with no mana cost.  Embalm only as a sorcery.)</i></text>
 </card>
 <card>
 <name>Bloodlust Inciter</name>
@@ -873,7 +873,7 @@ When Vizier of Deferment enters the battlefield, you may exile target creature i
 <pt>4/3</pt>
 <tablerow>2</tablerow>
 <text>When Heart-Piercer Manticore enters the battlefield, you may sacrifice another creature. When you do,  Heart-Piercer Manticore deals damage equal to that's creature's power to target creature or player.
-Embalm {5r} ({5r}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Manticore with no mana cost. Embalm only as a sorcery.)</text>
+Embalm {5r} <i>({5r}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Manticore with no mana cost. Embalm only as a sorcery.)</i></text>
 </card>
 <card>
 <name>Glorious End</name>
@@ -881,7 +881,7 @@ Embalm {5r} ({5r}, Exile this card from your graveyard: Create a token that's a 
 <manacost>2R</manacost>
 <cmc>3</cmc><color>R</color><type>Instant</type>
 <tablerow>3</tablerow>
-<text>End the turn. (Exile all spells and abilities on the stack, including this card. The player whose turn it is discards down to his or her maximum hand size. Damage wears off, and "this turn" and "until end of turn" effects end.)
+<text>End the turn. <i>(Exile all spells and abilities on the stack, including this card. The player whose turn it is discards down to his or her maximum hand size. Damage wears off, and "this turn" and "until end of turn" effects end.)</i>
 At the beginning of your next end step, you lose the game.</text>
 </card>
 <card>
@@ -908,10 +908,10 @@ At the beginning of your end step, create a 5/5 green Wurm creature token.</text
 <cmc>4</cmc><color>U</color><type>Instant</type>
 <tablerow>3</tablerow>
 <text>Put target spell or nonland permanent into it's owner's library second from the top.
-&lt;hr&gt;&lt;/hr&gt;
-&lt;b&gt;Memory&lt;/b&gt; {4}{uu}
-&lt;b&gt;Sorcery&lt;/b&gt;
-Aftermath  (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)
+<hr />
+<b>Memory</b> {4}{uu}
+<b>Sorcery</b>
+Aftermath  (<em>Cast this spell only from your graveyard.  Then exile it.</em>)
 Each player shuffles his or her hand and graveyard into his or her library, then draws seven cards.</text>
 </card>
 <card>
@@ -921,10 +921,10 @@ Each player shuffles his or her hand and graveyard into his or her library, then
 <cmc>3</cmc><color>G</color><type>Sorcery</type>
 <tablerow>3</tablerow>
 <text>Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.
-&lt;hr&gt;&lt;/hr&gt;
-&lt;b&gt;Mind&lt;/b&gt; {4}{uu}
-&lt;b&gt;Instant&lt;/b&gt;
-Aftermath  (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)
+<hr />
+<b>Mind</b> {4}{uu}
+<b>Instant</b>
+Aftermath  (<em>Cast this spell only from your graveyard.  Then exile it.</em>)
 Draw two cards.</text>
 </card>
 <card>
@@ -935,7 +935,7 @@ Draw two cards.</text>
 <tablerow>3</tablerow>
 <text>Draw two cards.
 
-Cycling {u} ({u}, Discard this card: Draw a card.)</text>
+Cycling {u} <i>({u}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Cascading Cataracts</name>
@@ -955,10 +955,10 @@ Cycling {u} ({u}, Discard this card: Draw a card.)</text>
 <tablerow>3</tablerow>
 <text>Create two 1/1 white Warrior creature tokens with vigilance.
 
-&lt;hr /&gt;
-&lt;strong&gt;Finish&lt;/strong&gt; {2}{B}
-&lt;strong&gt;Sorcery&lt;/strong&gt;
-Aftermath (Cast this card only from your graveyard.  Then exile it.)
+<hr />
+<strong>Finish</strong> {2}{B}
+<strong>Sorcery</strong>
+Aftermath <i>(Cast this card only from your graveyard.  Then exile it.)</i>
 As an additional cost to cast Finish, sacrifice a creature.
 Destroy target creature.</text>
 </card>
@@ -1016,9 +1016,9 @@ Destroy target creature.</text>
 <tablerow>2</tablerow>
 <text>Flying
 
-Cycling {2} ({2}, Discard this card: Draw a card.)
+Cycling {2} <i>({2}, Discard this card: Draw a card.)</i>
 
-Embalm {3}{W}{W} ({3}{W}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it'as a white Zombie Bird Soldier with no mana cost.  Embalm only as a sorcery.)</text>
+Embalm {3}{W}{W} <i>({3}{W}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it'as a white Zombie Bird Soldier with no mana cost.  Embalm only as a sorcery.)</i></text>
 </card>
 <card>
 <name>Gideon's Intervention</name>
@@ -1088,7 +1088,7 @@ Other creatures you control have haste.
 <cmc>3</cmc><color>R</color><type>Sorcery</type>
 <tablerow>3</tablerow>
 <text>Sweltering Suns deals 3 damage to each creature.
-Cycling {3} ({3}, Discard this card: Draw a card.)</text>
+Cycling {3} <i>({3}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Glyph Keeper</name>
@@ -1099,7 +1099,7 @@ Cycling {3} ({3}, Discard this card: Draw a card.)</text>
 <tablerow>2</tablerow>
 <text>Flying
 Whenever Glyph Keeper becomes the target of a spell or ability for the first time each turn, counter that spell or ability.
-Embalm {5}{U}{U} ({5}{U}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Sphinx with no mana cost.  Embalm only as a sorcery.)</text>
+Embalm {5}{U}{U} <i>({5}{U}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Sphinx with no mana cost.  Embalm only as a sorcery.)</i></text>
 </card>
 <card>
 <name>Bontu the Glorified</name>
@@ -1231,7 +1231,7 @@ Whenever another Zombie you control dies, each opponent loses 1 life.</text>
 <pt>1/3</pt>
 <tablerow>2</tablerow>
 <text>{T}: Untap another target permanent.
-Cycling {1}{U} ({1}{U}, Discard this card: Draw a card.)
+Cycling {1}{U} <i>({1}{U}, Discard this card: Draw a card.)</i>
 When you cycle Vizier of Tumbling Sands, untap target permanent.</text>
 </card>
 <card>
@@ -1241,7 +1241,7 @@ When you cycle Vizier of Tumbling Sands, untap target permanent.</text>
 <cmc>6</cmc><color>B</color><type>Sorcery</type>
 <tablerow>3</tablerow>
 <text>Create three 2/2 black Zombie creature tokens.
-Cycling {3}{B} ({3}{B}, Discard this card: Draw a card.)
+Cycling {3}{B} <i>({3}{B}, Discard this card: Draw a card.)</i>
 When you cycle Stir the Sands, create a 2/2 black Zombie creature token.</text>
 </card>
 <card>
@@ -1251,7 +1251,7 @@ When you cycle Stir the Sands, create a 2/2 black Zombie creature token.</text>
 <cmc>5</cmc><color>R</color><type>Instant - Instant</type>
 <tablerow>3</tablerow>
 <text>Deem Worthy deals 7 damage to target creature.
-Cycling {3}{R} ({3}{R}, Discard this card: Draw a card.)
+Cycling {3}{R} <i>({3}{R}, Discard this card: Draw a card.)</i>
 When you cycle Deem Worthy, you may have it deal 2 damage to target creature.</text>
 </card>
 <card>
@@ -1261,8 +1261,8 @@ When you cycle Deem Worthy, you may have it deal 2 damage to target creature.</t
 <cmc>6</cmc><color>G</color><type>Creature - Lizard</type>
 <pt>6/5</pt>
 <tablerow>2</tablerow>
-<text>Cycling {3}{G} ({3}{G}, Discard this card: Draw a card.)
-When you cycle Shefet Monitor, you may search your library for a basic land card or a Desert card, put it onto the battlefield, then shuffle your library. (Do this before you draw.)</text>
+<text>Cycling {3}{G} <i>({3}{G}, Discard this card: Draw a card.)</i>
+When you cycle Shefet Monitor, you may search your library for a basic land card or a Desert card, put it onto the battlefield, then shuffle your library. <i>(Do this before you draw.)</i></text>
 </card>
 <card>
 <name>Heaven // Earth</name>
@@ -1271,10 +1271,10 @@ When you cycle Shefet Monitor, you may search your library for a basic land card
 <cmc>0</cmc><type>Instant</type>
 <tablerow>3</tablerow>
 <text>Heaven deals X damage to each creature with flying.
-&lt;hr&gt;&lt;/hr&gt;
-&lt;b&gt;Earth&lt;/b&gt; {X}{R}{R}
-&lt;b&gt;Sorcery&lt;/b&gt;
-Aftermath (Cast this spell only from your graveyard.  Then exile it.)
+<hr />
+<b>Earth</b> {X}{R}{R}
+<b>Sorcery</b>
+Aftermath <i>(Cast this spell only from your graveyard.  Then exile it.)</i>
 Earth deals X damage to each creature without flying.</text>
 </card>
 <card>
@@ -1312,10 +1312,10 @@ Earth deals X damage to each creature without flying.</text>
 <cmc>3</cmc><color>U</color><type>Instant</type>
 <tablerow>3</tablerow>
 <text>Counter target spell unless its controller pays {3}.
-&lt;hr&gt;&lt;/hr&gt;
-&lt;b&gt;Rubble&lt;/b&gt; {2r}
-&lt;b&gt;Sorcery&lt;/b&gt;
-Aftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)
+<hr />
+<b>Rubble</b> {2r}
+<b>Sorcery</b>
+Aftermath (<em>Cast this spell only from your graveyard.  Then exile it.</em>)
 
 Up to three target lands don't untap during their controller's next untap step.</text>
 </card>
@@ -1339,7 +1339,7 @@ Whenever Neheb, the Worthy deals combat damage to a player, each player discards
 <tablerow>3</tablerow>
 <text>Target player discards two cards.
 
-Cycling {2} ({2}, Discard this card: Draw a card.)</text>
+Cycling {2} <i>({2}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Pull from Tomorrow</name>
@@ -1357,7 +1357,7 @@ Cycling {2} ({2}, Discard this card: Draw a card.)</text>
 <pt>6/6</pt>
 <tablerow>2</tablerow>
 <text>Trample
-Embalm {3}{G} ({3}{G}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Snake Hydra with no mana cost. Embalm only as a sorcery.)</text>
+Embalm {3}{G} <i>({3}{G}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Snake Hydra with no mana cost. Embalm only as a sorcery.)</i></text>
 </card>
 <card>
 <name>Never // Return</name>
@@ -1366,10 +1366,10 @@ Embalm {3}{G} ({3}{G}, Exile this card from your graveyard: Create a token that'
 <cmc>3</cmc><color>B</color><type>Sorcery</type>
 <tablerow>3</tablerow>
 <text>Destroy target creature or planeswalker.
-&lt;hr&gt;&lt;/hr&gt;
-&lt;b&gt;Return&lt;/b&gt; {3}{B}
-&lt;b&gt;Sorcery&lt;/b&gt;
-Aftermath  (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)
+<hr />
+<b>Return</b> {3}{B}
+<b>Sorcery</b>
+Aftermath  (<em>Cast this spell only from your graveyard.  Then exile it.</em>)
 Exile target card from a graveyard. Create a 2/2 black Zombie creature token.</text>
 </card>
 <card>
@@ -1379,7 +1379,7 @@ Exile target card from a graveyard. Create a 2/2 black Zombie creature token.</t
 <cmc>2</cmc><color>U</color><type>Instant</type>
 <tablerow>3</tablerow>
 <text>Counter target spell unless its controller pays {1}.
-Cycling {U} ({U}, Discard this card: Draw a card.)</text>
+Cycling {U} <i>({U}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Oketra the True</name>
@@ -1410,7 +1410,7 @@ When Liliana's Mastery enters the battlefield, create two 2/2 black Zombie creat
 <cmc>4</cmc><color>G</color><type>Creature - Naga Cleric</type>
 <pt>3/4</pt>
 <tablerow>2</tablerow>
-<text>You may look at the top card of your library. (You may do this at any time.)
+<text>You may look at the top card of your library. <i>(You may do this at any time.)</i>
 
 You may cast the top card of your library if it's a creature card.
 
@@ -1423,7 +1423,7 @@ You may spend mana as though it were mana of any type to cast creature spells.</
 <cmc>4</cmc><color>G</color><type>Creature - Jackal Warrior</type>
 <pt>3/3</pt>
 <tablerow>2</tablerow>
-<text>You may exert Champion of Rhonas as it attacks.  When you do, you may put a creature card from your hand onto the battlefield.  (An exerted creature won't untap during your next untap step.)</text>
+<text>You may exert Champion of Rhonas as it attacks.  When you do, you may put a creature card from your hand onto the battlefield.  <i>(An exerted creature won't untap during your next untap step.)</i></text>
 </card>
 <card>
 <name>Nimble-Blade Khenra</name>
@@ -1432,7 +1432,7 @@ You may spend mana as though it were mana of any type to cast creature spells.</
 <cmc>2</cmc><color>R</color><type>Creature - Jackal Warrior</type>
 <pt>1/3</pt>
 <tablerow>2</tablerow>
-<text>Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)</text>
+<text>Prowess <i>(Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)</i></text>
 </card>
 <card>
 <name>Winged Shepherd</name>
@@ -1443,7 +1443,7 @@ You may spend mana as though it were mana of any type to cast creature spells.</
 <tablerow>2</tablerow>
 <text>Flying, vigilance
 
-Cycling {w} ({w}, Discard this card: Draw a card.)</text>
+Cycling {w} <i>({w}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Supply Caravan</name>
@@ -1463,7 +1463,7 @@ Cycling {w} ({w}, Discard this card: Draw a card.)</text>
 <tablerow>2</tablerow>
 <text>Flying
 When Angel of Sanctions enters the battlefield, you may exile target nonland permanent an opponent controls until Angel of Sanctions leaves the battlefield.
-Embalm {5W } ({5W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Angel with no mana cost. Embalm only as a sorcery.)</text>
+Embalm {5W } <i>({5W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Angel with no mana cost. Embalm only as a sorcery.)</i></text>
 </card>
 <card>
 <name>Dissenter's Deliverance</name>
@@ -1473,7 +1473,7 @@ Embalm {5W } ({5W}, Exile this card from your graveyard: Create a token that's a
 <tablerow>3</tablerow>
 <text>Destroy target artifact.
 
-Cycling {G} ({G}, Discard this card: Draw a card.)</text>
+Cycling {G} <i>({G}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Bounty of the Luxa</name>
@@ -1547,10 +1547,10 @@ Whenever you put one or more -1/-1 counters on a creature, create a 1/1 green Sn
 <cmc>2</cmc><color>U</color><type>Instant</type>
 <tablerow>3</tablerow>
 <text>Return target spell to its owner's hand.
-&lt;hr&gt;&lt;/hr&gt;
-&lt;b&gt;Comply&lt;/b&gt; {w}
-&lt;b&gt;Sorcery&lt;/b&gt;
-Aftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)
+<hr />
+<b>Comply</b> {w}
+<b>Sorcery</b>
+Aftermath (<em>Cast this spell only from your graveyard.  Then exile it.</em>)
 Choose a card name. Until your next turn, your opponents can't cast spells with the chosen name.</text>
 </card>
 <card>
@@ -1638,7 +1638,7 @@ Creatures you control get +1/+1.</text>
 <tablerow>2</tablerow>
 <text>Flying
 Whenever you cycle or discard another card, scry 1.
-Cycling {u} ({u}, Discard this card: Draw a card.)</text>
+Cycling {u} <i>({u}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Battlefield Scavenger</name>
@@ -1647,7 +1647,7 @@ Cycling {u} ({u}, Discard this card: Draw a card.)</text>
 <cmc>2</cmc><color>R</color><type>Creature - Jackal Rogue</type>
 <pt>2/2</pt>
 <tablerow>2</tablerow>
-<text>You may exert Battlefield Scavenger as it attacks. (It won't untap during your next untap step.)
+<text>You may exert Battlefield Scavenger as it attacks. <i>(It won't untap during your next untap step.)</i>
 Whenever you exert a creature, you may discard a card. If you do, draw a card.</text>
 </card>
 <card>
@@ -1657,7 +1657,7 @@ Whenever you exert a creature, you may discard a card. If you do, draw a card.</
 <cmc>3</cmc><color>G</color><type>Creature - Naga Wizard</type>
 <pt>2/2</pt>
 <tablerow>2</tablerow>
-<text>You may exert Watchful Naga as it attacks. If you do, draw a card. (An exerted creature won't untap during your next untap step.)</text>
+<text>You may exert Watchful Naga as it attacks. If you do, draw a card. <i>(An exerted creature won't untap during your next untap step.)</i></text>
 </card>
 <card>
 <name>Glory-Bound Initiate</name>
@@ -1666,7 +1666,7 @@ Whenever you exert a creature, you may discard a card. If you do, draw a card.</
 <cmc>2</cmc><color>W</color><type>Creature - Human Warrior</type>
 <pt>3/1</pt>
 <tablerow>2</tablerow>
-<text>You may exert Glory-Bound Initiate as it attacks. When you do, it gets +1/+3 and gains lifelink until end of turn. (An exerted creature won't untap during your next untap step.)</text>
+<text>You may exert Glory-Bound Initiate as it attacks. When you do, it gets +1/+3 and gains lifelink until end of turn. <i>(An exerted creature won't untap during your next untap step.)</i></text>
 </card>
 <card>
 <name>Magma Spray</name>
@@ -1730,10 +1730,10 @@ When Regal Caracal enters the battlefield, create two 1/1 white Cat creature tok
 <cmc>3</cmc><color>G</color><type>Sorcery</type>
 <tablerow>3</tablerow>
 <text>Create a 3/3 green Hippo creature token.
-&lt;hr&gt;&lt;/hr&gt;
-&lt;b&gt;Feed&lt;/b&gt; {3}{G}
-&lt;b&gt;Sorcery&lt;/b&gt;
-Aftermath (Cast this spell only from your graveyard.  Then exile it.)
+<hr />
+<b>Feed</b> {3}{G}
+<b>Sorcery</b>
+Aftermath <i>(Cast this spell only from your graveyard.  Then exile it.)</i>
 Draw a card for each creature you control with power 3 or greater.</text>
 </card>
 <card>
@@ -1754,10 +1754,10 @@ where X is the number of time counters on As Foretold.</text>
 <cmc>4</cmc><color>B</color><type>Sorcery</type>
 <tablerow>3</tablerow>
 <text>All creatures get -2/-2 until end of turn.
-&lt;hr&gt;&lt;/hr&gt;
-&lt;b&gt;Riches&lt;/b&gt; {5}{uu}
-&lt;b&gt;Sorcery&lt;/b&gt;
-Aftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)
+<hr />
+<b>Riches</b> {5}{uu}
+<b>Sorcery</b>
+Aftermath (<em>Cast this spell only from your graveyard.  Then exile it.</em>)
 
 Each opponent chooses a creature he or she controls. You gain control of these creatures.</text>
 </card>
@@ -1768,10 +1768,10 @@ Each opponent chooses a creature he or she controls. You gain control of these c
 <cmc>3</cmc><color>R</color><type>Sorcery</type>
 <tablerow>3</tablerow>
 <text>Damage can't be prevented this turn.  If a source you control would deal damage this turn, it deals double that damage instead.
-&lt;hr&gt;&lt;/hr&gt;
-&lt;b&gt;Injury&lt;/b&gt; {2}{R}
-&lt;b&gt;Sorcery&lt;/b&gt;
-Aftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)
+<hr />
+<b>Injury</b> {2}{R}
+<b>Sorcery</b>
+Aftermath (<em>Cast this spell only from your graveyard.  Then exile it.</em>)
 Injury deals 2 damage to target creature and 2 damage to target player.</text>
 </card>
 <card>
@@ -1781,10 +1781,10 @@ Injury deals 2 damage to target creature and 2 damage to target player.</text>
 <cmc>2</cmc><color>R</color><type>Sorcery</type>
 <tablerow>3</tablerow>
 <text>Cut deals 4 damage to target creature.
-&lt;hr&gt;&lt;/hr&gt;
-&lt;b&gt;Ribbons&lt;/b&gt; {X}{B}{B}
-&lt;b&gt;Sorcery&lt;/b&gt;
-Aftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)
+<hr />
+<b>Ribbons</b> {X}{B}{B}
+<b>Sorcery</b>
+Aftermath (<em>Cast this spell only from your graveyard.  Then exile it.</em>)
 Each opponent loses X life.</text>
 </card>
 <card>
@@ -1795,7 +1795,7 @@ Each opponent loses X life.</text>
 <tablerow>3</tablerow>
 <text>Exile up to three target cards from a single graveyard.
 
-Cydling {B} ({B}, Discard this card: Draw a card.)</text>
+Cydling {B} <i>({B}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Combat Celebrant</name>
@@ -1804,7 +1804,7 @@ Cydling {B} ({B}, Discard this card: Draw a card.)</text>
 <cmc>3</cmc><color>R</color><type>Creature - Human Warrior</type>
 <pt>4/1</pt>
 <tablerow>2</tablerow>
-<text>If Combat Celebrant hasn't been exerted this turn, you may exert it as it attacks. When you do, untap all other creatures you control and after this phase, there is an additional combat phase. (An exerted creature won't untap during your next untap step.)</text>
+<text>If Combat Celebrant hasn't been exerted this turn, you may exert it as it attacks. When you do, untap all other creatures you control and after this phase, there is an additional combat phase. <i>(An exerted creature won't untap during your next untap step.)</i></text>
 </card>
 <card>
 <name>Painful Lesson</name>
@@ -1891,7 +1891,7 @@ Enchanted creature gets +1/+1 and has lifelink.</text>
 <tablerow>1</tablerow>
 <text>Enchant creature you control.
 
-When Cartouche of Strength enters the battlefield, you may have enchanted creature fight target creature an opponent controls. (Each deals damage equal to its power to the other.)
+When Cartouche of Strength enters the battlefield, you may have enchanted creature fight target creature an opponent controls. <i>(Each deals damage equal to its power to the other.)</i>
 
 Enchanted creature gets +1/+1 and has trample.</text>
 </card>
@@ -1933,7 +1933,7 @@ Enchanted creature gets +1/+1 and has flying.</text>
 <tablerow>3</tablerow>
 <text>Return up to two target creatures to their owners' hands.
 
-Cycling {2} ({2}, Discard this card: Draw a card.)</text>
+Cycling {2} <i>({2}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Kefnet the Mindful</name>
@@ -1956,7 +1956,7 @@ Kefnet the Mindful can't attack or block unless you have seven or more cards in 
 <tablerow>1</tablerow>
 <text>Flash
 When Cast Out enters the battlefield, exile target nonland permanent an opponent controls until Cast Out leaves the battlefield.
-Cycling {w} ({w}, Dicard this card: Draw a card.)</text>
+Cycling {w} <i>({w}, Dicard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Drake Haven</name>
@@ -1999,7 +1999,7 @@ Cycling {w} ({w}, Dicard this card: Draw a card.)</text>
 <pt>2/2</pt>
 <tablerow>2</tablerow>
 <text>Flying
-You may exert Tah-Crop Elite as it attacks. When you do, creatures you control get +1/+1 until end of turn. (An exerted creature won't untap during your next untap step.)</text>
+You may exert Tah-Crop Elite as it attacks. When you do, creatures you control get +1/+1 until end of turn. <i>(An exerted creature won't untap during your next untap step.)</i></text>
 </card>
 <card>
 <name>Onward // Victory</name>
@@ -2008,10 +2008,10 @@ You may exert Tah-Crop Elite as it attacks. When you do, creatures you control g
 <cmc>3</cmc><color>R</color><type>Instant</type>
 <tablerow>3</tablerow>
 <text>Target creature gets +X/+0 until end of turn, where X is its power.
-&lt;hr&gt;&lt;/hr&gt;
-&lt;b&gt;Victory&lt;/b&gt; {2}{W}
-&lt;b&gt;Sorcery&lt;/b&gt;
-Aftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)
+<hr />
+<b>Victory</b> {2}{W}
+<b>Sorcery</b>
+Aftermath (<em>Cast this spell only from your graveyard.  Then exile it.</em>)
 Target creature gains double strike until end of turn.</text>
 </card>
 <card>
@@ -2033,7 +2033,7 @@ Target creature gains double strike until end of turn.</text>
 <pt>2/2</pt>
 <tablerow>2</tablerow>
 <text>At the beginning of combat on your turn, target creature token you control gets +1/ +1 until end of turn and can't be blocked this turn.
-Embalm {3}{W}{U} ({3}{W}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Cleric with no mana cost. Embalm only as a sorcery.)</text>
+Embalm {3}{W}{U} <i>({3}{W}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Cleric with no mana cost. Embalm only as a sorcery.)</i></text>
 </card>
 <card>
 <name>Consuming Fervor</name>
@@ -2114,10 +2114,10 @@ Whenever Exemplar of Strength attacks, remove a -1/-1 counter from it. If you do
 <cmc>2</cmc><color>W</color><type>Instant</type>
 <tablerow>3</tablerow>
 <text>Untap target creature. It gets +2/+2 and lifelink until end of turn.
-&lt;hr&gt;&lt;/hr&gt;
-&lt;b&gt;Fight&lt;/b&gt; {3}{G}
-&lt;b&gt;Sorcery&lt;/b&gt;
-Aftermath &lt;em&gt;(Cast this spell only from your graveyard.  Then exile it.)&lt;/em&gt;
+<hr />
+<b>Fight</b> {3}{G}
+<b>Sorcery</b>
+Aftermath <em>(Cast this spell only from your graveyard.  Then exile it.)</em>
 Target creature you control fights target creature an opponent controls.</text>
 </card>
 <card>
@@ -2137,7 +2137,7 @@ Target creature you control fights target creature an opponent controls.</text>
 <tablerow>2</tablerow>
 <text>Lifelink
 
-Embalm {w} ({W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Cat with no mana cost. Embalm only as a sorcery.)</text>
+Embalm {w} <i>({W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Cat with no mana cost. Embalm only as a sorcery.)</i></text>
 </card>
 <card>
 <name>Liliana, Death Wielder</name>
@@ -2158,7 +2158,7 @@ Embalm {w} ({W}, Exile this card from your graveyard: Create a token that's a co
 <cmc>1</cmc><color>W</color><type>Instant</type>
 <tablerow>3</tablerow>
 <text>Untap target creature. Prevent all damage that would be dealt to it this turn.
-Cycling {2} ({2}, Discard this card: Draw a card.)</text>
+Cycling {2} <i>({2}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Limits of Solidarity</name>
@@ -2168,7 +2168,7 @@ Cycling {2} ({2}, Discard this card: Draw a card.)</text>
 <tablerow>3</tablerow>
 <text>Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.
 
-Cycling {2} {2}, Discard this card: Draw a card.)
+Cycling {2} <i>{2}, Discard this card: Draw a card.)
 </text>
 </card>
 <card>
@@ -2197,10 +2197,10 @@ Whenever you cycle or discard a card, Flameblade Adept gets +1/+0 until end of t
 <tablerow>3</tablerow>
 <text>Target creature gets +1/+0 and gains indestructible until end of turn.
 
-&lt;hr&gt;&lt;/hr&gt;
-&lt;strong&gt;Lead&lt;/strong&gt; {3g}
-&lt;strong&gt;Sorcery&lt;/strong&gt;
-Aftermath (Cast this spell only from your graveyard.  Then exile it.)
+<hr />
+<strong>Lead</strong> {3g}
+<strong>Sorcery</strong>
+Aftermath <i>(Cast this spell only from your graveyard.  Then exile it.)</i>
 
 All creatures able to block target creature this turn must do so.</text>
 </card>
@@ -2231,7 +2231,7 @@ When a Cartouche enters the battlefield under your control, return Trial of Know
 <pt>3/2</pt>
 <tablerow>2</tablerow>
 <text>Haste
-You may exert Ahn-Crop Crasher as it attacks. When you do, target creature can't block this turn. (An exterted creature can't untap during your next untap step)</text>
+You may exert Ahn-Crop Crasher as it attacks. When you do, target creature can't block this turn. <i>(An exterted creature can't untap during your next untap step)</i></text>
 </card>
 <card>
 <name>In Oketra's Name</name>
@@ -2250,7 +2250,7 @@ You may exert Ahn-Crop Crasher as it attacks. When you do, target creature can't
 <tablerow>2</tablerow>
 <text>Whenever a creature token enters the battlefield under your control, you gain 1 life.
 
-Embalm {3w} ({3W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Cleric with no mana cost. Embalm only as a sorcery)</text>
+Embalm {3w} <i>({3W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Cleric with no mana cost. Embalm only as a sorcery)</text>
 </card>
 <card>
 <name>Hazoret the Fervent</name>
@@ -2269,9 +2269,9 @@ Hazoret the Fervent can't attack or block unless you have one or fewer cards in 
 <manacost></manacost>
 <cmc>0</cmc><cipt>1</cipt><type>Land - Mountain Forest</type>
 <tablerow>0</tablerow>
-<text>({t}: Add {r} or {g} to your mana pool.)
+<text><i>({t}: Add {r} or {g} to your mana pool.)</i>
 Sheltered Thicket enters the battlefield tapped.
-Cycling {2} ({2}, discard this card: Draw a card.)</text>
+Cycling {2} <i>({2}, discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Canyon Slough</name>
@@ -2279,9 +2279,9 @@ Cycling {2} ({2}, discard this card: Draw a card.)</text>
 <manacost></manacost>
 <cmc>0</cmc><cipt>1</cipt><type>Land - Swamp Mountain</type>
 <tablerow>0</tablerow>
-<text>({t}: Add {b} or {r} to your mana pool.)
+<text><i>({t}: Add {b} or {r} to your mana pool.)</i>
 Canyon Slough enters the battlefield tapped.
-Cycling {2} ({2}, discard this card: Draw a card.)</text>
+Cycling {2} <i>({2}, discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Fetid Pools</name>
@@ -2289,9 +2289,9 @@ Cycling {2} ({2}, discard this card: Draw a card.)</text>
 <manacost></manacost>
 <cmc>0</cmc><cipt>1</cipt><type>Land - Island Swamp</type>
 <tablerow>0</tablerow>
-<text>({t}: Add {u} or {b} to your mana pool.)
+<text><i>({t}: Add {u} or {b} to your mana pool.)</i>
 Fetid Pools enters the battlefield tapped.
-Cycling {2} ({2}, discard this card: Draw a card.)</text>
+Cycling {2} <i>({2}, discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Scattered Groves</name>
@@ -2299,11 +2299,11 @@ Cycling {2} ({2}, discard this card: Draw a card.)</text>
 <manacost></manacost>
 <cmc>0</cmc><cipt>1</cipt><type>Land - Forest Plains</type>
 <tablerow>0</tablerow>
-<text>({T}: Add {G} or {W} to your mana pool.)
+<text><i>({T}: Add {G} or {W} to your mana pool.)</i>
 
 Scattered Groves enters the battlefield tapped.
 
-Cycling {2} ({2}, Discard this card: Draw a card.)</text>
+Cycling {2} <i>({2}, Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Irrigated Farmland</name>
@@ -2311,9 +2311,9 @@ Cycling {2} ({2}, Discard this card: Draw a card.)</text>
 <manacost></manacost>
 <cmc>0</cmc><cipt>1</cipt><type>Land - Plains Island</type>
 <tablerow>0</tablerow>
-<text>({t}: Add {w} or {u} to your mana pool.)
+<text><i>({t}: Add {w} or {u} to your mana pool.)</i>
 Irrigated Farmland enters the battlefield tapped.
-Cycling {2} ({2}, discard this card: Draw a card.)</text>
+Cycling {2} <i>({2}, discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Prowling Serpopard</name>
@@ -2334,7 +2334,7 @@ Creature spells you control can't be countered.</text>
 <tablerow>3</tablerow>
 <text>You gain 6 life.
 
-Cycling {1}{W} ({1}{W}, Discard this card: Draw a card.)
+Cycling {1}{W} <i>({1}{W}, Discard this card: Draw a card.)</i>
 
 When you cycle Renewed Faith, you may gain 2 life.</text>
 </card>
@@ -2398,7 +2398,7 @@ If an opponent would search a library, that player searches the top four cards o
 <tablerow>2</tablerow>
 <text>Vigilance
 
-Embalm {4}{W} ({4}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Warrior with no mana cost.  Embalm only as a sorcery.)</text>
+Embalm {4}{W} <i>({4}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Warrior with no mana cost.  Embalm only as a sorcery.)</i></text>
 </card>
 <card>
 <name>Miasmic Mummy</name>
@@ -2418,7 +2418,7 @@ Embalm {4}{W} ({4}{W}, Exile this card from your graveyard: Create a token that'
 <tablerow>2</tablerow>
 <text>Trueheart Duelist can block an additional creature each combat.
 
-Embalm {2w} ({2w}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Warrior with no mana cost. Embalm only as a sorcery)</text>
+Embalm {2w} <i>({2w}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Warrior with no mana cost. Embalm only as a sorcery)</i></text>
 </card>
 <card>
 <name>Tattered Mummy</name>
@@ -2509,7 +2509,7 @@ Fling deals damage equal to the sacrificed creature's power to target creature o
 <cmc>3</cmc><color>B</color><type>Creature - Zombie Minotaur</type>
 <pt>3/2</pt>
 <tablerow>2</tablerow>
-<text>Menace (This creature can't be blocked except by two or more creatures.)</text>
+<text>Menace <i>(This creature can't be blocked except by two or more creatures.)</i></text>
 </card>
 <card>
 <name>Ancient Crab</name>
@@ -2553,7 +2553,7 @@ Fling deals damage equal to the sacrificed creature's power to target creature o
 <pt>4/4</pt>
 <tablerow>2</tablerow>
 <text>Flying, haste
-You may exert Glorybringer as it attacks. When you do, it deals 4 damage to target non-Dragon creature an opponent controls. (An exerted creature won't untap during your next untap step.)</text>
+You may exert Glorybringer as it attacks. When you do, it deals 4 damage to target non-Dragon creature an opponent controls. <i>(An exerted creature won't untap during your next untap step.)</i></text>
 </card>
 <card>
 <name>Archfiend of Ifnir</name>
@@ -2564,7 +2564,7 @@ You may exert Glorybringer as it attacks. When you do, it deals 4 damage to targ
 <tablerow>2</tablerow>
 <text>Flying
 Whenever you cycle or discard another card, put a -1/-1 counter on each creature your opponents control.
-Cycling {2} ({2} , Discard this card: Draw a card.)</text>
+Cycling {2} <i>({2} , Discard this card: Draw a card.)</i></text>
 </card>
 <card>
 <name>Oracle's Vault</name>
@@ -2582,10 +2582,10 @@ Cycling {2} ({2} , Discard this card: Draw a card.)</text>
 <cmc>4</cmc><color>W</color><type>Sorcery</type>
 <tablerow>3</tablerow>
 <text>Destroy all creatures with power 3 or greater.
-&lt;hr&gt;&lt;/hr&gt;
-&lt;b&gt;Dawn&lt;/b&gt; {3}{W}{W}
-&lt;b&gt;Sorcery&lt;/b&gt;
-Aftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)
+<hr />
+<b>Dawn</b> {3}{W}{W}
+<b>Sorcery</b>
+Aftermath (<em>Cast this spell only from your graveyard.  Then exile it.</em>)
 Return all creature cards with power 2 or less from your graveyard to your hand.</text>
 </card>
 </cards>

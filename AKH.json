@@ -40,7 +40,7 @@
         "Naga",
         "Warrior"
       ],
-      "text": "You may exert Hooded Brawler as it attacks. When you do, it gains +2/+2 until end of turn. (An exerted creature won't untap during your next untap step.)",
+      "text": "You may exert Hooded Brawler as it attacks. When you do, it gains +2/+2 until end of turn. <i>(An exerted creature won't untap during your next untap step.)</i>",
       "toughness": "2",
       "type": "Creature - Naga Warrior",
       "types": [],
@@ -62,7 +62,7 @@
         "Naga",
         "Warrior"
       ],
-      "text": "Prevent all combat damage that would be dealt this turn.\nCycling {3} ({3}, Discard this card: Draw a card.)",
+      "text": "Prevent all combat damage that would be dealt this turn.\nCycling {3} <i>({3}, Discard this card: Draw a card.)</i>",
       "type": "Instant",
       "types": [
         "Instant"
@@ -109,7 +109,7 @@
         "Human",
         "Warrior"
       ],
-      "text": "Trample\n\nYou may exert Nef-Crop Entangler as it attacks. When you do, it gets +1/+2 until end of turn. (An exerted creature doesn't untap during your next untap step.)",
+      "text": "Trample\n\nYou may exert Nef-Crop Entangler as it attacks. When you do, it gets +1/+2 until end of turn. <i>(An exerted creature doesn't untap during your next untap step.)",
       "toughness": "1",
       "type": "Creature - Human Warrior",
       "types": [],
@@ -177,7 +177,7 @@
         "Minotaur",
         "Warrior"
       ],
-      "text": "You may exert Emberhorn Minotaur as it attacks. When you do, it gets +1/+1 and gains menace until end of turn. (An exterted creature won't untap during your next untap step) ",
+      "text": "You may exert Emberhorn Minotaur as it attacks. When you do, it gets +1/+1 and gains menace until end of turn. <i>(An exterted creature won't untap during your next untap step)</i> ",
       "toughness": "3",
       "type": "Creature - Minotaur Warrior",
       "types": [],
@@ -288,7 +288,7 @@
       "subtypes": [
         "Beast"
       ],
-      "text": "Cycling {r}  ({r}, Discard this card: Draw a card.)",
+      "text": "Cycling {r}  <i>({r}, Discard this card: Draw a card.)</i>",
       "toughness": "4",
       "type": "Creature - Beast",
       "types": [],
@@ -311,7 +311,7 @@
         "Jackal",
         "Warrior"
       ],
-      "text": "You may exert Trueheart Twins as it attacks. (It won't untap during your next untap step.)\n\nWhenever you exert a creature, creatures you control get +1/+0 until end of turn.",
+      "text": "You may exert Trueheart Twins as it attacks. <i>(It won't untap during your next untap step.)</i>\n\nWhenever you exert a creature, creatures you control get +1/+0 until end of turn.",
       "toughness": "4",
       "type": "Creature - Jackal Warrior",
       "types": [],
@@ -333,7 +333,7 @@
         "Jackal",
         "Warrior"
       ],
-      "text": "Destroy target artifact or land.\n\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Destroy target artifact or land.\n\nCycling {2} <i>({2}, Discard this card: Draw a card.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -448,7 +448,7 @@
       "subtypes": [
         "Scorpion"
       ],
-      "text": "Deathtouch\n\nCycling {2} ({2}, Discard a card: Draw a card)",
+      "text": "Deathtouch\n\nCycling {2} <i>({2}, Discard a card: Draw a card)</i>",
       "toughness": "2",
       "type": "Creature - Scorpion",
       "types": [],
@@ -471,7 +471,7 @@
         "Jackal",
         "Warrior"
       ],
-      "text": "You may exert Bitterblade Warrior as it attacks. When you do, it gains +1/+0 and gains deathtouch until end of turn. (An exerted creature won't untap during your next untap step.)",
+      "text": "You may exert Bitterblade Warrior as it attacks. When you do, it gains +1/+0 and gains deathtouch until end of turn. <i>(An exerted creature won't untap during your next untap step.)</i>",
       "toughness": "2",
       "type": "Creature - Jackal Warrior",
       "types": [],
@@ -534,7 +534,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Return up to two target creature cards from your graveyard to your hand.\n\nCycling {2} ({2} Discard this card: Draw a card)",
+      "text": "Return up to two target creature cards from your graveyard to your hand.\n\nCycling {2} <i>({2} Discard this card: Draw a card)</i>",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -557,7 +557,7 @@
       "subtypes": [
         "Wurm"
       ],
-      "text": "Greater Sandwurm can't be blocked by creatures with power 2 or less.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Greater Sandwurm can't be blocked by creatures with power 2 or less.\nCycling {2} <i>({2}, Discard this card: Draw a card.)</i>",
       "toughness": "7",
       "type": "Creature - Wurm",
       "types": [],
@@ -693,7 +693,7 @@
         "Naga",
         "Warrior"
       ],
-      "text": "Embalm {3}{U} ({3}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Naga Warrior with no mana cost. Embalm only as a sorcery.) ",
+      "text": "Embalm {3}{U} <i>({3}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Naga Warrior with no mana cost. Embalm only as a sorcery.)</i> ",
       "toughness": "1",
       "type": "Creature - Naga Warrior",
       "types": [],
@@ -806,7 +806,7 @@
       "subtypes": [
         "Drake"
       ],
-      "text": "Flying\n\nCycling {2] ({2}, Discard this card: Draw a card.)",
+      "text": "Flying\n\nCycling {2] <i>({2}, Discard this card: Draw a card.)</i>",
       "toughness": "4",
       "type": "Creature - Drake",
       "types": [],
@@ -1007,7 +1007,7 @@
       "subtypes": [
         "Serpent"
       ],
-      "text": "Put three -1/-1 counters on target creature with flying.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Put three -1/-1 counters on target creature with flying.\nCycling {2} <i>({2}, Discard this card: Draw a card.)</i>",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1140,7 +1140,7 @@
       "subtypes": [
         "Horror"
       ],
-      "text": "Whenever you cycle or discard another card, Horror of the Broken Lands gets +2/+1 until end of turn.\nCycling {b} ({b}, Discard this card: Draw a card.)",
+      "text": "Whenever you cycle or discard another card, Horror of the Broken Lands gets +2/+1 until end of turn.\nCycling {b} <i>({b}, Discard this card: Draw a card.)</i>",
       "toughness": "4",
       "type": "Creature - Horror",
       "types": [],
@@ -1347,7 +1347,7 @@
         "Jackal",
         "Warrior"
       ],
-      "text": "Target player puts the top five cards of his or her library into his or her graveyard.\n\nCycling {U}({U}, Discard this card: Draw a card.)",
+      "text": "Target player puts the top five cards of his or her library into his or her graveyard.\n\nCycling {U}<i>({U}, Discard this card: Draw a card.)</i>",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1466,7 +1466,7 @@
         "Bird",
         "Warrior"
       ],
-      "text": "Flying\n\nEmbalm {6}{U} ({6}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Bird Warrior with no mana cost. Embalm only as a sorcery.)",
+      "text": "Flying\n\nEmbalm {6}{U} <i>({6}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Bird Warrior with no mana cost. Embalm only as a sorcery.)</i>",
       "toughness": "2",
       "type": "Creature - Bird Warrior",
       "types": [],
@@ -1491,7 +1491,7 @@
         "Bird",
         "Warrior"
       ],
-      "text": "Flying, vigilance\nCreature tokens you control have flying and vigilance.\nEmbalm {4}{W}{U} ({4}{W}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Bird Warrior with no mana cost. Embalm only as a sorcery.)",
+      "text": "Flying, vigilance\nCreature tokens you control have flying and vigilance.\nEmbalm {4}{W}{U} <i>({4}{W}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Bird Warrior with no mana cost. Embalm only as a sorcery.)</i>",
       "toughness": "3",
       "type": "Creature - Bird Warrior",
       "types": [],
@@ -1583,7 +1583,7 @@
         "Human",
         "Warrior"
       ],
-      "text": "You may exert Ahn-Crop Champion as it attacks. When you do, untap all other creatures you control. (An exerted creature won't untap during your next untap step.)",
+      "text": "You may exert Ahn-Crop Champion as it attacks. When you do, untap all other creatures you control. <i>(An exerted creature won't untap during your next untap step.)</i>",
       "toughness": "4",
       "type": "Creature - Human Warrior",
       "types": [],
@@ -1650,7 +1650,7 @@
       "subtypes": [
         "Angel"
       ],
-      "text": "Flying\n\nIndestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it's still put into its owner's graveyard.)",
+      "text": "Flying\n\nIndestructible <i>(Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it's still put into its owner's graveyard.)</i>",
       "toughness": "4",
       "type": "Creature - Angel",
       "types": [],
@@ -1689,7 +1689,7 @@
         "Human",
         "Warrior"
       ],
-      "text": "You may exert Rhet-Crop Spearmaster as it attacks. When you do, it gets +1/+0 and gains first strike until end of turn. (An exerted creature won't untap during your next untap step.)",
+      "text": "You may exert Rhet-Crop Spearmaster as it attacks. When you do, it gets +1/+0 and gains first strike until end of turn. <i>(An exerted creature won't untap during your next untap step.)</i>",
       "toughness": "1",
       "type": "Creature - Human Warrior",
       "types": [],
@@ -1742,7 +1742,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "You may exert Gust Walker as it attacks. When you do, it gets +1/+1 and gains flying until end of turn. (An exerted creature won't untap during your next untap step.)",
+      "text": "You may exert Gust Walker as it attacks. When you do, it gets +1/+1 and gains flying until end of turn. <i>(An exerted creature won't untap during your next untap step.)",
       "toughness": "2",
       "type": "Creature - Human Wizard",
       "types": [],
@@ -1787,7 +1787,7 @@
         "Crocodile",
         "Demon"
       ],
-      "text": "Exile target artifact or enchantment.\n\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Exile target artifact or enchantment.\n\nCycling {2} <i>({2}, Discard this card: Draw a card.)</i>",
       "type": "Instant",
       "types": [
         "Instant"
@@ -1833,7 +1833,7 @@
         "Human",
         "Warrior"
       ],
-      "text": "You may exert Devoted Crop-Mate as it attacks. When you do, return target creature card with converted mana cost 2 or less from your graveyard to the battlefield. (An exerted creature won't untap during your next untap step.)",
+      "text": "You may exert Devoted Crop-Mate as it attacks. When you do, return target creature card with converted mana cost 2 or less from your graveyard to the battlefield. <i>(An exerted creature won't untap during your next untap step.)</i>",
       "toughness": "2",
       "type": "Creature - Human Warrior",
       "types": [],
@@ -1913,7 +1913,7 @@
       "subtypes": [
         "Aura"
       ],
-      "text": "Enchant permanent\n\nYou control enchanted permanent.\n\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Enchant permanent\n\nYou control enchanted permanent.\n\nCycling {2} <i>({2}, Discard this card: Draw a card.)</i>",
       "type": "Enchantment - Aura",
       "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_Fudu5L3mEP.png"
@@ -1951,7 +1951,7 @@
         "Illusion",
         "Warrior"
       ],
-      "text": "When Labyrinth Guardian becomes the target of a spell, sacrifice it.\n\nEmbalm {3}{U} ({3}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Illusion Warrior with no mana cost.  Embalm only as a sorcery.)",
+      "text": "When Labyrinth Guardian becomes the target of a spell, sacrifice it.\n\nEmbalm {3}{U} <i>({3}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Illusion Warrior with no mana cost.  Embalm only as a sorcery.)</i>",
       "toughness": "3",
       "type": "Creature - Illusion Warrior",
       "types": [],
@@ -2054,7 +2054,7 @@
       "subtypes": [
         "Manticore"
       ],
-      "text": "When Heart-Piercer Manticore enters the battlefield, you may sacrifice another creature. When you do,  Heart-Piercer Manticore deals damage equal to that's creature's power to target creature or player.\nEmbalm {5r} ({5r}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Manticore with no mana cost. Embalm only as a sorcery.)",
+      "text": "When Heart-Piercer Manticore enters the battlefield, you may sacrifice another creature. When you do,  Heart-Piercer Manticore deals damage equal to that's creature's power to target creature or player.\nEmbalm {5r} <i>({5r}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Manticore with no mana cost. Embalm only as a sorcery.)</i>",
       "toughness": "3",
       "type": "Creature - Manticore",
       "types": [],
@@ -2075,7 +2075,7 @@
       "subtypes": [
         "Manticore"
       ],
-      "text": "End the turn. (Exile all spells and abilities on the stack, including this card. The player whose turn it is discards down to his or her maximum hand size. Damage wears off, and \"this turn\" and \"until end of turn\" effects end.)\nAt the beginning of your next end step, you lose the game.",
+      "text": "End the turn. <i>(Exile all spells and abilities on the stack, including this card. The player whose turn it is discards down to his or her maximum hand size. Damage wears off, and \"this turn\" and \"until end of turn\" effects end.)</i>\nAt the beginning of your next end step, you lose the game.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2141,7 +2141,7 @@
       "subtypes": [
         "Manticore"
       ],
-      "text": "Put target spell or nonland permanent into it's owner's library second from the top.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Memory&lt;/b&gt; {4}{uu}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath  (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nEach player shuffles his or her hand and graveyard into his or her library, then draws seven cards.",
+      "text": "Put target spell or nonland permanent into it's owner's library second from the top.\n<hr />\n<b>Memory</b> {4}{uu}\n<b>Sorcery</b>\nAftermath  (<em>Cast this spell only from your graveyard.  Then exile it.</em>)\nEach player shuffles his or her hand and graveyard into his or her library, then draws seven cards.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2164,7 +2164,7 @@
       "subtypes": [
         "Manticore"
       ],
-      "text": "Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Mind&lt;/b&gt; {4}{uu}\n&lt;b&gt;Instant&lt;/b&gt;\nAftermath  (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nDraw two cards.",
+      "text": "Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.\n<hr />\n<b>Mind</b> {4}{uu}\n<b>Instant</b>\nAftermath  (<em>Cast this spell only from your graveyard.  Then exile it.</em>)\nDraw two cards.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2186,7 +2186,7 @@
       "subtypes": [
         "Manticore"
       ],
-      "text": "Draw two cards.\n\nCycling {u} ({u}, Discard this card: Draw a card.)",
+      "text": "Draw two cards.\n\nCycling {u} <i>({u}, Discard this card: Draw a card.)</i>",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2224,7 +2224,7 @@
       "subtypes": [
         "Manticore"
       ],
-      "text": "Create two 1/1 white Warrior creature tokens with vigilance.\n\n&lt;hr /&gt;\n&lt;strong&gt;Finish&lt;/strong&gt; {2}{B}\n&lt;strong&gt;Sorcery&lt;/strong&gt;\nAftermath (Cast this card only from your graveyard.  Then exile it.)\nAs an additional cost to cast Finish, sacrifice a creature.\nDestroy target creature.",
+      "text": "Create two 1/1 white Warrior creature tokens with vigilance.\n\n<hr />\n<strong>Finish</strong> {2}{B}\n<strong>Sorcery</strong>\nAftermath <i>(Cast this card only from your graveyard.  Then exile it.)</i>\nAs an additional cost to cast Finish, sacrifice a creature.\nDestroy target creature.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2342,7 +2342,7 @@
         "Bird",
         "Soldier"
       ],
-      "text": "Flying\n\nCycling {2} ({2}, Discard this card: Draw a card.)\n\nEmbalm {3}{W}{W} ({3}{W}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it'as a white Zombie Bird Soldier with no mana cost.  Embalm only as a sorcery.)",
+      "text": "Flying\n\nCycling {2} <i>({2}, Discard this card: Draw a card.)</i>\n\nEmbalm {3}{W}{W} <i>({3}{W}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it'as a white Zombie Bird Soldier with no mana cost.  Embalm only as a sorcery.)</i>",
       "toughness": "3",
       "type": "Creature - Bird Soldier",
       "types": [],
@@ -2500,7 +2500,7 @@
         "Human",
         "Warrior"
       ],
-      "text": "Sweltering Suns deals 3 damage to each creature.\nCycling {3} ({3}, Discard this card: Draw a card.)",
+      "text": "Sweltering Suns deals 3 damage to each creature.\nCycling {3} <i>({3}, Discard this card: Draw a card.)</i>",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2523,7 +2523,7 @@
       "subtypes": [
         "Sphinx"
       ],
-      "text": "Flying\nWhenever Glyph Keeper becomes the target of a spell or ability for the first time each turn, counter that spell or ability.\nEmbalm {5}{U}{U} ({5}{U}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Sphinx with no mana cost.  Embalm only as a sorcery.)",
+      "text": "Flying\nWhenever Glyph Keeper becomes the target of a spell or ability for the first time each turn, counter that spell or ability.\nEmbalm {5}{U}{U} <i>({5}{U}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Sphinx with no mana cost.  Embalm only as a sorcery.)</i>",
       "toughness": "3",
       "type": "Creature - Sphinx",
       "types": [],
@@ -2798,7 +2798,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}: Untap another target permanent.\nCycling {1}{U} ({1}{U}, Discard this card: Draw a card.)\nWhen you cycle Vizier of Tumbling Sands, untap target permanent.",
+      "text": "{T}: Untap another target permanent.\nCycling {1}{U} <i>({1}{U}, Discard this card: Draw a card.)</i>\nWhen you cycle Vizier of Tumbling Sands, untap target permanent.",
       "toughness": "3",
       "type": "Creature - Human Cleric",
       "types": [],
@@ -2820,7 +2820,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "Create three 2/2 black Zombie creature tokens.\nCycling {3}{B} ({3}{B}, Discard this card: Draw a card.)\nWhen you cycle Stir the Sands, create a 2/2 black Zombie creature token.",
+      "text": "Create three 2/2 black Zombie creature tokens.\nCycling {3}{B} <i>({3}{B}, Discard this card: Draw a card.)</i>\nWhen you cycle Stir the Sands, create a 2/2 black Zombie creature token.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2842,7 +2842,7 @@
       "subtypes": [
         "Instant"
       ],
-      "text": "Deem Worthy deals 7 damage to target creature.\nCycling {3}{R} ({3}{R}, Discard this card: Draw a card.)\nWhen you cycle Deem Worthy, you may have it deal 2 damage to target creature.",
+      "text": "Deem Worthy deals 7 damage to target creature.\nCycling {3}{R} <i>({3}{R}, Discard this card: Draw a card.)</i>\nWhen you cycle Deem Worthy, you may have it deal 2 damage to target creature.",
       "type": "Instant - Instant",
       "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_WgkilyufGv.png"
@@ -2863,7 +2863,7 @@
       "subtypes": [
         "Lizard"
       ],
-      "text": "Cycling {3}{G} ({3}{G}, Discard this card: Draw a card.)\nWhen you cycle Shefet Monitor, you may search your library for a basic land card or a Desert card, put it onto the battlefield, then shuffle your library. (Do this before you draw.)",
+      "text": "Cycling {3}{G} <i>({3}{G}, Discard this card: Draw a card.)</i>\nWhen you cycle Shefet Monitor, you may search your library for a basic land card or a Desert card, put it onto the battlefield, then shuffle your library. <i>(Do this before you draw.)</i>",
       "toughness": "5",
       "type": "Creature - Lizard",
       "types": [],
@@ -2880,7 +2880,7 @@
       "subtypes": [
         "Lizard"
       ],
-      "text": "Heaven deals X damage to each creature with flying.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Earth&lt;/b&gt; {X}{R}{R}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (Cast this spell only from your graveyard.  Then exile it.)\nEarth deals X damage to each creature without flying.",
+      "text": "Heaven deals X damage to each creature with flying.\n<hr />\n<b>Earth</b> {X}{R}{R}\n<b>Sorcery</b>\nAftermath <i>(Cast this spell only from your graveyard.  Then exile it.)</i>\nEarth deals X damage to each creature without flying.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -2963,7 +2963,7 @@
       "subtypes": [
         "Human"
       ],
-      "text": "Counter target spell unless its controller pays {3}.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Rubble&lt;/b&gt; {2r}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\n\nUp to three target lands don't untap during their controller's next untap step.",
+      "text": "Counter target spell unless its controller pays {3}.\n<hr />\n<b>Rubble</b> {2r}\n<b>Sorcery</b>\nAftermath (<em>Cast this spell only from your graveyard.  Then exile it.</em>)\n\nUp to three target lands don't untap during their controller's next untap step.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3011,7 +3011,7 @@
         "Minotaur",
         "Warrior"
       ],
-      "text": "Target player discards two cards.\n\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Target player discards two cards.\n\nCycling {2} <i>({2}, Discard this card: Draw a card.)</i>",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3051,7 +3051,7 @@
         "Snake",
         "Hydra"
       ],
-      "text": "Trample\nEmbalm {3}{G} ({3}{G}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Snake Hydra with no mana cost. Embalm only as a sorcery.)",
+      "text": "Trample\nEmbalm {3}{G} <i>({3}{G}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Snake Hydra with no mana cost. Embalm only as a sorcery.)</i>",
       "toughness": "6",
       "type": "Creature - Snake Hydra",
       "types": [],
@@ -3073,7 +3073,7 @@
         "Snake",
         "Hydra"
       ],
-      "text": "Destroy target creature or planeswalker.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Return&lt;/b&gt; {3}{B}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath  (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nExile target card from a graveyard. Create a 2/2 black Zombie creature token.",
+      "text": "Destroy target creature or planeswalker.\n<hr />\n<b>Return</b> {3}{B}\n<b>Sorcery</b>\nAftermath  (<em>Cast this spell only from your graveyard.  Then exile it.</em>)\nExile target card from a graveyard. Create a 2/2 black Zombie creature token.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3096,7 +3096,7 @@
         "Snake",
         "Hydra"
       ],
-      "text": "Counter target spell unless its controller pays {1}.\nCycling {U} ({U}, Discard this card: Draw a card.)",
+      "text": "Counter target spell unless its controller pays {1}.\nCycling {U} <i>({U}, Discard this card: Draw a card.)</i>",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3164,7 +3164,7 @@
         "Naga",
         "Cleric"
       ],
-      "text": "You may look at the top card of your library. (You may do this at any time.)\n\nYou may cast the top card of your library if it's a creature card.\n\nYou may spend mana as though it were mana of any type to cast creature spells.",
+      "text": "You may look at the top card of your library. <i>(You may do this at any time.)</i>\n\nYou may cast the top card of your library if it's a creature card.\n\nYou may spend mana as though it were mana of any type to cast creature spells.",
       "toughness": "4",
       "type": "Creature - Naga Cleric",
       "types": [],
@@ -3187,7 +3187,7 @@
         "Jackal",
         "Warrior"
       ],
-      "text": "You may exert Champion of Rhonas as it attacks.  When you do, you may put a creature card from your hand onto the battlefield.  (An exerted creature won't untap during your next untap step.)",
+      "text": "You may exert Champion of Rhonas as it attacks.  When you do, you may put a creature card from your hand onto the battlefield.  <i>(An exerted creature won't untap during your next untap step.)</i>",
       "toughness": "3",
       "type": "Creature - Jackal Warrior",
       "types": [],
@@ -3210,7 +3210,7 @@
         "Jackal",
         "Warrior"
       ],
-      "text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",
+      "text": "Prowess <i>(Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)</i>",
       "toughness": "3",
       "type": "Creature - Jackal Warrior",
       "types": [],
@@ -3232,7 +3232,7 @@
       "subtypes": [
         "Angel"
       ],
-      "text": "Flying, vigilance\n\nCycling {w} ({w}, Discard this card: Draw a card.)",
+      "text": "Flying, vigilance\n\nCycling {w} <i>({w}, Discard this card: Draw a card.)</i>",
       "toughness": "3",
       "type": "Creature - Angel",
       "types": [],
@@ -3276,7 +3276,7 @@
       "subtypes": [
         "Angel"
       ],
-      "text": "Flying\nWhen Angel of Sanctions enters the battlefield, you may exile target nonland permanent an opponent controls until Angel of Sanctions leaves the battlefield.\nEmbalm {5W } ({5W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Angel with no mana cost. Embalm only as a sorcery.)",
+      "text": "Flying\nWhen Angel of Sanctions enters the battlefield, you may exile target nonland permanent an opponent controls until Angel of Sanctions leaves the battlefield.\nEmbalm {5W } <i>({5W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Angel with no mana cost. Embalm only as a sorcery.)</i>",
       "toughness": "4",
       "type": "Creature - Angel",
       "types": [],
@@ -3297,7 +3297,7 @@
       "subtypes": [
         "Angel"
       ],
-      "text": "Destroy target artifact.\n\nCycling {G} ({G}, Discard this card: Draw a card.)",
+      "text": "Destroy target artifact.\n\nCycling {G} <i>({G}, Discard this card: Draw a card.)</i>",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3482,7 +3482,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "Return target spell to its owner's hand.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Comply&lt;/b&gt; {w}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nChoose a card name. Until your next turn, your opponents can't cast spells with the chosen name.",
+      "text": "Return target spell to its owner's hand.\n<hr />\n<b>Comply</b> {w}\n<b>Sorcery</b>\nAftermath (<em>Cast this spell only from your graveyard.  Then exile it.</em>)\nChoose a card name. Until your next turn, your opponents can't cast spells with the chosen name.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -3681,7 +3681,7 @@
       "subtypes": [
         "Sphinx"
       ],
-      "text": "Flying\nWhenever you cycle or discard another card, scry 1.\nCycling {u} ({u}, Discard this card: Draw a card.)",
+      "text": "Flying\nWhenever you cycle or discard another card, scry 1.\nCycling {u} <i>({u}, Discard this card: Draw a card.)</i>",
       "toughness": "4",
       "type": "Creature - Sphinx",
       "types": [],
@@ -3704,7 +3704,7 @@
         "Jackal",
         "Rogue"
       ],
-      "text": "You may exert Battlefield Scavenger as it attacks. (It won't untap during your next untap step.)\nWhenever you exert a creature, you may discard a card. If you do, draw a card.",
+      "text": "You may exert Battlefield Scavenger as it attacks. <i>(It won't untap during your next untap step.)</i>\nWhenever you exert a creature, you may discard a card. If you do, draw a card.",
       "toughness": "2",
       "type": "Creature - Jackal Rogue",
       "types": [],
@@ -3727,7 +3727,7 @@
         "Naga",
         "Wizard"
       ],
-      "text": "You may exert Watchful Naga as it attacks. If you do, draw a card. (An exerted creature won't untap during your next untap step.)",
+      "text": "You may exert Watchful Naga as it attacks. If you do, draw a card. <i>(An exerted creature won't untap during your next untap step.)</i>",
       "toughness": "2",
       "type": "Creature - Naga Wizard",
       "types": [],
@@ -3750,7 +3750,7 @@
         "Human",
         "Warrior"
       ],
-      "text": "You may exert Glory-Bound Initiate as it attacks. When you do, it gets +1/+3 and gains lifelink until end of turn. (An exerted creature won't untap during your next untap step.)",
+      "text": "You may exert Glory-Bound Initiate as it attacks. When you do, it gets +1/+3 and gains lifelink until end of turn. <i>(An exerted creature won't untap during your next untap step.)</i>",
       "toughness": "1",
       "type": "Creature - Human Warrior",
       "types": [],
@@ -3898,7 +3898,7 @@
       "subtypes": [
         "Insect"
       ],
-      "text": "Create a 3/3 green Hippo creature token.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Feed&lt;/b&gt; {3}{G}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (Cast this spell only from your graveyard.  Then exile it.)\nDraw a card for each creature you control with power 3 or greater.",
+      "text": "Create a 3/3 green Hippo creature token.\n<hr />\n<b>Feed</b> {3}{G}\n<b>Sorcery</b>\nAftermath <i>(Cast this spell only from your graveyard.  Then exile it.)</i>\nDraw a card for each creature you control with power 3 or greater.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3943,7 +3943,7 @@
       "subtypes": [
         "Insect"
       ],
-      "text": "All creatures get -2/-2 until end of turn.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Riches&lt;/b&gt; {5}{uu}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\n\nEach opponent chooses a creature he or she controls. You gain control of these creatures.",
+      "text": "All creatures get -2/-2 until end of turn.\n<hr />\n<b>Riches</b> {5}{uu}\n<b>Sorcery</b>\nAftermath (<em>Cast this spell only from your graveyard.  Then exile it.</em>)\n\nEach opponent chooses a creature he or she controls. You gain control of these creatures.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3965,7 +3965,7 @@
       "subtypes": [
         "Insect"
       ],
-      "text": "Damage can't be prevented this turn.  If a source you control would deal damage this turn, it deals double that damage instead.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Injury&lt;/b&gt; {2}{R}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nInjury deals 2 damage to target creature and 2 damage to target player.",
+      "text": "Damage can't be prevented this turn.  If a source you control would deal damage this turn, it deals double that damage instead.\n<hr />\n<b>Injury</b> {2}{R}\n<b>Sorcery</b>\nAftermath (<em>Cast this spell only from your graveyard.  Then exile it.</em>)\nInjury deals 2 damage to target creature and 2 damage to target player.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -3988,7 +3988,7 @@
       "subtypes": [
         "Insect"
       ],
-      "text": "Cut deals 4 damage to target creature.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Ribbons&lt;/b&gt; {X}{B}{B}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nEach opponent loses X life.",
+      "text": "Cut deals 4 damage to target creature.\n<hr />\n<b>Ribbons</b> {X}{B}{B}\n<b>Sorcery</b>\nAftermath (<em>Cast this spell only from your graveyard.  Then exile it.</em>)\nEach opponent loses X life.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4010,7 +4010,7 @@
       "subtypes": [
         "Insect"
       ],
-      "text": "Exile up to three target cards from a single graveyard.\n\nCydling {B} ({B}, Discard this card: Draw a card.)",
+      "text": "Exile up to three target cards from a single graveyard.\n\nCydling {B} <i>({B}, Discard this card: Draw a card.)</i>",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4034,7 +4034,7 @@
         "Human",
         "Warrior"
       ],
-      "text": "If Combat Celebrant hasn't been exerted this turn, you may exert it as it attacks. When you do, untap all other creatures you control and after this phase, there is an additional combat phase. (An exerted creature won't untap during your next untap step.)",
+      "text": "If Combat Celebrant hasn't been exerted this turn, you may exert it as it attacks. When you do, untap all other creatures you control and after this phase, there is an additional combat phase. <i>(An exerted creature won't untap during your next untap step.)</i>",
       "toughness": "1",
       "type": "Creature - Human Warrior",
       "types": [],
@@ -4234,7 +4234,7 @@
         "Aura",
         "Cartouche"
       ],
-      "text": "Enchant creature you control.\n\nWhen Cartouche of Strength enters the battlefield, you may have enchanted creature fight target creature an opponent controls. (Each deals damage equal to its power to the other.)\n\nEnchanted creature gets +1/+1 and has trample.",
+      "text": "Enchant creature you control.\n\nWhen Cartouche of Strength enters the battlefield, you may have enchanted creature fight target creature an opponent controls. <i>(Each deals damage equal to its power to the other.)</i>\n\nEnchanted creature gets +1/+1 and has trample.",
       "type": "Enchantment - Aura Cartouche",
       "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_bwq1cAxuoq.png"
@@ -4313,7 +4313,7 @@
       "subtypes": [
         "Cat"
       ],
-      "text": "Return up to two target creatures to their owners' hands.\n\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Return up to two target creatures to their owners' hands.\n\nCycling {2} <i>({2}, Discard this card: Draw a card.)</i>",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4357,7 +4357,7 @@
       "subtypes": [
         "God"
       ],
-      "text": "Flash\nWhen Cast Out enters the battlefield, exile target nonland permanent an opponent controls until Cast Out leaves the battlefield.\nCycling {w} ({w}, Dicard this card: Draw a card.)",
+      "text": "Flash\nWhen Cast Out enters the battlefield, exile target nonland permanent an opponent controls until Cast Out leaves the battlefield.\nCycling {w} <i>({w}, Dicard this card: Draw a card.)</i>",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -4470,7 +4470,7 @@
         "Bird",
         "Warrior"
       ],
-      "text": "Flying\nYou may exert Tah-Crop Elite as it attacks. When you do, creatures you control get +1/+1 until end of turn. (An exerted creature won't untap during your next untap step.)",
+      "text": "Flying\nYou may exert Tah-Crop Elite as it attacks. When you do, creatures you control get +1/+1 until end of turn. <i>(An exerted creature won't untap during your next untap step.)</i>",
       "toughness": "2",
       "type": "Creature - Bird Warrior",
       "types": [],
@@ -4493,7 +4493,7 @@
         "Bird",
         "Warrior"
       ],
-      "text": "Target creature gets +X/+0 until end of turn, where X is its power.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Victory&lt;/b&gt; {2}{W}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nTarget creature gains double strike until end of turn.",
+      "text": "Target creature gets +X/+0 until end of turn, where X is its power.\n<hr />\n<b>Victory</b> {2}{W}\n<b>Sorcery</b>\nAftermath (<em>Cast this spell only from your graveyard.  Then exile it.</em>)\nTarget creature gains double strike until end of turn.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4542,7 +4542,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "At the beginning of combat on your turn, target creature token you control gets +1/ +1 until end of turn and can't be blocked this turn.\nEmbalm {3}{W}{U} ({3}{W}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Cleric with no mana cost. Embalm only as a sorcery.)",
+      "text": "At the beginning of combat on your turn, target creature token you control gets +1/ +1 until end of turn and can't be blocked this turn.\nEmbalm {3}{W}{U} <i>({3}{W}{U}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Cleric with no mana cost. Embalm only as a sorcery.)</i>",
       "toughness": "2",
       "type": "Legendary Creature - Human Cleric",
       "types": [],
@@ -4710,7 +4710,7 @@
         "Human",
         "Warrior"
       ],
-      "text": "Untap target creature. It gets +2/+2 and lifelink until end of turn.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Fight&lt;/b&gt; {3}{G}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath &lt;em&gt;(Cast this spell only from your graveyard.  Then exile it.)&lt;/em&gt;\nTarget creature you control fights target creature an opponent controls.",
+      "text": "Untap target creature. It gets +2/+2 and lifelink until end of turn.\n<hr />\n<b>Fight</b> {3}{G}\n<b>Sorcery</b>\nAftermath <em>(Cast this spell only from your graveyard.  Then exile it.)</em>\nTarget creature you control fights target creature an opponent controls.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4756,7 +4756,7 @@
       "subtypes": [
         "Cat"
       ],
-      "text": "Lifelink\n\nEmbalm {w} ({W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Cat with no mana cost. Embalm only as a sorcery.)",
+      "text": "Lifelink\n\nEmbalm {w} <i>({W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Cat with no mana cost. Embalm only as a sorcery.)</i>",
       "toughness": "1",
       "type": "Creature - Cat",
       "types": [],
@@ -4799,7 +4799,7 @@
       "subtypes": [
         "Liliana"
       ],
-      "text": "Untap target creature. Prevent all damage that would be dealt to it this turn.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "Untap target creature. Prevent all damage that would be dealt to it this turn.\nCycling {2} <i>({2}, Discard this card: Draw a card.)</i>",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4821,7 +4821,7 @@
       "subtypes": [
         "Liliana"
       ],
-      "text": "Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.\n\nCycling {2} {2}, Discard this card: Draw a card.)\n",
+      "text": "Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.\n\nCycling {2} <i>{2}, Discard this card: Draw a card.)\n",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -4891,7 +4891,7 @@
         "Jackal",
         "Warrior"
       ],
-      "text": "Target creature gets +1/+0 and gains indestructible until end of turn.\n\n&lt;hr&gt;&lt;/hr&gt;\n&lt;strong&gt;Lead&lt;/strong&gt; {3g}\n&lt;strong&gt;Sorcery&lt;/strong&gt;\nAftermath (Cast this spell only from your graveyard.  Then exile it.)\n\nAll creatures able to block target creature this turn must do so.",
+      "text": "Target creature gets +1/+0 and gains indestructible until end of turn.\n\n<hr />\n<strong>Lead</strong> {3g}\n<strong>Sorcery</strong>\nAftermath <i>(Cast this spell only from your graveyard.  Then exile it.)</i>\n\nAll creatures able to block target creature this turn must do so.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -4959,7 +4959,7 @@
         "Minotaur",
         "Warrior"
       ],
-      "text": "Haste\nYou may exert Ahn-Crop Crasher as it attacks. When you do, target creature can't block this turn. (An exterted creature can't untap during your next untap step)",
+      "text": "Haste\nYou may exert Ahn-Crop Crasher as it attacks. When you do, target creature can't block this turn. <i>(An exterted creature can't untap during your next untap step)</i>",
       "toughness": "2",
       "type": "Creature - Minotaur Warrior",
       "types": [],
@@ -5005,7 +5005,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "Whenever a creature token enters the battlefield under your control, you gain 1 life.\n\nEmbalm {3w} ({3W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Cleric with no mana cost. Embalm only as a sorcery)",
+      "text": "Whenever a creature token enters the battlefield under your control, you gain 1 life.\n\nEmbalm {3w} <i>({3W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Cleric with no mana cost. Embalm only as a sorcery)",
       "toughness": "3",
       "type": "Creature - Human Cleric",
       "types": [],
@@ -5046,7 +5046,7 @@
         "Mountain",
         "Forest"
       ],
-      "text": "({t}: Add {r} or {g} to your mana pool.)\nSheltered Thicket enters the battlefield tapped.\nCycling {2} ({2}, discard this card: Draw a card.)",
+      "text": "<i>({t}: Add {r} or {g} to your mana pool.)</i>\nSheltered Thicket enters the battlefield tapped.\nCycling {2} <i>({2}, discard this card: Draw a card.)</i>",
       "type": "Land - Mountain Forest",
       "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_dJCfMS8DuP.png"
@@ -5064,7 +5064,7 @@
         "Swamp",
         "Mountain"
       ],
-      "text": "({t}: Add {b} or {r} to your mana pool.)\nCanyon Slough enters the battlefield tapped.\nCycling {2} ({2}, discard this card: Draw a card.)",
+      "text": "<i>({t}: Add {b} or {r} to your mana pool.)</i>\nCanyon Slough enters the battlefield tapped.\nCycling {2} <i>({2}, discard this card: Draw a card.)</i>",
       "type": "Land - Swamp Mountain",
       "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_O9Zye0bIYs.png"
@@ -5082,7 +5082,7 @@
         "Island",
         "Swamp"
       ],
-      "text": "({t}: Add {u} or {b} to your mana pool.)\nFetid Pools enters the battlefield tapped.\nCycling {2} ({2}, discard this card: Draw a card.)",
+      "text": "<i>({t}: Add {u} or {b} to your mana pool.)</i>\nFetid Pools enters the battlefield tapped.\nCycling {2} <i>({2}, discard this card: Draw a card.)</i>",
       "type": "Land - Island Swamp",
       "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_lRR892wXFr.png"
@@ -5100,7 +5100,7 @@
         "Forest",
         "Plains"
       ],
-      "text": "({T}: Add {G} or {W} to your mana pool.)\n\nScattered Groves enters the battlefield tapped.\n\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "text": "<i>({T}: Add {G} or {W} to your mana pool.)</i>\n\nScattered Groves enters the battlefield tapped.\n\nCycling {2} <i>({2}, Discard this card: Draw a card.)</i>",
       "type": "Land - Forest Plains",
       "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_cmJc89R9pt.png"
@@ -5118,7 +5118,7 @@
         "Plains",
         "Island"
       ],
-      "text": "({t}: Add {w} or {u} to your mana pool.)\nIrrigated Farmland enters the battlefield tapped.\nCycling {2} ({2}, discard this card: Draw a card.)",
+      "text": "<i>({t}: Add {w} or {u} to your mana pool.)</i>\nIrrigated Farmland enters the battlefield tapped.\nCycling {2} <i>({2}, discard this card: Draw a card.)</i>",
       "type": "Land - Plains Island",
       "types": [],
       "url": "http://media.wizards.com/2017/dw466ytu5_akh/en_nsXw6JpzGH.png"
@@ -5162,7 +5162,7 @@
         "Cat",
         "Snake"
       ],
-      "text": "You gain 6 life.\n\nCycling {1}{W} ({1}{W}, Discard this card: Draw a card.)\n\nWhen you cycle Renewed Faith, you may gain 2 life.",
+      "text": "You gain 6 life.\n\nCycling {1}{W} <i>({1}{W}, Discard this card: Draw a card.)</i>\n\nWhen you cycle Renewed Faith, you may gain 2 life.",
       "type": "Instant",
       "types": [
         "Instant"
@@ -5284,7 +5284,7 @@
         "Human",
         "Warrior"
       ],
-      "text": "Vigilance\n\nEmbalm {4}{W} ({4}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Warrior with no mana cost.  Embalm only as a sorcery.)",
+      "text": "Vigilance\n\nEmbalm {4}{W} <i>({4}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Warrior with no mana cost.  Embalm only as a sorcery.)</i>",
       "toughness": "2",
       "type": "Creature - Human Warrior",
       "types": [],
@@ -5330,7 +5330,7 @@
         "Human",
         "Soldier"
       ],
-      "text": "Trueheart Duelist can block an additional creature each combat.\n\nEmbalm {2w} ({2w}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Warrior with no mana cost. Embalm only as a sorcery)",
+      "text": "Trueheart Duelist can block an additional creature each combat.\n\nEmbalm {2w} <i>({2w}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Human Warrior with no mana cost. Embalm only as a sorcery)</i>",
       "toughness": "2",
       "type": "Creature - Human Soldier",
       "types": [],
@@ -5550,7 +5550,7 @@
         "Zombie",
         "Minotaur"
       ],
-      "text": "Menace (This creature can't be blocked except by two or more creatures.)",
+      "text": "Menace <i>(This creature can't be blocked except by two or more creatures.)</i>",
       "toughness": "2",
       "type": "Creature - Zombie Minotaur",
       "types": [],
@@ -5660,7 +5660,7 @@
       "subtypes": [
         "Dragon"
       ],
-      "text": "Flying, haste\nYou may exert Glorybringer as it attacks. When you do, it deals 4 damage to target non-Dragon creature an opponent controls. (An exerted creature won't untap during your next untap step.)",
+      "text": "Flying, haste\nYou may exert Glorybringer as it attacks. When you do, it deals 4 damage to target non-Dragon creature an opponent controls. <i>(An exerted creature won't untap during your next untap step.)</i>",
       "toughness": "4",
       "type": "Creature - Dragon",
       "types": [],
@@ -5682,7 +5682,7 @@
       "subtypes": [
         "Demon"
       ],
-      "text": "Flying\nWhenever you cycle or discard another card, put a -1/-1 counter on each creature your opponents control.\nCycling {2} ({2} , Discard this card: Draw a card.)",
+      "text": "Flying\nWhenever you cycle or discard another card, put a -1/-1 counter on each creature your opponents control.\nCycling {2} <i>({2} , Discard this card: Draw a card.)</i>",
       "toughness": "4",
       "type": "Creature - Demon",
       "types": [],
@@ -5719,7 +5719,7 @@
       "subtypes": [
         "Demon"
       ],
-      "text": "Destroy all creatures with power 3 or greater.\n&lt;hr&gt;&lt;/hr&gt;\n&lt;b&gt;Dawn&lt;/b&gt; {3}{W}{W}\n&lt;b&gt;Sorcery&lt;/b&gt;\nAftermath (&lt;em&gt;Cast this spell only from your graveyard.  Then exile it.&lt;/em&gt;)\nReturn all creature cards with power 2 or less from your graveyard to your hand.",
+      "text": "Destroy all creatures with power 3 or greater.\n<hr />\n<b>Dawn</b> {3}{W}{W}\n<b>Sorcery</b>\nAftermath (<em>Cast this spell only from your graveyard.  Then exile it.</em>)\nReturn all creature cards with power 2 or less from your graveyard to your hand.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
