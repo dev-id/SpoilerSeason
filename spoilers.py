@@ -16,6 +16,7 @@ def scrape_mtgs(url):
     return requests.get(url, headers={'Cache-Control':'no-cache', 'Pragma':'no-cache', 'Expires': 'Thu, 01 Jan 1970 00:00:00 GMT'}).text
 
 def parse_mtgs(mtgs, manual_cards=[], card_corrections=[], delete_cards=[], split_cards=[], related_cards=[]):
+    mtgs = mtgs.replace('utf-16','utf-8')
     patterns = ['<b>Name:</b> <b>(?P<name>.*?)<',
                 'Cost: (?P<cost>\d{0,2}[WUBRGC]*?)<',
                 'Type: (?P<type>.*?)<',
