@@ -1,22 +1,39 @@
-## Creating a set.xml file ##
+# SpoilerSeason #
+
+[![Join the chat at https://gitter.im/SpoilerSeason/Lobby](https://badges.gitter.im/SpoilerSeason/Lobby.svg)](https://gitter.im/SpoilerSeason/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+SpoilerSeason is a python script to scrape MTGS, Scryfall, and Wizards.com to compile a cockatrice-friendly XML file as well as json files.
+
+## Output [![Build Status](https://travis-ci.org/tritoch/SpoilerSeason.svg?branch=master)](https://travis-ci.org/tritoch/SpoilerSeason) ##
+Just looking for XML or JSON files?  [They're in our files branch!](https://github.com/tritoch/SpoilerSeason/tree/files)
+
+## Errors ##
+Noticed an error?  Check out our [Contributing file](https://github.com/tritoch/SpoilerSeason/blob/master/.github/CONTRIBUTING.md) for information on how to help!
+
+## Running ##
 
 ### Requirements ###
  * Python 2.7
- * python requests (pip install requests)
- * feedreader (pip install feedreader)
- * json
- * datetime
+ * Python Modules:
+    requests==2.13.0
+    feedparser
+    lxml
+    Pillow
+    datetime
+
+```
+pip install -r requirements.txt
+```
 
 ### Usage ###
     
 ```
-$> python spoiler.py
+$> python main.py
 ```
 
-Outputs EMN.json and EMN.xml
+Outputs out/{SETCODE}.xml, out/MPS\_{SETCODE}.xml, out/{SETCODE}.json, out/{MPS\_{SETCODE}.json
 
-Create the set xml file and add it to your `customsets` folder for Cockatrice.
+errors are logged to out/errors.json
 
-Scraper code by robtandy @ https://github.com/robtandy/CockatriceSpoilerXML
+Add the set xml file to your `customsets` folder for Cockatrice.
 
-All other code is MIT License
+When run by travis, uploads all files to [files branch](https://github.com/tritoch/SpoilerSeason/tree/files)
