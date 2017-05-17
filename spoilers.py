@@ -7,6 +7,7 @@ import os
 import shutil
 import time
 from lxml import html
+from lxml import etree
 from PIL import Image
 import datetime
 import urllib
@@ -313,26 +314,34 @@ def correct_cards(mtgjson, manual_cards=[], card_corrections=[], delete_cards=[]
 def errorcheck(mtgjson):
     errors = []
     for card in mtgjson['cards']:
-        if not 'type' in card:
-            errors.append({"name": card['name'], "key": "type", "value": ""})
-        else:
+        for key in card:
+            if key == "":
+                errors.append({"name": card['name'], "key": key, "value": ""})
+        requiredKeys = ['name','type']
+        for requiredKey in requiredKeys:
+            if not requiredKey in card:
+                errors.append({"name": card['name'], "key": key, "missing": True})
+        if 'text' in card:
+            #foo = 1
+            card['text'] = card['text'].replace('<i>','').replace('</i>','').replace('<em>','').replace('</em','').replace('(','')
+        if 'type' in card:
             if 'Planeswalker' in card['type']:
                 if not 'loyalty' in card:
                     errors.append({"name": card['name'], "key": "loyalty", "value": ""})
                 if not card['rarity'] == 'Mythic Rare':
                     errors.append({"name": card['name'], "key": "rarity", "value": card['rarity']})
                 if not 'subtypes' in card:
-                    errors.append({"name": card['name'], "key": "subtypes", "value": "", "fixed": True})
+                    errors.append({"name": card['name'], "key": "subtypes", "oldvalue": "", "newvalue": card['name'].split(" ")[0], "fixed": True})
                     if not card['name'].split(' ')[0] == 'Ob' and not card['name'].split(' ') == 'Nicol':
                         card["subtypes"] = card['name'].split(" ")[0]
                     else:
                         card["subtypes"] = card['name'].split(" ")[1]
                 if not 'types' in card:
+                    #errors.append({"name": card['name'], "key": "types", "fixed": True, "oldvalue": "", "newvalue": ["Planeswalker"]})
                     card['types'] = ["Planeswalker"]
-                    errors.append({"name": card['name'], "key": "types", "value": True})
                 elif not "Planeswalker" in card['types']:
+                    #errors.append({"name": card['name'], "key": "types", "fixed": True, "oldvalue": card['types'], "newvalue": card['types'] + ["Planeswalker"]})
                     card['types'].append("Planeswalker")
-                    errors.append({"name": card['name'], "key": "types", "fixed": True})
             if 'Creature' in card['type']:
                 if not 'power' in card:
                     errors.append({"name": card['name'], "key": "power", "value": ""})
@@ -340,11 +349,24 @@ def errorcheck(mtgjson):
                     errors.append({"name": card['name'], "key": "toughness", "value": ""})
                 if not 'subtypes' in card:
                     errors.append({"name": card['name'], "key": "subtypes", "value": ""})
+        if 'manaCost' in card:
+            workingCMC = 0
+            stripCost = card['manaCost'].replace('{','').replace('}','')
+            for manaSymbol in stripCost:
+                if manaSymbol.isdigit():
+                    workingCMC += int(manaSymbol)
+                elif not manaSymbol == 'X':
+                    workingCMC += 1
+            if not 'cmc' in card:
+                errors.append({"name": card['name'], "key": "cmc", "value": ""})
+            elif not card['cmc'] == workingCMC:
+                errors.append({"name": card['name'], "key": "cmc", "oldvalue": card['cmc'], "newvalue": workingCMC, "fixed": True, "match": card['manaCost']})
+                card['cmc'] = workingCMC
         if not 'cmc' in card:
             errors.append({"name": card['name'], "key": "cmc", "value": ""})
         else:
             if not isinstance(card['cmc'], int):
-                errors.append({"name": card['name'], "key": "cmc", "value": card['cmc'], "fixed": True})
+                errors.append({"name": card['name'], "key": "cmc", "oldvalue": card['cmc'], "newvalue": int(card['cmc']), "fixed": True})
                 card['cmc'] = int(card['cmc'])
             else:
                 if card['cmc'] > 0:
@@ -352,7 +374,7 @@ def errorcheck(mtgjson):
                         errors.append({"name": card['name'], "key": "manaCost", "value": "", "match": card['cmc']})
                 else:
                     if 'manaCost' in card:
-                        errors.append({"name": card['name'], "key": "manaCost", "value": card['manaCost'], "fixed": True})
+                        errors.append({"name": card['name'], "key": "manaCost", "oldvalue": card['manaCost'], "fixed": True})
                         del card["manaCost"]
         if 'colors' in card:
             if not 'colorIdentity' in card:
@@ -372,19 +394,6 @@ def errorcheck(mtgjson):
                         errors.append({"name": card['name'], "key": "colors", "value": ""})
                 #if not 'Land' in card['type'] and not 'Artifact' in card['type'] and not 'Eldrazi' in card['type']:
                 #    errors.append({"name": card['name'], "key": "colors", "value": ""})
-        if 'manaCost' in card:
-            workingCMC = 0
-            stripCost = card['manaCost'].replace('{','').replace('}','')
-            for manaSymbol in stripCost:
-                if manaSymbol.isdigit():
-                    workingCMC += int(manaSymbol)
-                elif not manaSymbol == 'X':
-                    workingCMC += 1
-            if not 'cmc' in card:
-                errors.append({"name": card['name'], "key": "cmc", "value": ""})
-            elif not card['cmc'] == workingCMC:
-                errors.append({"name": card['name'], "key": "cmc", "value": card['cmc'], "fixed": True, "match": card['manaCost']})
-                card['cmc'] = workingCMC
         if not 'url' in card:
             errors.append({"name": card['name'], "key": "url", "value": ""})
         elif len(card['url']) < 10:
@@ -830,6 +839,14 @@ def write_xml(mtgjson, setname, setlongname, setreleasedate, split_cards=[]):
         cardsxml.write("</card>\n")
 
     cardsxml.write("</cards>\n</cockatrice_carddatabase>")
+
+    #failing pretty xml code
+    #with open('out/' + setname + '.xml') as data_file:
+    #    tree = etree.parse(data_file)
+    #root = tree.getroot()
+    #f = open('out/' + setname + '.xml', 'w')
+    #f.write(etree.tostring(root, pretty_print=True))
+    #f.close()
 
     print 'XML STATS'
     print 'Total cards: ' + str(count)
