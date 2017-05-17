@@ -118,7 +118,7 @@ Search your library for a card and put that card into your hand. Then shuffle yo
 <manacost>U</manacost>
 <cmc>1</cmc><color>U</color><type>Instant</type>
 <tablerow>3</tablerow>
-<text>Counter target activated or triggered ability. (Mana abilities can't be targeted.)</text>
+<text>Counter target activated or triggered ability. Mana abilities can't be targeted.)</text>
 </card>
 <card>
 <name>Spell Pierce</name>

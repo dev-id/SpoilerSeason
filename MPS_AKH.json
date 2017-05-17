@@ -253,7 +253,7 @@
       "number": "40",
       "rarity": "Mythic Rare",
       "releaseDate": "2009",
-      "text": "Counter target activated or triggered ability. (Mana abilities can't be targeted.)",
+      "text": "Counter target activated or triggered ability. Mana abilities can't be targeted.)",
       "type": "Instant",
       "types": [
         "Instant"

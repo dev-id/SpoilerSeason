@@ -2,166 +2,147 @@
   "fixed": [
     {
       "fixed": true,
-      "key": "manaCost",
+      "key": "cmc",
+      "match": "{X}{U}{U}",
       "name": "Open into Wonder",
-      "value": "{X}{U}{U}"
+      "newvalue": 2,
+      "oldvalue": 0
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Painted Bluffs",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Cascading Cataracts",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Cradle of the Accursed",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Grasping Dunes",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
-      "key": "manaCost",
+      "key": "cmc",
+      "match": "{X}{R}",
       "name": "By Force",
-      "value": "{X}{R}"
+      "newvalue": 1,
+      "oldvalue": 0
     },
     {
       "fixed": true,
-      "key": "types",
-      "name": "Nissa, Steward of Elements"
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
+      "key": "cmc",
+      "match": "{X}{U}{G}",
       "name": "Nissa, Steward of Elements",
-      "value": "{X}{U}{G}"
+      "newvalue": 2,
+      "oldvalue": 0
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Sunscorched Desert",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Heaven // Earth",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Pull from Tomorrow",
-      "value": ""
-    },
-    {
-      "fixed": true,
-      "key": "types",
-      "name": "Liliana, Death's Majesty"
-    },
-    {
-      "fixed": true,
-      "key": "types",
-      "name": "Gideon, Martial Pargon"
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Foul Orchard",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Stone Quarry",
-      "value": ""
-    },
-    {
-      "fixed": true,
-      "key": "types",
-      "name": "Gideon of the Trials"
-    },
-    {
-      "fixed": true,
-      "key": "types",
-      "name": "Liliana, Death Wielder"
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Sheltered Thicket",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Canyon Slough",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Fetid Pools",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Scattered Groves",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Irrigated Farmland",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Forest",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Mountain",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Swamp",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Island",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Plains",
-      "value": ""
+      "oldvalue": ""
     },
     {
       "fixed": true,
       "key": "manaCost",
       "name": "Pact of Negation",
-      "value": "{0}"
+      "oldvalue": "{0}"
     }
   ],
   "unfixed": [
