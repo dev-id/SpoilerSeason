@@ -2,134 +2,8 @@
   "fixed": [
     {
       "fixed": true,
-      "key": "cmc",
-      "match": "{X}{U}{U}",
-      "name": "Open into Wonder",
-      "newvalue": 2,
-      "oldvalue": 0
-    },
-    {
-      "fixed": true,
       "key": "manaCost",
-      "name": "Painted Bluffs",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Cascading Cataracts",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Cradle of the Accursed",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Grasping Dunes",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "cmc",
-      "match": "{X}{R}",
-      "name": "By Force",
-      "newvalue": 1,
-      "oldvalue": 0
-    },
-    {
-      "fixed": true,
-      "key": "cmc",
-      "match": "{X}{U}{G}",
-      "name": "Nissa, Steward of Elements",
-      "newvalue": 2,
-      "oldvalue": 0
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Sunscorched Desert",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Heaven // Earth",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Pull from Tomorrow",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Foul Orchard",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Stone Quarry",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Sheltered Thicket",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Canyon Slough",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Fetid Pools",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Scattered Groves",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Irrigated Farmland",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Forest",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Mountain",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Swamp",
-      "oldvalue": ""
-    },
-    {
-      "fixed": true,
-      "key": "manaCost",
-      "name": "Island",
+      "name": "Unknown Shores",
       "oldvalue": ""
     },
     {
@@ -141,6 +15,144 @@
     {
       "fixed": true,
       "key": "manaCost",
+      "name": "Island",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Swamp",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Mountain",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Forest",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Spitfire Bastion",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Field of Ruin",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Lost Vale",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Adanto, the First Fort",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Azcanta, The Sunken Ruin",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Itlimoc, Cradle of the Sun",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Temple of Aclazotz",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Spires of Orazca",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Conqueror's Foothold",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Primal Wellspring",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Stone Quarry",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Woodland Stream",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Treasure Cove",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Unclaimed Territory",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Sanguine Sacrament",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Entrancing Melody",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Sunpetal Grove",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Rootbound Crag",
+      "oldvalue": ""
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
+      "name": "Slaughter Pact",
+      "oldvalue": "{0}"
+    },
+    {
+      "fixed": true,
+      "key": "manaCost",
       "name": "Pact of Negation",
       "oldvalue": "{0}"
     }
@@ -148,82 +160,977 @@
   "unfixed": [
     {
       "key": "url",
-      "name": "Commit // Memory",
+      "name": "Sigourney Weaver",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Spring // Mind",
+      "name": "Tempest Caller",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Start // Finish",
-      "value": ""
-    },
-    {
-      "key": "colors",
-      "name": "Heaven // Earth",
+      "name": "Storm Sculptor ",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Heaven // Earth",
+      "name": "Siren's Ruse",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Reduce // Rubble",
+      "name": "Siren Lookout",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Never // Return",
+      "name": "Bonded Horncrest",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Failure // Comply",
+      "name": "Shore Keeper",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Dual Shot",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Storm Sculptor",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Demolish",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Fathom Fleet Firebrand",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Fiery Cannonade",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Watertrap Weaver",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Fire Shrine Keeper",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Shipwreck Looter",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Wind Strider",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Firecannon Blast",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Frenzied Raptor",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Headstrong Brute",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Hijack",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Vanquish the Weak",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Nest Robber",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Spreading Rot",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Rummaging Goblin",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Skymarch Bloodletter",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Storm Fleet Pyromancer",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Seekers' Squire",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Shaper Apprentice",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Sure Strike",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Queen's Agent",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Swashbuckling",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Mark of the Vampire",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "March of the Drowned",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Thrash of Raptors",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Heartless Pillage",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Sailor of Means",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Atzocan Archer",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Grim Captain's Call",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Blinding Fog",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Fathom Fleet Cutthroat",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Blossom Dryad",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Dire Fleet Interloper",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Colossal Dreadmaw",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Crash the Ramparts",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Dark Nourishment",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Crushing Canopy",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Costly Plunder",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Deeproot Warrior",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Contract Killing",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Emergent Growth",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Ixalli's Diviner",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Blight Keeper",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Ixalli's Keeper",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Anointed Deacon",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Jade Guardian",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Jungle Delver",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Vampire's Zeal",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Run Aground",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "New Horizons",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Territorial Hammerskull",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Pirate's Prize",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Pounce",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Sunrise Seeker",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Steadfast Armasaur",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "River Heralds' Boon",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "One with the Wind",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Slash of Talons",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Verdant Rebirth",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Skyblade of the Legion",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Shining Aerosaur",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Navigator's Ruin",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Sheltering Light",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Cobbled Wings",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Ritual of Rejuvenation",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Elaborate Firecannon",
+      "value": ""
+    },
+    {
+      "key": "power",
+      "name": "Gilded Sentinel",
+      "value": ""
+    },
+    {
+      "key": "toughness",
+      "name": "Gilded Sentinel",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Gilded Sentinel",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Raptor Companion",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Hierophant's Chalice",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Rallying Roar",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Dive Down",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Queen's Commission",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Prying Blade",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Pterodon Knight",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Pious Interdiction",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Paladin of the Bloodstained",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Depths of Desire",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Unknown Shores",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Legion's Judgment",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Inspiring Cleric",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Imperial Aerosaur",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Glorifier of Dusk",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Encampment Keeper",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Air Elemental",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Demystify",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Bright Reprisal",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Bishop's Soldier",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Spike-Tailed Ceratops",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Looming Altisaur",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Ancient Brontodon",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Vineshaper Mystic",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Spitfire Bastion",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Vance's Blasting Cannons",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Perilous Voyage",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Emissary of Sunrise",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Shadowed Caravel",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Repeating Barrage",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Axis of Mortality",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Skulduggery",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Dire Fleet Hoarder",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Desperate Castaways",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Brazen Buccaneers",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Tilonalli's Knight",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Kinjalli's Caller",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Field of Ruin",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Rigging Runner",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Lightning-Rig Crew",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Raiders' Wake",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Ruthless Knave",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "River Sneak",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Captivating Crew",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Adanto Vanguard",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Charging Monstrosaur",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Imperial Lancer",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Makeshift Munitions",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Vicious Conquistador",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Trove of Temptation",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Lost Vale",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Dowsing Dagger",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Adanto, the First Fort",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Legion's Landing",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Snapping Sailback",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Sky Terror",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Lurking Chupacabra",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Bishop of the Bloodstained",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Merfolk Branchwalker",
       "value": ""
     },
     {
       "key": "loyalty",
-      "name": "Liliana, Death's Majesty",
+      "name": "Vraska, Relic Seeker",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Vraska, Relic Seeker",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Azcanta, The Sunken Ruin",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Search for Azcanta",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Rile",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Dinosaur Stampede",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Rampaging Ferocidon",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Legion Conquistador",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Lookout's Dispersal",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Thundering Spineback",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Storm Fleet Spy",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Otepec Huntmaster",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Itlimoc, Cradle of the Sun",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Growing Rites of Itlimoc",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Fell Flagship",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Skittering Heartstopper",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Chart a Course",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Grazing Whiptail",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Commune with Dinosaurs",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Vona, Butcher of Magan",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Raptor Hatchling",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Ranging Raptors",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Temple of Aclazotz",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Ravenous Daggertooth",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Arguel's Blood Fast",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Spell Pierce",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Opt",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Duress",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Slice in Twain",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Duskborne Skymarcher",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Favorable Winds",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Storm Fleet Arsonist",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Storm Fleet Aerialist",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Samp",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Savage Stomp",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Wily Goblin",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Pirate's Cutlass",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Kitesail Freebooter",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Overflowing Insight",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Sanctum Seeker",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Spires of Orazca",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Thaumatic Compass",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Conqueror's Foothold",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Conqueror's Galleon",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Wildgrowth Walker",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Wanted Scoundrels",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Drover of the Mighty",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Siren Stormtamer",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Lightning Strike",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Shapers of Nature",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Primal Amulet",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Primal Wellspring",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Deadeye Quartermaster",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Wakening Sun's Avatar",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Ixalan's Binding",
       "value": ""
     },
     {
       "key": "loyalty",
-      "name": "Gideon, Martial Pargon",
+      "name": "Huatli, Warrior Poet",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Gideon, Martial Pargon",
+      "name": "Huatli, Warrior Poet",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Dessicated Naga",
-      "value": ""
-    },
-    {
-      "key": "url",
-      "name": "Foul Orchard",
-      "value": ""
-    },
-    {
-      "key": "url",
-      "name": "Gideon's Resolve",
-      "value": ""
-    },
-    {
-      "key": "url",
-      "name": "Liliana's Influence",
-      "value": ""
-    },
-    {
-      "key": "url",
-      "name": "Companion of the Trials",
+      "name": "Sentinel Totem",
       "value": ""
     },
     {
@@ -233,82 +1140,452 @@
     },
     {
       "key": "url",
-      "name": "Mouth // Feed",
+      "name": "Sun-Blessed Mount",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Rags // Riches",
+      "name": "Huatli's Spurring",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Insult // Injury",
+      "name": "Huatli's Snubhorn",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Cut // Ribbons",
+      "name": "Woodland Stream",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Jace's Sentinel",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Grasping Current",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Castaway's Despair",
       "value": ""
     },
     {
       "key": "loyalty",
-      "name": "Gideon of the Trials",
-      "value": ""
-    },
-    {
-      "key": "power",
-      "name": "Watchers of the Dead",
-      "value": ""
-    },
-    {
-      "key": "toughness",
-      "name": "Watchers of the Dead",
+      "name": "Huatli, Dinosaur Knight",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Onward // Victory",
-      "value": ""
-    },
-    {
-      "key": "url",
-      "name": "Prepare // Fight",
+      "name": "Huatli, Dinosaur Knight",
       "value": ""
     },
     {
       "key": "loyalty",
-      "name": "Liliana, Death Wielder",
+      "name": "Jace, Ingenious Mind-Mage",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Liliana, Death Wielder",
+      "name": "Jace, Ingenious Mind-Mage",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Destined // Lead",
+      "name": "Marauding Looter",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Annointer Priest",
+      "name": "Raging Swordtooth",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Tattered Mummy",
+      "name": "~Speaker of Kumena",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Graceful Cat",
+      "name": "Kumena's Speaker",
       "value": ""
     },
     {
       "key": "url",
-      "name": "Dusk // Dawn",
+      "name": "Dusk Legion Dreadnought",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Pillar of Origins",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Bellowing Aegisaur",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "~~Roaring Anklodon",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Deathless Ancient",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Deeproot Waters",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Dire Fleet Captain",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Deadeye Plunderers",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Belligerent Brontodon",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Call to the Feast",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Headwater Sentries",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Queen's Bay Soldier",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Unfriendly Fire",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Sleek Schooner",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Tishana's Wayfinder",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Prosperous Pirates",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Deadeye Tormentor",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Sun-Crowned Hunters",
+      "value": ""
+    },
+    {
+      "key": "loyalty",
+      "name": "Jace, Cunning Castaway",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Jace, Cunning Castaway",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Treasure Cove",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Treasure Map",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Sword-Point Diplomacy",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Fleet Swallower",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Wakenun's Avatar",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Regisaur Alpha",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Deathgorge Scavenger",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Spell Swindle",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Bishop of Rebirth",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Kopala, Warden of Waves",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Walk the Plank",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Unclaimed Territory",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Burning Sun's Avatar",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Old-Growth Dryads",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "JUNK NAME TO DELETE",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Ashes of the Abhorrent",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Settle the Wreckage",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Priest of the Wandering Sun CHANGING NAME TO DELETE",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Priest of the Wakening Sun",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Sanguine Sacrament",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "River's Rebuke",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Vraska's Contempt",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Deadeye Tracker",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Fathom Fleet Captain",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Boneyard Parley",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Gishath, Sun's Avatar",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Tilonalli's Skinshifter",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Tocatli Honor Guard",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Admiral Beckett Brass",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Sunbird's Invocation",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Mavren Fein, Dusk Apostle",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Star of Extinction",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Angrath's Marauders",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Herald of Secret Streams",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Shapers' Sanctuary",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Verdant Sun's Avatar",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Carnage Tyrant",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Waker of the Wilds",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Ripjaw Raptor",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Kinjalli's Sunwing",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Emperor's Vanguard",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Entrancing Melody",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Revel in Riches",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Tishana, Voice of Thunder",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Dire Fleet Ravager",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Deeproot Champion",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Dreamcaller Siren",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Goring Ceratops",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Hostage Taker",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Sunpetal Grove",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Ruin Raider",
+      "value": ""
+    },
+    {
+      "key": "url",
+      "name": "Rootbound Crag",
+      "value": ""
+    },
+    {
+      "key": "number",
+      "name": "Doomsday",
+      "value": ""
+    },
+    {
+      "key": "number",
+      "name": "Shatterstorm",
+      "value": ""
+    },
+    {
+      "key": "number",
+      "name": "Blood Moon",
       "value": ""
     },
     {
@@ -318,7 +1595,17 @@
     },
     {
       "key": "number",
+      "name": "Force of Will",
+      "value": ""
+    },
+    {
+      "key": "number",
       "name": "Mind Twist",
+      "value": ""
+    },
+    {
+      "key": "number",
+      "name": "Counterspell",
       "value": ""
     }
   ]

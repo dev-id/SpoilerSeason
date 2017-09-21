@@ -5,50 +5,101 @@
   "border": "black",
   "cards": [
     {
-      "cmc": 3,
+      "artist": "Grzegorz Rutkowski",
+      "cmc": 5,
       "colorIdentity": [
-        "G"
+        "U",
+        "B"
       ],
       "colors": [
-        "Green"
+        "Blue",
+        "Black"
       ],
-      "manaCost": "2G",
-      "name": "Rhonas the Indomitable",
-      "number": "182",
+      "id": "db1a262fa2aa145cec392c7c2f4259029c1458f2",
+      "imageName": "the scarab god",
+      "layout": "normal",
+      "manaCost": "{3}{U}{B}",
+      "multiverseid": 430688,
+      "name": "The Scarab God",
+      "number": "53",
       "power": "5",
       "rarity": "Mythic Rare",
       "subtypes": [
         "God"
       ],
-      "text": "Deathtouch, indestructible\n\nRhonas the Indomitable can't attack or block unless you control another creature with power 4 or greater.\n\n{2}{G}: Another target creature gets +2/+0 and gains trample until end of turn.",
+      "supertypes": [
+        "Legendary"
+      ],
+      "text": "At the beginning of your upkeep, each opponent loses X life and you scry X, where X is the number of Zombies you control.\n{2}{U}{B}: Exile target creature card from a graveyard. Create a token that's a copy of it, except it's a 4/4 black Zombie.\nWhen The Scarab God dies, return it to its owner's hand at the beginning of the next end step.",
       "toughness": "5",
-      "type": "Legendary Creature - God",
-      "types": [],
-      "url": "http://media-dominaria.cursecdn.com/avatars/131/327/636276327578038901.png"
+      "type": "Legendary Creature \u2014 God",
+      "types": [
+        "Creature"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/391/636338161738992409.png"
     },
     {
-      "cmc": 3,
+      "artist": "Grzegorz Rutkowski",
+      "cmc": 6,
+      "colorIdentity": [
+        "U",
+        "R"
+      ],
+      "colors": [
+        "Blue",
+        "Red"
+      ],
+      "id": "7fbf410d0b2c3691332d9703129e379032943f3c",
+      "imageName": "the locust god",
+      "layout": "normal",
+      "manaCost": "{4}{U}{R}",
+      "multiverseid": 430686,
+      "name": "The Locust God",
+      "number": "51",
+      "power": "4",
+      "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
+      "supertypes": [
+        "Legendary"
+      ],
+      "text": "Flying\nWhenever you draw a card, create a 1/1 blue and red Insect creature token with flying and haste.\n{2}{U}{R}: Draw a card, then discard a card.\nWhen The Locust God dies, return it to its owner's hand at the beginning of the next end step.",
+      "toughness": "4",
+      "type": "Legendary Creature \u2014 God",
+      "types": [
+        "Creature"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/289/636335483416232829.png"
+    },
+    {
+      "artist": "Lucas Graciano",
+      "cmc": 1,
       "colorIdentity": [
         "B"
       ],
       "colors": [
         "Black"
       ],
-      "manaCost": "2B",
-      "name": "Bontu the Glorified",
-      "number": "82",
-      "power": "4",
+      "flavor": "\"Knowledge is such a burden. Release it. Release all your fears to me.\"\n\u2014Ashiok, Nightmare Weaver",
+      "id": "be40cbce5931824978945ec66582885a8d566b9c",
+      "imageName": "thoughtseize",
+      "layout": "normal",
+      "manaCost": "{B}",
+      "mciNumber": "107",
+      "multiverseid": 373632,
+      "name": "Thoughtseize",
+      "number": "107",
       "rarity": "Mythic Rare",
-      "subtypes": [
-        "God"
+      "text": "Target player reveals his or her hand. You choose a nonland card from it. That player discards that card. You lose 2 life.",
+      "type": "Sorcery",
+      "types": [
+        "Sorcery"
       ],
-      "text": "Menace, indestructible\n\nBontu the Glorified can't attack or block unless a creature died under your control this turn.\n\n{1}{B}, Sacrifice another creature: Scry 1. Each opponent loses 1 life and you gain 1 life.",
-      "toughness": "6",
-      "type": "Legendary Creature - God",
-      "types": [],
-      "url": "http://media-dominaria.cursecdn.com/avatars/131/319/636276005970527247.png"
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/268/636334652448249866.png"
     },
     {
+      "artist": "Jesper Myrfors",
       "cmc": 4,
       "colorIdentity": [
         "W"
@@ -56,21 +107,23 @@
       "colors": [
         "White"
       ],
-      "manaCost": "3W",
-      "name": "Oketra the True",
-      "number": "21",
-      "power": "3",
+      "id": "6a29a2efea9e63ceed0dc497a14b012fdccda778",
+      "imageName": "armageddon",
+      "layout": "normal",
+      "manaCost": "{3}{W}",
+      "mciNumber": "46",
+      "name": "Armageddon",
+      "number": "46",
       "rarity": "Mythic Rare",
-      "subtypes": [
-        "God"
+      "text": "Destroy all lands.",
+      "type": "Sorcery",
+      "types": [
+        "Sorcery"
       ],
-      "text": "Double strike, indestructible \n\nOketra the True can't attack or block unless you control at least three other creatures. \n\n{3}{W}: Create a 1/1 white Warrior creature token with vigilance.",
-      "toughness": "6",
-      "type": "Legendary Creature - God",
-      "types": [],
-      "url": "http://media-dominaria.cursecdn.com/avatars/131/257/636274291047385255.png"
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/254/636334648875305661.png"
     },
     {
+      "artist": "Anthony S. Waters",
       "cmc": 3,
       "colorIdentity": [
         "U"
@@ -78,21 +131,76 @@
       "colors": [
         "Blue"
       ],
-      "manaCost": "2U",
-      "name": "Kefnet the Mindful",
-      "number": "59",
-      "power": "5",
+      "flavor": "\"Over time, Konda grew ever more suspicious, fearing even his most loyal allies were being manipulated by unseen hands.\"\n\u2014The History of Kamigawa",
+      "id": "f441b89acc5dbcc8f5a5741cf97719dbc580c930",
+      "imageName": "threads of disloyalty",
+      "layout": "normal",
+      "manaCost": "{1}{U}{U}",
+      "mciNumber": "56",
+      "multiverseid": 74652,
+      "name": "Threads of Disloyalty",
+      "number": "56",
       "rarity": "Mythic Rare",
       "subtypes": [
-        "God"
+        "Aura"
       ],
-      "text": "Flying, indestructible\n\nKefnet the Mindful can't attack or block unless you have seven or more cards in hand.\n\n{3}{u}: Draw a card, then you may return a land you control to its owner's hand.",
-      "toughness": "5",
-      "type": "Legendary Creature - God",
-      "types": [],
-      "url": "http://media-dominaria.cursecdn.com/avatars/131/216/636271681332388427.png"
+      "text": "Enchant creature with converted mana cost 2 or less\nYou control enchanted creature.",
+      "type": "Enchantment \u2014 Aura",
+      "types": [
+        "Enchantment"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/260/636334651055914628.png"
     },
     {
+      "artist": "Josh Hass",
+      "cmc": 10,
+      "colorIdentity": [
+        "U"
+      ],
+      "colors": [
+        "Blue"
+      ],
+      "id": "e0fc65a6c7bd9f9592e9f2770816a486101ff783",
+      "imageName": "omniscience",
+      "layout": "normal",
+      "manaCost": "{7}{U}{U}{U}",
+      "multiverseid": 430669,
+      "name": "Omniscience",
+      "number": "34",
+      "rarity": "Mythic Rare",
+      "text": "You may cast spells from your hand without paying their mana costs.",
+      "type": "Enchantment",
+      "types": [
+        "Enchantment"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/257/636334650613418202.png"
+    },
+    {
+      "artist": "Adrian Smith",
+      "cmc": 3,
+      "colorIdentity": [
+        "B"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "id": "31b95e12ee4af18c85805528dfda3320c9855c99",
+      "imageName": "doomsday",
+      "layout": "normal",
+      "manaCost": "{B}{B}{B}",
+      "mciNumber": "8",
+      "multiverseid": 4454,
+      "name": "Doomsday",
+      "rarity": "Mythic Rare",
+      "text": "Search your library and graveyard for five cards and exile the rest. Put the chosen cards on top of your library in any order. You lose half your life, rounded up.",
+      "type": "Sorcery",
+      "types": [
+        "Sorcery"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/265/636334652072467924.png"
+    },
+    {
+      "artist": "Jason Alexander Behnke",
       "cmc": 4,
       "colorIdentity": [
         "R"
@@ -100,18 +208,610 @@
       "colors": [
         "Red"
       ],
-      "manaCost": "3R",
-      "name": "Hazoret the Fervent",
-      "number": "136",
+      "flavor": "\"When every reef is bared and every wave is dust\u2014only then shall I rest.\"",
+      "id": "cd58558de1664de1499a1e75e3d57d6159b210ba",
+      "imageName": "boil",
+      "layout": "normal",
+      "manaCost": "{3}{R}",
+      "mciNumber": "180",
+      "multiverseid": 45373,
+      "name": "Boil",
+      "number": "180",
+      "rarity": "Mythic Rare",
+      "text": "Destroy all Islands.",
+      "type": "Instant",
+      "types": [
+        "Instant"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/270/636334652739812556.png"
+    },
+    {
+      "artist": "Darek Zabrocki",
+      "cmc": 5,
+      "colorIdentity": [
+        "R"
+      ],
+      "colors": [
+        "Red"
+      ],
+      "id": "c5698c674f8a69653a291f3ff42cd364d9577b11",
+      "imageName": "through the breach",
+      "layout": "normal",
+      "manaCost": "{4}{R}",
+      "multiverseid": 430684,
+      "name": "Through the Breach",
+      "number": "49",
+      "rarity": "Mythic Rare",
+      "subtypes": [
+        "Arcane"
+      ],
+      "text": "You may put a creature card from your hand onto the battlefield. That creature gains haste. Sacrifice that creature at the beginning of the next end step.\nSplice onto Arcane {2}{R}{R} As you cast an Arcane spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card's effects to that spell.)",
+      "type": "Instant \u2014 Arcane",
+      "types": [
+        "Instant"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/272/636334652971375819.png"
+    },
+    {
+      "artist": "Titus Lunter",
+      "cmc": 5,
+      "colorIdentity": [
+        "U"
+      ],
+      "colors": [
+        "Blue"
+      ],
+      "id": "40affa37856533eceedc4d20a0ffcf34c086e3e1",
+      "imageName": "sunder",
+      "layout": "normal",
+      "manaCost": "{3}{U}{U}",
+      "multiverseid": 430671,
+      "name": "Sunder",
+      "number": "36",
+      "rarity": "Mythic Rare",
+      "text": "Return all lands to their owners' hands.",
+      "type": "Instant",
+      "types": [
+        "Instant"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/259/636334650910915977.png"
+    },
+    {
+      "artist": "Ron Spencer",
+      "cmc": 2,
+      "colorIdentity": [
+        "B"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "flavor": "Greven il-Vec lifted Vhati off his feet. \"The fall will give you time to think on your failure.\"",
+      "id": "9d8e3b619375b685fc14d2122b9084e5be6093b9",
+      "imageName": "diabolic edict",
+      "layout": "normal",
+      "manaCost": "{1}{B}",
+      "mciNumber": "102",
+      "multiverseid": 397522,
+      "name": "Diabolic Edict",
+      "number": "102",
+      "rarity": "Mythic Rare",
+      "text": "Target player sacrifices a creature.",
+      "type": "Instant",
+      "types": [
+        "Instant"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/264/636334651941997864.png"
+    },
+    {
+      "artist": "Grzegorz Rutkowski",
+      "cmc": 5,
+      "colorIdentity": [
+        "B",
+        "R"
+      ],
+      "colors": [
+        "Black",
+        "Red"
+      ],
+      "id": "a41ab9fea4c10772c75b2150dff7576c39852a51",
+      "imageName": "the scorpion god",
+      "layout": "normal",
+      "manaCost": "{3}{B}{R}",
+      "multiverseid": 430689,
+      "name": "The Scorpion God",
+      "number": "54",
+      "power": "6",
+      "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
+      "supertypes": [
+        "Legendary"
+      ],
+      "text": "Whenever a creature with a -1/-1 counter on it dies, draw a card.\n{1}{B}{R}: Put a -1/-1 counter on another target creature.\nWhen The Scorpion God dies, return it to its owner's hand at the beginning of the next end step.",
+      "toughness": "5",
+      "type": "Legendary Creature \u2014 God",
+      "types": [
+        "Creature"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/275/636334653373248819.png"
+    },
+    {
+      "artist": "Scott Kirschner",
+      "cmc": 3,
+      "colorIdentity": [
+        "U"
+      ],
+      "colors": [
+        "Blue"
+      ],
+      "id": "1a0bfef44f40b04e222834f10dc19192120d731d",
+      "imageName": "forbid",
+      "layout": "normal",
+      "manaCost": "{1}{U}{U}",
+      "mciNumber": "50",
+      "multiverseid": 397532,
+      "name": "Forbid",
+      "number": "50",
+      "rarity": "Mythic Rare",
+      "text": "Buyback\u2014Discard two cards. You may discard two cards in addition to any other costs as you cast this spell. If you do, put this card into your hand as it resolves.)\nCounter target spell.",
+      "type": "Instant",
+      "types": [
+        "Instant"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/256/636334650452638988.png"
+    },
+    {
+      "artist": "Josh Hass",
+      "cmc": 0,
+      "colorIdentity": [
+        "B"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "id": "e565c51b34a69ab723440d1eb8b6f34484162fd9",
+      "imageName": "slaughter pact",
+      "layout": "normal",
+      "multiverseid": 430679,
+      "name": "Slaughter Pact",
+      "number": "44",
+      "rarity": "Mythic Rare",
+      "text": "Destroy target nonblack creature.\nAt the beginning of your next upkeep, pay {2}{B}. If you don't, you lose the game.",
+      "type": "Instant",
+      "types": [
+        "Instant"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/267/636334652325594295.png"
+    },
+    {
+      "artist": "Terese Nielsen",
+      "cmc": 3,
+      "colorIdentity": [
+        "G"
+      ],
+      "colors": [
+        "Green"
+      ],
+      "flavor": "\"One day we shall walk where once was water.\"\n\u2014Eladamri, Lord of Leaves",
+      "id": "c4ec5d5ead76b6e45137d739cb23ad585c7684ef",
+      "imageName": "choke",
+      "layout": "normal",
+      "manaCost": "{2}{G}",
+      "mciNumber": "237",
+      "multiverseid": 45431,
+      "name": "Choke",
+      "number": "237",
+      "rarity": "Mythic Rare",
+      "text": "Islands don't untap during their controllers' untap steps.",
+      "type": "Enchantment",
+      "types": [
+        "Enchantment"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/273/636334653072938400.png"
+    },
+    {
+      "artist": "rk post",
+      "cmc": 8,
+      "colorIdentity": [
+        "B"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "id": "2a853c29576effdc9ff9bcb19504012469338d38",
+      "imageName": "avatar of woe",
+      "layout": "normal",
+      "manaCost": "{6}{B}{B}",
+      "mciNumber": "4",
+      "name": "Avatar of Woe",
+      "number": "4",
+      "power": "6",
+      "rarity": "Mythic Rare",
+      "releaseDate": "2010",
+      "subtypes": [
+        "Avatar"
+      ],
+      "text": "If there are ten or more creature cards total in all graveyards, Avatar of Woe costs {6} less to cast.\nFear This creature can't be blocked except by artifact creatures and/or black creatures.)\n{T}: Destroy target creature. It can't be regenerated.",
+      "toughness": "5",
+      "type": "Creature \u2014 Avatar",
+      "types": [
+        "Creature"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/261/636334651403253347.png"
+    },
+    {
+      "artist": "Mark Poole",
+      "cmc": 4,
+      "colorIdentity": [
+        "R"
+      ],
+      "colors": [
+        "Red"
+      ],
+      "flavor": "Chains of leaping fire and sizzling lightning laid waste the artificers' handiwork, sparing not a single device.",
+      "id": "68cc2c39b146b7724cb7a94ee59ccf512c333f1b",
+      "imageName": "shatterstorm",
+      "layout": "normal",
+      "manaCost": "{2}{R}{R}",
+      "mciNumber": "93",
+      "multiverseid": 1063,
+      "name": "Shatterstorm",
+      "rarity": "Mythic Rare",
+      "text": "Destroy all artifacts. They can't be regenerated.",
+      "type": "Sorcery",
+      "types": [
+        "Sorcery"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/271/636334652842781590.png"
+    },
+    {
+      "artist": "Jason A. Engle",
+      "cmc": 5,
+      "colorIdentity": [
+        "B",
+        "G"
+      ],
+      "colors": [
+        "Black",
+        "Green"
+      ],
+      "id": "536ca6c96f91980037e788514756b3d4df2fb728",
+      "imageName": "lord of extinction",
+      "layout": "normal",
+      "manaCost": "{3}{B}{G}",
+      "multiverseid": 430687,
+      "name": "Lord of Extinction",
+      "number": "52",
+      "power": "*",
+      "rarity": "Mythic Rare",
+      "subtypes": [
+        "Elemental"
+      ],
+      "text": "Lord of Extinction's power and toughness are each equal to the number of cards in all graveyards.",
+      "toughness": "*",
+      "type": "Creature \u2014 Elemental",
+      "types": [
+        "Creature"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/274/636334653217780292.png"
+    },
+    {
+      "artist": "Svetlin Velinov",
+      "cmc": 4,
+      "colorIdentity": [
+        "U"
+      ],
+      "colors": [
+        "Blue"
+      ],
+      "id": "bad7d3c708d69fc5668804cab26fff15378fd47d",
+      "imageName": "opposition",
+      "layout": "normal",
+      "manaCost": "{2}{U}{U}",
+      "multiverseid": 430670,
+      "name": "Opposition",
+      "number": "35",
+      "rarity": "Mythic Rare",
+      "text": "Tap an untapped creature you control: Tap target artifact, creature, or land.",
+      "type": "Enchantment",
+      "types": [
+        "Enchantment"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/258/636334650727323558.png"
+    },
+    {
+      "artist": "Jonas De Ro",
+      "cmc": 4,
+      "colorIdentity": [
+        "B"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "id": "a00f9501d37108b21f57f14737e23179edb086fe",
+      "imageName": "no mercy",
+      "layout": "normal",
+      "manaCost": "{2}{B}{B}",
+      "multiverseid": 430678,
+      "name": "No Mercy",
+      "number": "43",
+      "rarity": "Mythic Rare",
+      "text": "Whenever a creature deals damage to you, destroy it.",
+      "type": "Enchantment",
+      "types": [
+        "Enchantment"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/266/636334652183406450.png"
+    },
+    {
+      "artist": "Tom W\u00e4nerstrand",
+      "cmc": 3,
+      "colorIdentity": [
+        "U"
+      ],
+      "colors": [
+        "Blue"
+      ],
+      "id": "a387f2464028c5e3e0975a8bcddf1a65d33e12b8",
+      "imageName": "capsize",
+      "layout": "normal",
+      "manaCost": "{1}{U}{U}",
+      "mciNumber": "42",
+      "multiverseid": 397492,
+      "name": "Capsize",
+      "number": "42",
+      "rarity": "Mythic Rare",
+      "text": "Buyback {3} You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nReturn target permanent to its owner's hand.",
+      "type": "Instant",
+      "types": [
+        "Instant"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/255/636334650198107949.png"
+    },
+    {
+      "artist": "Bastien L. Deharme",
+      "cmc": 5,
+      "colorIdentity": [
+        "B",
+        "W"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "id": "5c10468ed47e7dc6f41e4975a15eb9ff61591b1a",
+      "imageName": "desolation angel",
+      "layout": "normal",
+      "manaCost": "{3}{B}{B}",
+      "multiverseid": 430675,
+      "name": "Desolation Angel",
+      "number": "40",
+      "power": "5",
+      "rarity": "Mythic Rare",
+      "subtypes": [
+        "Angel"
+      ],
+      "text": "Kicker {W}{W} You may pay an additional {W}{W} as you cast this spell.)\nFlying\nWhen Desolation Angel enters the battlefield, destroy all lands you control. If it was kicked, destroy all lands instead.",
+      "toughness": "4",
+      "type": "Creature \u2014 Angel",
+      "types": [
+        "Creature"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/263/636334651758405843.png"
+    },
+    {
+      "artist": "Tom W\u00e4nerstrand",
+      "cmc": 3,
+      "colorIdentity": [
+        "R"
+      ],
+      "colors": [
+        "Red"
+      ],
+      "flavor": "Heavy light flooded across the landscape, cloaking everything in deep crimson.",
+      "id": "444602a0dd7985d21feafd7518459ff4ac35b6b3",
+      "imageName": "blood moon",
+      "layout": "normal",
+      "manaCost": "{2}{R}",
+      "mciNumber": "57",
+      "multiverseid": 1784,
+      "name": "Blood Moon",
+      "rarity": "Mythic Rare",
+      "text": "Nonbasic lands are Mountains.",
+      "type": "Enchantment",
+      "types": [
+        "Enchantment"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/269/636334652617470386.png"
+    },
+    {
+      "artist": "Ron Spencer",
+      "cmc": 4,
+      "colorIdentity": [
+        "B"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "id": "26959ccda8d4650c2baf6ec0526415df20cad991",
+      "imageName": "damnation",
+      "layout": "normal",
+      "manaCost": "{2}{B}{B}",
+      "mciNumber": "24",
+      "name": "Damnation",
+      "number": "24",
+      "rarity": "Mythic Rare",
+      "releaseDate": "2007-12",
+      "text": "Destroy all creatures. They can't be regenerated.",
+      "type": "Sorcery",
+      "types": [
+        "Sorcery"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/132/262/636334651614033195.png"
+    },
+    {
+      "artist": "Jack Wang",
+      "cmc": 3,
+      "colorIdentity": [
+        "G"
+      ],
+      "colors": [
+        "Green"
+      ],
+      "id": "099b9db2510bbcd0420076096d54bb2404562fbc",
+      "imageName": "rhonas the indomitable",
+      "layout": "normal",
+      "manaCost": "{2}{G}",
+      "mciNumber": "28",
+      "multiverseid": 429887,
+      "name": "Rhonas the Indomitable",
+      "number": "28",
       "power": "5",
       "rarity": "Mythic Rare",
       "subtypes": [
         "God"
       ],
+      "supertypes": [
+        "Legendary"
+      ],
+      "text": "Deathtouch, indestructible\nRhonas the Indomitable can't attack or block unless you control another creature with power 4 or greater.\n{2}{G}: Another target creature gets +2/+0 and gains trample until end of turn.",
+      "toughness": "5",
+      "type": "Legendary Creature \u2014 God",
+      "types": [
+        "Creature"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/131/327/636276327578038901.png"
+    },
+    {
+      "artist": "Daniel Ljunggren",
+      "cmc": 3,
+      "colorIdentity": [
+        "B"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "id": "f32556b9363923f8f3d51722a91ddf4aedd09aab",
+      "imageName": "bontu the glorified",
+      "layout": "normal",
+      "manaCost": "{2}{B}",
+      "mciNumber": "20",
+      "multiverseid": 429879,
+      "name": "Bontu the Glorified",
+      "number": "20",
+      "power": "4",
+      "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
+      "supertypes": [
+        "Legendary"
+      ],
+      "text": "Menace, indestructible\nBontu the Glorified can't attack or block unless a creature died under your control this turn.\n{1}{B}, Sacrifice another creature: Scry 1. Each opponent loses 1 life and you gain 1 life.",
+      "toughness": "6",
+      "type": "Legendary Creature \u2014 God",
+      "types": [
+        "Creature"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/131/319/636276005970527247.png"
+    },
+    {
+      "artist": "Bastien L. Deharme",
+      "cmc": 4,
+      "colorIdentity": [
+        "W"
+      ],
+      "colors": [
+        "White"
+      ],
+      "id": "bddbb50778bbfdb846c4b5813513f101712b1efa",
+      "imageName": "oketra the true",
+      "layout": "normal",
+      "manaCost": "{3}{W}",
+      "mciNumber": "5",
+      "multiverseid": 429864,
+      "name": "Oketra the True",
+      "number": "5",
+      "power": "3",
+      "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
+      "supertypes": [
+        "Legendary"
+      ],
+      "text": "Double strike, indestructible\nOketra the True can't attack or block unless you control at least three other creatures.\n{3}{W}: Create a 1/1 white Warrior creature token with vigilance.",
+      "toughness": "6",
+      "type": "Legendary Creature \u2014 God",
+      "types": [
+        "Creature"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/131/257/636274291047385255.png"
+    },
+    {
+      "artist": "Jose Cabrera",
+      "cmc": 3,
+      "colorIdentity": [
+        "U"
+      ],
+      "colors": [
+        "Blue"
+      ],
+      "id": "7384943221b60e73d2e3c8c79fdb30c587542d89",
+      "imageName": "kefnet the mindful",
+      "layout": "normal",
+      "manaCost": "{2}{U}",
+      "mciNumber": "15",
+      "multiverseid": 429874,
+      "name": "Kefnet the Mindful",
+      "number": "15",
+      "power": "5",
+      "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
+      "supertypes": [
+        "Legendary"
+      ],
+      "text": "Flying, indestructible\nKefnet the Mindful can't attack or block unless you have seven or more cards in hand.\n{3}{U}: Draw a card, then you may return a land you control to its owner's hand.",
+      "toughness": "5",
+      "type": "Legendary Creature \u2014 God",
+      "types": [
+        "Creature"
+      ],
+      "url": "http://media-dominaria.cursecdn.com/avatars/131/216/636271681332388427.png"
+    },
+    {
+      "artist": "Joseph Meehan",
+      "cmc": 4,
+      "colorIdentity": [
+        "R"
+      ],
+      "colors": [
+        "Red"
+      ],
+      "id": "864773d58a9016785a1550c53d9c526b3d88e013",
+      "imageName": "hazoret the fervent",
+      "layout": "normal",
+      "manaCost": "{3}{R}",
+      "mciNumber": "27",
+      "multiverseid": 429886,
+      "name": "Hazoret the Fervent",
+      "number": "27",
+      "power": "5",
+      "rarity": "Mythic Rare",
+      "subtypes": [
+        "God"
+      ],
+      "supertypes": [
+        "Legendary"
+      ],
       "text": "Indestructible, haste\nHazoret the Fervent can't attack or block unless you have one or fewer cards in hand.\n{2}{R}, Discard a card: Hazoret deals 2 damage to each opponent.",
       "toughness": "4",
-      "type": "Legendary Creature - God",
-      "types": [],
+      "type": "Legendary Creature \u2014 God",
+      "types": [
+        "Creature"
+      ],
       "url": "http://media-dominaria.cursecdn.com/avatars/131/42/636268096129088124.png"
     },
     {
@@ -127,6 +827,7 @@
       "imageName": "divert",
       "layout": "normal",
       "manaCost": "{U}",
+      "mciNumber": "13",
       "multiverseid": 429872,
       "name": "Divert",
       "number": "13",
@@ -152,6 +853,7 @@
       "imageName": "entomb",
       "layout": "normal",
       "manaCost": "{B}",
+      "mciNumber": "87",
       "multiverseid": 413629,
       "name": "Entomb",
       "number": "87",
@@ -176,6 +878,7 @@
       "imageName": "diabolic intent",
       "layout": "normal",
       "manaCost": "{1}{B}",
+      "mciNumber": "22",
       "multiverseid": 429881,
       "name": "Diabolic Intent",
       "number": "22",
@@ -200,6 +903,7 @@
       "imageName": "attrition",
       "layout": "normal",
       "manaCost": "{1}{B}{B}",
+      "mciNumber": "19",
       "multiverseid": 429878,
       "name": "Attrition",
       "number": "19",
@@ -224,6 +928,7 @@
       "imageName": "aggravated assault",
       "layout": "normal",
       "manaCost": "{2}{R}",
+      "mciNumber": "25",
       "multiverseid": 429884,
       "name": "Aggravated Assault",
       "number": "25",
@@ -261,7 +966,7 @@
       "url": "http://media-dominaria.cursecdn.com/avatars/130/930/636263776492111002.png"
     },
     {
-      "artist": "Vance Kovacs",
+      "artist": "Deruchenko Alexander",
       "cmc": 1,
       "colorIdentity": [
         "U"
@@ -269,15 +974,14 @@
       "colors": [
         "Blue"
       ],
-      "flavor": "\"There's a hole in your plan.\"\n\u2014Noyan Dar, Tazeem lullmage",
-      "id": "c9d9214bb4dce077311c33eb7192fee89cfd4335",
+      "flavor": "\"A fool's fire is quickly quenched.\"\n\u2014Shaper Kumena",
+      "id": "b06e040cf4cb1888783adf16591003e0e08ac4b5",
       "imageName": "spell pierce",
       "layout": "normal",
       "manaCost": "{U}",
-      "mciNumber": "67",
-      "multiverseid": 178144,
+      "multiverseid": 435234,
       "name": "Spell Pierce",
-      "number": "67",
+      "number": "81",
       "rarity": "Mythic Rare",
       "text": "Counter target noncreature spell unless its controller pays {2}.",
       "type": "Instant",
@@ -299,6 +1003,7 @@
       "imageName": "containment priest",
       "layout": "normal",
       "manaCost": "{1}{W}",
+      "mciNumber": "3",
       "multiverseid": 429862,
       "name": "Containment Priest",
       "number": "3",
@@ -329,6 +1034,7 @@
       "imageName": "austere command",
       "layout": "normal",
       "manaCost": "{4}{W}{W}",
+      "mciNumber": "1",
       "multiverseid": 429860,
       "name": "Austere Command",
       "number": "1",
@@ -353,6 +1059,7 @@
       "imageName": "daze",
       "layout": "normal",
       "manaCost": "{1}{U}",
+      "mciNumber": "44",
       "multiverseid": 413586,
       "name": "Daze",
       "number": "44",
@@ -377,6 +1084,7 @@
       "imageName": "loyal retainers",
       "layout": "normal",
       "manaCost": "{2}{W}",
+      "mciNumber": "12",
       "multiverseid": 10491,
       "name": "Loyal Retainers",
       "number": "12",
@@ -395,7 +1103,7 @@
       "url": "http://media-dominaria.cursecdn.com/avatars/130/934/636263778313726044.png"
     },
     {
-      "artist": "John Coulthart",
+      "artist": "Sandra Everingham",
       "cmc": 1,
       "colorIdentity": [
         "B"
@@ -403,12 +1111,12 @@
       "colors": [
         "Black"
       ],
-      "flavor": "\"The ceremony ended with a voice from the shadows, a voice with vast, ominous power.\"\n\u2014Kifimbo, Shadow Guildmage",
-      "id": "d5312342640d1b811028a8e16960a4f194d233c3",
+      "id": "fff0b8e8fea06ee1ac5c35f048a0a459b1222673",
       "imageName": "dark ritual",
       "layout": "normal",
       "manaCost": "{B}",
-      "multiverseid": 3285,
+      "mciNumber": "7",
+      "multiverseid": 54,
       "name": "Dark Ritual",
       "rarity": "Mythic Rare",
       "text": "Add {B}{B}{B} to your mana pool.",
@@ -419,7 +1127,7 @@
       "url": "http://media-dominaria.cursecdn.com/avatars/130/941/636263781232106659.png"
     },
     {
-      "artist": "Brian Sn\u00f5ddy",
+      "artist": "Karla Ortiz",
       "cmc": 3,
       "colorIdentity": [
         "W",
@@ -429,15 +1137,15 @@
         "White",
         "Black"
       ],
-      "flavor": "\"Don't mourn for me. This is my destiny.\"\n\u2014Gerrard",
-      "id": "786bfb220573589f24368bc4b5a5f6bc2dec126e",
+      "flavor": "\"I have seen entire civilizations rise and fall. You mortals are but dust to me.\"\n\u2014Sorin Markov",
+      "id": "2400f039b0183fca4956bd58ded0c54c1fe0d279",
       "imageName": "vindicate",
       "layout": "normal",
       "manaCost": "{1}{W}{B}",
-      "mciNumber": "126",
-      "multiverseid": 19135,
+      "mciNumber": "210",
+      "multiverseid": 413752,
       "name": "Vindicate",
-      "number": "126",
+      "number": "210",
       "rarity": "Mythic Rare",
       "text": "Destroy target permanent.",
       "type": "Sorcery",
@@ -455,14 +1163,13 @@
       "colors": [
         "Blue"
       ],
-      "id": "3518946d384e4e920e7e7c1d2d307cade16e535e",
+      "id": "9dbf5c1f74b99d02b12919186db1348e9f7ca564",
       "imageName": "force of will",
       "layout": "normal",
       "manaCost": "{3}{U}{U}",
-      "mciNumber": "33",
-      "multiverseid": 159092,
+      "mciNumber": "42",
+      "multiverseid": 3107,
       "name": "Force of Will",
-      "number": "33",
       "rarity": "Mythic Rare",
       "text": "You may pay 1 life and exile a blue card from your hand rather than pay Force of Will's mana cost.\nCounter target spell.",
       "type": "Instant",
@@ -480,12 +1187,12 @@
       "colors": [
         "Black"
       ],
-      "id": "49408a06bfc3160186ad47f0d5c2ac872781305e",
+      "id": "36f2fc23e22acbb789fbeef11ebec3ee473c4697",
       "imageName": "mind twist",
       "layout": "normal",
       "manaCost": "{X}{B}",
-      "mciNumber": "25",
-      "multiverseid": 1167,
+      "mciNumber": "24",
+      "multiverseid": 71,
       "name": "Mind Twist",
       "rarity": "Mythic Rare",
       "text": "Target player discards X cards at random.",
@@ -509,7 +1216,7 @@
       "imageName": "worship",
       "layout": "normal",
       "manaCost": "{3}{W}",
-      "mciNumber": "8e/en/57",
+      "mciNumber": "57",
       "multiverseid": 45219,
       "name": "Worship",
       "number": "57",
@@ -559,6 +1266,7 @@
       "imageName": "counterbalance",
       "layout": "normal",
       "manaCost": "{U}{U}",
+      "mciNumber": "9",
       "multiverseid": 429868,
       "name": "Counterbalance",
       "number": "9",
@@ -571,7 +1279,7 @@
       "url": "http://media-dominaria.cursecdn.com/avatars/130/939/636263779775852647.png"
     },
     {
-      "artist": "Dom!",
+      "artist": "Mark Poole",
       "cmc": 2,
       "colorIdentity": [
         "U"
@@ -579,15 +1287,14 @@
       "colors": [
         "Blue"
       ],
-      "id": "49ade2479e2c2a83cabc1bcad534222ed9f3b2a0",
+      "id": "29e744e19f250bbdaee5593c79b1cc29f35266ba",
       "imageName": "counterspell",
       "layout": "normal",
       "manaCost": "{U}{U}",
-      "mciNumber": "1",
+      "mciNumber": "55",
+      "multiverseid": 102,
       "name": "Counterspell",
-      "number": "1",
       "rarity": "Mythic Rare",
-      "releaseDate": "1995",
       "text": "Counter target spell.",
       "type": "Instant",
       "types": [
@@ -608,7 +1315,7 @@
       "imageName": "wrath of god",
       "layout": "normal",
       "manaCost": "{2}{W}{W}",
-      "mciNumber": "8e/en/58",
+      "mciNumber": "58",
       "multiverseid": 45222,
       "name": "Wrath of God",
       "number": "58",
@@ -621,7 +1328,7 @@
       "url": "http://media-dominaria.cursecdn.com/avatars/130/936/636263778778215707.png"
     },
     {
-      "artist": "Jason Chan",
+      "artist": "Titus Lunter",
       "cmc": 0,
       "colorIdentity": [
         "U"
@@ -629,14 +1336,13 @@
       "colors": [
         "Blue"
       ],
-      "flavor": "Those who expect betrayal at every turn are seldom disappointed.",
-      "id": "b59e0d683d30846f3c7b71a50f66dbea32e18d12",
+      "id": "d61388705ce5d762017413c114b9f9ddeb4059c4",
       "imageName": "pact of negation",
       "layout": "normal",
-      "mciNumber": "42",
-      "multiverseid": 130701,
+      "mciNumber": "16",
+      "multiverseid": 429875,
       "name": "Pact of Negation",
-      "number": "42",
+      "number": "16",
       "rarity": "Mythic Rare",
       "text": "Counter target spell.\nAt the beginning of your next upkeep, pay {3}{U}{U}. If you don't, you lose the game.",
       "type": "Instant",
@@ -658,6 +1364,7 @@
       "imageName": "consecrated sphinx",
       "layout": "normal",
       "manaCost": "{4}{U}{U}",
+      "mciNumber": "8",
       "multiverseid": 429867,
       "name": "Consecrated Sphinx",
       "number": "8",
@@ -689,6 +1396,7 @@
       "imageName": "maelstrom pulse",
       "layout": "normal",
       "manaCost": "{1}{B}{G}",
+      "mciNumber": "29",
       "multiverseid": 429888,
       "name": "Maelstrom Pulse",
       "number": "29",
@@ -701,6 +1409,7 @@
       "url": "http://media-dominaria.cursecdn.com/avatars/130/943/636263781782811251.png"
     },
     {
+      "artist": "Jose Cabrera",
       "cmc": 3,
       "colorIdentity": [
         "W"
@@ -708,19 +1417,26 @@
       "colors": [
         "White"
       ],
-      "manaCost": "2W",
+      "id": "69b88405ea937dfeffb442b305140f10eede0727",
+      "imageName": "aven mindcensor",
+      "layout": "normal",
+      "manaCost": "{2}{W}",
+      "mciNumber": "2",
+      "multiverseid": 429861,
       "name": "Aven Mindcensor",
-      "number": "5",
+      "number": "2",
       "power": "2",
       "rarity": "Mythic Rare",
       "subtypes": [
         "Bird",
         "Wizard"
       ],
-      "text": "Flash \nFlying\nIf an opponent would search a library, that player searches the top four cards of that library instead.",
+      "text": "Flash\nFlying\nIf an opponent would search a library, that player searches the top four cards of that library instead.",
       "toughness": "1",
-      "type": "Creature - Bird Wizard",
-      "types": [],
+      "type": "Creature \u2014 Bird Wizard",
+      "types": [
+        "Creature"
+      ],
       "url": "http://media-dominaria.cursecdn.com/avatars/130/906/636263185962157528.png"
     },
     {
@@ -736,6 +1452,7 @@
       "imageName": "chain lightning",
       "layout": "normal",
       "manaCost": "{R}",
+      "mciNumber": "123",
       "multiverseid": 413665,
       "name": "Chain Lightning",
       "number": "123",
