@@ -1,3 +1,6 @@
+# This project is no longer maintained. Please go to the superceding project at [github.com/Cockatrice/Magic-Spoiler](https://github.com/Cockatrice/Magic-Spoiler)
+
+
 # SpoilerSeason [![Join the chat at https://gitter.im/SpoilerSeason/Lobby](https://badges.gitter.im/SpoilerSeason/Lobby.svg)](https://gitter.im/SpoilerSeason/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) #
 
 SpoilerSeason is a python script to scrape MTGS, Scryfall, and Wizards.com to compile a cockatrice-friendly XML file as well as json files.
